@@ -1,0 +1,10 @@
+PING 192.168.50.42 (192.168.50.42) 56(84) bytes of data.
+64 bytes from 192.168.50.42: icmp_seq=1 ttl=64 time=0.536 ms
+64 bytes from 192.168.50.42: icmp_seq=2 ttl=64 time=0.712 ms
+64 bytes from 192.168.50.42: icmp_seq=3 ttl=64 time=0.683 ms
+64 bytes from 192.168.50.42: icmp_seq=4 ttl=64 time=0.700 ms
+64 bytes from 192.168.50.42: icmp_seq=5 ttl=64 time=0.581 ms
+
+--- 192.168.50.42 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4093ms
+rtt min/avg/max/mdev = 0.536/0.642/0.712/0.070 ms

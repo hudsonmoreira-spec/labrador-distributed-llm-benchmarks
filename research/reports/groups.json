@@ -1,0 +1,10 @@
+{
+  "criterion": "prefixos aninhados da ordem em selection.md; revalidar carga e acesso antes de cada execução",
+  "groups": {
+    "1": ["node01"],
+    "2": ["node01", "node02"],
+    "4": ["node01", "node02", "node03", "node04"],
+    "8": ["node01", "node02", "node03", "node04", "node05", "node06", "node07", "node08"],
+    "16": ["node01", "node02", "node03", "node04", "node05", "node06", "node07", "node08", "node14", "node22", "node11", "node13", "node21", "node23", "node20", "node19"]
+  }
+}

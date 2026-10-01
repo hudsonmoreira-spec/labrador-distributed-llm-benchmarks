@@ -1,0 +1,10 @@
+PING 192.168.50.143 (192.168.50.143) 56(84) bytes of data.
+64 bytes from 192.168.50.143: icmp_seq=1 ttl=64 time=0.689 ms
+64 bytes from 192.168.50.143: icmp_seq=2 ttl=64 time=0.860 ms
+64 bytes from 192.168.50.143: icmp_seq=3 ttl=64 time=0.652 ms
+64 bytes from 192.168.50.143: icmp_seq=4 ttl=64 time=0.738 ms
+64 bytes from 192.168.50.143: icmp_seq=5 ttl=64 time=0.880 ms
+
+--- 192.168.50.143 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4052ms
+rtt min/avg/max/mdev = 0.652/0.763/0.880/0.091 ms

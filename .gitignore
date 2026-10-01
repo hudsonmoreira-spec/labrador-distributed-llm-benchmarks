@@ -1,0 +1,11 @@
+# Python/cache
+__pycache__/
+*.py[cod]
+
+# Local and sensitive infrastructure artifacts
+research/data/ssh/known_hosts
+research/data/runs/**/hosts.txt
+*.pem
+*.key
+*.token
+*.secret

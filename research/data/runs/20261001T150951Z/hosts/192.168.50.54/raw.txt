@@ -1,0 +1,369 @@
+UTC=2026-10-01T15:10:17Z
+---ACCESS---
+uid=1000(caninos) gid=1000(caninos) groups=1000(caninos),27(sudo)
+sudo_n=0
+---IDENTITY---
+lab5
+ Static hostname: lab5
+       Icon name: computer
+      Machine ID: 11b02da9cc614528b947d24bad602e6d
+         Boot ID: c228e7c021cf4087a00b77e4355ee91c
+Operating System: Debian GNU/Linux 12 (bookworm)
+          Kernel: Linux 6.1.76
+    Architecture: arm64
+lab5
+11b02da9cc614528b947d24bad602e6d
+---NETWORK---
+[{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"qdisc":"noqueue","operstate":"UNKNOWN","group":"default","txqlen":1000,"link_type":"loopback","address":"00:00:00:00:00:00","broadcast":"00:00:00:00:00:00","addr_info":[{"family":"inet","local":"127.0.0.1","prefixlen":8,"scope":"host","label":"lo","valid_life_time":4294967295,"preferred_life_time":4294967295},{"family":"inet6","local":"::1","prefixlen":128,"scope":"host","noprefixroute":true,"valid_life_time":4294967295,"preferred_life_time":4294967295}]},{"ifindex":2,"link":null,"ifname":"tunl0","flags":["NOARP"],"mtu":1480,"qdisc":"noop","operstate":"DOWN","group":"default","txqlen":1000,"link_type":"ipip","address":"0.0.0.0","broadcast":"0.0.0.0","addr_info":[]},{"ifindex":3,"link":null,"ifname":"ip6tnl0","flags":["NOARP"],"mtu":1452,"qdisc":"noop","operstate":"DOWN","group":"default","txqlen":1000,"link_type":"tunnel6","address":"::","broadcast":"::","permaddr":"2af5:5ab7:3a3b::","addr_info":[]},{"ifindex":4,"ifname":"wlan0","flags":["NO-CARRIER","BROADCAST","MULTICAST","UP"],"mtu":1500,"qdisc":"mq","operstate":"DOWN","group":"default","txqlen":1000,"link_type":"ether","address":"14:6b:9c:7c:46:c0","broadcast":"ff:ff:ff:ff:ff:ff","addr_info":[]},{"ifindex":5,"ifname":"end0","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"mq","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"4e:e5:41:88:5a:f9","broadcast":"ff:ff:ff:ff:ff:ff","addr_info":[{"family":"inet","local":"192.168.50.54","prefixlen":24,"broadcast":"192.168.50.255","scope":"global","dynamic":true,"noprefixroute":true,"label":"end0","valid_life_time":6786,"preferred_life_time":6786}]}]
+[{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"qdisc":"noqueue","operstate":"UNKNOWN","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"loopback","address":"00:00:00:00:00:00","broadcast":"00:00:00:00:00:00"},{"ifindex":2,"link":null,"ifname":"tunl0","flags":["NOARP"],"mtu":1480,"qdisc":"noop","operstate":"DOWN","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ipip","address":"0.0.0.0","broadcast":"0.0.0.0"},{"ifindex":3,"link":null,"ifname":"ip6tnl0","flags":["NOARP"],"mtu":1452,"qdisc":"noop","operstate":"DOWN","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"tunnel6","address":"::","broadcast":"::","permaddr":"2af5:5ab7:3a3b::"},{"ifindex":4,"ifname":"wlan0","flags":["NO-CARRIER","BROADCAST","MULTICAST","UP"],"mtu":1500,"qdisc":"mq","operstate":"DOWN","linkmode":"DORMANT","group":"default","txqlen":1000,"link_type":"ether","address":"14:6b:9c:7c:46:c0","broadcast":"ff:ff:ff:ff:ff:ff"},{"ifindex":5,"ifname":"end0","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"mq","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"4e:e5:41:88:5a:f9","broadcast":"ff:ff:ff:ff:ff:ff"}]
+[{"dst":"default","gateway":"192.168.50.1","dev":"end0","protocol":"dhcp","prefsrc":"192.168.50.54","metric":100,"flags":[]},{"dst":"192.168.50.0/24","dev":"end0","protocol":"kernel","scope":"link","prefsrc":"192.168.50.54","metric":100,"flags":[]}]
+/sys/class/net/end0/address=4e:e5:41:88:5a:f9
+/sys/class/net/ip6tnl0/address=00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+/sys/class/net/lo/address=00:00:00:00:00:00
+/sys/class/net/tunl0/address=00:00:00:00
+/sys/class/net/wlan0/address=14:6b:9c:7c:46:c0
+---DEVICE_TREE---
+Caninos Labrador 7 (Base 2.1) 
+caninos,k7
+
+cat: /proc/device-tree/serial-number: No such file or directory
+
+---CPU---
+Linux lab5 6.1.76 #1 SMP Mon Jan 26 19:02:43 -03 2026 aarch64 GNU/Linux
+Architecture:                       aarch64
+CPU op-mode(s):                     32-bit, 64-bit
+Byte Order:                         Little Endian
+CPU(s):                             4
+On-line CPU(s) list:                0-3
+Vendor ID:                          ARM
+Model name:                         Cortex-A53
+Model:                              4
+Thread(s) per core:                 1
+Core(s) per cluster:                4
+Socket(s):                          -
+Cluster(s):                         1
+Stepping:                           r0p4
+BogoMIPS:                           48.00
+Flags:                              fp asimd evtstrm crc32 cpuid
+Vulnerability Gather data sampling: Not affected
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Not affected
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Not affected
+Vulnerability Spectre v1:           Mitigation; __user pointer sanitization
+Vulnerability Spectre v2:           Not affected
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+processor	: 0
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm crc32 cpuid
+processor	: 1
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm crc32 cpuid
+processor	: 2
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm crc32 cpuid
+processor	: 3
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm crc32 cpuid
+---OS---
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+6.1.76
+2026-09-30 16:05:23
+ 12:10:18 up 20:04,  0 user,  load average: 2.35, 2.23, 2.19
+2026-10-01T15:10:18Z
+---MEMORY---
+               total        used        free      shared  buff/cache   available
+Mem:      2033942528   369422336    60006400     3125248  1692688384  1664520192
+Swap:              0           0           0
+bash: line 9: swapon: command not found
+MemTotal:        1986272 kB
+MemFree:           58348 kB
+MemAvailable:    1625380 kB
+Buffers:           49824 kB
+Cached:          1560856 kB
+SwapCached:            0 kB
+Active:           195272 kB
+Inactive:        1584048 kB
+Active(anon):       2880 kB
+Inactive(anon):   168688 kB
+Active(file):     192392 kB
+Inactive(file):  1415360 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              1176 kB
+Writeback:             0 kB
+AnonPages:        166632 kB
+Mapped:          1346096 kB
+Shmem:              3052 kB
+KReclaimable:      42460 kB
+Slab:              73988 kB
+SReclaimable:      42460 kB
+SUnreclaim:        31528 kB
+KernelStack:        2944 kB
+PageTables:         5332 kB
+SecPageTables:         0 kB
+---STORAGE---
+ALIGNMENT DISC-ALN DAX DISC-GRAN DISC-MAX DISC-ZERO FSAVAIL FSROOTS FSSIZE FSTYPE FSUSED FSUSE% FSVER GROUP HCTL HOTPLUG KNAME     LABEL LOG-SEC MAJ:MIN MIN-IO MODE       MODEL NAME        OPT-IO OWNER PARTFLAGS PARTLABEL PARTTYPE PARTTYPENAME PARTUUID                             PATH           PHY-SEC PKNAME  PTTYPE PTUUID                                RA RAND  REV RM RO ROTA RQ-SIZE SCHED       SERIAL      SIZE START STATE SUBSYSTEMS                  MOUNTPOINT MOUNTPOINTS TRAN TYPE UUID                                 VENDOR WSAME WWN ZONED ZONE-SZ ZONE-WGRAN ZONE-APP ZONE-NR ZONE-OMAX ZONE-AMAX
+        0        0   0        0B       0B         0                                                   disk             0 nbd0                512  43:0      512 brw-rw----       nbd0             0 root                                                                                 /dev/nbd0          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd1                512  43:32     512 brw-rw----       nbd1             0 root                                                                                 /dev/nbd1          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd2                512  43:64     512 brw-rw----       nbd2             0 root                                                                                 /dev/nbd2          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd3                512  43:96     512 brw-rw----       nbd3             0 root                                                                                 /dev/nbd3          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd4                512  43:128    512 brw-rw----       nbd4             0 root                                                                                 /dev/nbd4          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd5                512  43:160    512 brw-rw----       nbd5             0 root                                                                                 /dev/nbd5          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd6                512  43:192    512 brw-rw----       nbd6             0 root                                                                                 /dev/nbd6          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd7                512  43:224    512 brw-rw----       nbd7             0 root                                                                                 /dev/nbd7          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        4M    49.5M         0                                                   disk             1 mmcblk2             512 179:0      512 brw-rw----       mmcblk2          0 root                                                                                 /dev/mmcblk2       512         dos    65066145                             128    0  0x8  0  0    0     128 mq-deadline 0xcb1c010f 14.6G             block:mmc:mmc_host:platform                             disk                                                0B     none       0B         0B       0B       0         0         0
+        0  3145728   0        4M    49.5M         0    5.8G /        14.2G ext4     7.7G    54% 1.0   disk             1 mmcblk2p1           512 179:1      512 brw-rw----       └─mmcblk2p1      0 root  0x80                0x83     Linux        65066145-01                          /dev/mmcblk2p1     512 mmcblk2 dos    65066145                             128    0       0  0    0     128 mq-deadline            14.6G  2048       block:mmc:mmc_host:platform /          /                part 9bd20495-3270-4b70-be1e-3b2b519f0dce           0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nullb0              512 253:0      512 brw-rw----       nullb0           0 root                                                                                 /dev/nullb0        512                                                     128    0       0  0    0      64 none                    250G             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd8                512  43:256    512 brw-rw----       nbd8             0 root                                                                                 /dev/nbd8          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd9                512  43:288    512 brw-rw----       nbd9             0 root                                                                                 /dev/nbd9          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd10               512  43:320    512 brw-rw----       nbd10            0 root                                                                                 /dev/nbd10         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd11               512  43:352    512 brw-rw----       nbd11            0 root                                                                                 /dev/nbd11         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd12               512  43:384    512 brw-rw----       nbd12            0 root                                                                                 /dev/nbd12         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd13               512  43:416    512 brw-rw----       nbd13            0 root                                                                                 /dev/nbd13         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd14               512  43:448    512 brw-rw----       nbd14            0 root                                                                                 /dev/nbd14         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd15               512  43:480    512 brw-rw----       nbd15            0 root                                                                                 /dev/nbd15         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/root      ext4       15G  7.7G  5.9G  57% /
+devtmpfs       devtmpfs  712M     0  712M   0% /dev
+tmpfs          tmpfs     970M     0  970M   0% /dev/shm
+tmpfs          tmpfs     388M  3.0M  386M   1% /run
+tmpfs          tmpfs     5.0M   12K  5.0M   1% /run/lock
+tmpfs          tmpfs     194M   40K  194M   1% /run/user/1000
+---THERMAL---
+/sys/class/thermal/thermal_zone0/type=cpu-temp
+/sys/class/thermal/thermal_zone1/type=gpu-temp
+/sys/class/thermal/thermal_zone2/type=corelogic-temp
+/sys/class/thermal/thermal_zone0/temp=76987
+/sys/class/thermal/thermal_zone1/temp=95568
+/sys/class/thermal/thermal_zone2/temp=72546
+/sys/class/hwmon/hwmon0/name=cpu_temp
+/sys/class/hwmon/hwmon1/name=gpu_temp
+/sys/class/hwmon/hwmon2/name=corelogic_temp
+/sys/class/hwmon/hwmon0/temp1_input=76987
+/sys/class/hwmon/hwmon1/temp1_input=95568
+/sys/class/hwmon/hwmon2/temp1_input=72546
+---LOAD---
+2.35 2.23 2.19 1/178 123497
+    PID COMMAND         %CPU %MEM     ELAPSED COMMAND
+ 123498 ps               100  0.1       00:00 ps -eo pid,comm,pcpu,pmem,etime,args --sort=-pcpu
+ 123386 systemd         51.1  0.5       00:03 /lib/systemd/systemd --user
+ 123426 systemd-hostnam 29.2  0.2       00:01 /lib/systemd/systemd-hostnamed
+ 123403 wireplumber     26.4  0.7       00:01 /usr/bin/wireplumber
+ 123402 pipewire         7.0  0.3       00:01 /usr/bin/pipewire
+ 123404 pipewire-pulse   6.4  0.4       00:01 /usr/bin/pipewire-pulse
+ 123411 bash             5.5  0.1       00:01 bash -s
+ 123383 sshd             2.9  0.4       00:03 sshd: caninos [priv]
+ 123410 dbus-daemon      2.2  0.0       00:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+ 123409 sshd             1.5  0.3       00:01 sshd: caninos@notty
+ 120644 kworker/2:1-eve  0.4  0.0       22:04 [kworker/2:1-events_power_efficient]
+    384 NetworkManager   0.3  0.9    20:04:46 /usr/sbin/NetworkManager --no-daemon
+ 113706 kworker/2:0-mm_  0.3  0.0    01:21:51 [kworker/2:0-mm_percpu_wq]
+ 117759 kworker/2:3-eve  0.3  0.0       46:51 [kworker/2:3-events]
+    472 RTW_CMD_THREAD   0.1  0.0    20:04:43 [RTW_CMD_THREAD]
+    598 verifica_rede_l  0.1  0.1    20:04:03 /bin/bash /usr/local/bin/verifica_rede_led.sh
+    368 dbus-daemon      0.0  0.2    20:04:47 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    235 systemd-journal  0.0  3.3    20:04:50 /lib/systemd/systemd-journald
+    482 wpa_supplicant   0.0  0.5    20:04:43 /sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=netdev
+    597 llama-server     0.0 68.8    20:04:03 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none
+    346 ksdioirqd/mmc1   0.0  0.0    20:04:47 [ksdioirqd/mmc1]
+  47187 cups-browsed     0.0  0.6    12:09:56 /usr/sbin/cups-browsed
+    371 rsyslogd         0.0  0.1    20:04:46 /usr/sbin/rsyslogd -n -iNONE
+      1 systemd          0.0  0.6    20:04:55 /sbin/init
+  UNIT                       LOAD   ACTIVE SUB     DESCRIPTION
+  avahi-daemon.service       loaded active running Avahi mDNS/DNS-SD Stack
+  bluetooth.service          loaded active running Bluetooth service
+  colord.service             loaded active running Manage, Install and Generate Color Profiles
+  cron.service               loaded active running Regular background program processing daemon
+  cups-browsed.service       loaded active running Make remote CUPS printers available locally
+  cups.service               loaded active running CUPS Scheduler
+  dbus.service               loaded active running D-Bus System Message Bus
+  getty@tty1.service         loaded active running Getty on tty1
+  llama-server.service       loaded active running Servidor llama.cpp com Qwen2.5 1.5B
+  ModemManager.service       loaded active running Modem Manager
+  NetworkManager.service     loaded active running Network Manager
+  polkit.service             loaded active running Authorization Manager
+  rsyslog.service            loaded active running System Logging Service
+  rtkit-daemon.service       loaded active running RealtimeKit Scheduling Policy Service
+  serial-getty@ttyS3.service loaded active running Serial Getty on ttyS3
+  ssh.service                loaded active running OpenBSD Secure Shell server
+  systemd-hostnamed.service  loaded active running Hostname Service
+  systemd-journald.service   loaded active running Journal Service
+  systemd-logind.service     loaded active running User Login Management
+  systemd-timesyncd.service  loaded active running Network Time Synchronization
+  systemd-udevd.service      loaded active running Rule-based Manager for Device Events and Files
+  user@1000.service          loaded active running User Manager for UID 1000
+  verifica-rede-led.service  loaded active running Verifica rede end0 e controla LEDs da Labrador
+  wifi_bt_start.service      loaded active running LSB: Bluetooth Start
+  wpa_supplicant.service     loaded active running WPA supplicant
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+25 loaded units listed.
+---LINK_STATS---
+IF=end0
+bash: line 13: ethtool: command not found
+5: end0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 4e:e5:41:88:5a:f9 brd ff:ff:ff:ff:ff:ff
+    RX:  bytes packets errors dropped  missed   mcast           
+       6637864   43719      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+       2250589   14772      0       0       0       0 
+IF=ip6tnl0
+bash: line 13: ethtool: command not found
+3: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 2af5:5ab7:3a3b::
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+IF=lo
+bash: line 13: ethtool: command not found
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    RX:  bytes packets errors dropped  missed   mcast           
+        212399    2100      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+        212399    2100      0       0       0       0 
+IF=tunl0
+bash: line 13: ethtool: command not found
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+IF=wlan0
+bash: line 13: ethtool: command not found
+4: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN mode DORMANT group default qlen 1000
+    link/ether 14:6b:9c:7c:46:c0 brd ff:ff:ff:ff:ff:ff
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+---TOOLS---
+CMD=gcc PATH=/usr/bin/gcc
+gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+CMD=g++ PATH=/usr/bin/g++
+g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+CMD=clang PATH=bash: line 14: clang: command not found
+CMD=make PATH=/usr/bin/make
+GNU Make 4.3
+Built for aarch64-unknown-linux-gnu
+CMD=cmake PATH=/usr/bin/cmake
+cmake version 3.25.1
+
+CMD=python3 PATH=/usr/bin/python3
+Python 3.11.2
+CMD=python PATH=bash: line 14: python: command not found
+CMD=git PATH=/usr/bin/git
+git version 2.39.5
+CMD=pip3 PATH=bash: line 14: pip3: command not found
+CMD=llama-cli PATH=bash: line 14: llama-cli: command not found
+CMD=llama-server PATH=bash: line 14: llama-server: command not found
+CMD=ollama PATH=bash: line 14: ollama: command not found
+CMD=vllm PATH=bash: line 14: vllm: command not found
+CMD=torchrun PATH=bash: line 14: torchrun: command not found
+CMD=mpirun PATH=/usr/bin/mpirun
+mpirun (Open MPI) 4.1.4
+
+CMD=iperf3 PATH=/usr/bin/iperf3
+iperf 3.12 (cJSON 1.7.15)
+Linux lab5 6.1.76 #1 SMP Mon Jan 26 19:02:43 -03 2026 aarch64
+/home/caninos/llama-offline/llama.cpp/convert_llama_ggml_to_gguf.py 19112
+---LOG_EVIDENCE---
+[Thu Oct  1 09:04:50 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:04:50 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:04:53 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:05:35 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:05:39 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:05:39 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:05:42 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:06:24 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:06:28 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:06:28 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:06:31 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:07:13 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:07:17 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:07:17 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:07:19 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:08:02 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:08:06 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:08:06 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:08:09 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:08:51 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:08:55 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:08:55 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:08:58 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:09:08 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:09:24 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:09:24 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:09:27 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:10:09 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:10:13 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:10:13 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:10:16 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:10:58 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:11:02 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:11:02 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:11:05 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:11:47 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:11:51 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:11:51 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:11:54 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:12:36 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:12:40 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:12:40 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:12:43 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:13:25 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:13:29 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:13:29 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:13:32 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:14:14 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:14:18 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:14:18 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:14:21 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:15:03 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:15:07 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:15:07 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:15:10 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:15:52 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:15:55 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:15:55 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:15:58 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:16:40 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:16:43 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:16:43 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:16:46 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:17:28 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:17:31 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:17:31 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:17:34 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:18:16 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:18:19 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:18:19 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:18:22 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 10:04:30 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 10:07:03 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 10:07:03 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 10:07:06 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off

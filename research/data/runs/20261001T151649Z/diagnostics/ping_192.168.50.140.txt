@@ -1,0 +1,10 @@
+PING 192.168.50.140 (192.168.50.140) 56(84) bytes of data.
+64 bytes from 192.168.50.140: icmp_seq=1 ttl=64 time=0.786 ms
+64 bytes from 192.168.50.140: icmp_seq=2 ttl=64 time=0.796 ms
+64 bytes from 192.168.50.140: icmp_seq=3 ttl=64 time=0.599 ms
+64 bytes from 192.168.50.140: icmp_seq=4 ttl=64 time=0.630 ms
+64 bytes from 192.168.50.140: icmp_seq=5 ttl=64 time=0.700 ms
+
+--- 192.168.50.140 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4055ms
+rtt min/avg/max/mdev = 0.599/0.702/0.796/0.079 ms

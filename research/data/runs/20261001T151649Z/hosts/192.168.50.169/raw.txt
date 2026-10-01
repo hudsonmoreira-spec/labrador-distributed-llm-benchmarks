@@ -1,0 +1,307 @@
+UTC=2026-10-01T15:17:05Z
+---ACCESS---
+uid=1000(caninos) gid=1000(caninos) groups=1000(caninos),27(sudo)
+sudo_n=0
+---IDENTITY---
+lab3
+ Static hostname: lab3
+       Icon name: computer
+      Machine ID: 11b02da9cc614528b947d24bad602e6d
+         Boot ID: 7fe61e6800914c449d98f6f896ae870f
+Operating System: Debian GNU/Linux 12 (bookworm)
+          Kernel: Linux 6.1.76
+    Architecture: arm64
+lab3
+11b02da9cc614528b947d24bad602e6d
+---NETWORK---
+[{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"qdisc":"noqueue","operstate":"UNKNOWN","group":"default","txqlen":1000,"link_type":"loopback","address":"00:00:00:00:00:00","broadcast":"00:00:00:00:00:00","addr_info":[{"family":"inet","local":"127.0.0.1","prefixlen":8,"scope":"host","label":"lo","valid_life_time":4294967295,"preferred_life_time":4294967295},{"family":"inet6","local":"::1","prefixlen":128,"scope":"host","noprefixroute":true,"valid_life_time":4294967295,"preferred_life_time":4294967295}]},{"ifindex":2,"link":null,"ifname":"tunl0","flags":["NOARP"],"mtu":1480,"qdisc":"noop","operstate":"DOWN","group":"default","txqlen":1000,"link_type":"ipip","address":"0.0.0.0","broadcast":"0.0.0.0","addr_info":[]},{"ifindex":3,"link":null,"ifname":"ip6tnl0","flags":["NOARP"],"mtu":1452,"qdisc":"noop","operstate":"DOWN","group":"default","txqlen":1000,"link_type":"tunnel6","address":"::","broadcast":"::","permaddr":"dec1:253a:2ce0::","addr_info":[]},{"ifindex":4,"ifname":"wlan0","flags":["NO-CARRIER","BROADCAST","MULTICAST","UP"],"mtu":1500,"qdisc":"mq","operstate":"DOWN","group":"default","txqlen":1000,"link_type":"ether","address":"14:6b:9c:7c:46:9a","broadcast":"ff:ff:ff:ff:ff:ff","addr_info":[]},{"ifindex":5,"ifname":"end0","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"mq","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"aa:fa:5a:c3:1d:cb","broadcast":"ff:ff:ff:ff:ff:ff","addr_info":[{"family":"inet","local":"192.168.50.169","prefixlen":24,"broadcast":"192.168.50.255","scope":"global","dynamic":true,"noprefixroute":true,"label":"end0","valid_life_time":6683,"preferred_life_time":6683},{"family":"inet6","local":"fe80::6f1e:81c7:d8e:9f80","prefixlen":64,"scope":"link","noprefixroute":true,"valid_life_time":4294967295,"preferred_life_time":4294967295}]}]
+[{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"qdisc":"noqueue","operstate":"UNKNOWN","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"loopback","address":"00:00:00:00:00:00","broadcast":"00:00:00:00:00:00"},{"ifindex":2,"link":null,"ifname":"tunl0","flags":["NOARP"],"mtu":1480,"qdisc":"noop","operstate":"DOWN","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ipip","address":"0.0.0.0","broadcast":"0.0.0.0"},{"ifindex":3,"link":null,"ifname":"ip6tnl0","flags":["NOARP"],"mtu":1452,"qdisc":"noop","operstate":"DOWN","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"tunnel6","address":"::","broadcast":"::","permaddr":"dec1:253a:2ce0::"},{"ifindex":4,"ifname":"wlan0","flags":["NO-CARRIER","BROADCAST","MULTICAST","UP"],"mtu":1500,"qdisc":"mq","operstate":"DOWN","linkmode":"DORMANT","group":"default","txqlen":1000,"link_type":"ether","address":"14:6b:9c:7c:46:9a","broadcast":"ff:ff:ff:ff:ff:ff"},{"ifindex":5,"ifname":"end0","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"mq","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"aa:fa:5a:c3:1d:cb","broadcast":"ff:ff:ff:ff:ff:ff"}]
+[{"dst":"default","gateway":"192.168.50.1","dev":"end0","protocol":"dhcp","prefsrc":"192.168.50.169","metric":100,"flags":[]},{"dst":"192.168.50.0/24","dev":"end0","protocol":"kernel","scope":"link","prefsrc":"192.168.50.169","metric":100,"flags":[]}]
+/sys/class/net/end0/address=aa:fa:5a:c3:1d:cb
+/sys/class/net/ip6tnl0/address=00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+/sys/class/net/lo/address=00:00:00:00:00:00
+/sys/class/net/tunl0/address=00:00:00:00
+/sys/class/net/wlan0/address=14:6b:9c:7c:46:9a
+---DEVICE_TREE---
+Caninos Labrador 7 (Base 2.1) 
+caninos,k7
+
+cat: /proc/device-tree/serial-number: No such file or directory
+
+---CPU---
+Linux lab3 6.1.76 #1 SMP Fri Feb 28 17:06:14 UTC 2025 aarch64 GNU/Linux
+Architecture:                       aarch64
+CPU op-mode(s):                     32-bit, 64-bit
+Byte Order:                         Little Endian
+CPU(s):                             4
+On-line CPU(s) list:                0-3
+Vendor ID:                          ARM
+Model name:                         Cortex-A53
+Model:                              4
+Thread(s) per core:                 1
+Core(s) per cluster:                4
+Socket(s):                          -
+Cluster(s):                         1
+Stepping:                           r0p4
+BogoMIPS:                           48.00
+Flags:                              fp asimd evtstrm crc32 cpuid
+Vulnerability Gather data sampling: Not affected
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Not affected
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Not affected
+Vulnerability Spectre v1:           Mitigation; __user pointer sanitization
+Vulnerability Spectre v2:           Not affected
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+processor	: 0
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm crc32 cpuid
+processor	: 1
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm crc32 cpuid
+processor	: 2
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm crc32 cpuid
+processor	: 3
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm crc32 cpuid
+---OS---
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+6.1.76
+2026-10-01 09:20:41
+ 12:17:05 up  2:56,  0 user,  load average: 0.16, 0.20, 0.18
+2026-10-01T15:17:05Z
+---MEMORY---
+               total        used        free      shared  buff/cache   available
+Mem:      2034073600   337313792   282017792     3002368  1497436160  1696759808
+Swap:              0           0           0
+bash: line 9: swapon: command not found
+MemTotal:        1986400 kB
+MemFree:          274904 kB
+MemAvailable:    1656488 kB
+Buffers:           29332 kB
+Cached:          1401268 kB
+SwapCached:            0 kB
+Active:            75384 kB
+Inactive:        1503756 kB
+Active(anon):       2732 kB
+Inactive(anon):   148744 kB
+Active(file):      72652 kB
+Inactive(file):  1355012 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               776 kB
+Writeback:             0 kB
+AnonPages:        148676 kB
+Mapped:          1309120 kB
+Shmem:              2932 kB
+KReclaimable:      31740 kB
+Slab:              58452 kB
+SReclaimable:      31740 kB
+SUnreclaim:        26712 kB
+KernelStack:        2496 kB
+PageTables:         4548 kB
+SecPageTables:         0 kB
+---STORAGE---
+ALIGNMENT DISC-ALN DAX DISC-GRAN DISC-MAX DISC-ZERO FSAVAIL FSROOTS FSSIZE FSTYPE FSUSED FSUSE% FSVER GROUP HCTL HOTPLUG KNAME     LABEL LOG-SEC MAJ:MIN MIN-IO MODE       MODEL NAME        OPT-IO OWNER PARTFLAGS PARTLABEL PARTTYPE PARTTYPENAME PARTUUID                             PATH           PHY-SEC PKNAME  PTTYPE PTUUID                                RA RAND  REV RM RO ROTA RQ-SIZE SCHED       SERIAL      SIZE START STATE SUBSYSTEMS                  MOUNTPOINT MOUNTPOINTS TRAN TYPE UUID                                 VENDOR WSAME WWN ZONED ZONE-SZ ZONE-WGRAN ZONE-APP ZONE-NR ZONE-OMAX ZONE-AMAX
+        0        0   0        0B       0B         0                                                   disk             0 nbd0                512  43:0      512 brw-rw----       nbd0             0 root                                                                                 /dev/nbd0          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd1                512  43:32     512 brw-rw----       nbd1             0 root                                                                                 /dev/nbd1          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd2                512  43:64     512 brw-rw----       nbd2             0 root                                                                                 /dev/nbd2          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd3                512  43:96     512 brw-rw----       nbd3             0 root                                                                                 /dev/nbd3          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd4                512  43:128    512 brw-rw----       nbd4             0 root                                                                                 /dev/nbd4          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd5                512  43:160    512 brw-rw----       nbd5             0 root                                                                                 /dev/nbd5          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd6                512  43:192    512 brw-rw----       nbd6             0 root                                                                                 /dev/nbd6          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd7                512  43:224    512 brw-rw----       nbd7             0 root                                                                                 /dev/nbd7          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        4M    49.5M         0                                                   disk             1 mmcblk2             512 179:0      512 brw-rw----       mmcblk2          0 root                                                                                 /dev/mmcblk2       512         dos    0c5f6da2                             128    0  0x8  0  0    0     128 mq-deadline 0xcb1000ee 14.6G             block:mmc:mmc_host:platform                             disk                                                0B     none       0B         0B       0B       0         0         0
+        0  3145728   0        4M    49.5M         0    7.1G /        14.2G ext4     6.4G    45% 1.0   disk             1 mmcblk2p1           512 179:1      512 brw-rw----       └─mmcblk2p1      0 root  0x80                0x83     Linux        0c5f6da2-01                          /dev/mmcblk2p1     512 mmcblk2 dos    0c5f6da2                             128    0       0  0    0     128 mq-deadline            14.6G  2048       block:mmc:mmc_host:platform /          /                part 87b961e9-7baa-41f9-ab47-ebedb73bfaa9           0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nullb0              512 253:0      512 brw-rw----       nullb0           0 root                                                                                 /dev/nullb0        512                                                     128    0       0  0    0      64 none                    250G             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd8                512  43:256    512 brw-rw----       nbd8             0 root                                                                                 /dev/nbd8          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd9                512  43:288    512 brw-rw----       nbd9             0 root                                                                                 /dev/nbd9          512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd10               512  43:320    512 brw-rw----       nbd10            0 root                                                                                 /dev/nbd10         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd11               512  43:352    512 brw-rw----       nbd11            0 root                                                                                 /dev/nbd11         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd12               512  43:384    512 brw-rw----       nbd12            0 root                                                                                 /dev/nbd12         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd13               512  43:416    512 brw-rw----       nbd13            0 root                                                                                 /dev/nbd13         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd14               512  43:448    512 brw-rw----       nbd14            0 root                                                                                 /dev/nbd14         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+        0        0   0        0B       0B         0                                                   disk             0 nbd15               512  43:480    512 brw-rw----       nbd15            0 root                                                                                 /dev/nbd15         512                                                     128    0       0  0    0     256 mq-deadline               0B             block                                                   disk                                                0B     none       0B         0B       0B       0         0         0
+Filesystem     Type      Size  Used Avail Use% Mounted on
+/dev/root      ext4       15G  6.4G  7.1G  48% /
+devtmpfs       devtmpfs  712M     0  712M   0% /dev
+tmpfs          tmpfs     970M     0  970M   0% /dev/shm
+tmpfs          tmpfs     388M  2.9M  386M   1% /run
+tmpfs          tmpfs     5.0M     0  5.0M   0% /run/lock
+tmpfs          tmpfs     194M     0  194M   0% /run/user/1000
+---THERMAL---
+/sys/class/thermal/thermal_zone0/type=cpu-temp
+/sys/class/thermal/thermal_zone1/type=gpu-temp
+/sys/class/thermal/thermal_zone2/type=corelogic-temp
+/sys/class/thermal/thermal_zone0/temp=85536
+/sys/class/thermal/thermal_zone1/temp=85074
+/sys/class/thermal/thermal_zone2/temp=65927
+/sys/class/hwmon/hwmon0/name=cpu_temp
+/sys/class/hwmon/hwmon1/name=gpu_temp
+/sys/class/hwmon/hwmon2/name=corelogic_temp
+/sys/class/hwmon/hwmon0/temp1_input=85536
+/sys/class/hwmon/hwmon1/temp1_input=85074
+/sys/class/hwmon/hwmon2/temp1_input=65927
+---LOAD---
+0.16 0.20 0.18 1/151 21318
+    PID COMMAND         %CPU %MEM     ELAPSED COMMAND
+  21319 ps               200  0.1       00:00 ps -eo pid,comm,pcpu,pmem,etime,args --sort=-pcpu
+  21236 systemd         54.9  0.5       00:02 /lib/systemd/systemd --user
+  21264 systemd-hostnam 30.0  0.2       00:00 /lib/systemd/systemd-hostnamed
+  21257 bash             6.8  0.1       00:01 bash -s
+  21233 sshd             3.0  0.4       00:03 sshd: caninos [priv]
+  21256 sshd             1.8  0.3       00:01 sshd: caninos@notty
+    205 kworker/0:3-eve  0.4  0.0    02:56:21 [kworker/0:3-events]
+     61 kworker/0:2-eve  0.3  0.0    02:56:24 [kworker/0:2-events]
+     16 kworker/0:1-eve  0.2  0.0    02:56:25 [kworker/0:1-events]
+    440 RTW_CMD_THREAD   0.1  0.0    02:56:12 [RTW_CMD_THREAD]
+    503 llama-server     0.1 68.7    02:55:33 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none
+    510 verifica_rede_l  0.1  0.1    02:55:33 /bin/bash /usr/local/bin/verifica_rede_led.sh
+    395 NetworkManager   0.0  1.0    02:56:15 /usr/sbin/NetworkManager --no-daemon
+      1 systemd          0.0  0.6    02:56:25 /sbin/init
+    338 dbus-daemon      0.0  0.2    02:56:17 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    445 wpa_supplicant   0.0  0.5    02:56:12 /sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=netdev
+    355 ksdioirqd/mmc1   0.0  0.0    02:56:16 [ksdioirqd/mmc1]
+    233 systemd-journal  0.0  0.8    02:56:19 /lib/systemd/systemd-journald
+  19051 kworker/2:1-eve  0.0  0.0       16:53 [kworker/2:1-events]
+    394 ModemManager     0.0  0.6    02:56:15 /usr/sbin/ModemManager
+     21 kworker/1:0-eve  0.0  0.0    02:56:25 [kworker/1:0-events]
+     14 rcu_sched        0.0  0.0    02:56:25 [rcu_sched]
+  20090 kworker/2:3-eve  0.0  0.0       08:26 [kworker/2:3-events_long]
+   9288 kworker/3:1-eve  0.0  0.0    01:40:49 [kworker/3:1-events]
+  UNIT                       LOAD   ACTIVE SUB     DESCRIPTION
+  cron.service               loaded active running Regular background program processing daemon
+  dbus.service               loaded active running D-Bus System Message Bus
+  getty@tty1.service         loaded active running Getty on tty1
+  led-udp.service            loaded active running LED UDP Control Service
+  llama-server.service       loaded active running Servidor llama.cpp com Qwen2.5 1.5B
+  ModemManager.service       loaded active running Modem Manager
+  NetworkManager.service     loaded active running Network Manager
+  polkit.service             loaded active running Authorization Manager
+  rsyslog.service            loaded active running System Logging Service
+  serial-getty@ttyS3.service loaded active running Serial Getty on ttyS3
+  ssh.service                loaded active running OpenBSD Secure Shell server
+  systemd-hostnamed.service  loaded active running Hostname Service
+  systemd-journald.service   loaded active running Journal Service
+  systemd-logind.service     loaded active running User Login Management
+  systemd-timesyncd.service  loaded active running Network Time Synchronization
+  systemd-udevd.service      loaded active running Rule-based Manager for Device Events and Files
+  user@1000.service          loaded active running User Manager for UID 1000
+  verifica-rede-led.service  loaded active running Verifica rede end0 e controla LEDs da Labrador
+  wifi_bt_start.service      loaded active running LSB: Bluetooth Start
+  wpa_supplicant.service     loaded active running WPA supplicant
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+20 loaded units listed.
+---LINK_STATS---
+IF=end0
+bash: line 13: ethtool: command not found
+5: end0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether aa:fa:5a:c3:1d:cb brd ff:ff:ff:ff:ff:ff
+    RX:  bytes packets errors dropped  missed   mcast           
+        878583   10979      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+        581036    5485      0       0       0       0 
+IF=ip6tnl0
+bash: line 13: ethtool: command not found
+3: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/tunnel6 :: brd :: permaddr dec1:253a:2ce0::
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+IF=lo
+bash: line 13: ethtool: command not found
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    RX:  bytes packets errors dropped  missed   mcast           
+         12960     160      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+         12960     160      0       0       0       0 
+IF=tunl0
+bash: line 13: ethtool: command not found
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+IF=wlan0
+bash: line 13: ethtool: command not found
+4: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN mode DORMANT group default qlen 1000
+    link/ether 14:6b:9c:7c:46:9a brd ff:ff:ff:ff:ff:ff
+    RX:  bytes packets errors dropped  missed   mcast           
+             0       0      0       0       0       0 
+    TX:  bytes packets errors dropped carrier collsns           
+             0       0      0       0       0       0 
+---TOOLS---
+CMD=gcc PATH=/usr/bin/gcc
+gcc (Debian 12.2.0-14+deb12u1) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+CMD=g++ PATH=/usr/bin/g++
+g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+CMD=clang PATH=bash: line 14: clang: command not found
+CMD=make PATH=/usr/bin/make
+GNU Make 4.3
+Built for aarch64-unknown-linux-gnu
+CMD=cmake PATH=/usr/bin/cmake
+cmake version 3.25.1
+
+CMD=python3 PATH=/usr/bin/python3
+Python 3.11.2
+CMD=python PATH=bash: line 14: python: command not found
+CMD=git PATH=/usr/bin/git
+git version 2.39.5
+CMD=pip3 PATH=bash: line 14: pip3: command not found
+CMD=llama-cli PATH=bash: line 14: llama-cli: command not found
+CMD=llama-server PATH=bash: line 14: llama-server: command not found
+CMD=ollama PATH=bash: line 14: ollama: command not found
+CMD=vllm PATH=bash: line 14: vllm: command not found
+CMD=torchrun PATH=bash: line 14: torchrun: command not found
+CMD=mpirun PATH=/usr/bin/mpirun
+mpirun (Open MPI) 4.1.4
+
+CMD=iperf3 PATH=/usr/bin/iperf3
+iperf 3.12 (cJSON 1.7.15)
+Linux lab3 6.1.76 #1 SMP Fri Feb 28 17:06:14 UTC 2025 aarch64
+/home/caninos/llama-offline.tar.gz 1761663709
+/home/caninos/llama-offline/llama.cpp/convert_llama_ggml_to_gguf.py 19112
+---LOG_EVIDENCE---
+[Thu Oct  1 09:20:40 2026] CPU features: detected: CRC32 instructions
+[Thu Oct  1 09:20:40 2026] thermal_sys: Registered thermal governor 'step_wise'
+[Thu Oct  1 09:20:41 2026] caninos-tmu e01b00f0.thermal: probe finished
+[Thu Oct  1 09:20:41 2026] caninos-mmc e0210000.mmc: probe finished
+[Thu Oct  1 09:20:41 2026] caninos-mmc e0214000.mmc: probe finished
+[Thu Oct  1 09:20:41 2026] mmc1: new high speed SDIO card at address 0001
+[Thu Oct  1 09:20:41 2026] caninos-mmc e0218000.mmc: probe finished
+[Thu Oct  1 09:20:41 2026] mmc2: new high speed MMC card at address 0001
+[Thu Oct  1 09:20:41 2026] mmcblk2: mmc2:0001 QE63MB 14.6 GiB 
+[Thu Oct  1 09:20:41 2026]  mmcblk2: p1
+[Thu Oct  1 09:20:43 2026] EXT4-fs (mmcblk2p1): recovery complete
+[Thu Oct  1 09:20:43 2026] EXT4-fs (mmcblk2p1): mounted filesystem with ordered data mode. Quota mode: none.
+[Thu Oct  1 09:20:43 2026] VFS: Mounted root (ext4 filesystem) on device 179:1.
+[Thu Oct  1 09:20:51 2026] rtl8723bs mmc1:0001:1: firmware: direct-loading firmware rtlwifi/rtl8723bs_nic.bin
+[Thu Oct  1 09:20:53 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off
+[Thu Oct  1 09:20:53 2026] caninos-dwmac e0220000.ethernet end0: Link is Down
+[Thu Oct  1 09:20:56 2026] caninos-dwmac e0220000.ethernet end0: Link is Up - 100Mbps/Full - flow control off

@@ -1,0 +1,7 @@
+{
+  "status": "preliminar_condicional",
+  "main": ["node01", "node02", "node03", "node04", "node05", "node06", "node07", "node08", "node14", "node22", "node11", "node13", "node21", "node23", "node20", "node19"],
+  "reserve": ["node10", "node09", "node12", "node15", "node16", "node18", "node24", "node17"],
+  "blocked_or_unselected_reason": "node19 agora tem acesso confirmado, mas swap habilitado; node17 tem carga elevada e vários reservas têm baixa RAM disponível observada; todos devem ser revalidados antes do piloto",
+  "benchmarks_executed": false
+}

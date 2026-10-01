@@ -1,0 +1,10 @@
+PING 192.168.50.89 (192.168.50.89) 56(84) bytes of data.
+64 bytes from 192.168.50.89: icmp_seq=1 ttl=64 time=0.603 ms
+64 bytes from 192.168.50.89: icmp_seq=2 ttl=64 time=0.884 ms
+64 bytes from 192.168.50.89: icmp_seq=3 ttl=64 time=0.565 ms
+64 bytes from 192.168.50.89: icmp_seq=4 ttl=64 time=0.591 ms
+64 bytes from 192.168.50.89: icmp_seq=5 ttl=64 time=0.806 ms
+
+--- 192.168.50.89 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4120ms
+rtt min/avg/max/mdev = 0.565/0.689/0.884/0.129 ms

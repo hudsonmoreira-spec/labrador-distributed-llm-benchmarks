@@ -1,0 +1,10 @@
+PING 192.168.50.74 (192.168.50.74) 56(84) bytes of data.
+64 bytes from 192.168.50.74: icmp_seq=1 ttl=64 time=0.673 ms
+64 bytes from 192.168.50.74: icmp_seq=2 ttl=64 time=0.707 ms
+64 bytes from 192.168.50.74: icmp_seq=3 ttl=64 time=0.928 ms
+64 bytes from 192.168.50.74: icmp_seq=4 ttl=64 time=0.748 ms
+64 bytes from 192.168.50.74: icmp_seq=5 ttl=64 time=0.564 ms
+
+--- 192.168.50.74 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4122ms
+rtt min/avg/max/mdev = 0.564/0.724/0.928/0.118 ms
