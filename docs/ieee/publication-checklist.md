@@ -1,15 +1,15 @@
-# Checklist antes da publicação
+# Pre-publication checklist
 
-O material atual é útil para auditoria interna, mas não deve ser publicado sem revisão de privacidade e de completude.
+The current material is useful for internal auditing, but should not be published without privacy and completeness review.
 
-- [ ] Remover ou pseudonimizar IPs, nomes de host, `machine-id`, MACs, números de série e caminhos de usuário.
-- [ ] Revisar `research/data/ssh/known_hosts/` e qualquer log SSH antes do commit público.
-- [ ] Confirmar que não há chaves privadas, tokens, senhas ou credenciais nos logs.
-- [ ] Fixar um identificador de release/commit para o artefato suplementar.
-- [ ] Adicionar versão do hardware, sistema operacional, runtime, modelo e quantização ao manifesto de cada benchmark.
-- [ ] Adicionar scripts que regenerem cada tabela e figura a partir dos dados publicados.
-- [ ] Documentar critérios de inclusão/exclusão, falhas e repetições.
-- [ ] Separar claramente inventário preliminar de resultados de inferência.
-- [ ] Revisar licenças de modelos, datasets, dependências e ferramentas de terceiros.
+- [ ] Remove or pseudonymize IP addresses, hostnames, `machine-id`, MAC addresses, serial numbers, and user paths.
+- [ ] Review `research/data/ssh/known_hosts/` and all SSH logs before a public commit.
+- [ ] Confirm that logs contain no private keys, tokens, passwords, or credentials.
+- [ ] Pin a release/commit identifier for the supplementary artifact.
+- [ ] Add hardware, operating-system, runtime, model, and quantization versions to each benchmark manifest.
+- [ ] Add scripts that regenerate every table and figure from the published data.
+- [ ] Document inclusion/exclusion criteria, failures, and repetitions.
+- [ ] Clearly separate preliminary inventory from inference results.
+- [ ] Review licenses for models, datasets, dependencies, and third-party tools.
 
-A sanitização deve produzir uma cópia pública dos dados; os dados internos originais devem permanecer fora do repositório público e sob controle do responsável pela bancada.
+Sanitization should produce a public copy of the data; the original internal data should remain outside the public repository and under the testbed owner's control.

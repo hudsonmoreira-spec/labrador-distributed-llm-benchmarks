@@ -1,8 +1,8 @@
-# Inventário do cluster Labrador
+# Labrador Cluster Inventory
 
-Este repositório contém a descoberta de leitura e os diagnósticos leves da bancada Labrador. A descoberta não executa inferência, não instala pacotes, não inicia serviços, não reinicia placas e não realiza testes destrutivos.
+This repository contains read-only discovery and lightweight diagnostics for the Labrador testbed. Discovery does not run inference, install packages, start services, reboot boards, or perform destructive tests.
 
-## Repetição
+## Reproduction
 
 ```bash
 ./scripts/discover.sh
@@ -10,8 +10,8 @@ Este repositório contém a descoberta de leitura e os diagnósticos leves da ba
 python3 scripts/build_reports.py
 ```
 
-Os hosts estão em `config/hosts.txt`. Os dados brutos ficam em `data/runs/<UTC>/hosts/` e `data/runs/<UTC>/controller/`; cada host tem `metadata.json`, `raw.txt` e `error.txt`. O arquivo `known_hosts` usado pela coleta fica em `data/ssh/` e não contém chaves privadas.
+Hosts are listed in `config/hosts.txt`. Raw data is stored in `data/runs/<UTC>/hosts/` and `data/runs/<UTC>/controller/`; each host has `metadata.txt`, `raw.txt`, and `error.txt`. The `known_hosts` file used during collection is stored in `data/ssh/` and contains no private keys.
 
-Por padrão são usados `caninos`, `ConnectTimeout=6`, `ServerAliveInterval=5`, `ServerAliveCountMax=1`, modo não interativo e até quatro conexões simultâneas. A descoberta remota usa somente comandos de leitura e `sudo -n`; uma falha não bloqueia os demais hosts.
+The default configuration uses user `caninos`, `ConnectTimeout=6`, `ServerAliveInterval=5`, `ServerAliveCountMax=1`, non-interactive mode, and up to four concurrent connections. Remote discovery uses read-only commands and `sudo -n`; a failure does not block the other hosts.
 
-Os diagnósticos curtos devem ser executados após a descoberta e não substituem benchmarks longos. O relatório final e a seleção ficam em `reports/`.
+Short diagnostics should be run after discovery and do not replace long-running benchmarks. The final report and selection are stored in `reports/`.

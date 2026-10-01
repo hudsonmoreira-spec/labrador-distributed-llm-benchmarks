@@ -1,17 +1,17 @@
-# Proposta de piloto (não executado)
+# Pilot proposal (not executed)
 
-## Objetivo
+## Objective
 
-Comparar uma requisição única em um nó e em dois nós usando o mesmo artefato, quantização, prompt e parâmetros. Só atende ao experimento distribuído se o runtime particionar o mesmo modelo entre processos/nós; duas réplicas independentes são outro experimento.
+Compare a single request on one node and two nodes using the same artifact, quantization, prompt, and parameters. This qualifies as a distributed experiment only if the runtime partitions the same model across processes/nodes; two independent replicas are a different experiment.
 
-## Pendências
+## Open items
 
-Nenhum runtime de LLM distribuído foi confirmado no inventário. Verificar em cada nó escolhido e no controlador a versão/commit, documentação do particionamento, transporte, formato de modelo e instrumentação. `llama.cpp`, Ollama, vLLM, MPI e `iperf3` estão ausentes em parte da bancada; não instalar ou iniciar nada nesta etapa.
+No distributed LLM runtime was confirmed in the inventory. Verify the version/commit, partitioning documentation, transport, model format, and instrumentation on each selected node and the controller. `llama.cpp`, Ollama, vLLM, MPI, and `iperf3` are absent from parts of the testbed; do not install or start anything at this stage.
 
-## Comandos planejados
+## Planned commands
 
-Após aprovar instalação/configuração, registrar `command -v`, `--version`, commit e documentação; copiar/verificar o mesmo hash do modelo e usar uma configuração explícita de dois workers. Executar primeiro o caso de controle em `node01`, depois o caso de dois nós em `node01,node02`, com o mesmo prompt fixo. O comando exato depende do runtime escolhido e não deve ser inventado antes dessa verificação.
+After installation/configuration approval, record `command -v`, `--version`, commit, and documentation; copy/verify the same model hash and use an explicit two-worker configuration. Run the control case on `node01` first, then the two-node case on `node01,node02`, using the same fixed prompt. The exact command depends on the selected runtime and must not be invented before verification.
 
-## Evidência exigida
+## Required evidence
 
-Guardar logs do launcher e de cada worker contendo node/IP, rank, PID, carregamento das mesmas camadas, hash do modelo, início/fim UTC e identificador da requisição. Confirmar no trace que os dois ranks participaram da mesma requisição. Sem essa evidência, classificar como réplica/encaminhamento, não como modelo particionado. Não prometer medição de sincronização sem instrumentação do runtime.
+Store launcher and worker logs containing node/IP, rank, PID, loaded layers, model hash, UTC start/end, and request identifier. Confirm in the trace that both ranks participated in the same request. Without this evidence, classify the result as replication/routing, not model partitioning. Do not claim synchronization measurements without runtime instrumentation.

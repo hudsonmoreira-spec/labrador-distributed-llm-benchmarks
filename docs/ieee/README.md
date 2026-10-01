@@ -1,25 +1,25 @@
-# Material suplementar para publicação IEEE
+# IEEE Publication Supplement
 
-Esta pasta define a apresentação do artefato experimental, sem inventar resultados que ainda não foram medidos. A estrutura segue uma sequência familiar a leitores de artigos experimentais: objetivo, protocolo, ambiente, dados, reprodução, limitações e evidências.
+This directory defines the presentation of the experimental artifact without inventing results that have not yet been measured. Its structure follows a sequence familiar to experimental-paper readers: objective, protocol, environment, data, reproduction, limitations, and evidence.
 
-## Correspondência com um artigo
+## Mapping to a paper
 
-| Seção do artigo | Evidência neste repositório |
+| Paper section | Evidence in this repository |
 |---|---|
-| Ambiente experimental | `research/reports/inventory_report.md` e `research/data/inventory.csv` |
-| Método de descoberta | `research/scripts/discover.sh` |
-| Diagnósticos | `research/scripts/diagnostics.sh` e `research/data/runs/*/diagnostics/` |
-| Seleção da bancada | `research/reports/selection.md` |
-| Protocolo planejado | `research/reports/pilot_1_2.md` |
-| Tratamento de falhas | `research/reports/contingency.md` |
-| Evidência primária | `research/data/runs/*/hosts/*/raw.txt` |
+| Experimental environment | `research/reports/inventory_report.md` and `research/data/inventory.csv` |
+| Discovery method | `research/scripts/discover.sh` |
+| Diagnostics | `research/scripts/diagnostics.sh` and `research/data/runs/*/diagnostics/` |
+| Testbed selection | `research/reports/selection.md` |
+| Planned protocol | `research/reports/pilot_1_2.md` |
+| Failure handling | `research/reports/contingency.md` |
+| Primary evidence | `research/data/runs/*/hosts/*/raw.txt` |
 
-O relatório de inventário deve ser citado como caracterização do ambiente, não como resultado de desempenho. Resultados de throughput, latência, consumo, escalabilidade ou qualidade só devem ser adicionados depois de uma execução experimental explicitamente identificada.
+The inventory report should be cited as environment characterization, not as a performance result. Throughput, latency, energy, scalability, or quality results should be added only after an explicitly identified experimental run.
 
-## Convenções recomendadas
+## Recommended conventions
 
-- registrar todos os horários em UTC;
-- associar cada resultado ao commit do código, ao hash do modelo, à quantização, aos parâmetros e ao identificador da execução;
-- distinguir claramente configuração, observação, métrica derivada e interpretação;
-- preservar logs primários e gerar tabelas/figuras por scripts versionados;
-- declarar falhas, exclusões e nós substituídos, sem substituir evidências silenciosamente.
+- record all timestamps in UTC;
+- associate each result with the code commit, model hash, quantization, parameters, and run identifier;
+- clearly distinguish configuration, observation, derived metric, and interpretation;
+- preserve primary logs and generate tables/figures with versioned scripts;
+- report failures, exclusions, and replaced nodes without silently replacing evidence.

@@ -1,12 +1,12 @@
-# Relatório de inventário
+# Inventory report
 
-Execução: `data/runs/20261001T151649Z`
+Run: `data/runs/20261001T151649Z`
 
-Acessados: **24/24**; SSH e sudo sem senha confirmados: **24**.
+Accessed: **24/24**; passwordless SSH and sudo confirmed: **24**.
 
-Este relatório é preliminar e não contém benchmarks de inferência. Campos completos permanecem nos dados brutos.
+This report is preliminary and contains no inference benchmarks. Complete fields remain in the raw data.
 
-Hosts sem confirmação:
+Hosts without confirmation:
 
 
-Limitações: a extração é textual e deve ser revisada antes da seleção final; ausência de ferramenta não é defeito de hardware.
+Limitations: extraction is text-based and should be reviewed before final selection; a missing tool is not evidence of a hardware defect.

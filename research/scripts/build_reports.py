@@ -25,7 +25,7 @@ with (ROOT/'data/inventory.csv').open('w',newline='') as f:
     w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
 rep=ROOT/'reports'; rep.mkdir(exist_ok=True)
 good=[r for r in rows if r['ssh_ok'] and r['sudo_n']=='0']; bad=[r for r in rows if r not in good]
-lines=['# Relatório de inventário','',f'Execução: `{run.relative_to(ROOT)}`','',f'Acessados: **{sum(r["ssh_ok"] for r in rows)}/{len(rows)}**; SSH e sudo sem senha confirmados: **{len(good)}**.','', 'Este relatório é preliminar e não contém benchmarks de inferência. Campos completos permanecem nos dados brutos.','', 'Hosts sem confirmação:','']
+lines=['# Inventory report','',f'Run: `{run.relative_to(ROOT)}`','',f'Accessed: **{sum(r["ssh_ok"] for r in rows)}/{len(rows)}**; passwordless SSH and sudo confirmed: **{len(good)}**.','', 'This report is preliminary and contains no inference benchmarks. Complete fields remain in the raw data.','', 'Hosts without confirmation:','']
 lines += [f"- {r['node']} ({r['ip']}): {r['error'][:300].replace(chr(10),' ')}" for r in bad]
-lines += ['', 'Limitações: a extração é textual e deve ser revisada antes da seleção final; ausência de ferramenta não é defeito de hardware.']
+lines += ['', 'Limitations: extraction is text-based and should be reviewed before final selection; a missing tool is not evidence of a hardware defect.']
 (rep/'inventory_report.md').write_text('\n'.join(lines)+'\n')
