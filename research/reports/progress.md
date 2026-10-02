@@ -21,16 +21,16 @@ The working weights are: inventory and selection (15%), runtime and environment 
 - The final package was hash- and help-validated on node02 (`192.168.50.118`) and node04 (`192.168.50.140`). Local libraries resolve through `LD_LIBRARY_PATH`; system glibc remains in use.
 - The fixed pilot GGUF was identified on node03 (`192.168.50.129`) and copied to node02 with matching SHA-256 `b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c`.
 - A short single-node inference on node02 completed in 39.07 s with Q5_K_M, `-t 4`, `-tb 4`, context 512, temperature 0, seed 42; raw log and SHA-256 are in `data/runs/20261001T180524Z/pilot/`.
+- Distributed RPC attempts on node02 -> node04 accepted connections and logged `init_tensor`/`set_tensor` on node04, proving tensor work reached the second node. The 135 s attempt and the 600 s retry both timed out during model offload/loading; neither is a valid completed distributed inference result. Logs and hashes are preserved in `data/runs/20261001T180524Z/pilot/`.
 
 ## In progress
 
 - The node01 native build line is abandoned for future preparation after the SSH drop; it was not used for the final artifact and was not restarted.
-- Model transfer from node03 to node04 is in progress; the source `llama-server` remains running and untouched.
-- Two-node RPC pilot is pending the second model hash and launch logs.
+- Model transfer to node04 was abandoned because the RPC worker does not need the GGUF; invalid partials were removed and node04 was left without a model.
+- Two-node RPC pilot is attempted but not validated as a completed request; no benchmark result is reported.
 
 ## Not yet validated
 
-- Local single-node inference with a fixed model and prompt.
 - Distributed RPC inference proving that one request uses both nodes.
 - Frozen 1/2/4/8/16-node protocol and full matrix.
 - Scientific performance results and paper tables/figures.
@@ -46,4 +46,4 @@ The working weights are: inventory and selection (15%), runtime and environment 
 
 ## Next action
 
-Finish the node04 model hash, launch a short single-node inference on node02, then launch a two-node RPC request between node02 and node04 with RPC debug logs proving remote graph work. Freeze the protocol only after those logs are preserved.
+Investigate the RPC offload timeout (without changing the fixed runtime/model), then repeat the distributed pilot only after a completed request is observed. Freeze the protocol only after completion and preserve the timeout as a failure condition.

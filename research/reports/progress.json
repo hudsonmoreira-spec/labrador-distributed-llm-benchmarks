@@ -24,8 +24,8 @@
     "node02_build": "cross package hash/help/ldd passed",
     "node04_build": "cross package hash/help passed"
   },
-  "pilot": "single-node node02 validated; two-node RPC pending node04 model transfer",
+  "pilot": "single-node node02 validated; two-node RPC reached node04 init_tensor/set_tensor but timed out at 135s and 600s; not validated",
   "matrix": "not_started",
   "failure": "Native GCC/Clang builds failed on node01 and remain preserved. Ubuntu GCC15 cross output was rejected for GLIBC 2.38/GLIBCXX 3.4.32. Final cross build uses GCC12 plus Debian12 headers/libs and passes GLIBC<=2.34/GLIBCXX<=3.4.30. Optional UI download failed due controller DNS and is not used by the protocol.",
-  "next_action": "verify node04 model hash, run single-node inference on node02, then two-node RPC pilot on node02/node04"
+  "next_action": "investigate fixed-protocol RPC offload timeout and repeat only after a completed two-node request"
 }
