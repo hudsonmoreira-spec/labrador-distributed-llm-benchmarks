@@ -1,0 +1,37 @@
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\ 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b0-unknown
+model      : /home/caninos/research/models/qwen2.5-1.5b-instruct-q5_k_m.gguf
+ftype      : Q5_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Answer with exactly one short sentence: Why is reproducibility important in distributed inference benchmarks?
+Reproducibility is important in distributed inference benchmarks to ensure consistency and reliability in
+
+[ Prompt: 2,4 t/s | Generation: 1,6 t/s ]
+
+> 
+
+Exiting...
+
+LOCAL_ELAPSED=39.07
+LOCAL_EXIT=0

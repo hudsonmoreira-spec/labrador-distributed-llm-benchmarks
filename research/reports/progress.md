@@ -6,7 +6,7 @@ Last updated: 2026-10-02
 
 The working weights are: inventory and selection (15%), runtime and environment preparation (20%), pilot validation (20%), protocol freeze (10%), full matrix collection (25%), and analysis/article update (10%). A percentage is counted as validated only when its evidence is recorded; preparation in progress is not counted as complete.
 
-**Validated: 35%**
+**Validated: 40%**
 
 ## Completed evidence
 
@@ -20,6 +20,7 @@ The working weights are: inventory and selection (15%), runtime and environment 
 - Final package `llama.cpp-68e79bd8-arm64-debian12-gcc12-noomp` passed ELF and ABI checks and has SHA-256 manifest `research/data/preparation/llama.cpp-68e79bd8-arm64-debian12-gcc12-noomp/SHA256SUMS`.
 - The final package was hash- and help-validated on node02 (`192.168.50.118`) and node04 (`192.168.50.140`). Local libraries resolve through `LD_LIBRARY_PATH`; system glibc remains in use.
 - The fixed pilot GGUF was identified on node03 (`192.168.50.129`) and copied to node02 with matching SHA-256 `b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c`.
+- A short single-node inference on node02 completed in 39.07 s with Q5_K_M, `-t 4`, `-tb 4`, context 512, temperature 0, seed 42; raw log and SHA-256 are in `data/runs/20261001T180524Z/pilot/`.
 
 ## In progress
 

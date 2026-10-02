@@ -1,6 +1,6 @@
 {
   "updated_utc": "2026-10-02",
-  "validated_percent": 35,
+  "validated_percent": 40,
   "weights": {
     "inventory_and_selection": 15,
     "runtime_and_environment_preparation": 20,
@@ -24,7 +24,7 @@
     "node02_build": "cross package hash/help/ldd passed",
     "node04_build": "cross package hash/help passed"
   },
-  "pilot": "pending model transfer to node04",
+  "pilot": "single-node node02 validated; two-node RPC pending node04 model transfer",
   "matrix": "not_started",
   "failure": "Native GCC/Clang builds failed on node01 and remain preserved. Ubuntu GCC15 cross output was rejected for GLIBC 2.38/GLIBCXX 3.4.32. Final cross build uses GCC12 plus Debian12 headers/libs and passes GLIBC<=2.34/GLIBCXX<=3.4.30. Optional UI download failed due controller DNS and is not used by the protocol.",
   "next_action": "verify node04 model hash, run single-node inference on node02, then two-node RPC pilot on node02/node04"
