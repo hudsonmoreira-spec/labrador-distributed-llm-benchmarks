@@ -1,0 +1,31 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR aarch64)
+
+get_filename_component(PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}/../.." ABSOLUTE)
+set(CMAKE_SYSROOT "${PROJECT_ROOT}/ops/toolchain/sysroot-debian12" CACHE PATH "Debian 12 arm64 sysroot")
+
+set(CMAKE_C_COMPILER aarch64-linux-gnu-gcc-12)
+set(CMAKE_CXX_COMPILER aarch64-linux-gnu-g++-12)
+set(CMAKE_ASM_COMPILER aarch64-linux-gnu-gcc-12)
+set(CMAKE_C_COMPILER_TARGET aarch64-linux-gnu)
+set(CMAKE_CXX_COMPILER_TARGET aarch64-linux-gnu)
+
+set(TARGET_GCC_INCLUDE "/usr/lib/gcc-cross/aarch64-linux-gnu/12/include")
+set(TARGET_SYSTEM_INCLUDES "-isystem${CMAKE_SYSROOT}/usr/include/aarch64-linux-gnu -isystem${CMAKE_SYSROOT}/usr/include -isystem${TARGET_GCC_INCLUDE}")
+set(CMAKE_C_FLAGS_INIT "-mcpu=cortex-a53 -mno-outline-atomics -nostdinc ${TARGET_SYSTEM_INCLUDES}")
+set(CMAKE_CXX_FLAGS_INIT "-mcpu=cortex-a53 -mno-outline-atomics -nostdinc ${TARGET_SYSTEM_INCLUDES} -nostdinc++ -isystem${CMAKE_SYSROOT}/usr/include/c++/12 -isystem${CMAKE_SYSROOT}/usr/include/aarch64-linux-gnu/c++/12")
+set(TARGET_LIBDIRS "-L${CMAKE_SYSROOT}/usr/lib/aarch64-linux-gnu -L${CMAKE_SYSROOT}/lib/aarch64-linux-gnu")
+set(TARGET_RUNTIME_LIBS "-Wl,${CMAKE_SYSROOT}/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30,${CMAKE_SYSROOT}/lib/aarch64-linux-gnu/libgcc_s.so.1,/usr/lib/gcc-cross/aarch64-linux-gnu/12/libgcc.a,${CMAKE_SYSROOT}/usr/lib/aarch64-linux-gnu/libc.so,${CMAKE_SYSROOT}/lib/aarch64-linux-gnu/libm.so.6,${CMAKE_SYSROOT}/lib/aarch64-linux-gnu/libpthread.so.0,${CMAKE_SYSROOT}/lib/aarch64-linux-gnu/libdl.so.2,${CMAKE_SYSROOT}/lib/aarch64-linux-gnu/librt.so.1")
+set(CMAKE_EXE_LINKER_FLAGS_INIT "${TARGET_LIBDIRS} -nodefaultlibs -Wl,-rpath,'$ORIGIN/../lib'")
+set(CMAKE_SHARED_LINKER_FLAGS_INIT "${TARGET_LIBDIRS} -nodefaultlibs -Wl,-rpath,'$ORIGIN/../lib'")
+set(CMAKE_C_STANDARD_LIBRARIES_INIT "${TARGET_RUNTIME_LIBS}")
+set(CMAKE_CXX_STANDARD_LIBRARIES_INIT "${TARGET_RUNTIME_LIBS}")
+
+set(CMAKE_FIND_ROOT_PATH "${CMAKE_SYSROOT}")
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+
+set(ENV{PKG_CONFIG_SYSROOT_DIR} "${CMAKE_SYSROOT}")
+set(ENV{PKG_CONFIG_LIBDIR} "${CMAKE_SYSROOT}/usr/lib/aarch64-linux-gnu/pkgconfig:${CMAKE_SYSROOT}/usr/share/pkgconfig")

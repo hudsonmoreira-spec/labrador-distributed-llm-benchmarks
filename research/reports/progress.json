@@ -1,0 +1,31 @@
+{
+  "updated_utc": "2026-10-02",
+  "validated_percent": 35,
+  "weights": {
+    "inventory_and_selection": 15,
+    "runtime_and_environment_preparation": 20,
+    "pilot_validation": 20,
+    "protocol_freeze": 10,
+    "full_matrix_collection": 25,
+    "analysis_and_article": 10
+  },
+  "inventory": {
+    "run": "data/runs/20261001T180524Z",
+    "hosts": 24,
+    "ssh_ok": 24,
+    "sudo_ok": 24
+  },
+  "runtime": {
+    "project": "llama.cpp",
+    "commit": "68e79bd8cd6b7995f8fce8da252b249bbf237e63",
+    "rpc": true,
+    "controller_build": "x86 reference passed; GCC15 ARM artifact rejected by ABI audit; GCC12 Debian12 sysroot cross-build passed",
+    "node01_build": "native line abandoned after SSH drop; final artifact not based on it",
+    "node02_build": "cross package hash/help/ldd passed",
+    "node04_build": "cross package hash/help passed"
+  },
+  "pilot": "pending model transfer to node04",
+  "matrix": "not_started",
+  "failure": "Native GCC/Clang builds failed on node01 and remain preserved. Ubuntu GCC15 cross output was rejected for GLIBC 2.38/GLIBCXX 3.4.32. Final cross build uses GCC12 plus Debian12 headers/libs and passes GLIBC<=2.34/GLIBCXX<=3.4.30. Optional UI download failed due controller DNS and is not used by the protocol.",
+  "next_action": "verify node04 model hash, run single-node inference on node02, then two-node RPC pilot on node02/node04"
+}

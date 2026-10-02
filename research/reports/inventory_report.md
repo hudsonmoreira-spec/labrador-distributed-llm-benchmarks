@@ -1,6 +1,6 @@
 # Inventory report
 
-Run: `data/runs/20261001T151649Z`
+Run: `data/runs/20261001T180524Z`
 
 Accessed: **24/24**; passwordless SSH and sudo confirmed: **24**.
 

@@ -5,6 +5,9 @@ __pycache__/
 # Local and sensitive infrastructure artifacts
 research/data/ssh/known_hosts
 research/data/runs/**/hosts.txt
+research/runtime/
+ops/toolchain/sysroot-*/
+research/data/preparation/
 *.pem
 *.key
 *.token
