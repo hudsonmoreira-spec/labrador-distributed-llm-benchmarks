@@ -79,7 +79,7 @@ RPC--2 & \RPCN & \RPCProcMean & \RPCProcSD & \RPCProcMin & \RPCProcMax\\
 \label{fig:process}
 \end{figure}
 
-Table~\ref{tab:phases} separates the runtime's prompt and generation measurements. The reported generation rate is the runtime's predicted-token count divided by its generation time; it uses 32 generated tokens, not the process-time denominator. We do not call the remaining process time ``loading time'': loading and first-token timestamps were not independently instrumented.
+Table~\ref{tab:phases} separates the runtime's prompt and generation measurements. The reported generation-rate column is the arithmetic mean of the individual \texttt{predicted\_per\_second} values extracted from the final JSON response of each valid request. It is not recomputed from the 32-token limit or from an average time. We do not call the remaining process time ``loading time'': loading and first-token timestamps were not independently instrumented.
 
 \begin{table}[t]
 \caption{Mean phase metrics in seconds for valid selected cases. Runtime generation rate is the mean of the per-request \texttt{predicted\_per\_second} field.}
@@ -117,7 +117,7 @@ Partial generation & \FailurePartial\\
 \end{tabular}
 \end{table}
 
-The five valid cases per condition were selected by predeclared status, complete phase metrics, actual token count, and worker evidence. They were not five consecutive successes. The failure table distinguishes preparation and host availability, connection/startup, loading timeout, incomplete termination, and partial generation; a zero exit code alone was not sufficient for inclusion. Because these attempts span different campaigns and launcher procedures, no single operational success percentage is reported here.
+The five valid cases per condition were selected using explicit selection criteria: valid status, complete phase metrics, actual token count, and worker evidence. They were not five consecutive successes. The failure table distinguishes preparation and host availability, connection/startup, loading timeout, incomplete termination, and partial generation; a zero exit code alone was not sufficient for inclusion. Because these attempts span different campaigns and launcher procedures, no single operational success percentage is reported here.
 
 \section{Discussion and Limitations}
 The observed result is specific and reproducible: in this configuration, RPC-2 is slower than the isolated Labrador board. The latency difference is consistent with a combination of remote graph execution, intermediate-state communication, serialization, and coordination. The dataset does not isolate those mechanisms; in particular, the study does not justify attributing the result exclusively to the 100 Mb/s link.
@@ -128,7 +128,7 @@ The experiment has one model, one short prompt, one quantization, one network se
 We presented a reproducible audit of a small ARM RPC inference setup. The raw logs establish that both RPC workers participated in each of five selected two-worker requests. Under the frozen Qwen2.5-1.5B Q5\_K\_M workload, RPC-2 required 168.67 s of process time on average, compared with 43.86 s for a single Labrador board. This is an observation about the tested configuration, not a universal statement about distributed inference. The released evidence and failure inventory provide a basis for future work on phase-level loading and communication measurements without overstating scalability.
 
 \section*{Acknowledgment and AI-use disclosure}
-Generative-AI tools were used to organize repository evidence, draft portions of this manuscript, and prepare analysis scripts. The authors remain responsible for verification, technical claims, citations, and final text. This disclosure describes the assistance actually used and follows IEEE guidance on AI-generated text \cite{ieeeai}.
+OpenAI Codex, an AI coding agent, was used in this repository project to organize logs and manifests, draft and revise portions of the Introduction, Related Work, Testbed and Protocol, Results, Discussion, and Conclusion sections, and prepare or revise the Python analysis and LaTeX asset scripts. Earlier project work also used Codex to invoke authorized benchmark runs; this final revision did not run new benchmarks. All reported values in this manuscript were reconstructed from preserved logs by the repository scripts. The authors remain responsible for verification, technical claims, citations, and the final text. This disclosure identifies the AI system and the affected content in accordance with IEEE guidance on AI-generated text \cite{ieeeai}.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

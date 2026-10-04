@@ -13,10 +13,13 @@
 - Internal author instructions were removed from the manuscript. The PDF was rebuilt and visually checked in Letter, two-column format.
 - Final audit values: runtime-reported generation rates are 12.78 tok/s (notebook), 1.60 tok/s (Labrador), and 0.84 tok/s (RPC-2), computed as means of five individual JSON timing fields. The project-defined ratios remain 13.19, 1.65, and 0.87 tok/s in the derived CSV only.
 - Final PDF check: 3 pages, 612 x 792 points, tables and figure within columns, no clipped text observed.
+- The rate explanation now states that the table is the arithmetic mean of per-request `predicted_per_second` JSON fields; the separately derived project ratio is not called a runtime rate.
+- The selection text now says “explicit selection criteria” and does not imply preregistration or consecutive successes.
+- The AI disclosure names OpenAI Codex, identifies the affected manuscript sections and analysis scripts, and distinguishes earlier authorized benchmark invocation from this final no-benchmark revision.
 
 ## Must be resolved by authors
 
-- Replace the author-information placeholder with the confirmed author order, affiliation(s), and contact details.
+- Replace the author-information placeholder with an author-approved list, order, affiliation(s), and contact details. Git metadata alone is insufficient.
 - Select and confirm the ICCE 2027 track and keywords.
 - Verify every bibliographic record and whether all cited preprints are appropriate for the final paper.
 - Confirm the AI-use disclosure wording and any funding/conflict statements.
