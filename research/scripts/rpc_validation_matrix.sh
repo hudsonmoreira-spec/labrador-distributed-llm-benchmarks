@@ -102,10 +102,28 @@ rpc_log_size() {
     "wc -c < '$REMOTE_LOG_DIR/rpc-validation-${RUN_ID}-${h}.log' 2>/dev/null || echo 0" < /dev/null 2>/dev/null | tr -d '[:space:]'
 }
 
+rpc_health() {
+  local case_id=$1 n=$2 h
+  : > "$OUT/${case_id}.health.tsv"
+  for h in "${HOSTS[@]:0:n}"; do
+    if timeout 12s ssh -F /dev/null -o BatchMode=yes -o ConnectTimeout=5 -o ServerAliveInterval=3 -o ServerAliveCountMax=1 "caninos@$h" \
+      "p=\$(pgrep -o -x ggml-rpc-server || true); [ -n \"\$p\" ] && ss -ltn 2>/dev/null | grep -q ':50052 '" < /dev/null 2>/dev/null; then
+      printf '%s\t%s\thealthy\n' "$(date -u +%FT%TZ)" "$h" >> "$OUT/${case_id}.health.tsv"
+    else
+      printf '%s\t%s\tunhealthy\n' "$(date -u +%FT%TZ)" "$h" >> "$OUT/${case_id}.health.tsv"
+      return 1
+    fi
+  done
+}
+
 run_rpc() {
   local rep=$1 n=$2
   local case_id="rep-${rep}-rpc-${n}" log="$OUT/rep-${rep}-rpc-${n}.log" srv="$OUT/rep-${rep}-rpc-${n}.server.log" rpc h off end
   rpc=$(rpc_list "$n")
+  if ! rpc_health "$case_id" "$n"; then
+    echo healthcheck_failed > "$OUT/${case_id}.status"
+    return 0
+  fi
   remote_snapshot "${case_id}-before" "${HOSTS[*]:0:n}"
   : > "$OUT/${case_id}.offsets.tsv"
   for h in "${HOSTS[@]:0:n}"; do printf '%s\t%s\t%s\n' "$case_id" "$h" "$(rpc_log_size "$h")" >> "$OUT/${case_id}.offsets.tsv"; done

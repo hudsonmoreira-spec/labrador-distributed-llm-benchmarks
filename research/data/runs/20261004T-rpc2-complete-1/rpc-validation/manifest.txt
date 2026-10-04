@@ -1,0 +1,12 @@
+run_id=20261004T-rpc2-complete-1
+utc_start=2026-10-04T11:20:44Z
+git_commit=11b5b0ce5fab61095d120594f7563b6b518374b4
+llama_source_commit=68e79bd8cd6b7995f8fce8da252b249bbf237e63
+client_sha256=13b3c2e9b45a75615bf9ea11d1c98e182cfcd37e505c7aae9df2e332b5348d69
+model_sha256=b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c
+source_patch_sha256=58e8ea08a8052f4732fda28537ae90e870e587102a3a9b6e1f49b33f26ecde44
+workers=192.168.50.42 192.168.50.118 192.168.50.231 192.168.50.74 192.168.50.44 192.168.50.75
+arm_baseline_host=192.168.50.118
+parameters=ctx=512,threads=4,ngl=99,n_predict=32,prompt=Write\ exactly\ one\ short\ sentence\ about\ distributed\ computing.,temp=0,seed=42,ignore_eos=true,warmup=false,perf=true,verbose=true,timeout_s=240
+cache_policy=cold_process_per_case; no model-resident repeat
+utc_end=2026-10-04T11:29:41Z

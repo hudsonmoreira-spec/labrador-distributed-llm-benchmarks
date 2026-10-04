@@ -15,15 +15,15 @@ O piloto `20261004T-pilot2-instrumented-6` comprovou uso efetivo de dois workers
 ## Campanhas preservadas
 
 - `20261004T-matrix-validation-1`: 5 notebooks válidos; 5 ARM falharam pelo uso inexistente de `/usr/bin/time`; nenhum RPC foi coletado nessa tentativa.
-- `20261004T-matrix-validation-2`: 2 ARM válidos; processo interrompido antes do restante.
+- `20261004T-matrix-validation-2`: 5 ARM válidos com `command_exit=0`; os ensaios RPC subsequentes falharam na conexão e não são comparáveis.
 - `20261004T-matrix-validation-5`: 5 ARM válidos; dois workers falharam por indisponibilidade de `192.168.50.118`; não houve inferência válida.
 - `20261004T-matrix-validation-6`: 2 de 5 casos de dois workers válidos em terminal interativo; os demais foram interrompidos pelo controle de entrada do terminal.
-- `20261004T-matrix-validation-7`: caso incompleto: ambos receberam tensores e camadas, mas o timeout ocorreu no carregamento (`command_exit=137`) antes de tokens.
+- `20261004T-matrix-validation-7`: `rep-1` terminou por timeout durante carregamento (`command_exit=137`), `rep-2` foi interrompida (`124`), `rep-3` e `rep-4` concluíram normalmente (`command_exit=0`) com 32 tokens e operações registradas nos dois workers; `rep-5` abortou após transmitir 30 tokens (`command_exit=134`) e é inválida para métricas finais.
 
-As campanhas `-3` e `-4` registram falhas de ambiente/sandbox antes de inferência. O caso de oito workers não foi iniciado.
+As campanhas `-3` e `-4` registram falhas de ambiente/sandbox antes de inferência. A campanha `20261004T-rpc2-complete-1` completou as três repetições que faltavam, todas com health-check aprovado, `command_exit=0`, 32 tokens e operações nos dois workers. O CSV reconstruído está em [`research/data/derived/rpc-validation-20261004.csv`](../data/derived/rpc-validation-20261004.csv). O caso de oito workers não foi iniciado.
 
 ## Conclusão e lacunas
 
-**Observação:** há prova instrumental de distribuição efetiva em dois workers em um piloto controlado. **Hipótese:** a variabilidade atual parece relacionada à disponibilidade/estado dos servidores e ao modo de entrada do cliente; não permite atribuir um limite ao RPC. **Conclusão:** ainda não há cinco repetições válidas para notebook, Labrador e dois workers, nem base para comparar quatro, seis ou oito workers.
+**Observação:** há prova instrumental no piloto e cinco execuções RPC válidas, todas com camadas e operações nos dois workers. As médias das execuções válidas são: notebook 5,69 s de processo; ARM 43,86 s; RPC-2 168,67 s, com 31,08 s de prompt, 36,91 s de geração e 32 tokens gerados. **Hipótese:** o custo RPC observado é dominado por comunicação e execução distribuída; essa hipótese não deve ser tratada como causalidade sem novas medições. **Conclusão:** a comparação essencial A/B/C agora tem cinco execuções válidas por condição sob o protocolo controlado. Não há base nem necessidade, no escopo atual do artigo, para comparar quatro, seis ou oito workers.
 
-Próxima campanha: executar cliente sem TTY e com EOF explícito, validar saúde dos dois workers antes de cada caso, completar cinco repetições das três linhas de base e só então avançar para quatro, seis e piloto de oito. Não usar distributed-llama, modelo maior ou 16 nós nesta etapa.
+Próxima ação: consolidar médias, desvio-padrão amostral, mínimos, máximos e taxa de sucesso a partir do CSV, revisar o manuscrito e preservar as falhas como apêndice de validade. Não iniciar novos testes RPC nem ampliar para quatro, seis, oito ou 16 nós nesta etapa.
