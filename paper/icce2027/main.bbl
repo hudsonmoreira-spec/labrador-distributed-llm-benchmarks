@@ -24,19 +24,20 @@
 \bibitem{ggmlrpc2026}
 \BIBentryALTinterwordspacing
 {ggml-org}, ``llama.cpp rpc backend,'' GitHub repository documentation, 2026,
-  accessed 2026-10-04. [Online]. Available:
-  \url{https://github.com/ggml-org/llama.cpp/tree/master/tools/rpc}
+  source tree at commit 68e79bd8cd6b7995f8fce8da252b249bbf237e63, accessed
+  2026-10-04. [Online]. Available:
+  \url{https://github.com/ggml-org/llama.cpp/tree/68e79bd8cd6b7995f8fce8da252b249bbf237e63/tools/rpc}
 \BIBentrySTDinterwordspacing
 
 \bibitem{qwen25}
 \BIBentryALTinterwordspacing
 Qwen, A.~Yang, B.~Yang, B.~Zhang, B.~Hui, B.~Zheng, B.~Yu, C.~Li, D.~Liu,
   F.~Huang, H.~Wei, H.~Lin, J.~Yang, J.~Tu, J.~Zhang, J.~Yang, J.~Yang,
-  J.~Zhou, J.~Lin, K.~Dang, K.~Lu, K.~Bao, K.~Yang, L.~Yu, M.~Li, P.~Zhang,
-  Q.~Zhu, R.~Men, R.~Lin, T.~Li, T.~Tang, T.~Xia, X.~Ren, X.~Ren, Y.~Fan,
-  Y.~Su, Y.~Zhang, Y.~Wan, Y.~Liu, Z.~Cui, Z.~Zhang, and Z.~Qiu, ``Qwen2.5
-  technical report,'' \emph{arXiv preprint arXiv:2412.15115}, 2025. [Online].
-  Available: \url{https://arxiv.org/abs/2412.15115}
+  J.~Zhou, J.~Lin, K.~Dang, K.~Lu, K.~Bao, K.~Yang, L.~Yu, M.~Li, M.~Xue,
+  P.~Zhang, Q.~Zhu, R.~Men, R.~Lin, T.~Li, T.~Tang, T.~Xia, X.~Ren, X.~Ren,
+  Y.~Fan, Y.~Su, Y.~Zhang, Y.~Wan, Y.~Liu, Z.~Cui, Z.~Zhang, and Z.~Qiu,
+  ``Qwen2.5 technical report,'' \emph{arXiv preprint arXiv:2412.15115}, 2024.
+  [Online]. Available: \url{https://arxiv.org/abs/2412.15115}
 \BIBentrySTDinterwordspacing
 
 \bibitem{edgeshard}

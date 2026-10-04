@@ -9,8 +9,7 @@
 
 \title{Reproducible RPC Inference Across Resource-Constrained ARM Single-Board Computers}
 
-\author{\IEEEauthorblockN{Hudson Moreira}
-\IEEEauthorblockA{Affiliation and contact details to be confirmed by the authors}}
+\author{\IEEEauthorblockN{Author information pending confirmation}}
 
 \begin{document}
 \maketitle
@@ -35,9 +34,11 @@ The RPC backend used here is an experimental feature of \texttt{llama.cpp} that 
 
 \section{Testbed and Protocol}
 \subsection{Hardware and software}
-The testbed contains homogeneous Labrador ARM single-board computers connected by a switched 100 Mb/s Ethernet segment. The article uses pseudonymous roles: the notebook is the client; Labrador-A and Labrador-B are the two RPC workers. The internal raw artifacts retain the original operational identifiers, while this paper avoids publishing IP addresses and hostnames. The notebook executes the client, scheduler, local CPU backend, and any model portion not assigned remotely; it is not a passive controller.
+The testbed contains homogeneous Caninos Labrador 7 boards: ARM64 Cortex-A53, four cores, approximately 1.99 GiB RAM, Debian GNU/Linux 12, and Linux 6.1.76. The inventory records no swap on the boards. They were connected through the 	exttt{end0} Ethernet interface; the 100 Mb/s/full-duplex figure comes from dated kernel link-up records in the inventory, not from a throughput benchmark. The article uses pseudonymous roles: the notebook is the client; Labrador-A and Labrador-B are the two RPC workers. The internal raw artifacts retain the original operational identifiers, while this paper avoids publishing IP addresses and hostnames. The notebook executes the client, scheduler, local CPU backend, and any model portion not assigned remotely; it is not a passive controller.
 
-The model is Qwen2.5-1.5B-Instruct in Q5\_K\_M GGUF format (SHA-256 \texttt{b4666107...896f8c}). The fixed client binary has SHA-256 \texttt{13b3c2e9...348d69}. The ARM package was cross-compiled from \texttt{llama.cpp} commit \texttt{68e79bd8}, with RPC enabled, native CPU detection disabled, and OpenMP, CUDA, Vulkan, Metal, and RDMA disabled. The local compilation variant applies the preserved \texttt{-O0} patch to the common and RPC HTTP compilation targets. The package uses GCC 12 and a Debian 12 arm64 sysroot; the ABI audit reports maximum GLIBC 2.34 and GLIBCXX 3.4.30.
+The client log identifies a 12th Gen Intel Core i7-1255U notebook with 31,829 MiB visible memory, Linux x86\_64, one local CPU backend, and a four-thread llama.cpp compute pool. The log does not preserve the notebook distribution release or a separate worker-thread setting. The ARM server invocation and inventory do not provide a worker thread count; therefore, the client value must not be treated as a worker value. The present notebook state is Ubuntu 26.04 with 12 logical CPUs, but this post-hoc state is not asserted as the experimental OS.
+
+The model is Qwen2.5-1.5B-Instruct in Q5\_K\_M GGUF format (SHA-256 \texttt{b4666107...896f8c}). The fixed x86 client binary has SHA-256 \texttt{13b3c2e9...348d69}; its log reports GNU 15.2. The ARM package was cross-compiled from \texttt{llama.cpp} commit \texttt{68e79bd8}, with RPC enabled, native CPU detection disabled, and OpenMP, CUDA, Vulkan, Metal, and RDMA disabled. The local compilation variant applies the preserved \texttt{-O0} patch to the common and RPC HTTP compilation targets. The package uses GCC 12 and a Debian 12 arm64 sysroot; the ABI audit reports maximum GLIBC 2.34 and GLIBCXX 3.4.30. These are materially different x86 and ARM builds, so the comparison is an end-to-end configuration comparison rather than an isolated architecture effect.
 
 \subsection{Frozen workload}
 Every selected case used context 512, four threads, \texttt{-ngl 99}, a maximum of 32 output tokens, temperature zero, seed 42, \texttt{--ignore-eos}, and no warmup. The prompt was ``Write exactly one short sentence about distributed computing.'' The runtime reports 38 prompt tokens and, for every included case, 32 actually generated tokens. Each process was newly started; disk caches were not cleared, so the experiment is not a cold-disk benchmark. The process-time metric includes startup, model loading, RPC setup, prompt processing, generation, and residual work not separately instrumented.
@@ -46,9 +47,9 @@ Every selected case used context 512, four threads, \texttt{-ngl 99}, a maximum 
 The five notebook cases come from \texttt{matrix-validation-1}; the five isolated ARM cases come from \texttt{matrix-validation-5}; and the five RPC cases combine two valid cases from \texttt{matrix-validation-7} with three valid cases from \texttt{rpc2-complete-1}. These groups share model hash, client hash, runtime source commit, prompt, sampling parameters, and context. They do not form one consecutive campaign: the launcher and health-check procedure changed before the final three RPC cases, so campaign provenance is retained and the groups are not presented as uninterrupted repetitions.
 
 \section{Worker Participation Evidence}
-The RPC selection requires more than an open TCP port or a successful client exit. In each included RPC log, the client assigns layers 0--14 to Labrador-A and layers 15--27 to Labrador-B. The paired server-log slices contain graph computation and recomputation events, tensor transfers, and buffer allocation for both hosts. Each request records 38 evaluated prompt tokens, 32 predicted tokens, and normal completion with exit code zero. The earlier instrumented pilot independently established the same participation pattern; it is cited as validation evidence and was not repeated for this paper.
+The RPC selection requires more than an open TCP port or a successful client exit. Qwen2.5 has 28 repeating transformer blocks, represented by tensors \texttt{blk.0} through \texttt{blk.27}. The runtime also exposes logical layer 28 for the output stage; in the selected requests, layers 0--14 were assigned to Labrador-A and layers 15--28 to Labrador-B. Thus layer 28 is not a 29th transformer block: it covers the output-stage tensors such as \texttt{output\_norm} and \texttt{output}. The paired server-log slices contain distinct graph-compute, graph-recompute, and tensor-transfer events for both hosts. For a representative selected request, each host recorded 3 graph-compute events, 30 graph-recompute events, and 33 get-tensor events; set-tensor counts were 345 and 356. Event counts establish activity but do not imply identical computational work. Each request records 38 evaluated prompt tokens, 32 predicted tokens, and normal completion with exit code zero. The earlier instrumented pilot independently established the same participation pattern; it is cited as validation evidence and was not repeated for this paper.
 
-The selected cases have 426 relevant operation records in the Labrador-A server slice and 435 in Labrador-B under the reconstruction script's graph/tensor event rule. These counts are evidence of execution activity, not a claim that the two servers performed identical work. The notebook remains part of the computation, so the comparison is notebook-only versus one ARM board versus notebook-plus-two-workers, not one board versus an entirely remote cluster.
+The selected cases have 426 relevant operation records in the Labrador-A server slice and 435 in Labrador-B under the reconstruction script's broad graph/tensor event rule. These counts are evidence of execution activity, not a claim that the two servers performed identical work. The notebook remains part of the computation, so the comparison is notebook-only versus one ARM board versus notebook-plus-two-workers, not one board versus an entirely remote cluster.
 
 \section{Results}
 \begin{table}[t]
@@ -74,29 +75,49 @@ RPC--2 & \RPCN & \RPCProcMean & \RPCProcSD & \RPCProcMin & \RPCProcMax\\
 \addplot coordinates \ProcCoordinates;
 \end{axis}
 \end{tikzpicture}
-\caption{Mean process time for the five selected valid cases per condition. Error bars are reported in Table~\ref{tab:process}; the plot emphasizes scale, not statistical significance.}
+\caption{Mean process time for the five selected valid cases per condition. Standard deviations are tabulated in Table~\ref{tab:process}; the plot has no error bars and emphasizes scale, not statistical significance.}
 \label{fig:process}
 \end{figure}
 
 Table~\ref{tab:phases} separates the runtime's prompt and generation measurements. The reported generation rate is the runtime's predicted-token count divided by its generation time; it uses 32 generated tokens, not the process-time denominator. We do not call the remaining process time ``loading time'': loading and first-token timestamps were not independently instrumented.
 
 \begin{table}[t]
-\caption{Mean phase metrics for valid selected cases.}
+\caption{Mean phase metrics in seconds for valid selected cases. Runtime generation rate is the mean of the per-request \texttt{predicted\_per\_second} field.}
 \label{tab:phases}
 \centering
 \footnotesize
 \begin{tabular}{lrrrr}
 \toprule
-Condition & Prompt (s) & Generation (s) & Tokens & Runtime gen. (tok/s)\\
+Condition & Prompt & Gen. & Tok. & RT gen.\\
 \midrule
-Notebook & \NotebookPromptSec & \NotebookGenSec & 32 & \NotebookGenRate\\
-Labrador & \LabradorPromptSec & \LabradorGenSec & 32 & \LabradorGenRate\\
-RPC--2 & \RPCPromptSec & \RPCGenSec & 32 & \RPCGenRate\\
+Notebook & \NotebookPromptSec & \NotebookGenSec & 32 & \NotebookRuntimeGenRate\\
+Labrador & \LabradorPromptSec & \LabradorGenSec & 32 & \LabradorRuntimeGenRate\\
+RPC--2 & \RPCPromptSec & \RPCGenSec & 32 & \RPCRuntimeGenRate\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The five selected RPC cases all completed, giving a conditional success rate of 100\% for the selected set. This is not an operational reliability estimate: earlier attempts include connection failures, loading timeouts, terminal-input interruptions, and a process abort after partial generation. The full CSV preserves those denominators and classifications. The paper therefore reports performance conditioned on valid completion separately from the broader operational failure history.
+The table reports the mean of the runtime's per-request \texttt{predicted\_per\_second}; it is not 32 divided by the mean generation time. The reconstruction CSV also retains that derived ratio under a separate name, but it is not used as the runtime-reported rate. The fifteen selected cases are valid performance observations, not a reliability sample. The complete inventory contains 55 logged attempts across campaigns and conditions, with failures preserved as follows:
+
+\begin{table}[t]
+\caption{Failure inventory reconstructed from all scanned attempts; campaigns are not pooled into a single success denominator.}
+\label{tab:failures}
+\centering
+\footnotesize
+\begin{tabular}{lr}
+\toprule
+Failure class & Count\\
+\midrule
+Connection/startup & \FailureConnection\\
+Preparation/tool/host & \FailurePreparation\\
+Loading timeout/kill & \FailureLoading\\
+Incomplete timeout/interrupt & \FailureIncomplete\\
+Partial generation & \FailurePartial\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The five valid cases per condition were selected by predeclared status, complete phase metrics, actual token count, and worker evidence. They were not five consecutive successes. The failure table distinguishes preparation and host availability, connection/startup, loading timeout, incomplete termination, and partial generation; a zero exit code alone was not sufficient for inclusion. Because these attempts span different campaigns and launcher procedures, no single operational success percentage is reported here.
 
 \section{Discussion and Limitations}
 The observed result is specific and reproducible: in this configuration, RPC-2 is slower than the isolated Labrador board. The latency difference is consistent with a combination of remote graph execution, intermediate-state communication, serialization, and coordination. The dataset does not isolate those mechanisms; in particular, the study does not justify attributing the result exclusively to the 100 Mb/s link.
@@ -107,7 +128,7 @@ The experiment has one model, one short prompt, one quantization, one network se
 We presented a reproducible audit of a small ARM RPC inference setup. The raw logs establish that both RPC workers participated in each of five selected two-worker requests. Under the frozen Qwen2.5-1.5B Q5\_K\_M workload, RPC-2 required 168.67 s of process time on average, compared with 43.86 s for a single Labrador board. This is an observation about the tested configuration, not a universal statement about distributed inference. The released evidence and failure inventory provide a basis for future work on phase-level loading and communication measurements without overstating scalability.
 
 \section*{Acknowledgment and AI-use disclosure}
-The authors should confirm all author metadata, affiliations, and funding before submission. Generative-AI assistance was used to help organize repository evidence, draft portions of this manuscript, and prepare analysis code; the authors remain responsible for verification, technical claims, citations, and final text. This disclosure is included for author review in accordance with IEEE guidance on AI-generated text \cite{ieeeai}.
+Generative-AI tools were used to organize repository evidence, draft portions of this manuscript, and prepare analysis scripts. The authors remain responsible for verification, technical claims, citations, and final text. This disclosure describes the assistance actually used and follows IEEE guidance on AI-generated text \cite{ieeeai}.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

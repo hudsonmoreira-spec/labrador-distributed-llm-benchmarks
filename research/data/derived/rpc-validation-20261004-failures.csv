@@ -1,0 +1,9 @@
+failure_class,mode,count
+connection_failure,rpc2,15
+connection_or_startup_abort,rpc2,1
+incomplete_timeout_or_interrupt,rpc2,3
+loading_timeout_or_kill,rpc2,1
+partial_generation,arm,1
+partial_generation,rpc2,1
+preparation_missing_tool,arm,5
+preparation_or_host_unavailable,arm,5
