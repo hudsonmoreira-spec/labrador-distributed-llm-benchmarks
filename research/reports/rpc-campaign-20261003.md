@@ -2,7 +2,7 @@
 
 ## Resultado principal
 
-Na bancada homogênea, o cliente local conseguiu carregar e executar o Qwen2.5-1.5B-Instruct Q5_K_M com 2, 4 e 6 servidores RPC. Com 8 servidores, o cliente permaneceu em `Loading model...` e foi encerrado pelo timeout de 90 s (`exit 124`). Portanto, o limite observado nesta campanha é **6 hosts RPC para este modelo, configuração e cliente**; isso não prova que 6 seja um limite teórico do RPC.
+Na bancada homogênea, o cliente local conseguiu carregar e executar o Qwen2.5-1.5B-Instruct Q5_K_M com 2, 4 e 6 servidores RPC. Com 8 servidores, o cliente permaneceu em `Loading model...` e foi encerrado no ensaio confirmatório de 90 s (`exit 124`). Esse ensaio não é diretamente comparável aos casos concluídos em aproximadamente 128 s e não permite declarar um limite do RPC.
 
 | Hosts RPC | Resultado | Tempo real | Evidência de saída |
 |---:|---|---:|---|

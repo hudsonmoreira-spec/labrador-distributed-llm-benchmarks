@@ -1,6 +1,6 @@
 # Experimental progress
 
-Last updated: 2026-10-02
+Last updated: 2026-10-04
 
 ## Weighted status
 
@@ -19,6 +19,7 @@ The working weights are: inventory and selection (15%), runtime and environment 
 - The first GCC 15 package was rejected after ELF inspection because it required GLIBC 2.38/GLIBCXX 3.4.32; no node received it.
 - Final package `llama.cpp-68e79bd8-arm64-debian12-gcc12-noomp` passed ELF and ABI checks and has SHA-256 manifest `research/data/preparation/llama.cpp-68e79bd8-arm64-debian12-gcc12-noomp/SHA256SUMS`.
 - The final package was hash- and help-validated on node02 (`192.168.50.118`) and node04 (`192.168.50.140`). Local libraries resolve through `LD_LIBRARY_PATH`; system glibc remains in use.
+- A replicated RPC campaign completed 20/20 cases with the fixed local client and model: five notebook-only baselines and five repetitions each with 2, 4, and 6 RPC workers. Raw evidence is in `data/runs/20261004T-replicates-rpc-3/` and analysis is in `reports/rpc-replicates-20261004.md`.
 - The fixed pilot GGUF was identified on node03 (`192.168.50.129`) and copied to node02 with matching SHA-256 `b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c`.
 - A short single-node inference on node02 completed in 39.07 s with Q5_K_M, `-t 4`, `-tb 4`, context 512, temperature 0, seed 42; raw log and SHA-256 are in `data/runs/20261001T180524Z/pilot/`.
 - Distributed RPC attempts on node02 -> node04 accepted connections and logged `init_tensor`/`set_tensor` on node04, proving tensor work reached the second node. The 135 s attempt and the 600 s retry both timed out during model offload/loading; neither is a valid completed distributed inference result. Logs and hashes are preserved in `data/runs/20261001T180524Z/pilot/`.
@@ -31,8 +32,9 @@ The working weights are: inventory and selection (15%), runtime and environment 
 
 ## Not yet validated
 
-- Distributed RPC inference proving that one request uses both nodes.
+- Distributed RPC inference proving that one request uses tensors/layers on every listed worker; the current server logs prove connections but not effective tensor execution.
 - Frozen 1/2/4/8/16-node protocol and full matrix.
+- Separated load/prompt/generation timings and actual generated-token counts.
 - Scientific performance results and paper tables/figures.
 
 ## Failures and mitigations
@@ -46,4 +48,4 @@ The working weights are: inventory and selection (15%), runtime and environment 
 
 ## Next action
 
-Investigate the RPC offload timeout (without changing the fixed runtime/model), then repeat the distributed pilot only after a completed request is observed. Freeze the protocol only after completion and preserve the timeout as a failure condition.
+Add per-request worker telemetry and token/timing instrumentation without changing the fixed runtime/model. Establish the missing Labrador-only baseline, then repeat only the necessary configurations, including a uniform-timeout 8-worker case. Do not interpret the current 2/4/6 results as a universal RPC limit.

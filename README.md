@@ -4,7 +4,7 @@ Repository of experimental materials for studying distributed language-model inf
 
 ## Current status
 
-The material in [`research/`](research/) covers testbed characterization: inventory, lightweight diagnostics, preliminary node selection, and pilot planning. It does **not yet contain language-model inference benchmark results**.
+The material in [`research/`](research/) covers testbed characterization and reproducible RPC inference experiments. The completed replicated campaign is documented in [`research/reports/rpc-replicates-20261004.md`](research/reports/rpc-replicates-20261004.md). It validates completed requests for the notebook baseline and 2, 4, and 6 RPC workers, but does not yet prove per-worker tensor/layer participation or provide fully separated timing/token instrumentation.
 
 Results should be interpreted through three principles: execution traceability, separation of observation from interpretation, and reproducibility. Each run therefore preserves its raw data, UTC timestamps, and the scripts used to generate reports.
 
@@ -26,6 +26,8 @@ python3 scripts/build_reports.py
 ```
 
 The discovery scripts use read-only commands and `sudo -n`; they do not run inference, install packages, start services, or reboot nodes.
+
+The RPC replication artifacts are under [`research/data/runs/20261004T-replicates-rpc-3/`](research/data/runs/20261004T-replicates-rpc-3/). The run completed 20/20 cases: five notebook-only baselines and five repetitions each with 2, 4, and 6 RPC workers. The current evidence distinguishes a listening server from a worker proven to execute tensors for the same inference; the latter still requires additional instrumentation.
 
 ## Publication notice
 

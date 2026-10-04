@@ -8,3 +8,4 @@ client_sha256=13b3c2e9b45a75615bf9ea11d1c98e182cfcd37e505c7aae9df2e332b5348d69
 replicates=5
 timeout_s=240
 parameters=context=512,threads=4,ngl=99,prompt=Generate a short sentence about distributed computing.,tokens=64
+utc_end=2026-10-04T04:27:08Z

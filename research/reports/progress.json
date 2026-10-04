@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-02",
+  "updated_utc": "2026-10-04",
   "validated_percent": 40,
   "weights": {
     "inventory_and_selection": 15,
@@ -25,7 +25,7 @@
     "node04_build": "cross package hash/help passed"
   },
   "pilot": "single-node node02 validated; two-node RPC reached node04 init_tensor/set_tensor but timed out at 135s and 600s; not validated",
-  "matrix": "not_started",
+  "matrix": "replicated notebook baseline and 2/4/6-worker RPC cases completed 20/20; full matrix and effective-worker validation remain incomplete",
   "failure": "Native GCC/Clang builds failed on node01 and remain preserved. Ubuntu GCC15 cross output was rejected for GLIBC 2.38/GLIBCXX 3.4.32. Final cross build uses GCC12 plus Debian12 headers/libs and passes GLIBC<=2.34/GLIBCXX<=3.4.30. Optional UI download failed due controller DNS and is not used by the protocol.",
-  "next_action": "investigate fixed-protocol RPC offload timeout and repeat only after a completed two-node request"
+  "next_action": "add per-request worker telemetry plus actual-token and load/prompt/generation timing instrumentation; establish the Labrador-only baseline and use a uniform timeout for any 8-worker repeat"
 }
