@@ -4,13 +4,9 @@ import csv, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-RUNS = [
-    ROOT / "research/data/runs/20261004T-matrix-validation-1/rpc-validation",
-    ROOT / "research/data/runs/20261004T-matrix-validation-5/rpc-validation",
-    ROOT / "research/data/runs/20261004T-matrix-validation-7/rpc-validation",
-    ROOT / "research/data/runs/20261004T-rpc2-complete-1/rpc-validation",
-]
+RUNS = sorted((ROOT / "research/data/runs").glob("*/rpc-validation"))
 OUT = ROOT / "research/data/derived/rpc-validation-20261004.csv"
+SUMMARY = ROOT / "research/data/derived/rpc-validation-20261004-summary.csv"
 
 def number(value):
     if not value:
@@ -41,6 +37,13 @@ def cases():
                 mode = "rpc2"
             else:
                 continue
+            run_name = run.parent.name
+            selected = (
+                (run_name == "20261004T-matrix-validation-1" and mode == "notebook") or
+                (run_name == "20261004T-matrix-validation-5" and mode == "arm") or
+                (run_name == "20261004T-matrix-validation-7" and case in {"rep-3-rpc-2", "rep-4-rpc-2"}) or
+                (run_name == "20261004T-rpc2-complete-1" and mode == "rpc2")
+            )
             prompt_ms, prompt_tokens = metric(text, "prompt eval time")
             gen_ms, generated = metric(text, r"(?<!prompt )eval time")
             total_ms, total_tokens = metric(text, "total time")
@@ -54,7 +57,7 @@ def cases():
             graph = len(re.findall(r"\[graph_(?:compute|recompute)\]", server_text))
             valid = status == "valid" and exit_code == 0 and generated != ""
             yield {
-                "run": run.parent.name, "case": case, "mode": mode,
+                "run": run_name, "case": case, "mode": mode, "selected": int(selected),
                 "status": status, "valid": int(valid), "exit_code": exit_code,
                 "real_s": real, "prompt_ms": prompt_ms, "prompt_tokens": prompt_tokens,
                 "generation_ms": gen_ms, "generated_tokens": generated,
@@ -69,8 +72,27 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     fields = list(rows[0]) if rows else []
     with OUT.open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fields)
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         writer.writeheader(); writer.writerows(rows)
+    import statistics
+    summary_fields = ["condition", "n_attempts_included", "n_valid", "success_rate", "metric", "mean", "sample_sd", "minimum", "maximum"]
+    summary_rows = []
+    for condition in ("notebook", "arm", "rpc2"):
+        selected = [r for r in rows if r["mode"] == condition and r["selected"] == 1]
+        valid = [r for r in selected if r["valid"] == 1]
+        for metric_name in ("real_s", "prompt_ms", "generation_ms", "total_ms", "generated_tokens"):
+            values = [float(r[metric_name]) for r in valid if r[metric_name] != ""]
+            summary_rows.append({
+                "condition": condition, "n_attempts_included": len(selected),
+                "n_valid": len(valid), "success_rate": len(valid) / len(selected) if selected else "",
+                "metric": metric_name,
+                "mean": statistics.mean(values) if values else "",
+                "sample_sd": statistics.stdev(values) if len(values) > 1 else "",
+                "minimum": min(values) if values else "", "maximum": max(values) if values else "",
+            })
+    with SUMMARY.open("w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=summary_fields, lineterminator="\n")
+        writer.writeheader(); writer.writerows(summary_rows)
     print(OUT)
 
 if __name__ == "__main__":

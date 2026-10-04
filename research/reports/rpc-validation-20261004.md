@@ -1,6 +1,6 @@
 # Validação RPC — 2026-10-04
 
-Status: campanha interrompida antes da matriz completa. Resultados incompletos não são válidos para comparação.
+Status: conjunto A/B/C fechado para o recorte do artigo. A matriz ampla histórica não foi continuada; resultados incompletos permanecem preservados e fora dos agregados.
 
 ## Protocolo congelado
 
@@ -20,10 +20,12 @@ O piloto `20261004T-pilot2-instrumented-6` comprovou uso efetivo de dois workers
 - `20261004T-matrix-validation-6`: 2 de 5 casos de dois workers válidos em terminal interativo; os demais foram interrompidos pelo controle de entrada do terminal.
 - `20261004T-matrix-validation-7`: `rep-1` terminou por timeout durante carregamento (`command_exit=137`), `rep-2` foi interrompida (`124`), `rep-3` e `rep-4` concluíram normalmente (`command_exit=0`) com 32 tokens e operações registradas nos dois workers; `rep-5` abortou após transmitir 30 tokens (`command_exit=134`) e é inválida para métricas finais.
 
-As campanhas `-3` e `-4` registram falhas de ambiente/sandbox antes de inferência. A campanha `20261004T-rpc2-complete-1` completou as três repetições que faltavam, todas com health-check aprovado, `command_exit=0`, 32 tokens e operações nos dois workers. O CSV reconstruído está em [`research/data/derived/rpc-validation-20261004.csv`](../data/derived/rpc-validation-20261004.csv). O caso de oito workers não foi iniciado.
+As campanhas `-3` e `-4` registram falhas de ambiente/sandbox antes de inferência. A campanha `20261004T-rpc2-complete-1` completou as três repetições que faltavam, todas com health-check aprovado, `command_exit=0`, 32 tokens e operações nos dois workers. O CSV reconstruído está em [`research/data/derived/rpc-validation-20261004.csv`](../data/derived/rpc-validation-20261004.csv), e o resumo estatístico em `rpc-validation-20261004-summary.csv`. O caso de oito workers não foi iniciado.
+
+A campanha histórica `20261004T-replicates-rpc-3` concluiu 20/20 processos, mas sua instrumentação não comprovou execução efetiva em cada worker; ela permanece como contexto histórico e não é misturada ao conjunto do artigo. As classes de falha auditadas são: preparação (`/usr/bin/time` ausente no ARM em `matrix-validation-1`), conexão (worker RPC indisponível em `matrix-validation-5`), carregamento/timeout (`matrix-validation-7/rep-1`), execução interativa ou interrompida externamente (`rep-2` e `matrix-validation-6`) e encerramento anormal após geração parcial (`matrix-validation-7/rep-5`). O código de saída zero só foi aceito quando também havia métricas de fase, contagem de tokens e evidência dos dois servidores.
 
 ## Conclusão e lacunas
 
 **Observação:** há prova instrumental no piloto e cinco execuções RPC válidas, todas com camadas e operações nos dois workers. As médias das execuções válidas são: notebook 5,69 s de processo; ARM 43,86 s; RPC-2 168,67 s, com 31,08 s de prompt, 36,91 s de geração e 32 tokens gerados. **Hipótese:** o custo RPC observado é dominado por comunicação e execução distribuída; essa hipótese não deve ser tratada como causalidade sem novas medições. **Conclusão:** a comparação essencial A/B/C agora tem cinco execuções válidas por condição sob o protocolo controlado. Não há base nem necessidade, no escopo atual do artigo, para comparar quatro, seis ou oito workers.
 
-Próxima ação: consolidar médias, desvio-padrão amostral, mínimos, máximos e taxa de sucesso a partir do CSV, revisar o manuscrito e preservar as falhas como apêndice de validade. Não iniciar novos testes RPC nem ampliar para quatro, seis, oito ou 16 nós nesta etapa.
+O conjunto selecionado para análise tem cinco tentativas por condição e taxa de sucesso condicionada de 5/5 em cada condição. Isso não é a taxa operacional de todas as tentativas: o inventário completo inclui falhas de preparação, conexão, carregamento, interação e encerramento. Não iniciar novos testes RPC nem ampliar para quatro, seis, oito ou 16 nós nesta etapa; a próxima ação é a revisão dos autores do manuscrito em `paper/icce2027/`.

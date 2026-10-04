@@ -1,0 +1,30 @@
+diff --git a/common/CMakeLists.txt b/common/CMakeLists.txt
+index 2b307c59d..32c7aeeb5 100644
+--- a/common/CMakeLists.txt
++++ b/common/CMakeLists.txt
+@@ -127,6 +127,8 @@ add_library(${TARGET}
+     jinja/caps.h
+     )
+
++target_compile_options(${TARGET} PRIVATE -O0)
++
+ set_target_properties(${TARGET} PROPERTIES
+     VERSION ${LLAMA_VERSION_BASE}
+     SOVERSION ${LLAMA_VERSION_MAJOR}
+diff --git a/vendor/cpp-httplib/CMakeLists.txt b/vendor/cpp-httplib/CMakeLists.txt
+index 3c6b39806..31fafe579 100644
+--- a/vendor/cpp-httplib/CMakeLists.txt
++++ b/vendor/cpp-httplib/CMakeLists.txt
+@@ -9,6 +9,12 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+ add_library(${TARGET} STATIC httplib.cpp httplib.h)
+
++# The ARM64 Clang 14 toolchain on the Labrador image crashes while compiling
++# this large third-party translation unit at optimization levels above O0.
++# Keep the workaround local to this dependency; the llama.cpp targets remain
++# optimized and the source commit is unchanged.
++set_source_files_properties(httplib.cpp PROPERTIES COMPILE_OPTIONS "-O0")
++
+ add_library(vendor::cpp-httplib ALIAS ${TARGET})
+
+ # disable warnings in 3rd party code

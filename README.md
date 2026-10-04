@@ -33,6 +33,8 @@ The RPC replication artifacts are under [`research/data/runs/20261004T-replicate
 
 The current validation artifacts are under `research/data/runs/20261004T-pilot2-instrumented-6/`, `research/data/runs/20261004T-matrix-validation-{1..7}/`, and `research/data/runs/20261004T-rpc2-complete-1/`. The launcher now uses EOF explicitly and performs a two-worker health-check before each RPC case. Incomplete executions are not treated as valid results.
 
+The ICCE 2027 candidate is under [`paper/icce2027/`](paper/icce2027/), including the LaTeX source, bibliography, compiled PDF, reproducible analysis/asset scripts, build recipe, requirements audit, and author-review checklist. The manuscript is intentionally limited to notebook, isolated Labrador, and two-worker RPC conditions.
+
 ## Publication notice
 
 The artifacts are preserved for auditability, but contain private-network addresses, hostnames, machine identifiers, and known SSH host keys. Before making the repository public or attaching it to a paper, apply the sanitization described in [`docs/ieee/publication-checklist.md`](docs/ieee/publication-checklist.md).

@@ -1,6 +1,13 @@
 {
   "updated_utc": "2026-10-04",
   "validated_percent": 40,
+  "article_scope": {
+    "status": "candidate_ready_for_author_review",
+    "valid_cases_per_condition": 5,
+    "conditions": ["notebook", "labrador", "rpc2"],
+    "larger_worker_counts_in_scope": false,
+    "manuscript": "paper/icce2027/main.pdf"
+  },
   "weights": {
     "inventory_and_selection": 15,
     "runtime_and_environment_preparation": 20,
@@ -25,7 +32,7 @@
     "node04_build": "cross package hash/help passed"
   },
   "pilot": "single-node node02 validated; two-node RPC reached node04 init_tensor/set_tensor but timed out at 135s and 600s; not validated",
-  "matrix": "replicated notebook baseline and 2/4/6-worker RPC cases completed 20/20; full matrix and effective-worker validation remain incomplete",
+  "matrix": "broad historical matrix is preserved; article dataset has five valid notebook, five valid Labrador, and five valid RPC-2 cases with effective-worker evidence",
   "failure": "Native GCC/Clang builds failed on node01 and remain preserved. Ubuntu GCC15 cross output was rejected for GLIBC 2.38/GLIBCXX 3.4.32. Final cross build uses GCC12 plus Debian12 headers/libs and passes GLIBC<=2.34/GLIBCXX<=3.4.30. Optional UI download failed due controller DNS and is not used by the protocol.",
-  "next_action": "add per-request worker telemetry plus actual-token and load/prompt/generation timing instrumentation; establish the Labrador-only baseline and use a uniform timeout for any 8-worker repeat"
+  "next_action": "author review of the ICCE 2027 candidate, metadata, citations, AI-use disclosure, and sanitized-public-artifact checklist"
 }

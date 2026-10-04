@@ -24,18 +24,24 @@ The working weights are: inventory and selection (15%), runtime and environment 
 - A short single-node inference on node02 completed in 39.07 s with Q5_K_M, `-t 4`, `-tb 4`, context 512, temperature 0, seed 42; raw log and SHA-256 are in `data/runs/20261001T180524Z/pilot/`.
 - Distributed RPC attempts on node02 -> node04 accepted connections and logged `init_tensor`/`set_tensor` on node04, proving tensor work reached the second node. The 135 s attempt and the 600 s retry both timed out during model offload/loading; neither is a valid completed distributed inference result. Logs and hashes are preserved in `data/runs/20261001T180524Z/pilot/`.
 
+## Article-scope status
+
+- The bounded ICCE 2027 article dataset is closed: five valid cases each for notebook-only, isolated Labrador, and notebook-plus-two-RPC-workers.
+- The full 4/6/8/16-worker research matrix is intentionally out of scope for the article and remains unvalidated.
+- The candidate manuscript, PDF, source, bibliography, generated tables, audit CSV, build patch, and author-pending checklist are under `paper/icce2027/`.
+
 ## In progress
 
 - The node01 native build line is abandoned for future preparation after the SSH drop; it was not used for the final artifact and was not restarted.
 - Model transfer to node04 was abandoned because the RPC worker does not need the GGUF; invalid partials were removed and node04 was left without a model.
-- Two-node RPC pilot is attempted but not validated as a completed request; no benchmark result is reported.
+- The selected two-worker RPC cases are completed and validated with per-worker layer and graph-operation evidence. Earlier failed attempts remain historical evidence.
 
 ## Not yet validated
 
-- Distributed RPC inference proving that one request uses tensors/layers on every listed worker; the current server logs prove connections but not effective tensor execution.
-- Frozen 1/2/4/8/16-node protocol and full matrix.
-- Separated load/prompt/generation timings and actual generated-token counts.
-- Scientific performance results and paper tables/figures.
+- Direct proof of effective two-worker execution is complete for the selected RPC cases; larger worker counts remain open.
+- Full 1/2/4/6/8/16-node matrix remains out of scope for the current article.
+- Direct loading and time-to-first-token instrumentation remain absent; prompt, generation, process time, and actual token counts are available.
+- Manuscript author metadata, final track, and final IEEE submission checks remain pending.
 
 ## Failures and mitigations
 
@@ -48,4 +54,4 @@ The working weights are: inventory and selection (15%), runtime and environment 
 
 ## Next action
 
-Add per-request worker telemetry and token/timing instrumentation without changing the fixed runtime/model. Establish the missing Labrador-only baseline, then repeat only the necessary configurations, including a uniform-timeout 8-worker case. Do not interpret the current 2/4/6 results as a universal RPC limit.
+Author review of `paper/icce2027/main.pdf`, metadata, citations, AI-use disclosure, and the public-data sanitization checklist. Do not start a new benchmark matrix for this article.
