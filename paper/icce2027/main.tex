@@ -9,7 +9,11 @@
 
 \title{Reproducible RPC Inference Across Resource-Constrained ARM Single-Board Computers}
 
-\author{\IEEEauthorblockN{Author information pending confirmation}}
+\author{
+\IEEEauthorblockN{Hudson Moreira\IEEEauthorrefmark{1}, Marcelo Knörich Zuffo\IEEEauthorrefmark{2}}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Master's program, Escola Politécnica, University of São Paulo, São Paulo, Brazil\\
+\IEEEauthorrefmark{2}Department of Electronic Systems Engineering, Escola Politécnica, University of São Paulo, São Paulo, Brazil}
+}
 
 \begin{document}
 \maketitle
@@ -34,7 +38,7 @@ The RPC backend used here is an experimental feature of \texttt{llama.cpp} that 
 
 \section{Testbed and Protocol}
 \subsection{Hardware and software}
-The testbed contains homogeneous Caninos Labrador 7 boards: ARM64 Cortex-A53, four cores, approximately 1.99 GiB RAM, Debian GNU/Linux 12, and Linux 6.1.76. The inventory records no swap on the boards. They were connected through the 	exttt{end0} Ethernet interface; the 100 Mb/s/full-duplex figure comes from dated kernel link-up records in the inventory, not from a throughput benchmark. The article uses pseudonymous roles: the notebook is the client; Labrador-A and Labrador-B are the two RPC workers. The internal raw artifacts retain the original operational identifiers, while this paper avoids publishing IP addresses and hostnames. The notebook executes the client, scheduler, local CPU backend, and any model portion not assigned remotely; it is not a passive controller.
+The testbed contains homogeneous Caninos Labrador 7 boards: ARM64 Cortex-A53, four cores, approximately 1.99 GiB RAM, Debian GNU/Linux 12, and Linux 6.1.76. The inventory records no swap on the boards. They were connected through the \texttt{end0} Ethernet interface; the 100 Mb/s/full-duplex figure comes from dated kernel link-up records in the inventory, not from a throughput benchmark. The article uses pseudonymous roles: the notebook is the client; Labrador-A and Labrador-B are the two RPC workers. The internal raw artifacts retain the original operational identifiers, while this paper avoids publishing IP addresses and hostnames. The notebook executes the client, scheduler, local CPU backend, and any model portion not assigned remotely; it is not a passive controller.
 
 The client log identifies a 12th Gen Intel Core i7-1255U notebook with 31,829 MiB visible memory, Linux x86\_64, one local CPU backend, and a four-thread llama.cpp compute pool. The log does not preserve the notebook distribution release or a separate worker-thread setting. The ARM server invocation and inventory do not provide a worker thread count; therefore, the client value must not be treated as a worker value. The present notebook state is Ubuntu 26.04 with 12 logical CPUs, but this post-hoc state is not asserted as the experimental OS.
 
@@ -128,7 +132,7 @@ The experiment has one model, one short prompt, one quantization, one network se
 We presented a reproducible audit of a small ARM RPC inference setup. The raw logs establish that both RPC workers participated in each of five selected two-worker requests. Under the frozen Qwen2.5-1.5B Q5\_K\_M workload, RPC-2 required 168.67 s of process time on average, compared with 43.86 s for a single Labrador board. This is an observation about the tested configuration, not a universal statement about distributed inference. The released evidence and failure inventory provide a basis for future work on phase-level loading and communication measurements without overstating scalability.
 
 \section*{Acknowledgment and AI-use disclosure}
-OpenAI Codex, an AI coding agent, was used in this repository project to organize logs and manifests, draft and revise portions of the Introduction, Related Work, Testbed and Protocol, Results, Discussion, and Conclusion sections, and prepare or revise the Python analysis and LaTeX asset scripts. Earlier project work also used Codex to invoke authorized benchmark runs; this final revision did not run new benchmarks. All reported values in this manuscript were reconstructed from preserved logs by the repository scripts. The authors remain responsible for verification, technical claims, citations, and the final text. This disclosure identifies the AI system and the affected content in accordance with IEEE guidance on AI-generated text \cite{ieeeai}.
+OpenAI Codex, an AI coding agent, was used to organize logs and manifests, draft and revise portions of the Introduction, Related Work, Testbed and Protocol, Results, Discussion, and Conclusion sections, and prepare or revise the Python analysis and LaTeX asset scripts. All reported values in this manuscript were reconstructed from preserved logs by the repository scripts. The authors remain responsible for verification, technical claims, citations, and the final text. This disclosure identifies the AI system and the affected content in accordance with IEEE guidance on AI-generated text \cite{ieeeai}.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

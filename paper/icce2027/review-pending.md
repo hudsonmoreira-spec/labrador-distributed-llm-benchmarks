@@ -15,14 +15,15 @@
 - Final PDF check: 3 pages, 612 x 792 points, tables and figure within columns, no clipped text observed.
 - The rate explanation now states that the table is the arithmetic mean of per-request `predicted_per_second` JSON fields; the separately derived project ratio is not called a runtime rate.
 - The selection text now says “explicit selection criteria” and does not imply preregistration or consecutive successes.
-- The AI disclosure names OpenAI Codex, identifies the affected manuscript sections and analysis scripts, and distinguishes earlier authorized benchmark invocation from this final no-benchmark revision.
+- The AI disclosure names OpenAI Codex and identifies its role in organizing evidence, drafting and revising manuscript sections, and preparing the analysis and LaTeX scripts.
+- The proposed author block now lists Hudson Moreira first and Marcelo Knörich Zuffo second, with conservative affiliations based on the available records. Coauthorship, order, exact Hudson affiliation, and article contact addresses remain pending author confirmation.
 
 ## Must be resolved by authors
 
-- Replace the author-information placeholder with an author-approved list, order, affiliation(s), and contact details. Git metadata alone is insufficient.
+- Obtain Professor Zuffo's explicit consent to coauthorship and the proposed order; confirm Hudson's exact official affiliation and both authors' article contact addresses. The proposed names are present, but the manuscript is not submission-ready while these fields remain pending.
 - Select and confirm the ICCE 2027 track and keywords.
 - Verify every bibliographic record and whether all cited preprints are appropriate for the final paper.
-- Confirm the AI-use disclosure wording and any funding/conflict statements.
+- Confirm the AI-use disclosure wording and any funding/conflict statements with the authors.
 - Recheck the official deadline and PDF eXpress identifier immediately before submission.
 - Produce a sanitized public artifact; do not publish raw IP addresses, hostnames, machine IDs, or user paths.
 - Decide whether the internal ARM package and model redistribution licenses permit inclusion or only provide hashes and reproduction instructions.
