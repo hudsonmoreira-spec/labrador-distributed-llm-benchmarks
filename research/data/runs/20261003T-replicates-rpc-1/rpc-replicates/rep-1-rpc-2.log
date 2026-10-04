@@ -1,0 +1,55 @@
+case=rep-1-rpc-2
+rpc_hosts=2
+started_utc=2026-10-04T02:51:28Z
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\[0m
+|/[New LWP 1957521]
+[New LWP 1957519]
+[New LWP 1957443]
+[New LWP 1957442]
+[New LWP 1957441]
+[New LWP 1957440]
+[New LWP 1957439]
+[New LWP 1957438]
+[New LWP 1957437]
+[New LWP 1957436]
+[New LWP 1957435]
+[New LWP 1957434]
+[New LWP 1957433]
+[New LWP 1957432]
+[New LWP 1957431]
+[New LWP 1957430]
+[New LWP 1957429]
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+__syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+⚠️ warning: 56	../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S: No such file or directory
+#0  __syscall_cancel_arch () at ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S:56
+56	in ../sysdeps/unix/sysv/linux/x86_64/syscall_cancel.S
+#1  0x000071c0766a039c in __internal_syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=<optimized out>, a5=0, a6=0, nr=61) at ./nptl/cancellation.c:49
+⚠️ warning: 49	./nptl/cancellation.c: No such file or directory
+#2  __syscall_cancel (a1=<optimized out>, a2=<optimized out>, a3=<optimized out>, a4=<optimized out>, a5=a5@entry=0, a6=a6@entry=0, nr=61) at ./nptl/cancellation.c:75
+75	in ./nptl/cancellation.c
+#3  0x000071c07671cacf in __GI___wait4 (pid=<optimized out>, stat_loc=<optimized out>, options=<optimized out>, usage=<optimized out>) at ../sysdeps/unix/sysv/linux/wait4.c:30
+⚠️ warning: 30	../sysdeps/unix/sysv/linux/wait4.c: No such file or directory
+#4  0x000071c075d41773 in ggml_print_backtrace () from /home/hudymoreira/labrador-distributed-llm-benchmarks/research/runtime/llama.cpp/build-labrador-rpc/bin/libggml-base.so.0
+#5  0x000071c075d569ef in ggml_uncaught_exception() () from /home/hudymoreira/labrador-distributed-llm-benchmarks/research/runtime/llama.cpp/build-labrador-rpc/bin/libggml-base.so.0
+#6  0x000071c076ac364a in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#7  0x000071c076aabc6c in std::terminate() () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x00005920e3c7e663 in std::thread::~thread() ()
+#9  0x000071c076647e62 in __cxa_finalize (d=0x71c075ce2e00) at ./stdlib/cxa_finalize.c:97
+⚠️ warning: 97	./stdlib/cxa_finalize.c: No such file or directory
+#10 0x000071c07561fc77 in __do_global_dtors_aux () from /home/hudymoreira/labrador-distributed-llm-benchmarks/research/runtime/llama.cpp/build-labrador-rpc/bin/libllama-common.so.0
+#11 0x00007ffcefc61f60 in ?? ()
+#12 0x000071c0776e40d2 in _dl_call_fini (closure_map=0x71c077538b90) at ./elf/dl-call_fini.c:43
+⚠️ warning: 43	./elf/dl-call_fini.c: No such file or directory
+-Backtrace stopped: frame did not save the PC
+[Inferior 1 (process 1957424) detached]
+terminate called without an active exception

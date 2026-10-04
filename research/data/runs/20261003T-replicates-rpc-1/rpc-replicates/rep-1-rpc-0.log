@@ -1,0 +1,42 @@
+case=rep-1-rpc-0
+rpc_hosts=0
+started_utc=2026-10-04T02:51:24Z
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\ 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11341-68e79bd8c
+model      : /home/hudymoreira/labrador-distributed-llm-benchmarks/models/qwen2.5-1.5b-instruct-q5_k_m/qwen2.5-1.5b-instruct-q5_k_m.gguf
+ftype      : Q5_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Generate a short sentence about distributed computing.
+Distributed computing distributes tasks across multiple computers to perform complex computations.
+
+[ Prompt: 30.1 t/s | Generation: 12.6 t/s ]
+
+> 
+
+Exiting...
+real 4.31
+user 10.13
+sys 0.37
+command_exit=0
+finished_utc=2026-10-04T02:51:28Z

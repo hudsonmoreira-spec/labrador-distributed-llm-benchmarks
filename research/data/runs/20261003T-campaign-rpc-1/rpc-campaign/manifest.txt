@@ -1,0 +1,9 @@
+run_id=20261003T-campaign-rpc-1
+utc_start=2026-10-04T02:31:50Z
+client=/home/hudymoreira/labrador-distributed-llm-benchmarks/research/runtime/llama.cpp/build-labrador-rpc/bin/llama-cli
+client_commit=68e79bd8cd6b7995f8fce8da252b249bbf237e63
+model=/home/hudymoreira/labrador-distributed-llm-benchmarks/models/qwen2.5-1.5b-instruct-q5_k_m/qwen2.5-1.5b-instruct-q5_k_m.gguf
+b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c  /home/hudymoreira/labrador-distributed-llm-benchmarks/models/qwen2.5-1.5b-instruct-q5_k_m/qwen2.5-1.5b-instruct-q5_k_m.gguf
+client_sha256=13b3c2e9b45a75615bf9ea11d1c98e182cfcd37e505c7aae9df2e332b5348d69
+timeout_s=300
+parameters=context=512,threads=4,ngl=99,prompt=Hi.,steps=1
