@@ -1,0 +1,1102 @@
+
+--- host=192.168.50.42 offset=118290 end=153605 ---
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_alignment] device: 0, alignment: 32
+[get_max_size] device: 0, max_size: 18446744073709551615
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[alloc_buffer] device: 0, size: 499777536 -> remote_ptr: 5566056580, remote_size: 499777536
+[buffer_get_base] remote_ptr: 5566056580
+[init_tensor] buffer: 0x5566056580, data: 0x7f8ef32c40
+[init_tensor] buffer: 0x5566056580, data: 0x7f90fb0c40
+[init_tensor] buffer: 0x5566056580, data: 0x7f93022040
+[init_tensor] buffer: 0x5566056580, data: 0x7f94ed5040
+[init_tensor] buffer: 0x5566056580, data: 0x7f96d88040
+[init_tensor] buffer: 0x5566056580, data: 0x7f98c47c40
+[init_tensor] buffer: 0x5566056580, data: 0x7f9acc5c40
+[init_tensor] buffer: 0x5566056580, data: 0x7f9cd43c40
+[init_tensor] buffer: 0x5566056580, data: 0x7f9edc1c40
+[init_tensor] buffer: 0x5566056580, data: 0x7fa0e3fc40
+[init_tensor] buffer: 0x5566056580, data: 0x7fa2ebdc40
+[init_tensor] buffer: 0x5566056580, data: 0x7fa4f2f040
+[init_tensor] buffer: 0x5566056580, data: 0x7fa6de2040
+[init_tensor] buffer: 0x5566056580, data: 0x7fa8ca1c40
+[init_tensor] buffer: 0x5566056580, data: 0x7faad13040
+[set_tensor] buffer: 0x5566056580, data: 0x7f8e27f040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f8e280840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f8e40c840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f8e44e840, offset: 0, size: 322560
+[set_tensor] buffer: 0x5566056580, data: 0x7f8e49d440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f8e49ec40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f8e49f040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f8e49f440, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f8e62b440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f8e62cc40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f8ef32c40, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5566056580, data: 0x7f8f9f7040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f902fd040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f902fe840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f9048a840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f904cc840, offset: 0, size: 322560
+[set_tensor] buffer: 0x5566056580, data: 0x7f9051b440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9051cc40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f9051d040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f9051d440, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f906a9440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f906aac40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f90fb0c40, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5566056580, data: 0x7f91a75040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f9237b040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9237c840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f92508840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f9254a840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f9258c840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9258e040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f9258e440, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f9258e840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f9271a840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9271c040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f93022040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f93928040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f9422e040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9422f840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f943bb840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f943fd840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f9443f840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f94441040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f94441440, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f94441840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f945cd840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f945cf040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f94ed5040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f957db040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f960e1040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f960e2840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f9626e840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f962b0840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f962f2840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f962f4040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f962f4440, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f962f4840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f96480840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f96482040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f96d88040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f9768e040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f97f94040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f97f95840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f98121840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f98163840, offset: 0, size: 322560
+[set_tensor] buffer: 0x5566056580, data: 0x7f981b2440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f981b3c40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f981b4040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f981b4440, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f98340440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f98341c40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f98c47c40, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5566056580, data: 0x7f9970c040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f9a012040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9a013840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f9a19f840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f9a1e1840, offset: 0, size: 322560
+[set_tensor] buffer: 0x5566056580, data: 0x7f9a230440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9a231c40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f9a232040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f9a232440, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f9a3be440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9a3bfc40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f9acc5c40, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5566056580, data: 0x7f9b78a040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f9c090040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9c091840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f9c21d840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f9c25f840, offset: 0, size: 322560
+[set_tensor] buffer: 0x5566056580, data: 0x7f9c2ae440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9c2afc40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f9c2b0040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f9c2b0440, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f9c43c440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9c43dc40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f9cd43c40, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5566056580, data: 0x7f9d808040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f9e10e040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9e10f840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f9e29b840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7f9e2dd840, offset: 0, size: 322560
+[set_tensor] buffer: 0x5566056580, data: 0x7f9e32c440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9e32dc40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f9e32e040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7f9e32e440, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7f9e4ba440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7f9e4bbc40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7f9edc1c40, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5566056580, data: 0x7f9f886040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa018c040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa018d840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7fa0319840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7fa035b840, offset: 0, size: 322560
+[set_tensor] buffer: 0x5566056580, data: 0x7fa03aa440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa03abc40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7fa03ac040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7fa03ac440, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7fa0538440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa0539c40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa0e3fc40, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5566056580, data: 0x7fa1904040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa220a040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa220b840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7fa2397840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7fa23d9840, offset: 0, size: 322560
+[set_tensor] buffer: 0x5566056580, data: 0x7fa2428440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa2429c40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7fa242a040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7fa242a440, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7fa25b6440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa25b7c40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa2ebdc40, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5566056580, data: 0x7fa3982040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa4288040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa4289840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7fa4415840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7fa4457840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7fa4499840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa449b040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7fa449b440, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7fa449b840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7fa4627840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa4629040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa4f2f040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa5835040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa613b040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa613c840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7fa62c8840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7fa630a840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7fa634c840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa634e040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7fa634e440, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7fa634e840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7fa64da840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa64dc040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa6de2040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa76e8040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa7fee040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa7fef840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7fa817b840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7fa81bd840, offset: 0, size: 322560
+[set_tensor] buffer: 0x5566056580, data: 0x7fa820c440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa820dc40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7fa820e040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7fa820e440, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7fa839a440, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7fa839bc40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fa8ca1c40, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5566056580, data: 0x7fa9766040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7faa06c040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7faa06d840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7faa1f9840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7faa23b840, offset: 0, size: 270336
+[set_tensor] buffer: 0x5566056580, data: 0x7faa27d840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7faa27f040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7faa27f440, offset: 0, size: 1024
+[set_tensor] buffer: 0x5566056580, data: 0x7faa27f840, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5566056580, data: 0x7faa40b840, offset: 0, size: 6144
+[set_tensor] buffer: 0x5566056580, data: 0x7faa40d040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7faad13040, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5566056580, data: 0x7fab619040, offset: 0, size: 9461760
+[alloc_buffer] device: 0, size: 7864320 -> remote_ptr: 5566058f00, remote_size: 7864320
+[buffer_get_base] remote_ptr: 5566058f00
+[buffer_clear] remote_ptr: 5566058f00, value: 0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+[alloc_buffer] device: 0, size: 79208448 -> remote_ptr: 55668906c0, remote_size: 79208448
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[buffer_clear] remote_ptr: 5566058f00, value: 0
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[buffer_get_base] remote_ptr: 55668906c0
+[set_tensor] buffer: 0x55668906c0, data: 0x7f896f4040, offset: 0, size: 12288
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f4040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f6040, offset: 0, size: 16
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fa040, offset: 0, size: 16
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fe040, offset: 0, size: 1024
+[graph_compute] device: 0, n_nodes: 510, n_tensors: 725
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 12288
+[buffer_clear] remote_ptr: 5566058f00, value: 0
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[set_tensor] buffer: 0x55668906c0, data: 0x7f899f4040, offset: 0, size: 233472
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f4840, offset: 0, size: 152
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f7040, offset: 0, size: 304
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fb040, offset: 0, size: 304
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a37e040, offset: 0, size: 19456
+[graph_compute] device: 0, n_nodes: 510, n_tensors: 725
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 233472
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_compute] device: 0, n_nodes: 510, n_tensors: 725
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x55668906c0, data: 0x7f8a4fe040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f89cf4040, offset: 0, size: 6144
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f5040, offset: 0, size: 4
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2f8040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a2fc040, offset: 0, size: 8
+[set_tensor] buffer: 0x55668906c0, data: 0x7f8a3fe040, offset: 0, size: 512
+[graph_recompute] device: 0
+
+--- host=192.168.50.118 offset=125269 end=160748 ---
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_alignment] device: 0, alignment: 32
+[get_max_size] device: 0, max_size: 18446744073709551615
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[alloc_buffer] device: 0, size: 619321856 -> remote_ptr: 5567c84bb0, remote_size: 619321856
+[buffer_get_base] remote_ptr: 5567c84bb0
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f78a48a40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f7a908640
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f7c979a40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f7e82ca40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f806ec640
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8275da40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8461d640
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8668ea40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f88541a40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8a401640
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8c472a40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8e325a40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f901e5640
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f6c70e040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f6c70f840, offset: 0, size: 191439360
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77da1a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77da3240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77f2f240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77f71240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77fb3240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77fb4a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77fb4e40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77fb5240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f78141240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f78142a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f78a48a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7934ea40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79c54a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79c56240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79de2240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79e24240, offset: 0, size: 322560
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79e72e40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79e74640, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79e74a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79e74e40, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7a000e40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7a002640, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7a908640, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7b3cca40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bcd2a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bcd4240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7be60240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bea2240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bee4240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bee5a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bee5e40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bee6240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7c072240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7c073a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7c979a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7d27fa40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7db85a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7db87240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd13240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd55240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd97240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd98a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd98e40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd99240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7df25240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7df26a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7e82ca40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7f132a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fa38a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fa3a240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fbc6240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fc08240, offset: 0, size: 322560
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fc56e40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fc58640, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fc58a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fc58e40, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fde4e40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fde6640, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f806ec640, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f811b0a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f81ab6a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f81ab8240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f81c44240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f81c86240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f81cc8240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f81cc9a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f81cc9e40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f81cca240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f81e56240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f81e57a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8275da40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f83063a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f83969a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8396b240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f83af7240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f83b39240, offset: 0, size: 322560
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f83b87e40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f83b89640, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f83b89a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f83b89e40, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f83d15e40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f83d17640, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8461d640, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f850e1a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f859e7a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f859e9240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f85b75240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f85bb7240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f85bf9240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f85bfaa40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f85bfae40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f85bfb240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f85d87240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f85d88a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8668ea40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f86f94a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8789aa40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8789c240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f87a28240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f87a6a240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f87aac240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f87aada40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f87aade40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f87aae240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f87c3a240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f87c3ba40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f88541a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f88e47a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8974da40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8974f240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f898db240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8991d240, offset: 0, size: 322560
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8996be40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8996d640, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8996da40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8996de40, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f89af9e40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f89afb640, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8a401640, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8aec5a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8b7cba40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8b7cd240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8b959240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8b99b240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8b9dd240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8b9dea40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8b9dee40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8b9df240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8bb6b240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8bb6ca40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8c472a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8cd78a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8d67ea40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8d680240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8d80c240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8d84e240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8d890240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8d891a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8d891e40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8d892240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8da1e240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8da1fa40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8e325a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8ec2ba40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8f531a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8f533240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8f6bf240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8f701240, offset: 0, size: 322560
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8f74fe40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8f751640, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8f751a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8f751e40, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8f8dde40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f8f8df640, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f901e5640, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f90ca9a40, offset: 0, size: 9461760
+[alloc_buffer] device: 0, size: 6815744 -> remote_ptr: 5567c8be40, remote_size: 6815744
+[buffer_get_base] remote_ptr: 5567c8be40
+[buffer_clear] remote_ptr: 5567c8be40, value: 0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+[alloc_buffer] device: 0, size: 79208576 -> remote_ptr: 5567c87cc0, remote_size: 79208576
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[buffer_clear] remote_ptr: 5567c8be40, value: 0
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[buffer_get_base] remote_ptr: 5567c87cc0
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f67b83040, offset: 0, size: 12288
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68783040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68785040, offset: 0, size: 16
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68789040, offset: 0, size: 16
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878d040, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d040, offset: 0, size: 4
+[graph_compute] device: 0, n_nodes: 447, n_tensors: 637
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[buffer_clear] remote_ptr: 5567c8be40, value: 0
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f67e83040, offset: 0, size: 233472
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68783840, offset: 0, size: 152
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68786040, offset: 0, size: 304
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878a040, offset: 0, size: 304
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6880d040, offset: 0, size: 19456
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d060, offset: 0, size: 4
+[graph_compute] device: 0, n_nodes: 447, n_tensors: 637
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_compute] device: 0, n_nodes: 447, n_tensors: 637
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68183040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68784040, offset: 0, size: 4
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f68787040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6878b040, offset: 0, size: 8
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6888d040, offset: 0, size: 512
+[set_tensor] buffer: 0x5567c87cc0, data: 0x7f6898d080, offset: 0, size: 4
+[graph_recompute] device: 0
+[get_tensor] buffer: 0x5567c87cc0, data: 0x7f6898e8c0, offset: 0, size: 607744
