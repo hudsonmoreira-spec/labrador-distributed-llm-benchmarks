@@ -1,0 +1,3 @@
+utc	ns	label	ip	host	pid	starttime_ticks	rss_bytes	utime_ticks	stime_ticks	mem_available_kb	swap_free_kb	rx_bytes	tx_bytes
+2026-10-04T10:46:28Z	1791110788837966440'	rep-1-rpc-2-after	192.168.50.42	labrador	315015	16166984	4022272	3	1	1766828	0	1,09749e+10	254279911
+2026-10-04T10:46:29Z	1791110789361364895'	rep-1-rpc-2-after	192.168.50.118	labrador	493006	67540442	3170304	1	0	1754564	0	1,92497e+10	776593654

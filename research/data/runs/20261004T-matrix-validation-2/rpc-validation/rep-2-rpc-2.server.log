@@ -1,0 +1,9 @@
+
+--- host=192.168.50.42 offset=566 end=697 ---
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+
+--- host=192.168.50.118 offset=0 end=0 ---

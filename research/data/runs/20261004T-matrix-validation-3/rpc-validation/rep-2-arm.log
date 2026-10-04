@@ -1,0 +1,7 @@
+case_id=rep-2-arm
+mode=arm_baseline
+started_utc=2026-10-04T10:43:18Z
+socket: Operation not permitted
+ssh: connect to host 192.168.50.118 port 22: failure
+command_exit=255
+finished_utc=2026-10-04T10:43:18Z

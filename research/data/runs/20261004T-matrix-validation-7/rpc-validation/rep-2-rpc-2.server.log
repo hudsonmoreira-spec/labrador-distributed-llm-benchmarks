@@ -1,0 +1,320 @@
+
+--- host=192.168.50.42 offset=41293 end=46012 ---
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_alignment] device: 0, alignment: 32
+[get_max_size] device: 0, max_size: 18446744073709551615
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[alloc_buffer] device: 0, size: 499777536 -> remote_ptr: 5566056580, remote_size: 499777536
+[buffer_get_base] remote_ptr: 5566056580
+[init_tensor] buffer: 0x5566056580, data: 0x7f8ef32c40
+[init_tensor] buffer: 0x5566056580, data: 0x7f90fb0c40
+[init_tensor] buffer: 0x5566056580, data: 0x7f93022040
+[init_tensor] buffer: 0x5566056580, data: 0x7f94ed5040
+[init_tensor] buffer: 0x5566056580, data: 0x7f96d88040
+[init_tensor] buffer: 0x5566056580, data: 0x7f98c47c40
+[init_tensor] buffer: 0x5566056580, data: 0x7f9acc5c40
+[init_tensor] buffer: 0x5566056580, data: 0x7f9cd43c40
+[init_tensor] buffer: 0x5566056580, data: 0x7f9edc1c40
+[init_tensor] buffer: 0x5566056580, data: 0x7fa0e3fc40
+[init_tensor] buffer: 0x5566056580, data: 0x7fa2ebdc40
+[init_tensor] buffer: 0x5566056580, data: 0x7fa4f2f040
+[init_tensor] buffer: 0x5566056580, data: 0x7fa6de2040
+[init_tensor] buffer: 0x5566056580, data: 0x7fa8ca1c40
+[init_tensor] buffer: 0x5566056580, data: 0x7faad13040
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+
+--- host=192.168.50.118 offset=42144 end=51553 ---
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_alignment] device: 0, alignment: 32
+[get_max_size] device: 0, max_size: 18446744073709551615
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_alloc_size] device: 0, buffer: (nil), data: (nil)
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[get_device_memory] device: 0, free_mem: 2034073600, total_mem: 2034073600
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+[alloc_buffer] device: 0, size: 619321856 -> remote_ptr: 5567c84bb0, remote_size: 619321856
+[buffer_get_base] remote_ptr: 5567c84bb0
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f78a48a40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f7a908640
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f7c979a40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f7e82ca40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f806ec640
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8275da40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8461d640
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8668ea40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f88541a40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8a401640
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8c472a40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f8e325a40
+[init_tensor] buffer: 0x5567c84bb0, data: 0x7f901e5640
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f6c70e040, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f6c70f840, offset: 0, size: 191439360
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77da1a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77da3240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77f2f240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77f71240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77fb3240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77fb4a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77fb4e40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f77fb5240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f78141240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f78142a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f78a48a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7934ea40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79c54a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79c56240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79de2240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79e24240, offset: 0, size: 322560
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79e72e40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79e74640, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79e74a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f79e74e40, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7a000e40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7a002640, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7a908640, offset: 0, size: 11289600
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7b3cca40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bcd2a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bcd4240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7be60240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bea2240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bee4240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bee5a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bee5e40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7bee6240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7c072240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7c073a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7c979a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7d27fa40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7db85a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7db87240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd13240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd55240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd97240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd98a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd98e40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7dd99240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7df25240, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7df26a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7e82ca40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7f132a40, offset: 0, size: 9461760
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fa38a40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fa3a240, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fbc6240, offset: 0, size: 270336
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fc08240, offset: 0, size: 322560
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fc56e40, offset: 0, size: 6144
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fc58640, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fc58a40, offset: 0, size: 1024
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fc58e40, offset: 0, size: 1622016
+[set_tensor] buffer: 0x5567c84bb0, data: 0x7f7fde4e40, offset: 0, size: 6144
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4

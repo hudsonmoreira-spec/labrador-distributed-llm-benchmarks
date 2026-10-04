@@ -1,0 +1,2 @@
+utc	ns	label	ip	host	pid	starttime_ticks	rss_bytes	utime_ticks	stime_ticks	mem_available_kb	swap_free_kb	rx_bytes	tx_bytes
+2026-10-04T10:37:51Z	1791110271438923102'	rep-4-arm-after	192.168.50.118	labrador	460471	65939310	24854528	35355	2439	1737012	0	1,92493e+10	772752600

@@ -1,0 +1,6 @@
+case_id=rep-1-arm
+mode=arm_baseline
+started_utc=2026-10-04T10:37:46Z
+env: “/usr/bin/time”: Arquivo ou diretório inexistente
+command_exit=127
+finished_utc=2026-10-04T10:37:46Z

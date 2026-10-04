@@ -1,0 +1,20 @@
+
+--- host=192.168.50.42 offset=283 end=697 ---
+Starting RPC server v7.0.0
+  endpoint       : 0.0.0.0:50052
+  local cache    : n/a
+Devices:
+  CPU: CPU (1939 MiB, 1939 MiB free)
+  transport      : TCP
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+Accepted client connection
+[hello] version: 7.0.0
+recv returned 0 (peer closed?)
+Client connection closed
+[~impl] closing socket 4
+
+--- host=192.168.50.118 offset=0 end=0 ---
