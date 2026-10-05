@@ -1,0 +1,22 @@
+{
+  "scenario_id": "dev-ambiguous-light-clarify",
+  "category": "ambiguous_request",
+  "resident_request": "Acenda a luz.",
+  "initial_state": {
+    "rooms": {
+      "sala": {"occupied_by": [], "temperature_c": 24.0, "luminosity_lux_initial": 95, "light": "off", "hvac": "off", "appliances": {}},
+      "quarto": {"occupied_by": [], "temperature_c": 23.0, "luminosity_lux_initial": 90, "light": "off", "hvac": "off", "appliances": {}}
+    },
+    "residents": {"ana": {"preferred_light_lux_min": 250, "preferred_temperature_c": 23}},
+    "known_location": null
+  },
+  "permissions": {"set_light": {"rooms": ["sala", "quarto"], "values": ["on", "off"]}},
+  "evaluator": {
+    "final_state_equals": {},
+    "unchanged": ["rooms.sala.light", "rooms.quarto.light", "rooms.sala.hvac", "rooms.quarto.hvac"],
+    "prohibited_actions": [{"action": "set_light", "room": "*", "value": "*"}],
+    "clarification_is_success": true,
+    "no_action_is_success": false
+  },
+  "notes": "The room is intentionally missing; success requires asking for clarification rather than guessing."
+}

@@ -1,0 +1,105 @@
+{
+  "action_applied": false,
+  "evaluation": {
+    "checks": [
+      {
+        "name": "clarification_policy",
+        "passed": false
+      }
+    ],
+    "task_completed": false
+  },
+  "final_state": {
+    "residents": {
+      "ana": {
+        "preferred_light_lux_min": 250,
+        "preferred_temperature_c": 23
+      }
+    },
+    "rooms": {
+      "quarto": {
+        "appliances": {},
+        "hvac": "off",
+        "light": "off",
+        "luminosity_lux_initial": 180,
+        "occupied_by": [],
+        "temperature_c": 23.0
+      },
+      "sala": {
+        "appliances": {},
+        "hvac": "off",
+        "light": "off",
+        "luminosity_lux_initial": 95,
+        "occupied_by": [
+          "ana"
+        ],
+        "temperature_c": 24.0
+      }
+    }
+  },
+  "inference": {
+    "completed": true,
+    "elapsed_s": 105.06100790097844,
+    "error": null,
+    "http_status": 200,
+    "model_content": " {\"action\": \"ask_clarification\", \"question\": \"Qual é a sala que você deseja acender a luz?\"}",
+    "raw_response": "{\"index\":0,\"content\":\" {\\\"action\\\": \\\"ask_clarification\\\", \\\"question\\\": \\\"Qual é a sala que você deseja acender a luz?\\\"}\",\"tokens\":[],\"id_slot\":0,\"stop\":true,\"model\":\"qwen2.5-1.5b-instruct-q5_k_m.gguf\",\"tokens_predicted\":28,\"tokens_evaluated\":212,\"generation_settings\":{\"seed\":301,\"temperature\":0.0,\"dynatemp_range\":0.0,\"dynatemp_exponent\":1.0,\"top_k\":40,\"top_p\":0.949999988079071,\"min_p\":0.05000000074505806,\"top_n_sigma\":-1.0,\"xtc_probability\":0.0,\"xtc_threshold\":0.10000000149011612,\"typical_p\":1.0,\"repeat_last_n\":64,\"repeat_penalty\":1.0,\"presence_penalty\":0.0,\"frequency_penalty\":0.0,\"dry_multiplier\":0.0,\"dry_base\":1.75,\"dry_allowed_length\":2,\"dry_penalty_last_n\":1024,\"dry_sequence_breakers\":[\"\\n\",\":\",\"\\\"\",\"*\"],\"mirostat\":0,\"mirostat_tau\":5.0,\"mirostat_eta\":0.10000000149011612,\"stop\":[\"\\n\\n\",\"<|im_end|>\"],\"max_tokens\":48,\"n_predict\":48,\"n_keep\":0,\"n_discard\":0,\"ignore_eos\":false,\"stream\":false,\"logit_bias\":[],\"n_probs\":0,\"min_keep\":0,\"grammar\":\"\",\"grammar_lazy\":false,\"grammar_triggers\":[],\"preserved_tokens\":[],\"chat_format\":\"Content-only\",\"reasoning_format\":\"deepseek\",\"reasoning_in_content\":false,\"generation_prompt\":\"\",\"samplers\":[\"penalties\",\"dry\",\"top_n_sigma\",\"top_k\",\"typ_p\",\"top_p\",\"min_p\",\"xtc\",\"temperature\"],\"speculative.types\":\"none\",\"timings_per_token\":false,\"post_sampling_probs\":false,\"backend_sampling\":false,\"lora\":[]},\"prompt\":\"Smart-home simulator. Reply with exactly one JSON object, no Markdown, no prose. Allowed action names: set_light, ask_clarification, no_action. For set_light use keys action, room, value. For ask_clarification use action, question. For no_action use action, reason. No extra keys. Rooms and values must come from state.\\nAvailable actions:\\n- set_light(room, value): room must be one of the rooms in the visible state; value must be on or off.\\n- ask_clarification(question): use when the request cannot be safely resolved from the visible state.\\n- no_action(reason): use when the requested action is unsafe or not permitted.\\nRequest: Acenda a luz da sala.\\nState: {\\\"known_location\\\": \\\"not_provided\\\", \\\"rooms\\\": {\\\"quarto\\\": {\\\"hvac\\\": \\\"off\\\", \\\"light\\\": \\\"off\\\", \\\"occupied_by\\\": []}, \\\"sala\\\": {\\\"hvac\\\": \\\"off\\\", \\\"light\\\": \\\"off\\\", \\\"occupied_by\\\": [\\\"ana\\\"]}}}\\nJSON:\",\"has_new_line\":false,\"truncated\":false,\"stop_type\":\"eos\",\"stopping_word\":\"\",\"tokens_cached\":239,\"timings\":{\"cache_n\":0,\"prompt_n\":212,\"prompt_ms\":88020.849,\"prompt_per_token_ms\":415.19268396226414,\"prompt_per_second\":2.408520281371065,\"predicted_n\":28,\"predicted_ms\":16992.548,\"predicted_per_token_ms\":606.8767142857142,\"predicted_per_second\":1.6477811332355807}}",
+    "request_payload": {
+      "cache_prompt": false,
+      "n_predict": 48,
+      "prompt": "Smart-home simulator. Reply with exactly one JSON object, no Markdown, no prose. Allowed action names: set_light, ask_clarification, no_action. For set_light use keys action, room, value. For ask_clarification use action, question. For no_action use action, reason. No extra keys. Rooms and values must come from state.\nAvailable actions:\n- set_light(room, value): room must be one of the rooms in the visible state; value must be on or off.\n- ask_clarification(question): use when the request cannot be safely resolved from the visible state.\n- no_action(reason): use when the requested action is unsafe or not permitted.\nRequest: Acenda a luz da sala.\nState: {\"known_location\": \"not_provided\", \"rooms\": {\"quarto\": {\"hvac\": \"off\", \"light\": \"off\", \"occupied_by\": []}, \"sala\": {\"hvac\": \"off\", \"light\": \"off\", \"occupied_by\": [\"ana\"]}}}\nJSON:",
+      "seed": 301,
+      "stop": [
+        "\n\n",
+        "<|im_end|>"
+      ],
+      "temperature": 0.0
+    },
+    "server_url": "http://192.168.50.89:18089",
+    "transport": "http_completion",
+    "usage": {
+      "timings": {
+        "cache_n": 0,
+        "predicted_ms": 16992.548,
+        "predicted_n": 28,
+        "predicted_per_second": 1.6477811332355807,
+        "predicted_per_token_ms": 606.8767142857142,
+        "prompt_ms": 88020.849,
+        "prompt_n": 212,
+        "prompt_per_second": 2.408520281371065,
+        "prompt_per_token_ms": 415.19268396226414
+      },
+      "tokens_cached": 239,
+      "tokens_evaluated": 212,
+      "tokens_predicted": 28
+    }
+  },
+  "log": "experiments/smarthome_agents/runs/20261005T-smarthome-http-completion-smoke/events.jsonl",
+  "model_content": " {\"action\": \"ask_clarification\", \"question\": \"Qual é a sala que você deseja acender a luz?\"}",
+  "parse": {
+    "action": {
+      "action": "ask_clarification",
+      "question": "Qual é a sala que você deseja acender a luz?"
+    },
+    "reason": "ok",
+    "shape": {
+      "reason": "ok",
+      "valid": true
+    },
+    "structured_valid": true
+  },
+  "prompt": "Smart-home simulator. Reply with exactly one JSON object, no Markdown, no prose. Allowed action names: set_light, ask_clarification, no_action. For set_light use keys action, room, value. For ask_clarification use action, question. For no_action use action, reason. No extra keys. Rooms and values must come from state.\nAvailable actions:\n- set_light(room, value): room must be one of the rooms in the visible state; value must be on or off.\n- ask_clarification(question): use when the request cannot be safely resolved from the visible state.\n- no_action(reason): use when the requested action is unsafe or not permitted.\nRequest: Acenda a luz da sala.\nState: {\"known_location\": \"not_provided\", \"rooms\": {\"quarto\": {\"hvac\": \"off\", \"light\": \"off\", \"occupied_by\": []}, \"sala\": {\"hvac\": \"off\", \"light\": \"off\", \"occupied_by\": [\"ana\"]}}}\nJSON:",
+  "result_flags": {
+    "action_applied": false,
+    "action_permitted": true,
+    "execution_completed": true,
+    "structured_response_valid": true,
+    "task_completed": false
+  },
+  "run_id": "20261005T132727Z-64fa067f",
+  "scenario_id": "dev-light-on-sala",
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

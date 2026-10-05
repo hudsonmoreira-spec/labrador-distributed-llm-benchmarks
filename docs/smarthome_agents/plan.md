@@ -18,7 +18,7 @@ The study does not assume that collaboration is superior. The experiment uses re
 - Initial pilot: one Labrador, one model call, one validated action.
 - Planned collaboration: comfort, energy, and routine agents on three Labradors.
 
-The first working pilot uses `llama-cli` over SSH because the existing Labrador runtime package contains `llama-cli` and RPC binaries but no `llama-server` executable. This is an implementation gap to close before the main protocol is frozen.
+The first pre-correction pilot used `llama-cli` over SSH. The corrected pilot uses a resident `llama-server` on a single Labrador and HTTP JSON transport. Multi-board collaboration is paused until the single-agent output contract is reliable enough for development scenarios.
 
 ## Current Model Candidate
 

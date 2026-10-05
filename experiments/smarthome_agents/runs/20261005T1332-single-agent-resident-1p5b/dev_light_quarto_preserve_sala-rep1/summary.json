@@ -1,0 +1,98 @@
+{
+  "action_applied": false,
+  "evaluation": {
+    "checks": [
+      {
+        "name": "structured_response",
+        "passed": false
+      }
+    ],
+    "task_completed": false
+  },
+  "final_state": {
+    "residents": {
+      "ana": {
+        "preferred_light_lux_min": 250,
+        "preferred_temperature_c": 23
+      }
+    },
+    "rooms": {
+      "quarto": {
+        "appliances": {},
+        "hvac": "off",
+        "light": "off",
+        "luminosity_lux_initial": 90,
+        "occupied_by": [],
+        "temperature_c": 23.0
+      },
+      "sala": {
+        "appliances": {},
+        "hvac": "off",
+        "light": "on",
+        "luminosity_lux_initial": 280,
+        "occupied_by": [
+          "ana"
+        ],
+        "temperature_c": 24.0
+      }
+    }
+  },
+  "inference": {
+    "completed": true,
+    "elapsed_s": 78.51822577702114,
+    "error": null,
+    "http_status": 200,
+    "model_content": " {\"quarto\": {\"light\": \"on\"}} Explanation: The request is to set the light of the quarto to on. The state shows that the quarto's light is currently off, so we set it to on. The state",
+    "raw_response": "{\"index\":0,\"content\":\" {\\\"quarto\\\": {\\\"light\\\": \\\"on\\\"}} Explanation: The request is to set the light of the quarto to on. The state shows that the quarto's light is currently off, so we set it to on. The state\",\"tokens\":[],\"id_slot\":0,\"stop\":true,\"model\":\"qwen2.5-1.5b-instruct-q5_k_m.gguf\",\"tokens_predicted\":48,\"tokens_evaluated\":119,\"generation_settings\":{\"seed\":401,\"temperature\":0.0,\"dynatemp_range\":0.0,\"dynatemp_exponent\":1.0,\"top_k\":40,\"top_p\":0.949999988079071,\"min_p\":0.05000000074505806,\"top_n_sigma\":-1.0,\"xtc_probability\":0.0,\"xtc_threshold\":0.10000000149011612,\"typical_p\":1.0,\"repeat_last_n\":64,\"repeat_penalty\":1.0,\"presence_penalty\":0.0,\"frequency_penalty\":0.0,\"dry_multiplier\":0.0,\"dry_base\":1.75,\"dry_allowed_length\":2,\"dry_penalty_last_n\":1024,\"dry_sequence_breakers\":[\"\\n\",\":\",\"\\\"\",\"*\"],\"mirostat\":0,\"mirostat_tau\":5.0,\"mirostat_eta\":0.10000000149011612,\"stop\":[\"\\n\\n\",\"<|im_end|>\"],\"max_tokens\":48,\"n_predict\":48,\"n_keep\":0,\"n_discard\":0,\"ignore_eos\":false,\"stream\":false,\"logit_bias\":[],\"n_probs\":0,\"min_keep\":0,\"grammar\":\"\",\"grammar_lazy\":false,\"grammar_triggers\":[],\"preserved_tokens\":[],\"chat_format\":\"Content-only\",\"reasoning_format\":\"deepseek\",\"reasoning_in_content\":false,\"generation_prompt\":\"\",\"samplers\":[\"penalties\",\"dry\",\"top_n_sigma\",\"top_k\",\"typ_p\",\"top_p\",\"min_p\",\"xtc\",\"temperature\"],\"speculative.types\":\"none\",\"timings_per_token\":false,\"post_sampling_probs\":false,\"backend_sampling\":false,\"lora\":[]},\"prompt\":\"Return one strict JSON object only. Actions: set_light(room,value on/off), ask_clarification(question), no_action(reason). No extra keys. Use only rooms in state. Request: Acenda somente a luz do quarto e deixe a sala como está. State: {\\\"known_location\\\": \\\"not_provided\\\", \\\"rooms\\\": {\\\"quarto\\\": {\\\"hvac\\\": \\\"off\\\", \\\"light\\\": \\\"off\\\", \\\"occupied_by\\\": []}, \\\"sala\\\": {\\\"hvac\\\": \\\"off\\\", \\\"light\\\": \\\"on\\\", \\\"occupied_by\\\": [\\\"ana\\\"]}}} JSON:\",\"has_new_line\":false,\"truncated\":false,\"stop_type\":\"limit\",\"stopping_word\":\"\",\"tokens_cached\":166,\"timings\":{\"cache_n\":0,\"prompt_n\":119,\"prompt_ms\":49403.121,\"prompt_per_token_ms\":415.1522773109244,\"prompt_per_second\":2.4087547019549636,\"predicted_n\":48,\"predicted_ms\":29080.427,\"predicted_per_token_ms\":605.8422291666667,\"predicted_per_second\":1.6505947453935255}}",
+    "request_payload": {
+      "cache_prompt": false,
+      "n_predict": 48,
+      "prompt": "Return one strict JSON object only. Actions: set_light(room,value on/off), ask_clarification(question), no_action(reason). No extra keys. Use only rooms in state. Request: Acenda somente a luz do quarto e deixe a sala como está. State: {\"known_location\": \"not_provided\", \"rooms\": {\"quarto\": {\"hvac\": \"off\", \"light\": \"off\", \"occupied_by\": []}, \"sala\": {\"hvac\": \"off\", \"light\": \"on\", \"occupied_by\": [\"ana\"]}}} JSON:",
+      "seed": 401,
+      "stop": [
+        "\n\n",
+        "<|im_end|>"
+      ],
+      "temperature": 0.0
+    },
+    "server_url": "http://192.168.50.89:18089",
+    "transport": "http_completion",
+    "usage": {
+      "timings": {
+        "cache_n": 0,
+        "predicted_ms": 29080.427,
+        "predicted_n": 48,
+        "predicted_per_second": 1.6505947453935255,
+        "predicted_per_token_ms": 605.8422291666667,
+        "prompt_ms": 49403.121,
+        "prompt_n": 119,
+        "prompt_per_second": 2.4087547019549636,
+        "prompt_per_token_ms": 415.1522773109244
+      },
+      "tokens_cached": 166,
+      "tokens_evaluated": 119,
+      "tokens_predicted": 48
+    }
+  },
+  "log": "experiments/smarthome_agents/runs/20261005T1332-single-agent-resident-1p5b/dev_light_quarto_preserve_sala-rep1/events.jsonl",
+  "model_content": " {\"quarto\": {\"light\": \"on\"}} Explanation: The request is to set the light of the quarto to on. The state shows that the quarto's light is currently off, so we set it to on. The state",
+  "parse": {
+    "action": null,
+    "reason": "json_decode_error: Extra data",
+    "structured_valid": false
+  },
+  "prompt": "Return one strict JSON object only. Actions: set_light(room,value on/off), ask_clarification(question), no_action(reason). No extra keys. Use only rooms in state. Request: Acenda somente a luz do quarto e deixe a sala como está. State: {\"known_location\": \"not_provided\", \"rooms\": {\"quarto\": {\"hvac\": \"off\", \"light\": \"off\", \"occupied_by\": []}, \"sala\": {\"hvac\": \"off\", \"light\": \"on\", \"occupied_by\": [\"ana\"]}}} JSON:",
+  "result_flags": {
+    "action_applied": false,
+    "action_permitted": false,
+    "execution_completed": true,
+    "structured_response_valid": false,
+    "task_completed": false
+  },
+  "run_id": "20261005T133857Z-74c759fc",
+  "scenario_id": "dev-light-quarto-preserve-sala",
+  "validation": {
+    "allowed": false,
+    "reason": "no_structured_action"
+  }
+}

@@ -35,4 +35,8 @@ Model conditions require at least five repetitions per evaluation case. Repetiti
 
 ## Current Pilot
 
-The first pilot scenario is `dev-001-simple-light`. The resident asks for more light in the occupied room. The successful action is turning the `sala` light on, without changing the `quarto` or HVAC state.
+The original `dev-001-simple-light` pilot from commit `aeff69b` is pre-correction evidence only and must not be used as campaign evidence.
+
+The corrected single-agent pilot uses four development scenarios and a resident `llama-server`. It separates execution completion, structured response validity, action permission, action application, and task completion. The evaluator checks scenario-defined final state, unchanged fields, prohibited actions, and clarification/no-action policy. Sensor fields named `luminosity_lux_initial` are initial readings only; the simulator does not update them after light actions and does not use them as final illumination measurements.
+
+Before expanding to three agents, the single-agent output contract must be improved because the 2026-10-05 resident-server pilot completed transport successfully but produced 0/12 structurally valid responses.

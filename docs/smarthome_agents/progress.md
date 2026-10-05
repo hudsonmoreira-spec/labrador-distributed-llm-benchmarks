@@ -38,3 +38,38 @@ Problems found:
 Next step:
 
 Move from per-call `llama-cli` to a resident lightweight agent service, preferably backed by `llama-server`, then run the same scenario through the single-agent HTTP path before expanding to three agents.
+
+## 2026-10-05 Follow-up
+
+Branch: `smarthome-multiagent`.
+
+Implemented:
+
+- Corrected the single-agent pilot after reviewing commit `aeff69b`.
+- Replaced SSH `llama-cli` calls with HTTP requests to a resident `llama-server`.
+- Added four development scenarios and a generic evaluator.
+- Added local software tests for prompt echo, timeout, malformed JSON, unexpected fields, contradictory fixed hints, wrong-room action, unchanged-state checks, clarification, and no-action handling.
+- Started an isolated resident server on `192.168.50.89:18089`.
+
+Verified:
+
+- Local tests: 7/7 passed.
+- Resident server startup: 72 s until `/health` returned `ok`.
+- Corrected 12-attempt pilot: 12/12 HTTP executions completed and preserved.
+
+Pilot outcome:
+
+- Structured valid responses: 0/12.
+- Actions applied: 0/12.
+- Tasks completed: 0/12.
+- This is a valid infrastructure result: malformed or non-contract model outputs were rejected rather than counted as success.
+
+Evidence:
+
+- Server configuration: `docs/smarthome_agents/server_resident_20261005.md`.
+- Pilot report: `docs/smarthome_agents/single_agent_pilot_20261005.md`.
+- Campaign data: `experiments/smarthome_agents/runs/20261005T1332-single-agent-resident-1p5b/`.
+
+Next step:
+
+Do not start multi-board collaboration yet. First improve the single-agent output contract, likely with llama.cpp grammar or JSON schema constraints, then rerun a new identified development campaign.
