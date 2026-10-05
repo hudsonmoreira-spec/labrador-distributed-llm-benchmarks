@@ -37,6 +37,14 @@ class StudyTests(unittest.TestCase):
         sc=deepcopy(DEV[0]);a=study.rule_response(sc);del sc['evaluator'];del sc['category']
         self.assertEqual(a,study.rule_response(sc))
 
+    def test_courtesy_stripping_does_not_turn_invalid_into_light_action(self):
+        sc=deepcopy(DEV[6])
+        self.assertEqual(study.rule_response(sc)['action'],'ask_clarification')
+        sc['resident_request']='Por favor, ligue o ar-condicionado da sala.'
+        self.assertEqual(study.rule_response(sc)['action'],'no_action')
+        sc['resident_request']='Por favor, acenda a luz da sala.'
+        self.assertEqual(study.rule_response(sc),{'action':'set_light','room':'sala','value':'on'})
+
     def test_plan_success_and_prompt_has_no_evaluator(self):
         sc=DEV[4];action=study.rule_response(sc)
         final,p,_=study.execute(sc,action)

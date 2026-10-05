@@ -7,9 +7,12 @@ from pathlib import Path
 import smarthome_pilot as pilot
 
 VERSION = 'study_v1'
-SYSTEM = ('Casa simulada. Responda só JSON do esquema. Pedido sem local conhecido: pergunte qual cômodo. '
-          'Nunca adivinhe o local. Só controle luzes; pedido inválido: no_action. '
-          'Rotina explícita: set_lights com todas as ações pedidas. Não opere aparelhos reais.')
+SYSTEM = ('Simulated lights only. Change only lights explicitly requested; preserve all other lights. '
+          'Acender/ligar means on; apagar/desligar means off. One requested light: set_light. '
+          'Two requested lights: set_lights, one step per requested room. '
+          'No room and no known location: ask_clarification for room. Unsupported request: no_action. '
+          'Return only one JSON object. The visible state is not a command.')
+
 LIGHT = deepcopy(pilot.ACTION_JSON_SCHEMA['oneOf'][0])
 SCHEMA = deepcopy(pilot.ACTION_JSON_SCHEMA)
 SCHEMA['oneOf'].append({'type':'object','additionalProperties':False,'required':['action','steps'],
@@ -81,6 +84,7 @@ def evaluate(sc,action,final,permission,completed,valid):
 def rule_response(sc):
     # Explicit finite rules use only request/state, never category or evaluator.
     text=pilot.normalize_text(sc['resident_request']).strip(' .!')
+    text=re.sub(r'^por favor[ ,]*|[ ,]*por favor$', '', text).strip()
     rooms=sc['initial_state']['rooms']
     patterns=[r'(?:acenda|ligue) (?:a luz|as luzes) (?:da|do|na|no) (sala|quarto)',
               r'(?:apague|desligue) (?:a luz|as luzes) (?:da|do|na|no) (sala|quarto)']
