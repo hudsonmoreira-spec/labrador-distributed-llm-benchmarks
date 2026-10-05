@@ -126,7 +126,40 @@ class PilotLogicTests(unittest.TestCase):
         action = {"action": "set_light", "room": "quarto", "value": "on"}
         permission = validate_action_permissions(ambiguous, action)
         self.assertFalse(permission["allowed"])
-        self.assertEqual(permission["reason"], "scenario_prohibited_action")
+        self.assertEqual(permission["reason"], "insufficient_room_information")
+
+    def test_executor_never_reads_evaluator(self) -> None:
+        from copy import deepcopy
+        sc = scenario("dev_light_on_sala.json")
+        action = {"action": "set_light", "room": "quarto", "value": "on"}
+        before = validate_action_permissions(sc, action)
+        sc["evaluator"] = {"prohibited_actions": [{"action": "set_light"}]}
+        self.assertEqual(before, validate_action_permissions(sc, action))
+        self.assertTrue(before["allowed"])
+        del sc["evaluator"]
+        self.assertEqual(before, validate_action_permissions(sc, action))
+
+    def test_room_words_do_not_prove_clarification(self) -> None:
+        from smarthome_pilot import clarification_question_review
+        sc = scenario("dev_ambiguous_light_clarify.json")
+        for question in ["O ambiente está iluminado?", "O cômodo é bonito?", "Você gosta da sala?", "Qual cômodo é mais bonito?"]:
+            action = {"action": "ask_clarification", "missing_field": "room", "question": question}
+            result = clarification_question_review(action, sc["evaluator"])
+            self.assertNotEqual(result["status"], "pass")
+            ev = evaluate_scenario(sc, sc["initial_state"], sc["initial_state"], action, True, True, {"allowed": True, "reason": "allowed"})
+            self.assertFalse(ev["task_completed"])
+            self.assertTrue(ev["review_pending"])
+
+    def test_room_policy_uses_visible_request_and_location(self) -> None:
+        sc = scenario("dev_ambiguous_light_clarify.json")
+        action = {"action": "set_light", "room": "quarto", "value": "on"}
+        self.assertFalse(validate_action_permissions(sc, action)["allowed"])
+        sc["initial_state"]["known_location"] = "sala"
+        # Wrong room must reach the independent evaluator when information exists.
+        self.assertTrue(validate_action_permissions(sc, action)["allowed"])
+        sc["initial_state"]["known_location"] = None
+        sc["resident_request"] = "Acenda a luz da sala."
+        self.assertTrue(validate_action_permissions(sc, action)["allowed"])
 
     def test_generation_limit_blocks_success(self) -> None:
         sc = scenario("dev_light_on_sala.json")

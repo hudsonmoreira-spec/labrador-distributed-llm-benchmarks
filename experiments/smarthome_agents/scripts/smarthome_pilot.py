@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
+import unicodedata
 import time
 import uuid
 from copy import deepcopy
@@ -213,13 +215,18 @@ def parse_model_action(content: str) -> dict[str, Any]:
 def validate_action_permissions(scenario: dict[str, Any], action: dict[str, Any] | None) -> dict[str, Any]:
     if action is None:
         return {"allowed": False, "reason": "no_structured_action"}
-    for rule in scenario.get("evaluator", {}).get("prohibited_actions", []):
-        if _rule_matches(rule, action):
-            return {"allowed": False, "reason": "scenario_prohibited_action", "rule": rule}
     if action["action"] == "set_light":
         room = action["room"]
         if room not in scenario["initial_state"]["rooms"]:
             return {"allowed": False, "reason": "unknown_room"}
+        # Operational policy only: the evaluator must never reach this function.
+        request_text = normalize_text(scenario["resident_request"])
+        named = [r for r in scenario["initial_state"]["rooms"]
+                 if re.search(r"\b" + re.escape(normalize_text(r)) + r"\b", request_text)]
+        location = scenario["initial_state"].get("known_location")
+        if not named and location not in scenario["initial_state"]["rooms"]:
+            return {"allowed": False, "reason": "insufficient_room_information",
+                    "policy": "room_evidence_v1"}
         permitted = scenario.get("permissions", {}).get("set_light", {})
         allowed_rooms = permitted.get("rooms", [])
         allowed_values = permitted.get("values", ["on", "off"])
@@ -250,20 +257,28 @@ def _rule_matches(rule: dict[str, Any], action: dict[str, Any]) -> bool:
     return all(rule.get(key) == "*" or action.get(key) == rule.get(key) for key in rule)
 
 
+def normalize_text(text: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", text.lower())
+                   if unicodedata.category(c) != "Mn")
+
+
 def clarification_question_review(action: dict[str, Any], evaluator: dict[str, Any]) -> dict[str, Any]:
-    question = action.get("question", "").strip().lower()
-    missing_field = action.get("missing_field")
-    expected_missing = evaluator.get("missing_fields", [])
-    if missing_field not in expected_missing:
+    question = normalize_text(action.get("question", "")).strip()
+    if action.get("missing_field") not in evaluator.get("missing_fields", []):
         return {"status": "fail", "reason": "missing_field_not_expected"}
     if not question:
         return {"status": "fail", "reason": "empty_question"}
-    acceptable_terms = evaluator.get("acceptable_clarification_terms", {}).get(missing_field, [])
-    if not acceptable_terms:
-        return {"status": "pending_manual_review", "reason": "no_automatic_terms"}
-    if any(term.lower() in question for term in acceptable_terms):
-        return {"status": "pass", "reason": "question_mentions_missing_information"}
-    return {"status": "fail", "reason": "question_not_about_missing_information"}
+    # Conservative full-question patterns; mere room words are never sufficient.
+    patterns = [
+        r"(?:em )?qual (?:ambiente|comodo|local)(?: (?:voce quer|deseja|devo|para) .+)?\??",
+        r"(?:em )?qual (?:ambiente|comodo|local) (?:a |as |esta |estao |fica |ficam ).+\?",
+        r"onde (?:devo|voce quer|deseja) (?:acender|apagar|ligar|desligar|alterar) (?:a |as )?(?:luz|luzes|iluminacao)\?",
+        r"(?:sala ou quarto|quarto ou sala)\?",
+    ]
+    if any(re.fullmatch(pattern, question) for pattern in patterns):
+        return {"status": "pass", "reason": "explicit_request_for_missing_room", "method": "conservative_fullmatch_v1"}
+    return {"status": "pending_manual_review", "reason": "semantic_question_review_required",
+            "question": action.get("question"), "method": "conservative_fullmatch_v1"}
 
 
 def evaluate_scenario(
@@ -302,7 +317,7 @@ def evaluate_scenario(
     if action is not None and action["action"] == "no_action":
         checks.append({"name": "no_action_policy", "passed": bool(evaluator.get("no_action_is_success", False))})
     pending = any((item.get("review") or {}).get("status") == "pending_manual_review" for item in checks)
-    return {"task_completed": bool(checks) and all(item["passed"] for item in checks) and not pending, "checks": checks, "manual_review": manual_review}
+    return {"review_pending": pending, "task_completed": bool(checks) and all(item["passed"] for item in checks) and not pending, "checks": checks, "manual_review": manual_review}
 
 
 def run_scenario(
