@@ -42,12 +42,17 @@ The server became healthy after 72 seconds, measured by polling `http://127.0.0.
 
 ## Request Parameters
 
-- Endpoint: `/completion`.
+- Corrected endpoint: `/v1/chat/completions`.
+- Previous development endpoint `/completion` is preserved only in older smoke/campaign logs.
+- Chat template: supplied by the Qwen GGUF metadata and exposed through `GET /props`; the template uses Qwen `<|im_start|>system`, `<|im_start|>user`, and `<|im_start|>assistant` message formatting.
+- Structured output: `response_format` with `type: json_schema` and nested `json_schema.schema`.
 - Temperature: `0`.
-- Seeds in 12-run pilot: `401`, `402`, `403`, repeated per scenario.
-- `n_predict`: `48` per request in the corrected pilot.
+- Seeds in the schema-constrained 12-run pilot: `601`, `602`, `603`, repeated per scenario.
+- `max_tokens`: `128` per request in the schema-constrained pilot. The earlier 48-token budget was too small and contributed to truncated or repeated outputs.
 - Prompt cache in request payload: `false`.
 - The server remains resident across requests. The campaign logs and server elapsed time confirm the process was not restarted between the 12 requests.
+
+The llama.cpp server documentation describes `/v1/chat/completions` as an OpenAI-compatible endpoint and documents `response_format` for plain JSON and schema-constrained JSON. The local server was also tested directly before the campaign; the non-nested `response_format: {"type":"json_schema","schema":...}` shape was not sufficient on this installation, while `response_format: {"type":"json_schema","json_schema":{"name":"smart_home_action","strict":true,"schema":...}}` produced schema-shaped output.
 
 ## Memory Collection
 

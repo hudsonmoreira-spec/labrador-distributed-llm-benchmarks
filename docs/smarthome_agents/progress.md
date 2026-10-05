@@ -73,3 +73,48 @@ Evidence:
 Next step:
 
 Do not start multi-board collaboration yet. First improve the single-agent output contract, likely with llama.cpp grammar or JSON schema constraints, then rerun a new identified development campaign.
+
+## 2026-10-05 Chat Schema Follow-up
+
+Implemented:
+
+- Switched inference from `/completion` to `/v1/chat/completions`.
+- Used separate `system` and `user` messages so the Qwen Instruct chat template is applied by `llama-server`.
+- Added `response_format` with JSON Schema for the three allowed action shapes.
+- Expanded `ask_clarification` to require `missing_field` and `question`.
+- Tightened clarification evaluation: the missing field must match the scenario, the question must ask about the missing room, and unchanged/prohibited-action checks are still evaluated.
+- Rejected generation-limit completions even if content appears parseable.
+
+Verified:
+
+- Local tests: 11/11 passed.
+- Development smoke test with chat/schema completed successfully.
+- New campaign directory: `experiments/smarthome_agents/runs/20261005T1422-single-agent-chat-schema-1p5b/`.
+
+Intermediate campaign result before validator fix:
+
+- 12/12 executions completed.
+- 12/12 responses were schema-valid JSON.
+- 12/12 ended with `finish_reason=stop`; 0/12 hit the generation limit.
+- 9/12 tasks completed.
+- The 3 failures were all ambiguous-room cases where the model selected `quarto` instead of asking for clarification.
+- This intermediate run exposed that scenario-prohibited actions were evaluated as task failures but still applied to simulated state.
+
+Validator fix:
+
+- Scenario `prohibited_actions` now blocks action permission before state application.
+- Local tests after the fix: 12/12 passed.
+
+Final campaign result:
+
+- Directory: `experiments/smarthome_agents/runs/20261005T1445-single-agent-chat-schema-1p5b-validatorfix/`.
+- 12/12 executions completed.
+- 12/12 responses were schema-valid JSON.
+- 12/12 ended with `finish_reason=stop`; 0/12 hit the generation limit.
+- 9/12 actions were permitted and applied.
+- 9/12 tasks completed.
+- The 3 ambiguous-room cases still selected `quarto`, but the validator blocked the scenario-prohibited action, so no simulated state change occurred.
+
+Next step:
+
+Keep collaboration paused. The next evidence-driven choice is either improve ambiguous-request behavior while preserving schema constraints, or compare the 1.5B and 0.5B models under the now-correct chat/schema infrastructure.

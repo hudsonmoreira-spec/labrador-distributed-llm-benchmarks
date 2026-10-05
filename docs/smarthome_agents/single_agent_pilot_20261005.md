@@ -62,3 +62,48 @@ Latency with the resident model remained high: approximately 71 to 79 seconds pe
 ## Interpretation Boundary
 
 This pilot demonstrates the corrected infrastructure and evaluator, not useful smart-home task performance. The negative task outcome is expected to inform prompt/schema/runtime work before any collaboration among boards or larger campaigns.
+
+## Chat-Template and Schema Follow-up
+
+A follow-up corrected campaign used `/v1/chat/completions`, the Qwen chat template exposed by the local server, and `response_format` with a JSON Schema. This changed the input/output configuration and must not be compared as a model-only improvement against the previous `/completion` pilot.
+
+Intermediate campaign directory, preserved because it exposed a validator issue:
+
+`experiments/smarthome_agents/runs/20261005T1422-single-agent-chat-schema-1p5b/`
+
+Final campaign directory for this step:
+
+`experiments/smarthome_agents/runs/20261005T1445-single-agent-chat-schema-1p5b-validatorfix/`
+
+Summary files in the final directory:
+
+- `summary.csv`
+- `summary.md`
+
+Configuration:
+
+- Endpoint: `/v1/chat/completions`.
+- Messages: one `system` message with general instructions and one `user` message with resident request and visible state.
+- Output contract: exactly one JSON object for `set_light`, `ask_clarification`, or `no_action`.
+- Schema-constrained generation: `response_format.type=json_schema`, with nested `json_schema.schema`.
+- Temperature: `0`.
+- Seeds: `601`, `602`, `603`.
+- `max_tokens`: `128`.
+
+Final results:
+
+| Metric | Count |
+|---|---:|
+| HTTP executions completed | 12/12 |
+| Finish reason `stop` | 12/12 |
+| Generation limit reached | 0/12 |
+| Structured responses valid | 12/12 |
+| Actions permitted | 9/12 |
+| Actions applied | 9/12 |
+| Tasks completed | 9/12 |
+
+The three task failures are all from the ambiguous-room scenario. The model produced valid JSON, but chose `{"action":"set_light","room":"quarto","value":"on"}` instead of asking which room should be changed. After the validator fix, that action is blocked by the scenario's `prohibited_actions`; the home state is not changed and the task is not counted as complete. These are decision errors, not format or transport errors.
+
+Mean request latency was 91.912 s, with observed range 89.142 s to 96.766 s in the final campaign. Temperature zero means the three repetitions primarily test operational stability and deterministic behavior under repeated requests; they do not provide decision diversity.
+
+Manual clarification review did not produce any successful clarification in this campaign, because the model never emitted `ask_clarification` for the ambiguous scenario. The evaluator now requires `missing_field=room`, a question about the missing room/ambiente/comodo, unchanged home state, and no prohibited action match.

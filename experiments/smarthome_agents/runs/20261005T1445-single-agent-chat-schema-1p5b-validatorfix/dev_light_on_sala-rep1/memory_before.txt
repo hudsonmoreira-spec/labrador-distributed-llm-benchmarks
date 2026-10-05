@@ -1,0 +1,2 @@
+    PID   RSS    VSZ %CPU %MEM     ELAPSED COMMAND
+1389750 1315548 2012788 59.5 66.2 04:25:23 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 18089 --threads 4 --ctx-size 1024 --n-predict 96 --parallel 1 --metrics

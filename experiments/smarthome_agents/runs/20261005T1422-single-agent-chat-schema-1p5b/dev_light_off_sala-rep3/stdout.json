@@ -1,0 +1,231 @@
+{
+  "action_applied": true,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "final:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.sala.hvac",
+        "passed": true
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.quarto.hvac",
+        "passed": true
+      },
+      {
+        "name": "prohibited:{'action': 'set_light', 'room': 'quarto', 'value': '*'}",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "task_completed": true
+  },
+  "final_state": {
+    "residents": {
+      "ana": {
+        "preferred_light_lux_min": 250,
+        "preferred_temperature_c": 23
+      }
+    },
+    "rooms": {
+      "quarto": {
+        "appliances": {},
+        "hvac": "off",
+        "light": "off",
+        "luminosity_lux_initial": 180,
+        "occupied_by": [],
+        "temperature_c": 23.0
+      },
+      "sala": {
+        "appliances": {},
+        "hvac": "off",
+        "light": "off",
+        "luminosity_lux_initial": 320,
+        "occupied_by": [
+          "ana"
+        ],
+        "temperature_c": 24.0
+      }
+    }
+  },
+  "inference": {
+    "completed": true,
+    "elapsed_s": 89.60658403701382,
+    "error": null,
+    "finish_reason": "stop",
+    "http_status": 200,
+    "limit_reached": false,
+    "model_content": "{\n  \"action\": \"set_light\",\n  \"room\": \"sala\",\n  \"value\": \"off\"\n}",
+    "raw_response": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"action\\\": \\\"set_light\\\",\\n  \\\"room\\\": \\\"sala\\\",\\n  \\\"value\\\": \\\"off\\\"\\n}\"}}],\"created\":1791210665,\"model\":\"qwen2.5-1.5b-instruct-q5_k_m.gguf\",\"system_fingerprint\":\"b9584-e25a32e98\",\"object\":\"chat.completion\",\"usage\":{\"completion_tokens\":26,\"prompt_tokens\":177,\"total_tokens\":203,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"id\":\"chatcmpl-JoyrSgqTSc35uGs2JLdEpWeujLmRBE53\",\"timings\":{\"cache_n\":0,\"prompt_n\":177,\"prompt_ms\":73830.826,\"prompt_per_token_ms\":417.1233107344633,\"prompt_per_second\":2.397372609646816,\"predicted_n\":26,\"predicted_ms\":15703.978,\"predicted_per_token_ms\":603.9991538461538,\"predicted_per_second\":1.6556314584750438}}",
+    "request_payload": {
+      "cache_prompt": false,
+      "max_tokens": 128,
+      "messages": [
+        {
+          "content": "You control only a simulated smart home. Return exactly one JSON object that matches the supplied response schema. Do not include Markdown or prose. Do not execute shell commands or operate real devices. Use set_light only for a room present in the state. Use ask_clarification when required information is missing; for this pilot the only supported missing_field is room. Use no_action only when the request is unsafe or cannot be represented by the available actions.",
+          "role": "system"
+        },
+        {
+          "content": "Resident request: Apague a luz da sala.\nVisible state JSON: {\"known_location\": \"not_provided\", \"rooms\": {\"quarto\": {\"hvac\": \"off\", \"light\": \"off\", \"occupied_by\": []}, \"sala\": {\"hvac\": \"off\", \"light\": \"on\", \"occupied_by\": [\"ana\"]}}}",
+          "role": "user"
+        }
+      ],
+      "response_format": {
+        "json_schema": {
+          "name": "smart_home_action",
+          "schema": {
+            "oneOf": [
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "action": {
+                    "const": "set_light"
+                  },
+                  "room": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "enum": [
+                      "on",
+                      "off"
+                    ]
+                  }
+                },
+                "required": [
+                  "action",
+                  "room",
+                  "value"
+                ],
+                "type": "object"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "action": {
+                    "const": "ask_clarification"
+                  },
+                  "missing_field": {
+                    "enum": [
+                      "room"
+                    ]
+                  },
+                  "question": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "action",
+                  "missing_field",
+                  "question"
+                ],
+                "type": "object"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "action": {
+                    "const": "no_action"
+                  },
+                  "reason": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "action",
+                  "reason"
+                ],
+                "type": "object"
+              }
+            ]
+          },
+          "strict": true
+        },
+        "type": "json_schema"
+      },
+      "seed": 603,
+      "temperature": 0.0
+    },
+    "schema_constrained": true,
+    "server_url": "http://192.168.50.89:18089",
+    "timings": {
+      "cache_n": 0,
+      "predicted_ms": 15703.978,
+      "predicted_n": 26,
+      "predicted_per_second": 1.6556314584750438,
+      "predicted_per_token_ms": 603.9991538461538,
+      "prompt_ms": 73830.826,
+      "prompt_n": 177,
+      "prompt_per_second": 2.397372609646816,
+      "prompt_per_token_ms": 417.1233107344633
+    },
+    "transport": "http_chat_completions",
+    "usage": {
+      "completion_tokens": 26,
+      "prompt_tokens": 177,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 203
+    }
+  },
+  "log": "experiments/smarthome_agents/runs/20261005T1422-single-agent-chat-schema-1p5b/dev_light_off_sala-rep3/events.jsonl",
+  "messages": [
+    {
+      "content": "You control only a simulated smart home. Return exactly one JSON object that matches the supplied response schema. Do not include Markdown or prose. Do not execute shell commands or operate real devices. Use set_light only for a room present in the state. Use ask_clarification when required information is missing; for this pilot the only supported missing_field is room. Use no_action only when the request is unsafe or cannot be represented by the available actions.",
+      "role": "system"
+    },
+    {
+      "content": "Resident request: Apague a luz da sala.\nVisible state JSON: {\"known_location\": \"not_provided\", \"rooms\": {\"quarto\": {\"hvac\": \"off\", \"light\": \"off\", \"occupied_by\": []}, \"sala\": {\"hvac\": \"off\", \"light\": \"on\", \"occupied_by\": [\"ana\"]}}}",
+      "role": "user"
+    }
+  ],
+  "model_content": "{\n  \"action\": \"set_light\",\n  \"room\": \"sala\",\n  \"value\": \"off\"\n}",
+  "parse": {
+    "action": {
+      "action": "set_light",
+      "room": "sala",
+      "value": "off"
+    },
+    "reason": "ok",
+    "shape": {
+      "reason": "ok",
+      "valid": true
+    },
+    "structured_valid": true
+  },
+  "prompt": "system: You control only a simulated smart home. Return exactly one JSON object that matches the supplied response schema. Do not include Markdown or prose. Do not execute shell commands or operate real devices. Use set_light only for a room present in the state. Use ask_clarification when required information is missing; for this pilot the only supported missing_field is room. Use no_action only when the request is unsafe or cannot be represented by the available actions.\nuser: Resident request: Apague a luz da sala.\nVisible state JSON: {\"known_location\": \"not_provided\", \"rooms\": {\"quarto\": {\"hvac\": \"off\", \"light\": \"off\", \"occupied_by\": []}, \"sala\": {\"hvac\": \"off\", \"light\": \"on\", \"occupied_by\": [\"ana\"]}}}",
+  "result_flags": {
+    "action_applied": true,
+    "action_permitted": true,
+    "execution_completed": true,
+    "structured_response_valid": true,
+    "task_completed": true
+  },
+  "run_id": "20261005T142926Z-6913ebe8",
+  "scenario_id": "dev-light-off-sala",
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}
