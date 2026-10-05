@@ -1,0 +1,16 @@
+{
+  "source": "experiments/smarthome_agents/runs/20261005T1445-single-agent-chat-schema-1p5b-validatorfix",
+  "attempts": 12,
+  "scenarios": 4,
+  "latency_s": {
+    "Median": 90.83253305102699,
+    "Pninetyfive": 96.76586602098541,
+    "Mean": 91.91209090683454,
+    "Min": 89.14245353097795,
+    "Max": 96.76586602098541
+  },
+  "p95_method": "nearest rank",
+  "structured_valid": 12,
+  "task_completed": 9,
+  "blocked_by_historical_evaluator": 3
+}

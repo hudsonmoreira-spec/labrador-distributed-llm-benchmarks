@@ -1,0 +1,6 @@
+# Referências primárias verificadas em 2026-10-05
+
+Metadados (autores, título, ano, publicação, páginas e DOI) conferidos nas páginas oficiais da ACL Anthology. BibTeX local em `references.bib`. Nenhum PDF de terceiros é redistribuído.
+
+- [HomeBench](https://aclanthology.org/2025.acl-long.597/), Silin Li, Yuhang Guo, Jiashu Yao, Zeming Liu e Haifeng Wang, ACL 2025, pp. 12230–12250, DOI 10.18653/v1/2025.acl-long.597. O resumo e a descrição oficial distinguem instruções válidas/inválidas e um/vários dispositivos. Pertinência: fundamentar categorias e análise de propostas erradas. Nosso conjunto pequeno não é o HomeBench nem reproduz seus resultados. Código oficial indicado pela publicação: https://github.com/BITHLP/HomeBench.
+- [Demystifying Small Language Models for Edge Deployment](https://aclanthology.org/2025.acl-long.718/), Zhenyan Lu, Xiang Li, Dongqi Cai, Rongjie Yi, Fangming Liu, Wei Liu, Jian Luan, Xiwen Zhang, Nicholas D. Lane e Mengwei Xu, ACL 2025, pp. 14747–14764, DOI 10.18653/v1/2025.acl-long.718. A descrição oficial examina mais de 60 modelos pequenos e limitações/otimizações na borda. Pertinência: motivar medição conjunta de qualidade e eficiência. Não comprova desempenho do Labrador. Esta nota inicial foi baseada nos metadados e resumo oficiais; revisão aprofundada das seções experimentais fica pendente para a versão final.

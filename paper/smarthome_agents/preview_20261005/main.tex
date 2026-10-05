@@ -1,0 +1,62 @@
+\documentclass[letterpaper,conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{url}
+\input{generated/pilot.tex}
+\title{Controle Doméstico Simulado com Modelos Pequenos em SBCs: Precisão, Latência e Escalabilidade}
+\author{\IEEEauthorblockN{Hudson Moreira, Marcelo Knörich Zuffo, Laisa Costa de Biase}}
+\begin{document}
+\maketitle
+\begin{center}\footnotesize Prévia para discussão --- resultados preliminares\\
+5 de outubro de 2026; referência: \texttt{3427be7}.\end{center}
+\begin{abstract}
+Este estudo investiga a tradução de pedidos domésticos em ações explícitas usando modelos de linguagem pequenos em computadores de placa única (SBCs) Labrador. A casa e todas as ações são simuladas; as placas e a inferência são reais. Um piloto de desenvolvimento com Qwen2.5-1.5B-Instruct quantizado produziu 12 respostas estruturadas válidas em quatro casos, com três repetições por caso. Nove tarefas foram concluídas; nos três pedidos ambíguos o modelo escolheu um cômodo sem solicitar esclarecimento. A latência mediana por requisição foi \PilotMedian\,s. Esses resultados verificam o fluxo implementado, mas não estimam precisão geral. A campanha principal comparará regras, modelos de 0.5B e 1.5B e atendimento por réplicas independentes em uma, três e seis placas.
+\end{abstract}
+\begin{IEEEkeywords}casa simulada, modelos pequenos, SBC, avaliação, latência\end{IEEEkeywords}
+\section{Problema e motivação}
+Pedidos em linguagem natural podem especificar uma ação, omitir seu alvo ou solicitar funções inexistentes. Um controlador deve distinguir essas situações antes de modificar o estado de uma casa. A execução local em SBCs também exige medir latência e uso de recursos sob restrições de memória. O objetivo é avaliar conjuntamente a decisão produzida pelo modelo e o comportamento do programa que executa suas propostas.
+
+HomeBench inclui instruções válidas e inválidas para um ou vários dispositivos, oferecendo motivação para avaliar erros de interpretação doméstica~\cite{homebench}. O estudo de Lu et al. examina modelos pequenos e restrições de implantação na borda~\cite{edge}. Este trabalho adota um domínio menor e hardware Labrador; os resultados dessas referências não são transferidos para as placas desta pesquisa.
+\section{Pergunta de pesquisa e escopo}
+Qual é a precisão das decisões e o custo de latência de modelos pequenos quantizados, em comparação com regras explícitas, no controle de uma casa simulada, e como varia a capacidade de atendimento ao replicar o serviço em uma, três e seis Labradores?
+
+O escopo final abrange iluminação, uma rotina descrita por ações explícitas, esclarecimento e rejeição de pedidos inválidos. Não haverá colaboração entre agentes nesta campanha; esse tema fica como trabalho futuro. Não se controlam lâmpadas, sensores ou atuadores reais.
+\section{Arquitetura implementada}
+Um coordenador Python mantém o estado da casa, constrói mensagens de sistema e usuário, envia requisições HTTP a um \texttt{llama-server} residente e registra conteúdo, parâmetros, tempos e resultado. O modelo deve emitir exatamente um objeto JSON conforme um esquema com três ações: \texttt{set\_light}, \texttt{ask\_clarification} e \texttt{no\_action}. O programa verifica formato e permissões, aplica ações no simulador e avalia o resultado separadamente.
+
+O piloto usou uma Labrador com quatro CPUs, Debian 12 e aproximadamente 2 GB de RAM, runtime versão 9584 (\texttt{e25a32e98}) e Qwen2.5-1.5B-Instruct Q5\_K\_M. O SHA-256 do modelo está preservado no documento de configuração. O servidor utilizou quatro threads, contexto 1024 e uma vaga de inferência. As mensagens continham instruções gerais, pedido e estado visível; não incluíam o gabarito.
+\section{Método e comparações planejadas}
+O piloto empregou o endpoint de chat, geração restrita por JSON Schema, temperatura zero, limite de 128 tokens e sementes 601--603. O servidor permaneceu residente e o cache foi desativado nas requisições; os registros reportaram zero tokens em cache. A latência foi medida com relógio monotônico no coordenador, do envio até a resposta, incluindo comunicação e inferência, sem carregamento inicial do modelo.
+
+Antes da campanha principal, somente casos de desenvolvimento serão usados para escolher configurações viáveis de Qwen2.5-0.5B-Instruct e Qwen2.5-1.5B-Instruct quantizados. Aproximadamente 40 casos reservados incluirão pedidos claros, variações linguísticas, ambiguidades e solicitações inválidas. Cenários, critérios, prompts, esquema, configurações, política de bloqueio, repetições e medição serão congelados e versionados antes da execução. Correções posteriores originarão campanhas distintas.
+
+A comparação básica não terá inferências concorrentes na mesma placa. As tentativas serão distribuídas entre hosts, com os dois modelos balanceados entre placas. Os testes de escala usarão réplicas independentes e separarão latência por pedido de tarefas concluídas por minuto. A análise agrupará repetições por cenário e reportará categorias, propostas indevidas, bloqueios, esclarecimentos, tokens, memória e falhas operacionais.
+\section{Resultados reais do piloto}
+\begin{table}[t]
+\caption{Casos de desenvolvimento: três repetições por caso. Latências em segundos, obtidas dos registros individuais.}
+\centering\footnotesize
+\begin{tabular}{lrrr}\toprule
+Caso & Válidas & Concluídas & Mediana\\\midrule
+\input{generated/rows.tex}
+\end{tabular}
+\label{tab:pilot}
+\end{table}
+As 12 requisições terminaram normalmente, sem atingir o limite de geração. Todas produziram JSON válido. As nove tarefas claras foram concluídas. Nos três pedidos ``Acenda a luz.'', sem localização conhecida, o modelo propôs acender a luz do quarto em vez de perguntar o cômodo. A Tabela~\ref{tab:pilot} apresenta resultados por caso, sem tratar as repetições como casos independentes.
+
+A mediana global foi \PilotMedian\,s e o percentil 95 foi \PilotPninetyfive\,s ($n=12$ requisições; método do posto mais próximo). A média foi \PilotMean\,s e o intervalo observado foi \PilotMin--\PilotMax\,s. Cada entrada consumiu 170--187 tokens e cada saída 26--30 tokens. Os arquivos preservam tempos de processamento do prompt e geração, além de instantâneos de memória antes e depois; não medem pico de memória.
+
+As três escolhas de cômodo são erros de decisão do modelo, não falhas de transporte ou formato. O executor histórico bloqueou essas propostas consultando \texttt{prohibited\_actions} no avaliador do cenário. A ausência de mudança de estado resulta dessa intervenção e não demonstra que o modelo resolveu a ambiguidade. Essa dependência do gabarito será removida antes da campanha principal, com uma política operacional geral e registros separados de proposta e bloqueio.
+\section{Limitações}
+São repetições de quatro casos de desenvolvimento, não uma estimativa geral de precisão. Temperatura zero produziu decisões repetidas; as sementes não garantem diversidade. O piloto envolve apenas um modelo, um host e um esquema simples. Não existem aqui medidas comparativas do modelo 0.5B, ganhos de escala ou resultados de rotina. A procedência da conversão GGUF ainda requer documentação.
+
+A avaliação anterior de esclarecimento aceitava palavras relacionadas a cômodo, insuficientes para verificar se uma pergunta solicita a informação ausente. Nenhuma resposta do piloto foi um esclarecimento, de modo que essa fragilidade não altera os nove sucessos registrados, mas deverá ser corrigida. Casos de julgamento incerto terão revisão manual documentada, sem sucesso automático. O simulador não valida uso residencial real, consumo energético ou segurança de dispositivos físicos.
+\section{Próximas etapas}
+Separar permissões de avaliação, corrigir esclarecimentos e testar essas mudanças; comparar configurações em desenvolvimento; preparar e congelar os casos reservados; executar qualidade e escala; gerar tabelas e figuras diretamente dos registros. Somente após conferir as campanhas serão redigidas conclusões comparativas e as versões finais em inglês e português.
+\section*{Acompanhamento e uso de IA}
+A autoria e sua ordem são propostas para apreciação dos orientadores. Afiliações e contatos não são acrescentados nesta prévia. Codex auxiliou a organização das evidências, a análise e a redação; a revisão e aprovação final cabem aos autores.
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}
