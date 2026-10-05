@@ -1,0 +1,12 @@
+ip=192.168.50.1 192.168.50.169
+hostname=lab3
+user=caninos
+sudo_n=OK
+arch=aarch64
+kernel=6.1.76
+os=Debian GNU/Linux 12 (bookworm) 12
+cpu_count=4
+cpu_model=mem_total_kb=1986400
+storage_root=15G 7,1G 48%
+python3=Python 3.11.2
+llama_server=models=/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-nomic-bert-moe.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-gpt-neox.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-deepseek-llm.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-bert-bge.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-starcoder.gguf,

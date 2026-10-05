@@ -1,0 +1,12 @@
+ip=192.168.50.1 192.168.50.118
+hostname=labrador
+user=caninos
+sudo_n=OK
+arch=aarch64
+kernel=6.1.76
+os=Debian GNU/Linux 12 (bookworm) 12
+cpu_count=4
+cpu_model=mem_total_kb=1986400
+storage_root=15G 7,7G 44%
+python3=Python 3.11.2
+llama_server=models=/home/caninos/research/models/qwen2.5-1.5b-instruct-q5_k_m.gguf,

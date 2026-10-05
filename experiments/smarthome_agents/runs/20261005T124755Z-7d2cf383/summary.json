@@ -1,0 +1,50 @@
+{
+  "action": {
+    "action": "set_light",
+    "room": "sala|quarto",
+    "value": "on|off"
+  },
+  "final_state": {
+    "residents": {
+      "ana": {
+        "preferred_light_lux_min": 250,
+        "preferred_temperature_c": 23
+      }
+    },
+    "rooms": {
+      "quarto": {
+        "appliances": {},
+        "hvac": "off",
+        "light": "off",
+        "luminosity_lux": 180,
+        "occupied_by": [],
+        "temperature_c": 23.0
+      },
+      "sala": {
+        "appliances": {},
+        "hvac": "off",
+        "light": "off",
+        "luminosity_lux": 95,
+        "occupied_by": [
+          "ana"
+        ],
+        "temperature_c": 24.0
+      }
+    }
+  },
+  "host": "192.168.50.118",
+  "inference_elapsed_s": 142.74257380701602,
+  "log": "experiments/smarthome_agents/runs/20261005T124755Z-7d2cf383/events.jsonl",
+  "raw_action_json": "{\"action\": \"set_light\", \"room\": \"sala|quarto\", \"value\": \"on|off\"}",
+  "result": {
+    "criterion": "dev-001 explicit evaluator",
+    "success": false
+  },
+  "returncode": 124,
+  "run_id": "20261005T124755Z-7d2cf383",
+  "scenario_id": "dev-001-simple-light",
+  "validation": {
+    "reason": "not_in_allowed_actions",
+    "valid": false
+  }
+}

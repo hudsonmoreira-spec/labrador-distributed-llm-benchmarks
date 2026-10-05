@@ -1,0 +1,15 @@
+host_ip=192.168.50.195
+hostname=lab8
+user=caninos
+sudo_n=OK
+arch=aarch64
+kernel=6.1.76
+os=Debian GNU/Linux 12 (bookworm)
+cpu_count=4
+cpu_model=
+mem_total_kb=1986272
+storage_root=15G total, 5,1G avail, 63% used
+python3=Python 3.11.2
+llama_server=/home/caninos/llama-offline/llama.cpp/build/bin/llama-server
+llama_cli=/home/caninos/llama-offline/llama.cpp/build/bin/llama-cli
+models=/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-starcoder.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-gemma-4.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-llama-spm.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-deepseek-coder.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-aquila.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-baichuan.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-mpt.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-llama-bpe.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-command-r.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-gpt-2.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-refact.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-bert-bge.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-qwen2.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-falcon.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-gpt-neox.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-qwen35.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-phi-3.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-nomic-bert-moe.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-deepseek-llm.gguf

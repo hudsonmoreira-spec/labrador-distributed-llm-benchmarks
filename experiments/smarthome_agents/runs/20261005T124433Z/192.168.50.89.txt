@@ -1,0 +1,12 @@
+ip=192.168.50.1 192.168.50.89
+hostname=lab2
+user=caninos
+sudo_n=OK
+arch=aarch64
+kernel=6.1.76
+os=Debian GNU/Linux 12 (bookworm) 12
+cpu_count=4
+cpu_model=mem_total_kb=1986400
+storage_root=15G 3,4G 76%
+python3=Python 3.11.2
+llama_server=models=/home/caninos/models/Qwen3-0.6B-Q8_0.gguf,/home/caninos/models/qwen2.5-1.5b-instruct-q5_k_m.gguf,/home/caninos/models/qwen2.5-0.5b-instruct-q4_k_m.gguf,/home/caninos/models/qwen2.5-0.5b-instruct-q5_k_m.gguf,/home/caninos/llama-offline/llama.cpp/models/ggml-vocab-qwen2.gguf,

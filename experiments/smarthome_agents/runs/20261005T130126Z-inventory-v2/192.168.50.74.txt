@@ -1,0 +1,15 @@
+host_ip=192.168.50.74
+hostname=labrador
+user=caninos
+sudo_n=OK
+arch=aarch64
+kernel=6.1.76
+os=Debian GNU/Linux 12 (bookworm)
+cpu_count=4
+cpu_model=
+mem_total_kb=1986400
+storage_root=15G total, 12G avail, 13% used
+python3=Python 3.11.2
+llama_server=
+llama_cli=/home/caninos/research/runtime/llama.cpp-68e79bd8-arm64-debian12-gcc12-noomp/bin/llama-cli
+models=
