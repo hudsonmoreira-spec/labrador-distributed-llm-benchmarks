@@ -7,7 +7,7 @@ import shlex
 import subprocess
 from pathlib import Path
 from datetime import datetime,timezone
-HOSTS=['192.168.50.129','192.168.50.89','192.168.50.169','192.168.50.200','192.168.50.240','192.168.50.195']
+HOSTS=['192.168.50.129','192.168.50.89','192.168.50.169','192.168.50.54','192.168.50.240','192.168.50.195']
 BASE='/home/caninos/smarthome_agents/study_v1'
 BIN='/home/caninos/llama-offline/llama.cpp/build/bin'
 MODEL05='qwen2.5-0.5b-instruct-q5_k_m.gguf'

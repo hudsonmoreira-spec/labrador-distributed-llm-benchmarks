@@ -6,7 +6,7 @@ Só estará congelado quando `freeze.json` for registrado após a campanha de de
 
 Referência de regras finitas; Qwen2.5-0.5B-Instruct Q5_K_M; Qwen2.5-1.5B-Instruct Q5_K_M. Nenhuma colaboração entre agentes. Casa simulada com sala/quarto, luzes on/off, ações simples, uma rotina de duas ações explícitas, esclarecimento de local e pedidos inválidos. O coordenador aplica apenas mudanças em dicionários Python.
 
-Seis Labradores selecionadas: lab1 (.129), lab2 (.89), lab3 (.169), lab6 (.200), lab7 (.240), lab8 (.195). Quatro CPUs ARM64, Debian 12, ~2 GB RAM. Registrar inventário exato, runtime e bibliotecas por hash e hashes dos modelos. Usar o mesmo runtime b9584-e25a32e98, quatro threads e quatro threads de lote, contexto 512, uma vaga por servidor, CPU (`--device none`), processos residentes. O modelo 0.5B usa porta 19005; 1.5B porta 19015; regras Python porta 19000. Serviços anteriores ficam preservados; seus processos/memória/carga são registrados. Instantes anteriores/posteriores não medem pico por requisição.
+Seis Labradores selecionadas: lab1 (.129), lab2 (.89), lab3 (.169), lab5 (.54), lab7 (.240), lab8 (.195). Quatro CPUs ARM64, Debian 12, ~2 GB RAM. Registrar inventário exato, runtime e bibliotecas por hash e hashes dos modelos. Usar o mesmo runtime b9584-e25a32e98, quatro threads e quatro threads de lote, contexto 512, uma vaga por servidor, CPU (`--device none`), processos residentes. O modelo 0.5B usa porta 19005; 1.5B porta 19015; regras Python porta 19000. Serviços anteriores ficam preservados; seus processos/memória/carga são registrados. Instantes anteriores/posteriores não medem pico por requisição.
 
 ## Desenvolvimento
 

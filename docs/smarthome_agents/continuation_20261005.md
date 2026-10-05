@@ -17,3 +17,5 @@ Preparação inicial preservada: biblioteca faltava no LD_LIBRARY_PATH de comand
 Próximos passos: concluir .85, conferir propriedades/runtime/hash e fontes da referência por regras; registrar commit de desenvolvimento; executar `--phase development` em nova pasta; analisar sem reservado; congelar scripts e protocolo por hash em commit; qualidade 240 tentativas e escala 108; análise e manuscritos atualizados inglês/português; revisão visual e commits/publicação.
 
 A sexta placa foi substituída de .85/lab4 para .200/lab6 antes do desenvolvimento, por conexões interrompidas/atrasadas na preparação. Mesmo runtime conferido. Sem aumentar número de placas ou mudar categorias. Não usar .85 nas campanhas.
+
+A cópia notebook→.200 mostrou ~8 MiB após vários minutos. A alternativa direta .89→.54 via HTTP local temporário transferiu os 522186592 bytes em 44,743 s. O conjunto final candidato é .129, .89, .169, .54, .240, .195. .200 não integra a campanha e sua transferência parcial é somente preparação. Conferir hashes e propriedades antes do desenvolvimento. O servidor temporário de arquivos na .89 deve ser encerrado após concluir a transferência.
