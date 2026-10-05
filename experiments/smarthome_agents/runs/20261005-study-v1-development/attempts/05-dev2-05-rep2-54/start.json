@@ -1,0 +1,15 @@
+{
+  "attempt_id": "05-dev2-05-rep2-54",
+  "category": "routine",
+  "host": "192.168.50.54",
+  "model": "05",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "dev2-05",
+  "started_at": "2026-10-05T20:18:26.193086+00:00",
+  "url": "http://192.168.50.54:19005"
+}

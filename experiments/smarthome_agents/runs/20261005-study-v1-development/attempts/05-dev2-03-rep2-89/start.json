@@ -1,0 +1,15 @@
+{
+  "attempt_id": "05-dev2-03-rep2-89",
+  "category": "paraphrase",
+  "host": "192.168.50.89",
+  "model": "05",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "dev2-03",
+  "started_at": "2026-10-05T20:17:47.120643+00:00",
+  "url": "http://192.168.50.89:19005"
+}

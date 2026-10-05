@@ -1,0 +1,15 @@
+{
+  "attempt_id": "rules-dev2-06-rep2-169",
+  "category": "ambiguity",
+  "host": "192.168.50.169",
+  "model": "rules",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "dev2-06",
+  "started_at": "2026-10-05T20:20:24.670451+00:00",
+  "url": "http://192.168.50.169:19000"
+}

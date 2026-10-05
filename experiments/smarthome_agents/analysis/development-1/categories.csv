@@ -1,0 +1,16 @@
+model,category,scenarios,attempts,mean_scenario_success,successes,pending
+05,ambiguity,2,4,0,0,0
+05,clear,3,6,0.3333333333333333,2,0
+05,invalid,1,2,0,0,0
+05,paraphrase,1,2,0,0,0
+05,routine,1,2,0,0,0
+15,ambiguity,2,4,0,0,0
+15,clear,3,6,0.3333333333333333,2,0
+15,invalid,1,2,0,0,0
+15,paraphrase,1,2,0,0,0
+15,routine,1,2,1,2,0
+rules,ambiguity,2,4,0.5,2,0
+rules,clear,3,6,1,6,0
+rules,invalid,1,2,1,2,0
+rules,paraphrase,1,2,0,0,0
+rules,routine,1,2,1,2,0

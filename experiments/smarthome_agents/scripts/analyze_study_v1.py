@@ -30,9 +30,16 @@ def memory_values(path):
 
 def main():
     a=argparse.ArgumentParser();a.add_argument('--run',type=Path,required=True);a.add_argument('--out',type=Path,required=True);args=a.parse_args()
+    args.run=args.run.resolve()
     args.out.mkdir(parents=True,exist_ok=True)
     campaign=json.loads((args.run/'campaign.json').read_text());cases=json.loads((ROOT/campaign['scenario_file']).read_text());byid={s['scenario_id']:s for s in cases}
     rows=[];pending=[];failures=[]
+    ledger_path=args.run/'manual_reviews.json'
+    ledger=json.loads(ledger_path.read_text()) if ledger_path.exists() else []
+    reviews={r['attempt']:r for r in ledger}
+    assert len(reviews)==len(ledger), 'duplicate manual review'
+    for review in reviews.values():
+        assert review['decision'] in {'pass','fail'} and review['reviewer'] and review['rationale']
     paths=sorted(args.run.glob('**/attempts/*/summary.json'))
     starts=sorted(args.run.glob('**/attempts/*/start.json'))
     missing=[str(p.relative_to(ROOT)) for p in starts if not (p.parent/'summary.json').exists()]
@@ -49,13 +56,20 @@ def main():
         assert state==r['final_state'] and permission==r['validation']
         ev=study.evaluate(sc,parsed['action'],state,permission,r['execution_completed'],parsed['structured_valid'])
         assert ev==r['evaluation'],path
+        original_success=ev['task_completed']
+        review=reviews.get(str(path.relative_to(ROOT)))
+        if review:
+            assert ev.get('review_pending'), 'review only unresolved semantic clarification'
+            if review['decision']=='pass':
+                ev['task_completed']=all(c['passed'] or c['name']=='clarification_missing_field' for c in ev['checks'])
+            ev['review_pending']=False
         action=parsed['action'];steps=study.light_steps(action)
         undue=ev.get('undue_proposal',False)
         if ev.get('review_pending'):
             pending.append({'attempt':str(path.relative_to(ROOT)),'model':r['model'],'scenario':r['scenario_id'],'question':action.get('question'),'status':'pending_manual_review','criterion':'Does the question request the missing location of the light action?'})
         before=memory_values(path.parent/'memory_before.txt');after=memory_values(path.parent/'memory_after.txt')
-        row={'attempt':str(path.relative_to(ROOT)),'model':r['model'],'host':r['host'],'scenario':r['scenario_id'],'category':r['category'],'rep':r['repetition'],
-             'completed':r['execution_completed'],'valid':parsed['structured_valid'],'success':ev['task_completed'],'review_pending':ev.get('review_pending',False),
+        row={'attempt':str(path.relative_to(ROOT)),'model':r['model'],'host':r['host'],'scenario':r['scenario_id'],'category':r['category'],'rep':r['repetition'],'replicas':int(path.parents[2].name.split('-n')[1].split('-')[0]) if campaign['phase']=='scale' else 1,
+             'completed':r['execution_completed'],'valid':parsed['structured_valid'],'success':ev['task_completed'],'automatic_success':original_success,'manual_review':bool(review),'manual_reviewer':review['reviewer'] if review else None,'human_validation_pending':bool(review and review.get('human_validation_pending')), 'review_pending':ev.get('review_pending',False),
              'undue_proposal':undue,'undue_blocked':undue and not permission['allowed'],'undue_applied':undue and r['action_applied'],
              'clarification_proposed':bool(action and action['action']=='ask_clarification'),
              'clarification_correct':bool(action and action['action']=='ask_clarification' and ev['task_completed']),
@@ -88,7 +102,7 @@ def main():
         rs=[r for r in rows if r['model']==model];xs=[r['latency_s'] for r in rs];gs=[g for g in scenarios if g['model']==model]
         rss=[r['rss_after_kib'] for r in rs if r['rss_after_kib'] is not None]
         metrics.append({'model':model,'n':len(rs),'scenarios':len(gs),'successes':sum(r['success'] for r in rs),
-            'mean_scenario_success':stats.mean(g['success_fraction'] for g in gs),'valid':sum(r['valid'] for r in rs),'operational_failures':sum(not r['completed'] for r in rs),
+            'mean_scenario_success':stats.mean(g['success_fraction'] for g in gs),'automatic_successes':sum(r['automatic_success'] for r in rs),'manual_reviewed':sum(r['manual_review'] for r in rs),'human_validation_pending':sum(r['human_validation_pending'] for r in rs),'valid':sum(r['valid'] for r in rs),'operational_failures':sum(not r['completed'] for r in rs),
             'non_stop':sum(r['finish_reason']!='stop' for r in rs),'median_s':stats.median(xs),'p95_s':percentile(xs),'min_s':min(xs),'max_s':max(xs),
             'undue_proposed':sum(r['undue_proposal'] for r in rs),'undue_blocked':sum(r['undue_blocked'] for r in rs),'undue_applied':sum(r['undue_applied'] for r in rs),
             'clarification_correct':sum(r['clarification_correct'] for r in rs),'clarification_incorrect':sum(r['clarification_incorrect'] for r in rs),'review_pending':sum(r['review_pending'] for r in rs),

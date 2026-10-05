@@ -17,3 +17,5 @@ Esclarecimento exige campo ausente correto, pergunta que solicite o local da aç
 ## Verificação
 
 15 testes locais passaram, incluindo independência do gabarito, bloqueio por falta de informação, permissão para proposta errada chegar ao avaliador e perguntas irrelevantes contendo palavras de cômodo. Esses testes não são resultados de inferência.
+
+Uma revisão caso a caso é anexada em `manual_reviews.json` da campanha: caminho da tentativa, pass/fail, identificação do revisor e justificativa. A análise mantém o sucesso automático e o sucesso após revisão em campos separados. Revisões assistidas por Codex devem se identificar como tal e manter `human_validation_pending=true`; nunca apresentá-las como revisão feita por pessoa. O registro original de pendência permanece inalterado. Aprovar semanticamente uma pergunta não dispensa os demais critérios de estado, permissão e ação esperada.

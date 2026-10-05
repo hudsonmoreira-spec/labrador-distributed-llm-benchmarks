@@ -1,0 +1,15 @@
+{
+  "attempt_id": "rules-dev2-03-rep2-195",
+  "category": "paraphrase",
+  "host": "192.168.50.195",
+  "model": "rules",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "dev2-03",
+  "started_at": "2026-10-05T20:18:06.872538+00:00",
+  "url": "http://192.168.50.195:19000"
+}

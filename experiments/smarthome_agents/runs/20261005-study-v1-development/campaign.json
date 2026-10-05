@@ -1,0 +1,30 @@
+{
+  "configuration": {
+    "cache_prompt": false,
+    "max_tokens": 128,
+    "seeds": [
+      801,
+      802
+    ],
+    "temperature": 0,
+    "timeout_s": 180
+  },
+  "git_commit": "c6d7c25f5c7a8627e60ee43d943a564cb526d3d4",
+  "hosts": [
+    "192.168.50.129",
+    "192.168.50.89",
+    "192.168.50.169",
+    "192.168.50.54",
+    "192.168.50.240",
+    "192.168.50.195"
+  ],
+  "models": [
+    "rules",
+    "05",
+    "15"
+  ],
+  "phase": "development",
+  "scenario_file": "experiments/smarthome_agents/study_v1/development.json",
+  "scenario_sha256": "c871188eaa7cb8d8d62fefeaa3d99dfbfc936dbc3c9ff97afc2cffb98eb884bb",
+  "started_at": "2026-10-05T20:16:09.625110+00:00"
+}

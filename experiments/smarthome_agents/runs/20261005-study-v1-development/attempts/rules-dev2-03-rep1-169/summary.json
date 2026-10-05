@@ -1,0 +1,93 @@
+{
+  "action_applied": false,
+  "attempt_id": "rules-dev2-03-rep1-169",
+  "cache_tokens": 0,
+  "category": "paraphrase",
+  "dispatch_monotonic_s": 374618.63862342,
+  "elapsed_s": 0.02972079103346914,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "off",
+        "expected": "on",
+        "name": "final:rooms.sala.light",
+        "passed": false
+      },
+      {
+        "actual": "on",
+        "expected": "on",
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true
+      },
+      {
+        "name": "no_action_policy",
+        "passed": false
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "review_pending": false,
+    "task_completed": false,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-05T20:18:08.540274+00:00",
+  "host": "192.168.50.169",
+  "memory_errors": [],
+  "model": "rules",
+  "model_content": "{\"action\":\"no_action\",\"reason\":\"Pedido fora das regras explícitas.\"}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "no_action",
+      "reason": "Pedido fora das regras explícitas."
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "repetition": 1,
+  "response_monotonic_s": 374618.668344211,
+  "returned_model": "rules-v1",
+  "scenario_id": "dev2-03",
+  "started_at": "2026-10-05T20:18:07.573811+00:00",
+  "step_permissions": [],
+  "system_fingerprint": null,
+  "timings": {
+    "rule_compute_s": 0.015826546994503587
+  },
+  "url": "http://192.168.50.169:19000",
+  "usage": {},
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

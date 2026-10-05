@@ -1,0 +1,131 @@
+{
+  "cache_prompt": false,
+  "max_tokens": 128,
+  "messages": [
+    {
+      "content": "Casa simulada. Responda só JSON do esquema. Pedido sem local conhecido: pergunte qual cômodo. Nunca adivinhe o local. Só controle luzes; pedido inválido: no_action. Rotina explícita: set_lights com todas as ações pedidas. Não opere aparelhos reais.",
+      "role": "system"
+    },
+    {
+      "content": "Apague a luz, por favor.\n{\"lights\":{\"sala\":\"off\",\"quarto\":\"on\"},\"location\":null}",
+      "role": "user"
+    }
+  ],
+  "response_format": {
+    "json_schema": {
+      "name": "simulated_home",
+      "schema": {
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "action": {
+                "const": "set_light"
+              },
+              "room": {
+                "type": "string"
+              },
+              "value": {
+                "enum": [
+                  "on",
+                  "off"
+                ]
+              }
+            },
+            "required": [
+              "action",
+              "room",
+              "value"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "action": {
+                "const": "ask_clarification"
+              },
+              "missing_field": {
+                "enum": [
+                  "room"
+                ]
+              },
+              "question": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "action",
+              "missing_field",
+              "question"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "action": {
+                "const": "no_action"
+              },
+              "reason": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "action",
+              "reason"
+            ],
+            "type": "object"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "action": {
+                "const": "set_lights"
+              },
+              "steps": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "action": {
+                      "const": "set_light"
+                    },
+                    "room": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "enum": [
+                        "on",
+                        "off"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "room",
+                    "value"
+                  ],
+                  "type": "object"
+                },
+                "maxItems": 2,
+                "minItems": 1,
+                "type": "array"
+              }
+            },
+            "required": [
+              "action",
+              "steps"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "seed": 802,
+  "temperature": 0
+}

@@ -1,0 +1,1342 @@
+[
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-01-rep1-169/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-01-rep2-195/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-02-rep1-54/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.quarto.light",
+          "passed": false,
+          "expected": "off",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-02-rep2-129/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.quarto.light",
+          "passed": false,
+          "expected": "off",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-03-rep1-240/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-03-rep2-89/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-05-rep1-129/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "final:rooms.quarto.light",
+          "passed": false,
+          "expected": "off",
+          "actual": "on"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-05-rep2-54/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "final:rooms.quarto.light",
+          "passed": false,
+          "expected": "off",
+          "actual": "on"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-06-rep1-89/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": false,
+      "reason": "insufficient_room_information",
+      "policy": "room_evidence_v1"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": false,
+          "detail": "insufficient_room_information"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-06-rep2-240/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": false,
+      "reason": "insufficient_room_information",
+      "policy": "room_evidence_v1"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": false,
+          "detail": "insufficient_room_information"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-07-rep1-169/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+    "block": {
+      "allowed": false,
+      "reason": "insufficient_room_information",
+      "policy": "room_evidence_v1"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": false,
+          "detail": "insufficient_room_information"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-07-rep2-195/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+    "block": {
+      "allowed": false,
+      "reason": "insufficient_room_information",
+      "policy": "room_evidence_v1"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": false,
+          "detail": "insufficient_room_information"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-08-rep1-54/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": false,
+          "expected": "off",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/05-dev2-08-rep2-129/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": false,
+          "expected": "off",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-01-rep1-240/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-01-rep2-89/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-03-rep1-129/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-03-rep2-54/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-04-rep1-89/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-04-rep2-240/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-06-rep1-54/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": false,
+      "reason": "insufficient_room_information",
+      "policy": "room_evidence_v1"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": false,
+          "detail": "insufficient_room_information"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-06-rep2-129/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": false,
+      "reason": "insufficient_room_information",
+      "policy": "room_evidence_v1"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": false,
+          "detail": "insufficient_room_information"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-07-rep1-240/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"},{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}]}",
+    "block": {
+      "allowed": false,
+      "reason": "insufficient_room_information",
+      "policy": "room_evidence_v1"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": false,
+          "detail": "insufficient_room_information"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-07-rep2-89/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"},{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}]}",
+    "block": {
+      "allowed": false,
+      "reason": "insufficient_room_information",
+      "policy": "room_evidence_v1"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": false,
+          "detail": "insufficient_room_information"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-08-rep1-195/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": false,
+          "expected": "off",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/15-dev2-08-rep2-169/summary.json",
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": false,
+          "expected": "off",
+          "actual": "on"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": false
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": true
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/rules-dev2-03-rep1-169/summary.json",
+    "content": "{\"action\":\"no_action\",\"reason\":\"Pedido fora das regras explícitas.\"}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "no_action_policy",
+          "passed": false
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": false
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/rules-dev2-03-rep2-195/summary.json",
+    "content": "{\"action\":\"no_action\",\"reason\":\"Pedido fora das regras explícitas.\"}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "final:rooms.sala.light",
+          "passed": false,
+          "expected": "on",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "no_action_policy",
+          "passed": false
+        },
+        {
+          "name": "exact_proposed_steps",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": false
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/rules-dev2-07-rep1-129/summary.json",
+    "content": "{\"action\":\"no_action\",\"reason\":\"Pedido fora das regras explícitas.\"}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "no_action_policy",
+          "passed": false
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": false
+    },
+    "error": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261005-study-v1-development/attempts/rules-dev2-07-rep2-54/summary.json",
+    "content": "{\"action\":\"no_action\",\"reason\":\"Pedido fora das regras explícitas.\"}",
+    "block": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "evaluation": {
+      "review_pending": false,
+      "task_completed": false,
+      "checks": [
+        {
+          "name": "action_allowed",
+          "passed": true,
+          "detail": "allowed"
+        },
+        {
+          "name": "unchanged:rooms.sala.light",
+          "passed": true,
+          "expected": "off",
+          "actual": "off"
+        },
+        {
+          "name": "unchanged:rooms.quarto.light",
+          "passed": true,
+          "expected": "on",
+          "actual": "on"
+        },
+        {
+          "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+          "passed": true
+        },
+        {
+          "name": "no_action_policy",
+          "passed": false
+        },
+        {
+          "name": "expected_action",
+          "passed": false
+        },
+        {
+          "name": "no_prohibited_plan_steps",
+          "passed": true
+        }
+      ],
+      "manual_review": null,
+      "undue_proposal": false
+    },
+    "error": null
+  }
+]

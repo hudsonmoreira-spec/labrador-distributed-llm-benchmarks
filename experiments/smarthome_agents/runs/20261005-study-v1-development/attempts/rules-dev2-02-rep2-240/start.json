@@ -1,0 +1,15 @@
+{
+  "attempt_id": "rules-dev2-02-rep2-240",
+  "category": "clear",
+  "host": "192.168.50.240",
+  "model": "rules",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "dev2-02",
+  "started_at": "2026-10-05T20:17:36.138594+00:00",
+  "url": "http://192.168.50.240:19000"
+}
