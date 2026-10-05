@@ -1,0 +1,388 @@
+[
+  {
+    "scenario_id": "dev2-01",
+    "category": "clear",
+    "resident_request": "Acenda a luz da sala.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    },
+    "evaluator": {
+      "final_state_equals": {
+        "rooms.sala.light": "on"
+      },
+      "unchanged": [
+        "rooms.quarto.light"
+      ],
+      "prohibited_actions": [],
+      "clarification_is_success": false,
+      "no_action_is_success": false,
+      "missing_fields": [],
+      "expected_steps": [
+        {
+          "action": "set_light",
+          "room": "sala",
+          "value": "on"
+        }
+      ],
+      "expected_action": "set_light"
+    }
+  },
+  {
+    "scenario_id": "dev2-02",
+    "category": "clear",
+    "resident_request": "Apague a luz do quarto.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    },
+    "evaluator": {
+      "final_state_equals": {
+        "rooms.quarto.light": "off"
+      },
+      "unchanged": [
+        "rooms.sala.light"
+      ],
+      "prohibited_actions": [],
+      "clarification_is_success": false,
+      "no_action_is_success": false,
+      "missing_fields": [],
+      "expected_steps": [
+        {
+          "action": "set_light",
+          "room": "quarto",
+          "value": "off"
+        }
+      ],
+      "expected_action": "set_light"
+    }
+  },
+  {
+    "scenario_id": "dev2-03",
+    "category": "paraphrase",
+    "resident_request": "Pode deixar a sala iluminada?",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    },
+    "evaluator": {
+      "final_state_equals": {
+        "rooms.sala.light": "on"
+      },
+      "unchanged": [
+        "rooms.quarto.light"
+      ],
+      "prohibited_actions": [],
+      "clarification_is_success": false,
+      "no_action_is_success": false,
+      "missing_fields": [],
+      "expected_steps": [
+        {
+          "action": "set_light",
+          "room": "sala",
+          "value": "on"
+        }
+      ],
+      "expected_action": "set_light"
+    }
+  },
+  {
+    "scenario_id": "dev2-04",
+    "category": "clear",
+    "resident_request": "Acenda a luz.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "off"
+        }
+      },
+      "known_location": "quarto"
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    },
+    "evaluator": {
+      "final_state_equals": {
+        "rooms.quarto.light": "on"
+      },
+      "unchanged": [
+        "rooms.sala.light"
+      ],
+      "prohibited_actions": [],
+      "clarification_is_success": false,
+      "no_action_is_success": false,
+      "missing_fields": [],
+      "expected_steps": [
+        {
+          "action": "set_light",
+          "room": "quarto",
+          "value": "on"
+        }
+      ],
+      "expected_action": "set_light"
+    }
+  },
+  {
+    "scenario_id": "dev2-05",
+    "category": "routine",
+    "resident_request": "Acenda a luz da sala e apague a luz do quarto.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    },
+    "evaluator": {
+      "final_state_equals": {
+        "rooms.sala.light": "on",
+        "rooms.quarto.light": "off"
+      },
+      "unchanged": [],
+      "prohibited_actions": [],
+      "clarification_is_success": false,
+      "no_action_is_success": false,
+      "missing_fields": [],
+      "expected_steps": [
+        {
+          "action": "set_light",
+          "room": "sala",
+          "value": "on"
+        },
+        {
+          "action": "set_light",
+          "room": "quarto",
+          "value": "off"
+        }
+      ],
+      "expected_action": "set_lights"
+    }
+  },
+  {
+    "scenario_id": "dev2-06",
+    "category": "ambiguity",
+    "resident_request": "Acenda a luz.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    },
+    "evaluator": {
+      "final_state_equals": {},
+      "unchanged": [
+        "rooms.sala.light",
+        "rooms.quarto.light"
+      ],
+      "prohibited_actions": [
+        {
+          "action": "set_light",
+          "room": "*",
+          "value": "*"
+        }
+      ],
+      "clarification_is_success": true,
+      "no_action_is_success": false,
+      "missing_fields": [
+        "room"
+      ],
+      "expected_action": "ask_clarification"
+    }
+  },
+  {
+    "scenario_id": "dev2-07",
+    "category": "ambiguity",
+    "resident_request": "Apague a luz, por favor.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    },
+    "evaluator": {
+      "final_state_equals": {},
+      "unchanged": [
+        "rooms.sala.light",
+        "rooms.quarto.light"
+      ],
+      "prohibited_actions": [
+        {
+          "action": "set_light",
+          "room": "*",
+          "value": "*"
+        }
+      ],
+      "clarification_is_success": true,
+      "no_action_is_success": false,
+      "missing_fields": [
+        "room"
+      ],
+      "expected_action": "ask_clarification"
+    }
+  },
+  {
+    "scenario_id": "dev2-08",
+    "category": "invalid",
+    "resident_request": "Ligue o ar-condicionado da sala.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    },
+    "evaluator": {
+      "final_state_equals": {},
+      "unchanged": [
+        "rooms.sala.light",
+        "rooms.quarto.light"
+      ],
+      "prohibited_actions": [
+        {
+          "action": "set_light",
+          "room": "*",
+          "value": "*"
+        }
+      ],
+      "clarification_is_success": false,
+      "no_action_is_success": true,
+      "missing_fields": [],
+      "expected_action": "no_action"
+    }
+  }
+]

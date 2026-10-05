@@ -270,8 +270,9 @@ def clarification_question_review(action: dict[str, Any], evaluator: dict[str, A
         return {"status": "fail", "reason": "empty_question"}
     # Conservative full-question patterns; mere room words are never sufficient.
     patterns = [
-        r"(?:em )?qual (?:ambiente|comodo|local)(?: (?:voce quer|deseja|devo|para) .+)?\??",
-        r"(?:em )?qual (?:ambiente|comodo|local) (?:a |as |esta |estao |fica |ficam ).+\?",
+        r"(?:em )?qual (?:ambiente|comodo|local)\??",
+        r"(?:em )?qual (?:ambiente|comodo|local) (?:voce quer|deseja|devo) (?:acender|apagar|ligar|desligar|alterar) (?:a |as )?(?:luz|luzes|iluminacao)\?",
+        r"(?:em )?qual (?:ambiente|comodo|local) (?:esta|fica) a luz\?",
         r"onde (?:devo|voce quer|deseja) (?:acender|apagar|ligar|desligar|alterar) (?:a |as )?(?:luz|luzes|iluminacao)\?",
         r"(?:sala ou quarto|quarto ou sala)\?",
     ]
