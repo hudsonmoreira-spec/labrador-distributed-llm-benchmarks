@@ -1,0 +1,2 @@
+041474553fcabfc2a2d67903f9d2c2e50bd92528e670da4f33b5d0ce6e59fd55  /home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf
+b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c  /home/caninos/models/qwen2.5-1.5b-instruct-q5_k_m.gguf

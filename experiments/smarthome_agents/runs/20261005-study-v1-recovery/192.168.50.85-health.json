@@ -1,0 +1,11 @@
+{
+  "05": {
+    "error": "<urlopen error [Errno 111] Connection refused>"
+  },
+  "15": {
+    "error": "<urlopen error [Errno 111] Connection refused>"
+  },
+  "rules": {
+    "error": "<urlopen error [Errno 111] Connection refused>"
+  }
+}

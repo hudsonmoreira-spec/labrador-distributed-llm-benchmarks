@@ -1,0 +1,13 @@
+{
+  "05": {
+    "status": "ok"
+  },
+  "15": {
+    "status": "ok"
+  },
+  "rules": {
+    "status": "ok",
+    "version": "study_v1",
+    "backend": "rules"
+  }
+}

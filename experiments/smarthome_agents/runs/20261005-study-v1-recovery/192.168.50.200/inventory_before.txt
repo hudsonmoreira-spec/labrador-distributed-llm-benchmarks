@@ -1,0 +1,13 @@
+lab6
+Linux lab6 6.1.76 #1 SMP Mon Jan 26 19:02:43 -03 2026 aarch64 GNU/Linux
+               total       usada       livre    compart.  buff/cache  disponível
+Mem.:        1986272      248992     1212460        3016      615364     1737280
+Swap:              0           0           0
+Sist. Arq.      Tam. Usado Disp. Uso% Montado em
+/dev/root        15G   11G  2,7G  81% /
+1437473 25.0  3004 bash -c hostname; uname -a; free -k; df -h /; ps -eo pid,pcpu,rss,args | grep -E "llama|rpc"; sha256sum /home/caninos/llama-offline/llama.cpp/build/bin/llama-server /home/caninos/llama-offline/llama.cpp/build/bin/libllama-server-impl.so /home/caninos/llama-offline/llama.cpp/build/bin/libllama.so /home/caninos/llama-offline/llama.cpp/build/bin/libggml-cpu.so; LD_LIBRARY_PATH=/home/caninos/llama-offline/llama.cpp/build/bin /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --version
+1437479  0.0  1968 grep -E llama|rpc
+a46782e75231c0a4a75a1e38afbbc5d7b72d92c8d834d6bb8b5020a0e1e79a87  /home/caninos/llama-offline/llama.cpp/build/bin/llama-server
+2fd64d2f82daa895c5e2a4a2dd81570a3045256acb5b05ae01ecf1e6bda59e51  /home/caninos/llama-offline/llama.cpp/build/bin/libllama-server-impl.so
+e4856996bc39976a68302e84806dc48ef91a8435b66b4cb07bd3110b6d73cc7a  /home/caninos/llama-offline/llama.cpp/build/bin/libllama.so
+a3b287b9a5bd3f3a74b215680e274d014e405b363d8e68c48b4e71940c5ecf23  /home/caninos/llama-offline/llama.cpp/build/bin/libggml-cpu.so

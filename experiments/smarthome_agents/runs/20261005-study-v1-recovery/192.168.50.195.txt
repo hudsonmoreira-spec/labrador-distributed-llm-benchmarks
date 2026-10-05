@@ -1,0 +1,16 @@
+/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf 522186592
+/home/caninos/smarthome_agents/study_v1/rules/server.log 0
+/home/caninos/smarthome_agents/study_v1/rules/__pycache__/smarthome_pilot.cpython-311.pyc 26318
+/home/caninos/smarthome_agents/study_v1/rules/__pycache__/study_v1.cpython-311.pyc 11032
+/home/caninos/smarthome_agents/study_v1/rules/study_v1.py 5850
+/home/caninos/smarthome_agents/study_v1/rules/server.pid 8
+/home/caninos/smarthome_agents/study_v1/rules/smarthome_pilot.py 18795
+/home/caninos/smarthome_agents/study_v1/rules/rules_server_v1.py 1267
+/home/caninos/smarthome_agents/study_v1/15/server.log 2557
+/home/caninos/smarthome_agents/study_v1/15/server.pid 8
+/home/caninos/smarthome_agents/study_v1/05/server.log 2420
+/home/caninos/smarthome_agents/study_v1/05/server.pid 8
+PORT=19000
+{"status": "ok", "version": "study_v1", "backend": "rules"}PORT=19005
+{"status":"ok"}PORT=19015
+{"status":"ok"}

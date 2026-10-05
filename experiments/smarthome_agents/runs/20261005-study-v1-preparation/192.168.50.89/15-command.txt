@@ -1,0 +1,1 @@
+/home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 19015 --threads 4 --threads-batch 4 --ctx-size 512 --parallel 1 --n-predict 128 --device none --metrics --no-warmup
