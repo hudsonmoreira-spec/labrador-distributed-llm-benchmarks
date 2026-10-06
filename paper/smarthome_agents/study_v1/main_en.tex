@@ -1,0 +1,79 @@
+\documentclass[letterpaper,conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{balance}
+\usepackage{graphicx}
+\usepackage{url}
+\providecommand{\StudyPrefix}{}
+\input{\StudyPrefix generated/metrics.tex}
+\input{\StudyPrefix generated/provenance.tex}
+\title{Simulated Smart-Home Control with Small Language Models on SBCs: Accuracy, Latency, and Scalability}
+\author{\IEEEauthorblockN{Hudson Moreira, Marcelo Knörich Zuffo, Laisa Costa de Biase}}
+\begin{document}
+\maketitle
+\begin{center}\footnotesize Version for advisor review --- \StudyDate\\Frozen protocol: \texttt{\StudyCommit}; data: \texttt{\StudyDataCommit}.\end{center}
+\begin{abstract}
+We evaluate a finite-rule baseline and quantized Qwen2.5 models of 0.5B and 1.5B parameters on Labrador single-board computers (SBCs). The home and every action are simulated; hardware and inference are real. Forty reserved scenarios cover clear instructions, paraphrases, explicit routines, ambiguity, and invalid requests, with two repetitions per condition. Scenario-averaged success is computed from the two repetitions, while latency statistics describe individual requests. Mean scenario success was 52.5\% for rules, 37.5\% for 0.5B, and 15.0\% for 1.5B, with request medians 0.157, 36.848, and 94.663 s, respectively. Independent replicas on one, three, and six boards serve a fixed six-request batch. The released attempts distinguish model proposals from executor interventions and preserve unsuccessful executions. The scope supports conclusions about the tested configurations and constructed cases, without claiming general residential accuracy or maximum service capacity.
+\end{abstract}
+\begin{IEEEkeywords}simulated smart home, small language models, SBC, evaluation, latency\end{IEEEkeywords}
+\section{Introduction and Research Question}
+Natural-language domestic control requires deciding which action to perform, when to request missing information, and when to reject an unsupported instruction. Structured output alone does not establish that the action is correct. On an SBC, an adequate decision must also be assessed against response time and memory cost. We therefore ask: how do a rule baseline and two small quantized models differ in task completion and latency, and how does service capacity change with independent replicas?
+
+HomeBench evaluates valid and invalid instructions for one or several devices in a virtual home~\cite{homebench}. Its coverage motivates separating incorrect proposals from syntactic validity. Lu et al. jointly examine small-model capabilities and deployment costs, including prefill, decoding, quantization, and hardware effects~\cite{edge}. Our two-room Portuguese workload is a separate constructed dataset; it is neither a HomeBench replication nor evidence that findings from other edge hardware hold on Labrador.
+\section{Architecture and Decision Boundaries}
+A Python coordinator constructs a fresh simulated state per request, calls a resident HTTP service, validates the returned JSON, applies permitted changes to Python dictionaries, and independently checks the outcome. No domestic device is connected to the executor. The domain has sala and quarto, lights with on/off values, single actions, an explicit two-step routine, clarification, and rejection. The schema admits \texttt{set\_light}, \texttt{set\_lights}, \texttt{ask\_clarification}, and \texttt{no\_action}. Plans are atomic: a permission failure in any step prevents the entire plan from being applied.
+
+The executor receives only request, visible state, and permissions. It cannot consult expected states, prohibited proposals, scenario category, or other evaluator fields. A general conservative policy blocks lighting proposals when no known room name occurs as a whole word in the request and no valid location is supplied. Unknown or unauthorized rooms/values also block execution. Room evidence permits an incorrect-room proposal to reach the simulator; only the independent evaluator establishes correctness. Lexical room evidence does not validate intent in negative or unsupported requests. We record proposals, blocks, applied changes, and task outcomes separately.
+
+Clarification requires requesting the missing room, preserving state, and producing no inappropriate action. Full-question conservative patterns recognize explicit requests such as ``Qual cômodo?''. Merely mentioning a room word does not pass. Other questions enter a case-by-case review ledger; reviewer identity and rationale are retained, and unresolved questions never automatically succeed. Assisted reviews are identified separately from human review.
+\section{Testbed and Frozen Protocol}
+Six boards report four ARM64 CPUs, Debian 12, and approximately 2 GB of RAM. The same runtime binary and all shared libraries were verified by SHA-256. We use \texttt{llama-server} build 9584/\texttt{e25a32e98}, CPU execution, four compute and four batch threads, context 512, and one inference slot per resident model. Both model servers remain loaded on each board, with at most one inference active across them. Qwen2.5-0.5B-Instruct and Qwen2.5-1.5B-Instruct~\cite{qwen05,qwen15} are evaluated as local Q5\_K\_M GGUF files with preserved hashes. The hashes match the GGUF files published by Qwen byte for byte~\cite{qwen05gguf,qwen15gguf}; model identity is thus established beyond filenames and metadata. The historical local download procedure is not preserved.
+
+The rule baseline runs as a resident stateless Python HTTP service on the same boards. Its finite grammar recognizes acenda/ligue and apague/desligue, explicit room names, simple conjunctions, known-location commands, and edge-position politeness formulas. Unsupported forms return \texttt{no\_action}. This grammar is a limited engineering reference, not an optimal natural-language rule system.
+
+Eight development cases were used before freeze. A first compact prompt exposed unrequested lighting changes; a second development campaign tested general preservation instructions and the rule politeness correction. Both campaigns remain separate. Reserved outputs were unavailable during configuration selection. The freeze manifest versions scenarios, expected states and steps, prompt, schema, blocking policy, runtime/model settings, repetitions, and measurement scripts. There is no agent collaboration; collaboration is future work.
+
+The main dataset contains eight cases in each of five categories (40 distinct cases). Each condition has two repetitions per case ($n=80$ requests; 240 total). All models run across all hosts, with repetitions of a case assigned to different boards. Each host processes a sequential queue; no board runs concurrent inferences in this comparison. Requests use compact general English instructions with Portuguese user text, temperature zero, seeds 801/802, 128 output tokens, and a 180 s timeout. Prompt cache is disabled and actual cache counts are retained. Temperature zero limits decision diversity; repetitions assess operational stability.
+
+Success requires normal completion, valid output, correct proposed steps, expected final state, and preserved unrelated state. One-step plans and single-light actions are equivalent. Routines require exactly the expected steps, without extras. Ambiguities require an informative clarification; invalid requests require rejection without state change. Two repetitions are grouped by scenario; category averages give each scenario equal weight. No binomial precision interval or population-level significance claim treats repetitions as independent cases.
+\section{Measurement}
+Coordinator monotonic time spans HTTP dispatch through response read and decode, including communication and inference and excluding model startup and SSH memory snapshots. Median and nearest-rank p95 are descriptive request statistics with sample sizes stated. Tokens and prompt/generation timings come from the runtime. Rules have no model tokens. RSS snapshots are before/after values; process VmHWM is a high-water mark since process start, not a per-request peak. RSS describes each process and may include shared mappings; it is not exclusive physical memory of the model. Other resident services are documented, so exclusive board memory is not asserted.
+
+Scale tests use independent replicas with one request per board per wave, one, three, or six active boards, and two six-request batches per size/condition (108 total requests). The same six cases include one clear command, one paraphrase, two routines, one ambiguity, and one invalid request. The batch window runs from first dispatch to last response, including instrumented gaps between waves. We separately report individual latency, responses/min, and correctly completed tasks/min. Correct-task rate uses the number judged successful over this HTTP response window; final simulation application and grading occur after receipt. It is a rate of correct task responses, not measured time until a physical or simulated state change. This finite closed workload does not establish saturation throughput, queued-arrival latency, or maximum service capacity. Each request starts from a fresh state with no conversation history.
+\section{Results}
+\subsection{Preserved pilot}
+The discussion preview preserves the earlier four-case, three-repetition 1.5B pilot: 12 structured responses, nine completed tasks, and three guesses of quarto for a missing-room request. Median request latency was 90.833 s and p95 was 96.766 s ($n=12$). Its executor used prohibited-action evaluator fields to block guesses; that intervention was removed before the present study. These development repetitions do not estimate general accuracy and are not pooled with the main campaign.
+\subsection{Reserved quality and latency}
+\begin{table}[t]\caption{Reserved attempts per condition ($n=80$ requests, 40 scenarios). Latency in seconds; p95 by nearest rank. Undue and blocked columns count light commands in valid structured replies, not unique scenarios or complete plans.}
+\centering\footnotesize\begin{tabular}{lrrrrr}\toprule
+Condition & Success & Median & p95 & Undue & Blocked\\\midrule
+\input{\StudyPrefix generated/quality_rows.tex}
+\end{tabular}\label{tab:quality}\end{table}
+\begin{table}[t]\caption{Success by category: eight scenarios with two repetitions (16 attempts) per cell. Per-scenario fractions are in the reproducible CSV.}
+\centering\footnotesize\begin{tabular}{lrrr}\toprule
+Category & Rules & 0.5B & 1.5B\\\midrule
+\input{\StudyPrefix generated/category_rows.tex}
+\end{tabular}\label{tab:categories}\end{table}
+\input{\StudyPrefix generated/results_en.tex}
+\begin{figure}[t]\centering\includegraphics[width=\columnwidth]{\StudyPrefix generated/quality_figure.pdf}\caption{Mean scenario success after grouping the two repetitions. This constructed workload does not define residential population accuracy.}\label{fig:quality}\end{figure}
+\subsection{Replicated service}
+\begin{table}[t]\caption{Two six-request batches per condition/size. Rate is mean correctly completed tasks/min; individual median and p95 use $n=12$ requests. Batch ranges and responses/min are in the artifact.}
+\centering\scriptsize\begin{tabular}{lrrrrr}\toprule
+Condition & Boards & Success & Rate & Median & p95\\\midrule
+\input{\StudyPrefix generated/scale_rows.tex}
+\end{tabular}\label{tab:scale}\end{table}
+\begin{figure}[t]\centering\includegraphics[width=\columnwidth]{\StudyPrefix generated/scale_figure.pdf}\caption{Correct tasks/min averaged over two instrumented closed batches. Individual latency and unsuccessful decisions are tabulated; curves do not demonstrate maximum capacity.}\label{fig:scale}\end{figure}
+\input{\StudyPrefix generated/scale_en.tex}
+\section{Discussion and Limitations}
+\input{\StudyPrefix generated/discussion_en.tex}
+The 40 cases are authored utterance/state combinations rather than 40 different homes; several express the same underlying action. Requested lights initially have the opposite value, so idempotent requests and alternative state distributions are untested. Routine success alone cannot establish language understanding independent of a state-toggling strategy. The workload is small, Portuguese, and restricted to two light controls. The rule grammar is deliberately finite, the JSON contract constrains generation, and one quantization is used per size. This is a configuration comparison, not an isolated parameter-count or architecture effect. Interleaving reduces model/host confounding without eliminating thermal, memory, and network variation. Services remain resident, but disk/page caches are not cleared. Memory snapshots do not measure per-request peaks, and no energy measurement is made. Scale batches are few and include coordinator instrumentation costs, which can dominate the rule baseline. Clarification reviews require author scrutiny. The simulator cannot establish real-home safety or usability.
+\section{Conclusion and Next Steps}
+In the reserved workload, rules completed 42/80 attempts, the 0.5B configuration 30/80, and the 1.5B configuration 12/80; all replies were structured valid. The 0.5B configuration covered 14/16 paraphrases but rejected none of the invalid requests correctly. These outcomes separate decision quality from structural validity and operational intervention. The measured counts and latency characterize the frozen configurations on these constructed cases. Further work should expand independently reviewed cases and real-user phrasing before any residential deployment. Collaboration among agents and cache comparisons require separate future protocols.
+\section*{Authorship proposal and AI-use disclosure}
+Authorship and order are proposed for advisor appreciation; verified final affiliations and contact metadata remain pending. Codex assisted code, evidence reconstruction, literature checking, and manuscript drafting. Case-by-case assisted clarification reviews are explicitly identified in the artifact; they are not represented as human reviews. Authors remain responsible for validation and the final text.
+\balance
+\bibliographystyle{IEEEtran}
+\bibliography{\StudyPrefix references}
+\end{document}

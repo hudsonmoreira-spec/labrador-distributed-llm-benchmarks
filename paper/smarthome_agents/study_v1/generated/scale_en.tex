@@ -1,0 +1,3 @@
+The batch CSV preserves each window, successful-task rate, and response rate separately. Table~\ref{tab:scale} pools twelve individual requests per condition/size for latency and averages two batch rates; ranges remain in the machine-readable summary.
+
+For 0.5B, mean correct-task response rates were 0.871, 2.883, and 6.393/min with one, three, and six replicas; 1.5B rates were 0.085, 0.289, and 0.661/min. Each six-request batch retained three correct tasks for 0.5B, one for 1.5B, and five for rules. The rule rate at six replicas reflects a response window of about 9--11 ms and removal of between-wave instrumentation gaps, so it must not be interpreted as measured sustained service capacity.

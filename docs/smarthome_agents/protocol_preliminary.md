@@ -1,3 +1,5 @@
+> Registro histórico: o escopo abaixo foi substituído pelo estudo reduzido congelado em `experiments/smarthome_agents/study_v1/protocol.md`. Colaboração entre agentes não foi executada; versões atuais do artigo estão em `paper/smarthome_agents/study_v1/`.
+
 # Preliminary Protocol
 
 Status: draft. Not frozen for the main campaign.

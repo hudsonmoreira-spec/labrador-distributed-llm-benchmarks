@@ -1,0 +1,81 @@
+\documentclass[letterpaper,conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\renewcommand{\IEEEkeywordsname}{Palavras-chave}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{balance}
+\usepackage{graphicx}
+\usepackage{url}
+\providecommand{\StudyPrefix}{}
+\input{\StudyPrefix generated/metrics.tex}
+\input{\StudyPrefix generated/provenance.tex}
+\title{Controle Doméstico Simulado com Modelos Pequenos em SBCs: Precisão, Latência e Escalabilidade}
+\author{\IEEEauthorblockN{Hudson Moreira, Marcelo Knörich Zuffo, Laisa Costa de Biase}}
+\begin{document}
+\maketitle
+\begin{center}\footnotesize Versão para apreciação dos orientadores --- \StudyDate\\Protocolo congelado: \texttt{\StudyCommit}; dados: \texttt{\StudyDataCommit}.\end{center}
+\begin{abstract}
+Avaliamos uma referência de regras finitas e os modelos Qwen2.5 de 0.5B e 1.5B quantizados em computadores de placa única (SBCs) Labrador. A casa e todas as ações são simuladas; hardware e inferência são reais. Quarenta cenários reservados abrangem pedidos claros, paráfrases, rotinas explícitas, ambiguidades e solicitações inválidas, com duas repetições por condição. A média de sucesso agrupa as repetições por cenário, enquanto as estatísticas de latência descrevem requisições individuais. A média de sucesso por cenário foi 52.5\% nas regras, 37.5\% no 0.5B e 15.0\% no 1.5B, com medianas por requisição de 0.157, 36.848 e 94.663 s, respectivamente. Réplicas independentes em uma, três e seis placas atendem um lote fixo de seis pedidos. Os registros distinguem propostas do modelo de intervenções do executor e preservam falhas. As conclusões se restringem às configurações e casos construídos, sem estimar precisão residencial geral ou capacidade máxima do serviço.
+\end{abstract}
+\begin{IEEEkeywords}casa simulada, modelos pequenos, SBC, avaliação, latência\end{IEEEkeywords}
+\section{Introdução e pergunta de pesquisa}
+Controlar ações domésticas por linguagem natural exige identificar a ação, pedir informações ausentes e rejeitar instruções não representáveis. Produzir JSON válido não comprova que a proposta é correta. Em uma SBC, a decisão também deve ser avaliada em relação ao tempo de resposta e à memória. Perguntamos: como uma referência de regras e dois modelos pequenos quantizados diferem em conclusão de tarefas e latência, e como muda a capacidade de atendimento com réplicas independentes?
+
+HomeBench avalia instruções válidas e inválidas para um ou vários dispositivos em ambiente virtual~\cite{homebench}, motivando a distinção entre validade sintática e propostas indevidas. Lu et al. examinam conjuntamente capacidade de modelos pequenos e custos de implantação, incluindo processamento do prompt, geração, quantização e hardware~\cite{edge}. Nosso conjunto em português, limitado a dois cômodos, é uma construção independente. Não reproduz HomeBench nem transfere para Labrador conclusões obtidas em outro hardware.
+\section{Arquitetura e limites de decisão}
+Um coordenador Python constrói um estado simulado novo para cada pedido, consulta um serviço HTTP residente, valida o JSON, aplica mudanças permitidas em dicionários e avalia o resultado separadamente. Nenhum dispositivo doméstico está conectado ao executor. O domínio contém sala e quarto, luzes on/off, ações simples, uma rotina explícita de dois passos, esclarecimento e rejeição. O esquema aceita \texttt{set\_light}, \texttt{set\_lights}, \texttt{ask\_clarification} e \texttt{no\_action}. Um plano é atômico: a falha de permissão de qualquer passo impede a aplicação de todo o plano.
+
+O executor recebe somente pedido, estado visível e permissões. Não consulta estados esperados, propostas proibidas, categoria do cenário ou qualquer gabarito. Uma política geral conservadora bloqueia propostas de iluminação quando o pedido não menciona nenhum nome de cômodo conhecido como palavra inteira e a localização não é válida. Cômodos desconhecidos ou valores não autorizados também são bloqueados. Havendo informação de local, uma proposta para o cômodo errado pode chegar ao simulador; o avaliador independente identifica o erro. Presença lexical de cômodo não valida a intenção em frases negativas ou pedidos inválidos. Proposta, bloqueio, mudança aplicada e sucesso são registrados separadamente.
+
+Esclarecimento exige solicitar o cômodo ausente, preservar o estado e não propor ação indevida. Padrões conservadores de pergunta completa reconhecem solicitações explícitas como ``Qual cômodo?''. Mencionar uma palavra de cômodo é insuficiente. Outras perguntas entram em um registro de revisão caso a caso, com identificação e justificativa do revisor; pendências não recebem sucesso automático. Revisões assistidas são distinguidas de revisão humana.
+\section{Plataforma e protocolo congelado}
+As seis placas informam quatro CPUs ARM64, Debian 12 e aproximadamente 2 GB de RAM. Binário e todas as bibliotecas compartilhadas foram conferidos por SHA-256. O \texttt{llama-server} é build 9584/\texttt{e25a32e98}, executado em CPU, com quatro threads de cálculo e quatro de lote, contexto 512 e uma vaga por modelo residente. Os dois servidores permanecem carregados em cada placa, com no máximo uma inferência ativa entre eles. Qwen2.5-0.5B-Instruct e Qwen2.5-1.5B-Instruct~\cite{qwen05,qwen15} são avaliados como arquivos locais Q5\_K\_M GGUF, com hashes preservados. Os hashes coincidem com os arquivos GGUF publicados oficialmente por Qwen~\cite{qwen05gguf,qwen15gguf}, estabelecendo identidade byte a byte, além de nomes e metadados. O procedimento histórico de download local não foi preservado.
+
+A referência de regras é um serviço Python HTTP residente e sem estado nas mesmas placas. Sua gramática finita reconhece acenda/ligue e apague/desligue, cômodos explícitos, conjunções simples, comandos com localização conhecida e fórmulas de cortesia nas extremidades. Formas não reconhecidas retornam \texttt{no\_action}. Essa referência de engenharia tem cobertura limitada e não representa o melhor sistema possível de regras para linguagem natural.
+
+Oito casos de desenvolvimento antecederam o congelamento. Um primeiro prompt compacto expôs mudanças em luzes não solicitadas. Uma segunda campanha verificou instruções gerais de preservação e a correção da cortesia nas regras. Ambas são preservadas separadamente. Não havia resultados reservados durante a seleção de configuração. O manifesto congela cenários, estados e passos esperados, prompt, esquema, política de bloqueio, configurações, repetições e medição. Colaboração entre agentes permanece como trabalho futuro.
+
+O conjunto principal tem oito casos em cada uma de cinco categorias (40 casos distintos). Cada condição possui duas repetições por caso ($n=80$ requisições; 240 no total). Cada modelo é distribuído por todos os hosts e as repetições de um caso usam placas distintas. A fila de cada host é sequencial; não há inferências concorrentes do controlador na mesma placa. As entradas usam instrução geral compacta em inglês e pedido em português, temperatura zero, sementes 801/802, limite de 128 tokens e timeout de 180 s. O cache é desativado, com contagem efetiva preservada. Temperatura zero limita diversidade; as repetições verificam estabilidade operacional.
+
+Sucesso exige conclusão normal, saída válida, passos corretos, estado final esperado e preservação do restante. Um plano de um passo equivale a uma ação simples. Rotinas exigem exatamente os passos previstos, sem extras; ambiguidades exigem esclarecimento informativo; pedidos inválidos exigem rejeição sem mudança. As duas repetições são agrupadas por cenário, com peso igual por caso nas categorias. Não se usam as repetições como casos independentes para inferência populacional ou significância.
+\section{Medição}
+O relógio monotônico do coordenador mede do despacho HTTP até a leitura e decodificação da resposta, incluindo rede e inferência e excluindo carregamento do modelo e instantâneos SSH. Mediana e p95 por posto mais próximo são estatísticas descritivas com tamanho de amostra informado. Tokens e tempos de prompt/geração vêm do runtime; regras não têm tokens de modelo. RSS é observado antes/depois, enquanto VmHWM é o máximo desde o início do processo, não pico individual. RSS descreve cada processo e pode incluir mapeamentos compartilhados, não memória física exclusiva do modelo. Serviços residentes anteriores são documentados; não se afirma memória exclusiva da placa.
+
+A escala usa réplicas independentes, uma requisição por placa em cada onda, uma/três/seis placas ativas e dois lotes de seis pedidos por tamanho/condição (108 requisições). Os mesmos seis casos abrangem um claro, uma paráfrase, duas rotinas, uma ambiguidade e um inválido. A janela vai do primeiro despacho à última resposta e inclui intervalos instrumentados entre ondas. Latência individual, respostas/min e tarefas corretamente concluídas/min são separados. A taxa divide tarefas julgadas corretas pela janela de respostas HTTP; a aplicação final no simulador e a avaliação ocorrem após o recebimento. É uma taxa de respostas corretas às tarefas, não tempo medido até mudar o estado físico ou simulado. Esse lote fechado não mede saturação, latência com chegadas enfileiradas ou capacidade máxima. Cada requisição parte de estado novo, sem histórico de conversa. O controlador aguarda ociosidade dos dois modelos após eventual timeout antes de enviar outro pedido.
+\section{Resultados}
+\subsection{Piloto preservado}
+A prévia de discussão preserva o piloto anterior de 1.5B: quatro casos, três repetições, 12 respostas estruturadas, nove tarefas concluídas e três escolhas de quarto em pedidos sem cômodo. A mediana foi 90,833 s e o p95 96,766 s ($n=12$). O executor histórico usava campos do avaliador para bloquear essas escolhas; essa dependência foi removida antes deste estudo. As repetições de desenvolvimento não estimam precisão geral nem são agregadas à campanha principal.
+\subsection{Qualidade e latência reservadas}
+\begin{table}[t]\caption{Tentativas reservadas por condição ($n=80$ requisições, 40 cenários). Latência em segundos; p95 por posto mais próximo. Indevidas e bloqueios contam comandos de luz em respostas estruturadas válidas, não casos únicos ou planos completos.}
+\centering\footnotesize\begin{tabular}{lrrrrr}\toprule
+Condição & Sucesso & Mediana & p95 & Indevidas & Bloq.\\\midrule
+\input{\StudyPrefix generated/quality_rows_pt.tex}
+\end{tabular}\label{tab:quality}\end{table}
+\begin{table}[t]\caption{Sucesso por categoria: oito cenários com duas repetições (16 tentativas) por célula. As frações por cenário estão no CSV reproduzível.}
+\centering\footnotesize\begin{tabular}{lrrr}\toprule
+Categoria & Regras & 0.5B & 1.5B\\\midrule
+\input{\StudyPrefix generated/category_rows_pt.tex}
+\end{tabular}\label{tab:categories}\end{table}
+\input{\StudyPrefix generated/results_pt.tex}
+\begin{figure}[t]\centering\includegraphics[width=\columnwidth]{\StudyPrefix generated/quality_figure_pt.pdf}\caption{Média de sucesso por cenário, agrupando as duas repetições. O conjunto elaborado não define precisão populacional residencial.}\label{fig:quality}\end{figure}
+\subsection{Serviço replicado}
+\begin{table}[t]\caption{Dois lotes de seis pedidos por condição/tamanho. Taxa: média de tarefas corretas/min; mediana e p95 individuais usam $n=12$ requisições. Intervalos dos lotes e respostas/min estão no artefato.}
+\centering\scriptsize\begin{tabular}{lrrrrr}\toprule
+Condição & Placas & Sucesso & Taxa & Mediana & p95\\\midrule
+\input{\StudyPrefix generated/scale_rows_pt.tex}
+\end{tabular}\label{tab:scale}\end{table}
+\begin{figure}[t]\centering\includegraphics[width=\columnwidth]{\StudyPrefix generated/scale_figure_pt.pdf}\caption{Tarefas corretas/min, médias de dois lotes fechados instrumentados. Latência individual e erros são apresentados separadamente; as curvas não demonstram capacidade máxima.}\label{fig:scale}\end{figure}
+\input{\StudyPrefix generated/scale_pt.tex}
+\section{Discussão e limitações}
+\input{\StudyPrefix generated/discussion_pt.tex}
+Os 40 casos são combinações elaboradas de pedido e estado, não 40 casas diferentes; vários expressam a mesma ação. Luzes solicitadas começam no valor oposto, sem testar idempotência ou outras distribuições de estado. Sucesso em rotinas isoladamente não comprova compreensão linguística independente de uma estratégia de inverter o estado. O conjunto é pequeno, em português e restrito a dois cômodos. A gramática das regras é finita, o esquema restringe a geração e há uma quantização por tamanho. Comparam-se configurações completas, sem isolar efeito de parâmetros ou arquitetura. O intercalamento reduz associação entre modelo e host, mas não elimina variações térmicas, de memória e rede. Processos permanecem residentes; caches de disco/páginas não são esvaziados. Não se mede pico individual de memória nem energia. Os lotes de escala são poucos e incluem custos de instrumentação, que podem dominar a referência de regras. Revisões de esclarecimento exigem apreciação dos autores. A simulação não valida segurança ou usabilidade residencial real.
+\section{Conclusão e próximas etapas}
+No conjunto reservado, regras concluíram 42/80 tentativas, o 0.5B 30/80 e o 1.5B 12/80; todas as respostas foram estruturadas válidas. O 0.5B acertou 14/16 paráfrases, mas não rejeitou corretamente nenhum pedido inválido. Esses resultados distinguem qualidade da decisão, validade estrutural e intervenção operacional. Os números e latências caracterizam as configurações congeladas nesses casos construídos. Trabalho futuro deve ampliar casos revisados independentemente e formulações de usuários reais antes de aplicação residencial. Colaboração entre agentes e comparações de cache exigem protocolos separados.
+\section*{Autoria proposta e uso de IA}
+Autoria e ordem são propostas para apreciação dos orientadores; afiliações e contatos finais permanecem pendentes. Codex auxiliou código, reconstrução de evidências, conferência bibliográfica e redação. Revisões assistidas de esclarecimento são identificadas no artefato e não apresentadas como revisões humanas. A responsabilidade de verificação e aprovação final pertence aos autores.
+\balance
+\bibliographystyle{IEEEtran}
+\bibliography{\StudyPrefix references}
+\end{document}

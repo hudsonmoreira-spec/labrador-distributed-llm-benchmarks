@@ -1,0 +1,8 @@
+# Notas de leitura e pertinência — 2026-10-06
+
+Metadados conferidos nas páginas oficiais e primeira página dos PDFs da ACL Anthology; conteúdo relevante consultado nas seções de construção/avaliação e implantação. Nenhum PDF externo foi incluído no Git. BibTeX: `references.bib`. A nota da prévia permanece preservada como registro anterior.
+
+- [HomeBench](https://aclanthology.org/2025.acl-long.597/), Li, Guo, Yao, Liu e Wang, ACL 2025, pp.12230–12250, DOI10.18653/v1/2025.acl-long.597. Distingue instruções válidas, inválidas e mistas, para um ou vários dispositivos, em ambiente virtual. Pertinência: avaliar a correção da operação e a rejeição, além da sintaxe. Nosso domínio de duas luzes é independente e muito menor; não usamos o conjunto nem seus resultados como comparação numérica.
+- [Demystifying Small Language Models for Edge Deployment](https://aclanthology.org/2025.acl-long.718/), Lu, Li, Cai, Yi, Liu, Liu, Luan, Zhang, Lane e Xu, ACL 2025, pp.14747–14764, DOI10.18653/v1/2025.acl-long.718. Examina capacidade e custos de implantação, distinguindo processamento do prompt e geração e discutindo quantização e hardware. Pertinência: medir conjuntamente decisão, latência, tokens e memória. Não comprova desempenho ou vantagem de modelos no Labrador.
+
+Nomes completos e ordem bibliográfica estão no BibTeX conferido. Os modelos e hashes GGUF oficiais são documentados em `experiments/smarthome_agents/study_v1/model-provenance.md`. Propriedades e arquivos do runtime local auditado sustentam as configurações; documentação atual de servidor não substitui a evidência da versão executada.

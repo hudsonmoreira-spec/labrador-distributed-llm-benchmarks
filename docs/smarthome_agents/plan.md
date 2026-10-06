@@ -1,3 +1,5 @@
+> Registro histórico: o escopo abaixo foi substituído pelo estudo reduzido congelado em `experiments/smarthome_agents/study_v1/protocol.md`. Colaboração entre agentes não foi executada; versões atuais do artigo estão em `paper/smarthome_agents/study_v1/`.
+
 # Smart-Home Multi-Agent Research Plan
 
 Working title: Collaborative AI Agents on Low-Cost SBCs: An Evaluation in a Simulated Smart Home.
