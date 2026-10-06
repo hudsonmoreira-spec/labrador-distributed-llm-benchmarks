@@ -1,0 +1,119 @@
+{
+  "action_applied": false,
+  "attempt_id": "rules-held-ambiguity-01-rep2-54",
+  "cache_tokens": 0,
+  "category": "ambiguity",
+  "dispatch_monotonic_s": 431268.844583058,
+  "dispatched": true,
+  "elapsed_s": 0.005094451014883816,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "on",
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true
+      },
+      {
+        "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+        "passed": true
+      },
+      {
+        "name": "clarification_allowed",
+        "passed": true
+      },
+      {
+        "name": "clarification_missing_field",
+        "passed": true,
+        "review": {
+          "method": "conservative_fullmatch_v1",
+          "reason": "explicit_request_for_missing_room",
+          "status": "pass"
+        }
+      },
+      {
+        "name": "expected_action",
+        "passed": true
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": {
+      "clarification_question": {
+        "method": "conservative_fullmatch_v1",
+        "reason": "explicit_request_for_missing_room",
+        "status": "pass"
+      }
+    },
+    "review_pending": false,
+    "task_completed": true,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:02:18.750998+00:00",
+  "host": "192.168.50.54",
+  "memory_errors": [],
+  "model": "rules",
+  "model_content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Qual cômodo?\"}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "ask_clarification",
+      "missing_field": "room",
+      "question": "Qual cômodo?"
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.011982010037172586,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 2,
+  "response_monotonic_s": 431268.849677509,
+  "returned_model": "rules-v1",
+  "scenario_id": "held-ambiguity-01",
+  "started_at": "2026-10-06T12:02:17.721560+00:00",
+  "step_permissions": [],
+  "system_fingerprint": null,
+  "timings": {
+    "rule_compute_s": 0.0006058230064809322
+  },
+  "url": "http://192.168.50.54:19000",
+  "usage": {},
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

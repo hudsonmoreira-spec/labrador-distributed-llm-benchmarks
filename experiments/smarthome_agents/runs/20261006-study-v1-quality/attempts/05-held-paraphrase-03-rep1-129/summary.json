@@ -1,0 +1,130 @@
+{
+  "action_applied": false,
+  "attempt_id": "05-held-paraphrase-03-rep1-129",
+  "cache_tokens": 0,
+  "category": "paraphrase",
+  "dispatch_monotonic_s": 432957.100379529,
+  "dispatched": true,
+  "elapsed_s": 44.06098888197448,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "off",
+        "expected": "on",
+        "name": "final:rooms.sala.light",
+        "passed": false
+      },
+      {
+        "actual": "on",
+        "expected": "on",
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true
+      },
+      {
+        "name": "clarification_allowed",
+        "passed": false
+      },
+      {
+        "name": "clarification_missing_field",
+        "passed": false,
+        "review": {
+          "reason": "missing_field_not_expected",
+          "status": "fail"
+        }
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": {
+      "clarification_question": {
+        "reason": "missing_field_not_expected",
+        "status": "fail"
+      }
+    },
+    "review_pending": false,
+    "task_completed": false,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:31:30.585020+00:00",
+  "host": "192.168.50.129",
+  "memory_errors": [
+    "Command '['ssh', '-F', '/dev/null', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', '-o', 'StrictHostKeyChecking=accept-new', 'caninos@192.168.50.129', 'p=$(cat /home/caninos/smarthome_agents/study_v1/05/server.pid); cat /proc/$p/status; cat /proc/loadavg; cat /proc/meminfo; ps -eo pid,pcpu,rss,comm']' timed out after 20 seconds"
+  ],
+  "model": "05",
+  "model_content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"A luz da sala deve ficar acesa?\"}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "ask_clarification",
+      "missing_field": "room",
+      "question": "A luz da sala deve ficar acesa?"
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.4219418700085953,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 1,
+  "response_monotonic_s": 433001.161368411,
+  "returned_model": "qwen2.5-0.5b-instruct-q5_k_m.gguf",
+  "scenario_id": "held-paraphrase-03",
+  "started_at": "2026-10-06T12:30:23.115560+00:00",
+  "step_permissions": [],
+  "system_fingerprint": "b9584-e25a32e98",
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 7670.256,
+    "predicted_n": 29,
+    "predicted_per_second": 3.7808386056475816,
+    "predicted_per_token_ms": 264.49158620689656,
+    "prompt_ms": 29936.141,
+    "prompt_n": 129,
+    "prompt_per_second": 4.309172648538768,
+    "prompt_per_token_ms": 232.0631085271318
+  },
+  "url": "http://192.168.50.129:19005",
+  "usage": {
+    "completion_tokens": 29,
+    "prompt_tokens": 129,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 158
+  },
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

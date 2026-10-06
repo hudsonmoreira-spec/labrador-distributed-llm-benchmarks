@@ -1,0 +1,28 @@
+{
+  "scenario": {
+    "initial_state": {
+      "known_location": null,
+      "rooms": {
+        "quarto": {
+          "light": "off"
+        },
+        "sala": {
+          "light": "off"
+        }
+      }
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    },
+    "resident_request": "Mude a luz do quarto para on."
+  }
+}

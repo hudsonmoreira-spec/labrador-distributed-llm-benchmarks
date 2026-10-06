@@ -1,0 +1,34 @@
+[
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep1-240/summary.json",
+    "decision": "fail",
+    "reviewer": "Codex — revisão semântica assistida caso a caso",
+    "rationale": "A frase declara desejo de acender a luz, mas não solicita o cômodo ausente.",
+    "question": "Quero a luz acender.",
+    "human_validation_pending": true
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep2-89/summary.json",
+    "decision": "fail",
+    "reviewer": "Codex — revisão semântica assistida caso a caso",
+    "rationale": "A frase declara desejo de acender a luz, mas não solicita o cômodo ausente.",
+    "question": "Quero a luz acender.",
+    "human_validation_pending": true
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-04-rep1-195/summary.json",
+    "decision": "fail",
+    "reviewer": "Codex — revisão semântica assistida caso a caso",
+    "rationale": "Repete o pedido de apagar a iluminação e não solicita a informação de local ausente.",
+    "question": "Pode apagar a iluminação?",
+    "human_validation_pending": true
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-04-rep2-169/summary.json",
+    "decision": "fail",
+    "reviewer": "Codex — revisão semântica assistida caso a caso",
+    "rationale": "Repete o pedido de apagar a iluminação e não solicita a informação de local ausente.",
+    "question": "Pode apagar a iluminação?",
+    "human_validation_pending": true
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "attempt_id": "rules-held-clear-06-rep1-195",
+  "category": "clear",
+  "host": "192.168.50.195",
+  "model": "rules",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "repetition": 1,
+  "scenario_id": "held-clear-06",
+  "started_at": "2026-10-06T12:15:20.943336+00:00",
+  "url": "http://192.168.50.195:19000"
+}

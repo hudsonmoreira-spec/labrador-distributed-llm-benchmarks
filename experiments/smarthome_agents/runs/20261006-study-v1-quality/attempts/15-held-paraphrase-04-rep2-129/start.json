@@ -1,0 +1,15 @@
+{
+  "attempt_id": "15-held-paraphrase-04-rep2-129",
+  "category": "paraphrase",
+  "host": "192.168.50.129",
+  "model": "15",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "held-paraphrase-04",
+  "started_at": "2026-10-06T12:31:30.586307+00:00",
+  "url": "http://192.168.50.129:19015"
+}

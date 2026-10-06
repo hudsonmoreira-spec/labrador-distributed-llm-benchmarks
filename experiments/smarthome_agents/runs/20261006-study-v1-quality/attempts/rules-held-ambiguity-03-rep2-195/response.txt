@@ -1,0 +1,1 @@
+{"choices": [{"finish_reason": "stop", "message": {"content": "{\"action\":\"no_action\",\"reason\":\"Pedido fora das regras explícitas.\"}"}}], "usage": {}, "timings": {"rule_compute_s": 0.005631436943076551}, "model": "rules-v1"}

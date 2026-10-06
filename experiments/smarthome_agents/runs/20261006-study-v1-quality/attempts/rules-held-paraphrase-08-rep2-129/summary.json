@@ -1,0 +1,101 @@
+{
+  "action_applied": false,
+  "attempt_id": "rules-held-paraphrase-08-rep2-129",
+  "cache_tokens": 0,
+  "category": "paraphrase",
+  "dispatch_monotonic_s": 433406.59395136,
+  "dispatched": true,
+  "elapsed_s": 0.02537383302114904,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "off",
+        "name": "final:rooms.quarto.light",
+        "passed": false
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "name": "no_action_policy",
+        "passed": false
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "review_pending": false,
+    "task_completed": false,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:38:10.096333+00:00",
+  "host": "192.168.50.129",
+  "memory_errors": [
+    "Command '['ssh', '-F', '/dev/null', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', '-o', 'StrictHostKeyChecking=accept-new', 'caninos@192.168.50.129', 'p=$(cat /home/caninos/smarthome_agents/study_v1/rules/server.pid); cat /proc/$p/status; cat /proc/loadavg; cat /proc/meminfo; ps -eo pid,pcpu,rss,comm']' timed out after 20 seconds"
+  ],
+  "model": "rules",
+  "model_content": "{\"action\":\"no_action\",\"reason\":\"Pedido fora das regras explícitas.\"}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "no_action",
+      "reason": "Pedido fora das regras explícitas."
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.008212768007069826,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 2,
+  "response_monotonic_s": 433406.619325193,
+  "returned_model": "rules-v1",
+  "scenario_id": "held-paraphrase-08",
+  "started_at": "2026-10-06T12:37:35.967166+00:00",
+  "step_permissions": [],
+  "system_fingerprint": null,
+  "timings": {
+    "rule_compute_s": 0.0005433280020952225
+  },
+  "url": "http://192.168.50.129:19000",
+  "usage": {},
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

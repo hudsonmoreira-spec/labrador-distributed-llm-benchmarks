@@ -1,0 +1,114 @@
+{
+  "action_applied": false,
+  "attempt_id": "15-held-clear-04-rep1-89",
+  "cache_tokens": 0,
+  "category": "clear",
+  "dispatch_monotonic_s": 431906.92193719,
+  "dispatched": true,
+  "elapsed_s": 124.85475275601493,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "off",
+        "name": "final:rooms.quarto.light",
+        "passed": false
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "name": "no_action_policy",
+        "passed": false
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "review_pending": false,
+    "task_completed": false,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:15:02.800534+00:00",
+  "host": "192.168.50.89",
+  "memory_errors": [],
+  "model": "15",
+  "model_content": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "no_action",
+      "reason": "Unsupported request"
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.017596844991203398,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 1,
+  "response_monotonic_s": 432031.776689946,
+  "returned_model": "qwen2.5-1.5b-instruct-q5_k_m.gguf",
+  "scenario_id": "held-clear-04",
+  "started_at": "2026-10-06T12:12:55.809358+00:00",
+  "step_permissions": [],
+  "system_fingerprint": "b9584-e25a32e98",
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 35939.478,
+    "predicted_n": 12,
+    "predicted_per_second": 0.3338946659158488,
+    "predicted_per_token_ms": 2994.9565000000002,
+    "prompt_ms": 88689.905,
+    "prompt_n": 127,
+    "prompt_per_second": 1.4319555309028689,
+    "prompt_per_token_ms": 698.3457086614173
+  },
+  "url": "http://192.168.50.89:19015",
+  "usage": {
+    "completion_tokens": 12,
+    "prompt_tokens": 127,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 139
+  },
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

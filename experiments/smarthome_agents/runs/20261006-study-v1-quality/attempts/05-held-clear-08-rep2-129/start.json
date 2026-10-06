@@ -1,0 +1,15 @@
+{
+  "attempt_id": "05-held-clear-08-rep2-129",
+  "category": "clear",
+  "host": "192.168.50.129",
+  "model": "05",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "held-clear-08",
+  "started_at": "2026-10-06T12:17:00.295899+00:00",
+  "url": "http://192.168.50.129:19005"
+}

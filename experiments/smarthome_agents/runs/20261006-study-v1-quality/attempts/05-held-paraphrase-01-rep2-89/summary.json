@@ -1,0 +1,121 @@
+{
+  "action_applied": true,
+  "attempt_id": "05-held-paraphrase-01-rep2-89",
+  "cache_tokens": 0,
+  "category": "paraphrase",
+  "dispatch_monotonic_s": 432802.639562278,
+  "dispatched": true,
+  "elapsed_s": 41.25487264001276,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "on",
+        "name": "final:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "on",
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": true
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "review_pending": false,
+    "task_completed": true,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "on"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:28:33.966724+00:00",
+  "host": "192.168.50.89",
+  "memory_errors": [],
+  "model": "05",
+  "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}]}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "set_lights",
+      "steps": [
+        {
+          "action": "set_light",
+          "room": "sala",
+          "value": "on"
+        }
+      ]
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.03934015001868829,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 2,
+  "response_monotonic_s": 432843.894434918,
+  "returned_model": "qwen2.5-0.5b-instruct-q5_k_m.gguf",
+  "scenario_id": "held-paraphrase-01",
+  "started_at": "2026-10-06T12:27:51.473577+00:00",
+  "step_permissions": [
+    {
+      "allowed": true,
+      "reason": "allowed"
+    }
+  ],
+  "system_fingerprint": "b9584-e25a32e98",
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 7390.868,
+    "predicted_n": 26,
+    "predicted_per_second": 3.517854736412557,
+    "predicted_per_token_ms": 284.2641538461539,
+    "prompt_ms": 33684.775,
+    "prompt_n": 130,
+    "prompt_per_second": 3.8593103264011708,
+    "prompt_per_token_ms": 259.11365384615385
+  },
+  "url": "http://192.168.50.89:19005",
+  "usage": {
+    "completion_tokens": 26,
+    "prompt_tokens": 130,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 156
+  },
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

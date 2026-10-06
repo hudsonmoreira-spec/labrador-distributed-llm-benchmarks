@@ -1,0 +1,15 @@
+{
+  "attempt_id": "15-held-invalid-07-rep2-54",
+  "category": "invalid",
+  "host": "192.168.50.54",
+  "model": "15",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "held-invalid-07",
+  "started_at": "2026-10-06T12:22:05.339681+00:00",
+  "url": "http://192.168.50.54:19015"
+}

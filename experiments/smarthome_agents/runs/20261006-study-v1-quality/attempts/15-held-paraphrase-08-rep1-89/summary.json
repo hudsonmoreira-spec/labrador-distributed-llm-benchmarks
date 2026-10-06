@@ -1,0 +1,114 @@
+{
+  "action_applied": false,
+  "attempt_id": "15-held-paraphrase-08-rep1-89",
+  "cache_tokens": 0,
+  "category": "paraphrase",
+  "dispatch_monotonic_s": 433212.698324616,
+  "dispatched": true,
+  "elapsed_s": 133.70526577701094,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "off",
+        "name": "final:rooms.quarto.light",
+        "passed": false
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "name": "no_action_policy",
+        "passed": false
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "review_pending": false,
+    "task_completed": false,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:36:57.647758+00:00",
+  "host": "192.168.50.89",
+  "memory_errors": [],
+  "model": "15",
+  "model_content": "{\"action\":\"no_action\",\"reason\":\"The request is not supported.\"}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "no_action",
+      "reason": "The request is not supported."
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.019302538014017045,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 1,
+  "response_monotonic_s": 433346.403590393,
+  "returned_model": "qwen2.5-1.5b-instruct-q5_k_m.gguf",
+  "scenario_id": "held-paraphrase-08",
+  "started_at": "2026-10-06T12:34:41.586238+00:00",
+  "step_permissions": [],
+  "system_fingerprint": "b9584-e25a32e98",
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 36001.207,
+    "predicted_n": 16,
+    "predicted_per_second": 0.444429543709465,
+    "predicted_per_token_ms": 2250.0754375,
+    "prompt_ms": 97483.67,
+    "prompt_n": 136,
+    "prompt_per_second": 1.3951054571499002,
+    "prompt_per_token_ms": 716.7916911764705
+  },
+  "url": "http://192.168.50.89:19015",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 136,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 152
+  },
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "action_applied": true,
+  "attempt_id": "05-held-clear-02-rep1-54",
+  "cache_tokens": 0,
+  "category": "clear",
+  "dispatch_monotonic_s": 431641.427814537,
+  "dispatched": true,
+  "elapsed_s": 24.71331650495995,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "off",
+        "name": "final:rooms.quarto.light",
+        "passed": false
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "review_pending": false,
+    "task_completed": false,
+    "undue_proposal": true
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:09:15.554944+00:00",
+  "host": "192.168.50.54",
+  "memory_errors": [
+    "Command '['ssh', '-F', '/dev/null', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', '-o', 'StrictHostKeyChecking=accept-new', 'caninos@192.168.50.54', 'p=$(cat /home/caninos/smarthome_agents/study_v1/05/server.pid); cat /proc/$p/status; cat /proc/loadavg; cat /proc/meminfo; ps -eo pid,pcpu,rss,comm']' timed out after 20 seconds"
+  ],
+  "model": "05",
+  "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "set_lights",
+      "steps": [
+        {
+          "action": "set_light",
+          "room": "quarto",
+          "value": "on"
+        }
+      ]
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.007898670039139688,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 1,
+  "response_monotonic_s": 431666.141131042,
+  "returned_model": "qwen2.5-0.5b-instruct-q5_k_m.gguf",
+  "scenario_id": "held-clear-02",
+  "started_at": "2026-10-06T12:08:30.144460+00:00",
+  "step_permissions": [
+    {
+      "allowed": true,
+      "reason": "allowed"
+    }
+  ],
+  "system_fingerprint": "b9584-e25a32e98",
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 7669.456,
+    "predicted_n": 27,
+    "predicted_per_second": 3.520458295868703,
+    "predicted_per_token_ms": 284.0539259259259,
+    "prompt_ms": 16364.673,
+    "prompt_n": 127,
+    "prompt_per_second": 7.760619475867315,
+    "prompt_per_token_ms": 128.85569291338584
+  },
+  "url": "http://192.168.50.54:19005",
+  "usage": {
+    "completion_tokens": 27,
+    "prompt_tokens": 127,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 154
+  },
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

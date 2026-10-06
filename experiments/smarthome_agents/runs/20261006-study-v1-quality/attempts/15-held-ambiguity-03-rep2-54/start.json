@@ -1,0 +1,15 @@
+{
+  "attempt_id": "15-held-ambiguity-03-rep2-54",
+  "category": "ambiguity",
+  "host": "192.168.50.54",
+  "model": "15",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "held-ambiguity-03",
+  "started_at": "2026-10-06T12:02:46.570798+00:00",
+  "url": "http://192.168.50.54:19015"
+}

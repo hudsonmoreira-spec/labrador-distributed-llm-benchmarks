@@ -1,0 +1,130 @@
+{
+  "action_applied": false,
+  "attempt_id": "05-held-clear-04-rep1-195",
+  "cache_tokens": 0,
+  "category": "clear",
+  "dispatch_monotonic_s": 431895.524323194,
+  "dispatched": true,
+  "elapsed_s": 27.630723138980102,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "off",
+        "name": "final:rooms.quarto.light",
+        "passed": false
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "name": "clarification_allowed",
+        "passed": false
+      },
+      {
+        "name": "clarification_missing_field",
+        "passed": false,
+        "review": {
+          "reason": "missing_field_not_expected",
+          "status": "fail"
+        }
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": {
+      "clarification_question": {
+        "reason": "missing_field_not_expected",
+        "status": "fail"
+      }
+    },
+    "review_pending": false,
+    "task_completed": false,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:13:32.584128+00:00",
+  "host": "192.168.50.195",
+  "memory_errors": [
+    "Command '['ssh', '-F', '/dev/null', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', '-o', 'StrictHostKeyChecking=accept-new', 'caninos@192.168.50.195', 'p=$(cat /home/caninos/smarthome_agents/study_v1/05/server.pid); cat /proc/$p/status; cat /proc/loadavg; cat /proc/meminfo; ps -eo pid,pcpu,rss,comm']' timed out after 20 seconds"
+  ],
+  "model": "05",
+  "model_content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quem está no quarto?\"}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "ask_clarification",
+      "missing_field": "room",
+      "question": "Quem está no quarto?"
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.007537039986345917,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 1,
+  "response_monotonic_s": 431923.155046333,
+  "returned_model": "qwen2.5-0.5b-instruct-q5_k_m.gguf",
+  "scenario_id": "held-clear-04",
+  "started_at": "2026-10-06T12:12:43.898163+00:00",
+  "step_permissions": [],
+  "system_fingerprint": "b9584-e25a32e98",
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 7441.139,
+    "predicted_n": 26,
+    "predicted_per_second": 3.4940887409844112,
+    "predicted_per_token_ms": 286.19765384615386,
+    "prompt_ms": 20113.791,
+    "prompt_n": 127,
+    "prompt_per_second": 6.314075750314796,
+    "prompt_per_token_ms": 158.3763070866142
+  },
+  "url": "http://192.168.50.195:19005",
+  "usage": {
+    "completion_tokens": 26,
+    "prompt_tokens": 127,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 153
+  },
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

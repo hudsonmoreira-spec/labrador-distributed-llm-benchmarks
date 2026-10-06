@@ -1,0 +1,15 @@
+{
+  "attempt_id": "rules-held-invalid-08-rep1-54",
+  "category": "invalid",
+  "host": "192.168.50.54",
+  "model": "rules",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "repetition": 1,
+  "scenario_id": "held-invalid-08",
+  "started_at": "2026-10-06T12:23:32.742689+00:00",
+  "url": "http://192.168.50.54:19000"
+}

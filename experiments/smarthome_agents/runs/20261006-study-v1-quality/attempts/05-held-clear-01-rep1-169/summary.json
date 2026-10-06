@@ -1,0 +1,121 @@
+{
+  "action_applied": true,
+  "attempt_id": "05-held-clear-01-rep1-169",
+  "cache_tokens": 0,
+  "category": "clear",
+  "dispatch_monotonic_s": 431653.930366842,
+  "dispatched": true,
+  "elapsed_s": 37.47532354196301,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "on",
+        "name": "final:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "on",
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": true
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "review_pending": false,
+    "task_completed": true,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "on"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:09:23.090190+00:00",
+  "host": "192.168.50.169",
+  "memory_errors": [],
+  "model": "05",
+  "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}]}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "set_lights",
+      "steps": [
+        {
+          "action": "set_light",
+          "room": "sala",
+          "value": "on"
+        }
+      ]
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.21901756100123748,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 1,
+  "response_monotonic_s": 431691.405690384,
+  "returned_model": "qwen2.5-0.5b-instruct-q5_k_m.gguf",
+  "scenario_id": "held-clear-01",
+  "started_at": "2026-10-06T12:08:42.228709+00:00",
+  "step_permissions": [
+    {
+      "allowed": true,
+      "reason": "allowed"
+    }
+  ],
+  "system_fingerprint": "b9584-e25a32e98",
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 8015.834,
+    "predicted_n": 26,
+    "predicted_per_second": 3.243580143999988,
+    "predicted_per_token_ms": 308.30130769230766,
+    "prompt_ms": 29391.193,
+    "prompt_n": 125,
+    "prompt_per_second": 4.252974692112702,
+    "prompt_per_token_ms": 235.12954399999998
+  },
+  "url": "http://192.168.50.169:19005",
+  "usage": {
+    "completion_tokens": 26,
+    "prompt_tokens": 125,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 151
+  },
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

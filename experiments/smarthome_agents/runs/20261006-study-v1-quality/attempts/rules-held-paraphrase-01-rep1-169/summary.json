@@ -1,0 +1,99 @@
+{
+  "action_applied": false,
+  "attempt_id": "rules-held-paraphrase-01-rep1-169",
+  "cache_tokens": 0,
+  "category": "paraphrase",
+  "dispatch_monotonic_s": 432448.759455875,
+  "dispatched": true,
+  "elapsed_s": 0.0069639289868064225,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "off",
+        "expected": "on",
+        "name": "final:rooms.sala.light",
+        "passed": false
+      },
+      {
+        "actual": "on",
+        "expected": "on",
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true
+      },
+      {
+        "name": "no_action_policy",
+        "passed": false
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "review_pending": false,
+    "task_completed": false,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:21:58.661010+00:00",
+  "host": "192.168.50.169",
+  "memory_errors": [],
+  "model": "rules",
+  "model_content": "{\"action\":\"no_action\",\"reason\":\"Pedido fora das regras explícitas.\"}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "no_action",
+      "reason": "Pedido fora das regras explícitas."
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.009793041041120887,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 1,
+  "response_monotonic_s": 432448.766419804,
+  "returned_model": "rules-v1",
+  "scenario_id": "held-paraphrase-01",
+  "started_at": "2026-10-06T12:21:56.212078+00:00",
+  "step_permissions": [],
+  "system_fingerprint": null,
+  "timings": {
+    "rule_compute_s": 0.0007354450062848628
+  },
+  "url": "http://192.168.50.169:19000",
+  "usage": {},
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}
