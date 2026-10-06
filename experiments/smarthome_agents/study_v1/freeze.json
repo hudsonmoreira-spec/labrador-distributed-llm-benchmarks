@@ -1,0 +1,26 @@
+{
+  "frozen_at": "2026-10-06T12:00:44.493156+00:00",
+  "reference_commit": "72beda0924423a491434f0ff494e3c5215ca0619",
+  "development_run": "experiments/smarthome_agents/runs/20261006-study-v1-development-2",
+  "held_out_observed_before_freeze": false,
+  "files": {
+    "docs/smarthome_agents/policy_v1.md": "ad85445ac3ebe640782e5f73eb9d6b6bda7558c166e6289d15d65a1eb6c2d600",
+    "experiments/smarthome_agents/runs/20261005-study-v1-audit-2/verified.json": "6bd476ec02dd05dcb9230037167dfb823754f6cb4e8aa57c09894eef4f90b165",
+    "experiments/smarthome_agents/scripts/analyze_study_v1.py": "7508c630dbb6d8819a98000fbcff25db5b1e89c2c2e8c7905f2bdfc55fcc9115",
+    "experiments/smarthome_agents/scripts/prepare_hosts_v1.py": "8f5451b4b9870e8ae551e02cdde23218c93fc5ba9b8c6bc4f6079c21308d2f07",
+    "experiments/smarthome_agents/scripts/rules_server_v1.py": "8505682f5568b258d876193fd7f05e9bec6c7e0f7d927849309f9dcf5b545aab",
+    "experiments/smarthome_agents/scripts/run_study_v1.py": "fe5ca8f961f2fa17a9d4e21acdf4592ecc58986a716186b49cde3159b0eec798",
+    "experiments/smarthome_agents/scripts/smarthome_pilot.py": "59ad2262c9e4f35253699c608052377d60536702475ccfdfd63d6c15a934106c",
+    "experiments/smarthome_agents/scripts/study_v1.py": "4837d682f4f2e89bc32dfdb341aeb67b22e4f87112869c8fcf428baf7ea14f42",
+    "experiments/smarthome_agents/study_v1/configuration.json": "5b2bc9f12e7b54dba85503b9c496e3c5ec1da54a23a182cf19f2fc3a15834d9d",
+    "experiments/smarthome_agents/study_v1/development.json": "c871188eaa7cb8d8d62fefeaa3d99dfbfc936dbc3c9ff97afc2cffb98eb884bb",
+    "experiments/smarthome_agents/study_v1/model-provenance.md": "b46d7b7a0ac8f2f1d17bd9242e60b9dcc4168e841baacb1b8648582c240fd33f",
+    "experiments/smarthome_agents/study_v1/model05-metadata.json": "317e66fa9ea53eaeb4ff6d114bd54360aea31b2c610432cfb159503b9e771156",
+    "experiments/smarthome_agents/study_v1/model15-metadata.json": "2da7f453800acb28a7b9a43a7477340c686979d01f7680894a0cb2d6ff5a69c1",
+    "experiments/smarthome_agents/study_v1/protocol.md": "0371ba7acf78766f5596a878362110b211d0683733c1995d5eca6059273f810b",
+    "experiments/smarthome_agents/study_v1/reserved.json": "5a4b0716e043c3b9a8359a203631a54c64429b3d231e3d3e8b751243bd3f2c87",
+    "experiments/smarthome_agents/tests/test_controller_readiness.py": "e0bdfaa7c5223b9c783c89c21fd7f0d59b30ede1c9cb2ef627fbafb6ba8f1b71",
+    "experiments/smarthome_agents/tests/test_pilot_logic.py": "ea67f84090d63de43b132e7f162b59715bec305a2f032253616b18068940d11b",
+    "experiments/smarthome_agents/tests/test_study_v1.py": "38c5740c05980a5ae155b29c098731eb0ebb2d7c8a0827023e7870ac797c5a97"
+  }
+}
