@@ -1,0 +1,4 @@
+model,n,scenarios,successes,mean_scenario_success,automatic_successes,manual_reviewed,human_validation_pending,valid,operational_failures,non_stop,latency_n,median_s,p95_s,min_s,max_s,undue_proposed,undue_blocked,undue_applied,clarification_correct,clarification_incorrect,review_pending,cache_nonzero,median_rss_kib,prompt_tokens_min,prompt_tokens_max,completion_tokens_min,completion_tokens_max
+05,36,6,18,0.5,18,0,0,36,0,0,36,24.022227109526284,37.90347159001976,20.496124624973163,40.91672324802494,12,6,6,0,6,0,0,587016.0,125,134,16,40
+15,36,6,6,0.16666666666666666,6,0,0,36,0,0,36,81.35882248348207,131.20283506496344,62.77075354597764,139.2779517250019,24,6,18,0,0,0,0,1230940.0,125,134,12,41
+rules,36,6,30,0.8333333333333334,30,0,0,36,0,0,36,0.00577707149204798,0.010640255000907928,0.00440492999041453,0.2108741319971159,0,0,0,6,0,0,0,16420.0,,,,

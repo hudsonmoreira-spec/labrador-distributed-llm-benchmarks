@@ -1,0 +1,239 @@
+Name:	llama-server
+Umask:	0022
+State:	S (sleeping)
+Tgid:	1434630
+Ngid:	0
+Pid:	1434630
+PPid:	1
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	64
+Groups:	27 1000 
+NStgid:	1434630
+NSpid:	1434630
+NSpgid:	1434628
+NSsid:	1434628
+VmPeak:	 1237276 kB
+VmSize:	 1237276 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	  586616 kB
+VmRSS:	  586616 kB
+RssAnon:	  172816 kB
+RssFile:	  413800 kB
+RssShmem:	       0 kB
+VmData:	  314644 kB
+VmStk:	     132 kB
+VmExe:	       8 kB
+VmLib:	   24656 kB
+VmPTE:	    1452 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+Threads:	11
+SigQ:	0/5695
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001005
+SigCgt:	0000000100004002
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	not vulnerable
+SpeculationIndirectBranch:	unknown
+Cpus_allowed:	f
+Cpus_allowed_list:	0-3
+Mems_allowed:	1
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	88490
+nonvoluntary_ctxt_switches:	118351
+1.15 0.57 1.33 1/171 1553667
+MemTotal:        1986400 kB
+MemFree:           52204 kB
+MemAvailable:    1317508 kB
+Buffers:             520 kB
+Cached:          1314672 kB
+SwapCached:            0 kB
+Active:           439896 kB
+Inactive:        1343152 kB
+Active(anon):       2764 kB
+Inactive(anon):   468060 kB
+Active(file):     437132 kB
+Inactive(file):   875092 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               156 kB
+Writeback:             0 kB
+AnonPages:        467768 kB
+Mapped:          1290540 kB
+Shmem:              2944 kB
+KReclaimable:      30064 kB
+Slab:              75488 kB
+SReclaimable:      30064 kB
+SUnreclaim:        45424 kB
+KernelStack:        2784 kB
+PageTables:         8568 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      993200 kB
+Committed_AS:    1144832 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:        7712 kB
+VmallocChunk:          0 kB
+Percpu:             1216 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    411648 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:         524288 kB
+CmaFree:            5736 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+    PID %CPU   RSS COMMAND
+      1  0.0  7240 systemd
+      2  0.0     0 kthreadd
+      3  0.0     0 rcu_gp
+      4  0.0     0 rcu_par_gp
+      5  0.0     0 slub_flushwq
+      6  0.0     0 netns
+     10  0.0     0 mm_percpu_wq
+     11  0.0     0 rcu_tasks_rude_kthread
+     12  0.0     0 rcu_tasks_trace_kthread
+     13  0.0     0 ksoftirqd/0
+     14  0.0     0 rcu_sched
+     15  0.0     0 migration/0
+     17  0.0     0 cpuhp/0
+     18  0.0     0 cpuhp/1
+     19  0.0     0 migration/1
+     20  0.0     0 ksoftirqd/1
+     23  0.0     0 cpuhp/2
+     24  0.0     0 migration/2
+     25  0.0     0 ksoftirqd/2
+     28  0.0     0 cpuhp/3
+     29  0.0     0 migration/3
+     30  0.0     0 ksoftirqd/3
+     33  0.0     0 kdevtmpfs
+     34  0.0     0 inet_frag_wq
+     35  0.0     0 kauditd
+     36  0.0     0 khungtaskd
+     37  0.0     0 oom_reaper
+     39  0.0     0 writeback
+     40  0.0     0 kcompactd0
+     41  0.0     0 khugepaged
+     42  0.0     0 pencrypt_serial
+     44  0.0     0 pdecrypt_serial
+     45  0.0     0 cryptd
+     46  0.0     0 kintegrityd
+     47  0.0     0 kblockd
+     48  0.0     0 blkcg_punt_bio
+     49  0.0     0 devfreq_wq
+     54  0.0     0 kswapd0
+     55  0.0     0 kthrotld
+     60  0.0     0 card0-crtc0
+     62  0.0     0 kworker/u9:0
+     63  0.0     0 nbd0-recv
+     64  0.0     0 nbd1-recv
+     65  0.0     0 nbd2-recv
+     66  0.0     0 nbd3-recv
+     67  0.0     0 nbd4-recv
+     68  0.0     0 nbd5-recv
+     69  0.0     0 nbd6-recv
+     70  0.0     0 nbd7-recv
+     71  0.0     0 nbd8-recv
+     72  0.0     0 nbd9-recv
+     73  0.0     0 nbd10-recv
+     74  0.0     0 nbd11-recv
+     75  0.0     0 nbd12-recv
+     76  0.0     0 nbd13-recv
+     77  0.0     0 nbd14-recv
+     78  0.0     0 nbd15-recv
+     79  0.0     0 drbd-reissue
+     80  0.0     0 kmemstick
+     83  0.0     0 mmc_complete
+     86  0.0     0 tls-strp
+     87  0.0     0 mld
+     88  0.0     0 ipv6_addrconf
+     99  0.0     0 kstrp
+    101  0.0     0 zswap-shrink
+    204  0.0     0 jbd2/mmcblk2p1-8
+    205  0.0     0 ext4-rsv-conver
+    244  0.0 27440 systemd-journal
+    272  0.0  3604 systemd-udevd
+    286  0.0  3448 systemd-timesyn
+    359  0.0     0 cfg80211
+    366  0.0     0 stmmac_wq
+    367  0.0     0 ksdioirqd/mmc1
+    422  0.0  2012 cron
+    423  0.0  3020 dbus-daemon
+    425  0.0  3444 polkitd
+    426  0.0  7336 rsyslogd
+    427  0.0  3960 systemd-logind
+    441  0.2 11224 NetworkManager
+    457  0.0  5580 ModemManager
+    465  0.0  6216 python3
+    469  0.0   692 agetty
+    471  0.0   732 agetty
+    480  0.0  3340 sshd
+    500  0.0     0 RTW_XMIT_THREAD
+    501  0.1     0 RTW_CMD_THREAD
+    502  0.0     0 RTWHALXT
+    506  0.0  4728 wpa_supplicant
+    564  0.0 109812 llama-server
+    567  0.1  2760 verifica_rede_l
+1385666  0.0     0 kworker/1:2-mm_percpu_wq
+1434137  0.0  5652 systemd
+1434138  0.0  4940 (sd-pam)
+1434630  2.6 586616 llama-server
+1434649  9.4 974408 llama-server
+1438536  0.0 16216 python3
+1546297  0.0     0 kworker/2:0-events
+1546881  0.2     0 kworker/3:1-mm_percpu_wq
+1547167  0.5     0 kworker/3:2-mm_percpu_wq
+1548728  0.3     0 kworker/3:3-events
+1549268  0.1     0 kworker/2:0H-mmc_complete
+1549622  0.0     0 kworker/3:1H-kblockd
+1550371  0.0     0 kworker/u8:2-events_unbound
+1550510  0.0     0 kworker/0:1H-mmc_complete
+1551115  0.0     0 kworker/1:1H-mmc_complete
+1551283  0.0     0 kworker/2:2-events_power_efficient
+1551811  0.0     0 kworker/u8:3-writeback
+1552128  0.0     0 kworker/0:0-events_freezable
+1552209  0.0     0 kworker/3:0H-mmc_complete
+1552340  0.0     0 kworker/1:2H-mmc_complete
+1552476  0.0     0 kworker/2:1H-mmc_complete
+1552506  0.0     0 kworker/0:0H-mmc_complete
+1552557  0.0     0 kworker/1:1-cgroup_destroy
+1552811  0.0     0 kworker/0:1-mm_percpu_wq
+1553084  0.0     0 kworker/1:0H-mmc_complete
+1553154  0.0     0 kworker/3:2H-mmc_complete
+1553166  0.0     0 kworker/2:2H-mmc_complete
+1553219  0.0     0 kworker/0:2H-mmc_complete
+1553231  0.0     0 kworker/u8:0-ext4-rsv-conversion
+1553232  0.0     0 kworker/u8:1
+1553263  0.4     0 kworker/3:0-events
+1553404  0.0     0 kworker/0:2-events
+1553485  0.0     0 kworker/3:4
+1553648 26.1  9580 sshd
+1553654  0.0  6396 sshd
+1553660 80.0  3940 ps
+1553667  0.0   712 sleep

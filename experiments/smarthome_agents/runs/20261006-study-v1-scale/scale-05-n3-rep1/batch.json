@@ -1,0 +1,16 @@
+{
+  "completed_tasks_per_min": 2.690500136676303,
+  "hosts": [
+    "192.168.50.129",
+    "192.168.50.89",
+    "192.168.50.169"
+  ],
+  "model": "05",
+  "note": "fixed six-request closed batch; includes dispatch gaps between waves; no inference concurrency per host",
+  "repetition": 1,
+  "replicas": 3,
+  "requests": 6,
+  "responses_per_min": 5.381000273352606,
+  "successes": 3,
+  "window_s": 66.90205941500608
+}

@@ -1,0 +1,135 @@
+{
+  "action_applied": false,
+  "attempt_id": "05-held-invalid-01-rep1-129",
+  "cache_tokens": 0,
+  "category": "invalid",
+  "dispatch_monotonic_s": 434284.252080634,
+  "dispatched": true,
+  "elapsed_s": 23.6950321070035,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "on",
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true
+      },
+      {
+        "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+        "passed": true
+      },
+      {
+        "name": "clarification_allowed",
+        "passed": false
+      },
+      {
+        "name": "clarification_missing_field",
+        "passed": false,
+        "review": {
+          "reason": "missing_field_not_expected",
+          "status": "fail"
+        }
+      },
+      {
+        "name": "expected_action",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": {
+      "clarification_question": {
+        "reason": "missing_field_not_expected",
+        "status": "fail"
+      }
+    },
+    "review_pending": false,
+    "task_completed": false,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T12:53:17.375875+00:00",
+  "host": "192.168.50.129",
+  "memory_errors": [
+    "Command '['ssh', '-F', '/dev/null', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', '-o', 'StrictHostKeyChecking=accept-new', 'caninos@192.168.50.129', 'p=$(cat /home/caninos/smarthome_agents/study_v1/05/server.pid); cat /proc/$p/status; cat /proc/loadavg; cat /proc/meminfo; ps -eo pid,pcpu,rss,comm']' timed out after 20 seconds",
+    "Command '['ssh', '-F', '/dev/null', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=8', '-o', 'StrictHostKeyChecking=accept-new', 'caninos@192.168.50.129', 'p=$(cat /home/caninos/smarthome_agents/study_v1/05/server.pid); cat /proc/$p/status; cat /proc/loadavg; cat /proc/meminfo; ps -eo pid,pcpu,rss,comm']' timed out after 20 seconds"
+  ],
+  "model": "05",
+  "model_content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Qual sala gostaria de abrir?\"}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "ask_clarification",
+      "missing_field": "room",
+      "question": "Qual sala gostaria de abrir?"
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.008122119004838169,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 1,
+  "response_monotonic_s": 434307.947112741,
+  "returned_model": "qwen2.5-0.5b-instruct-q5_k_m.gguf",
+  "scenario_id": "held-invalid-01",
+  "started_at": "2026-10-06T12:52:13.633449+00:00",
+  "step_permissions": [],
+  "system_fingerprint": "b9584-e25a32e98",
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 6804.805,
+    "predicted_n": 25,
+    "predicted_per_second": 3.6738745636355485,
+    "predicted_per_token_ms": 272.1922,
+    "prompt_ms": 16211.957,
+    "prompt_n": 126,
+    "prompt_per_second": 7.772041339611251,
+    "prompt_per_token_ms": 128.66632539682539
+  },
+  "url": "http://192.168.50.129:19005",
+  "usage": {
+    "completion_tokens": 25,
+    "prompt_tokens": 126,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 151
+  },
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

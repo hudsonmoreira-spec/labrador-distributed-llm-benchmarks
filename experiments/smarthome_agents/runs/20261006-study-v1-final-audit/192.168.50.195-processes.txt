@@ -1,0 +1,14 @@
+/home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 19005 --threads 4 --threads-batch 4 --ctx-size 512 --parallel 1 --n-predict 128 --device none --metrics --no-warmup 
+/home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 19015 --threads 4 --threads-batch 4 --ctx-size 512 --parallel 1 --n-predict 128 --device none --metrics --no-warmup 
+python3 rules_server_v1.py 
+lab8
+Linux lab8 6.1.76 #1 SMP Mon Jan 26 19:02:43 -03 2026 aarch64 GNU/Linux
+               total       usada       livre    compart.  buff/cache  disponível
+Mem.:        1986272      691352       50128        3080     1332336     1294920
+Swap:              0           0           0
+    561  0.0 107188 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none
+1445078  3.4 207060 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 19005 --threads 4 --threads-batch 4 --ctx-size 512 --parallel 1 --n-predict 128 --device none --metrics --no-warmup
+1445096 10.4 739060 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 19015 --threads 4 --threads-batch 4 --ctx-size 512 --parallel 1 --n-predict 128 --device none --metrics --no-warmup
+1448971  0.0 15740 python3 rules_server_v1.py
+1568677 16.6  2848 bash -c for d in /home/caninos/smarthome_agents/study_v1/05 /home/caninos/smarthome_agents/study_v1/15 /home/caninos/smarthome_agents/study_v1/rules; do p=$(cat "$d/server.pid"); tr "\0" " " < /proc/$p/cmdline; printf "\n"; done; hostname; uname -a; free -k; ps -eo pid,pcpu,rss,args | grep -E "llama|rules_server"
+1568688  0.0  1860 grep -E llama|rules_server

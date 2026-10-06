@@ -1,0 +1,9 @@
+{
+  "phase": "scale",
+  "attempts": 108,
+  "starts": 108,
+  "incomplete": 0,
+  "scenarios": 40,
+  "p95_method": "nearest_rank",
+  "reconstruction": "raw response + frozen evaluator; assertions on recorded state, permission and evaluation"
+}

@@ -1,0 +1,15 @@
+{
+  "attempt_id": "15-held-routine-02-rep1-169",
+  "category": "routine",
+  "host": "192.168.50.169",
+  "model": "15",
+  "params": {
+    "max_tokens": 128,
+    "seed": 801,
+    "temperature": 0
+  },
+  "repetition": 1,
+  "scenario_id": "held-routine-02",
+  "started_at": "2026-10-06T13:27:34.464950+00:00",
+  "url": "http://192.168.50.169:19015"
+}

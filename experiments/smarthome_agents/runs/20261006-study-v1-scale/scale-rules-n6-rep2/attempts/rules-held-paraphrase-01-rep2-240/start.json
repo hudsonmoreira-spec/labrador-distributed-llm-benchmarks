@@ -1,0 +1,15 @@
+{
+  "attempt_id": "rules-held-paraphrase-01-rep2-240",
+  "category": "paraphrase",
+  "host": "192.168.50.240",
+  "model": "rules",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "held-paraphrase-01",
+  "started_at": "2026-10-06T12:49:23.814983+00:00",
+  "url": "http://192.168.50.240:19000"
+}

@@ -1,0 +1,1 @@
+{"choices": [{"finish_reason": "stop", "message": {"content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Qual cômodo?\"}"}}], "usage": {}, "timings": {"rule_compute_s": 0.00038516701897606254}, "model": "rules-v1"}

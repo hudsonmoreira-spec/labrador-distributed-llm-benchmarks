@@ -1,0 +1,245 @@
+Name:	python3
+Umask:	0022
+State:	S (sleeping)
+Tgid:	1434021
+Ngid:	0
+Pid:	1434021
+PPid:	1
+TracerPid:	0
+Uid:	1000	1000	1000	1000
+Gid:	1000	1000	1000	1000
+FDSize:	64
+Groups:	27 1000 
+NStgid:	1434021
+NSpid:	1434021
+NSpgid:	1434019
+NSsid:	1434019
+VmPeak:	   30876 kB
+VmSize:	   30876 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	   20876 kB
+VmRSS:	   16552 kB
+RssAnon:	   11636 kB
+RssFile:	    4916 kB
+RssShmem:	       0 kB
+VmData:	   12944 kB
+VmStk:	     132 kB
+VmExe:	    5204 kB
+VmLib:	    7708 kB
+VmPTE:	      88 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+Threads:	1
+SigQ:	0/5695
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000001001007
+SigCgt:	0000000000000000
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	not vulnerable
+SpeculationIndirectBranch:	unknown
+Cpus_allowed:	f
+Cpus_allowed_list:	0-3
+Mems_allowed:	1
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	117462
+nonvoluntary_ctxt_switches:	1413
+1.94 2.87 2.82 1/177 1547589
+MemTotal:        1986400 kB
+MemFree:           41496 kB
+MemAvailable:    1323368 kB
+Buffers:             172 kB
+Cached:          1331116 kB
+SwapCached:            0 kB
+Active:           464352 kB
+Inactive:        1334788 kB
+Active(anon):       2760 kB
+Inactive(anon):   468056 kB
+Active(file):     461592 kB
+Inactive(file):   866732 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:              2984 kB
+Writeback:             0 kB
+AnonPages:        464432 kB
+Mapped:          1308972 kB
+Shmem:              2964 kB
+KReclaimable:      31000 kB
+Slab:              76648 kB
+SReclaimable:      31000 kB
+SUnreclaim:        45648 kB
+KernelStack:        2912 kB
+PageTables:         8736 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      993200 kB
+Committed_AS:    1144924 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:        8724 kB
+VmallocChunk:          0 kB
+Percpu:             1264 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    403456 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:         524288 kB
+CmaFree:            4688 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+    PID %CPU   RSS COMMAND
+      1  0.0  7480 systemd
+      2  0.0     0 kthreadd
+      3  0.0     0 rcu_gp
+      4  0.0     0 rcu_par_gp
+      5  0.0     0 slub_flushwq
+      6  0.0     0 netns
+     10  0.0     0 mm_percpu_wq
+     11  0.0     0 rcu_tasks_rude_kthread
+     12  0.0     0 rcu_tasks_trace_kthread
+     13  0.0     0 ksoftirqd/0
+     14  0.0     0 rcu_sched
+     15  0.0     0 migration/0
+     17  0.0     0 cpuhp/0
+     18  0.0     0 cpuhp/1
+     19  0.0     0 migration/1
+     20  0.0     0 ksoftirqd/1
+     23  0.0     0 cpuhp/2
+     24  0.0     0 migration/2
+     25  0.0     0 ksoftirqd/2
+     28  0.0     0 cpuhp/3
+     29  0.0     0 migration/3
+     30  0.0     0 ksoftirqd/3
+     33  0.0     0 kdevtmpfs
+     34  0.0     0 inet_frag_wq
+     35  0.0     0 kauditd
+     36  0.0     0 khungtaskd
+     37  0.0     0 oom_reaper
+     39  0.0     0 writeback
+     40  0.0     0 kcompactd0
+     41  0.0     0 khugepaged
+     42  0.0     0 pencrypt_serial
+     44  0.0     0 pdecrypt_serial
+     45  0.0     0 cryptd
+     46  0.0     0 kintegrityd
+     47  0.0     0 kblockd
+     48  0.0     0 blkcg_punt_bio
+     49  0.0     0 devfreq_wq
+     53  0.0     0 kswapd0
+     54  0.0     0 kthrotld
+     58  0.0     0 card0-crtc0
+     61  0.0     0 kworker/u9:0-hci0
+     62  0.0     0 nbd0-recv
+     63  0.0     0 nbd1-recv
+     64  0.0     0 nbd2-recv
+     65  0.0     0 nbd3-recv
+     66  0.0     0 nbd4-recv
+     67  0.0     0 nbd5-recv
+     68  0.0     0 nbd6-recv
+     69  0.0     0 nbd7-recv
+     70  0.0     0 nbd8-recv
+     71  0.0     0 nbd9-recv
+     72  0.0     0 nbd10-recv
+     73  0.0     0 nbd11-recv
+     74  0.0     0 nbd12-recv
+     75  0.0     0 nbd13-recv
+     76  0.0     0 nbd14-recv
+     77  0.0     0 nbd15-recv
+     78  0.0     0 drbd-reissue
+     79  0.0     0 kmemstick
+     82  0.0     0 mmc_complete
+     84  0.0     0 tls-strp
+     85  0.0     0 mld
+     87  0.0     0 ipv6_addrconf
+     98  0.0     0 kstrp
+    100  0.0     0 zswap-shrink
+    199  0.0     0 jbd2/mmcblk2p1-8
+    200  0.0     0 ext4-rsv-conver
+    243  0.0 26420 systemd-journal
+    263  0.0  3624 systemd-udevd
+    278  0.0  3348 systemd-timesyn
+    348  0.0     0 cfg80211
+    354  0.0     0 stmmac_wq
+    358  0.0     0 ksdioirqd/mmc1
+    414  0.0  1912 cron
+    415  0.0  2972 dbus-daemon
+    417  0.0  3436 polkitd
+    418  0.0  3476 rsyslogd
+    419  0.0  4520 systemd-logind
+    434  0.2 10520 NetworkManager
+    445  0.0  2120 sudo
+    449  0.0  5576 ModemManager
+    450  0.0   744 rtk_hciattach
+    460  0.0  6084 python3
+    471  0.0   616 agetty
+    473  0.0   692 agetty
+    475  0.0  3692 sshd
+    496  0.0     0 RTW_XMIT_THREAD
+    497  0.1     0 RTW_CMD_THREAD
+    498  0.0     0 RTWHALXT
+    502  0.0  4996 wpa_supplicant
+    524  0.0     0 kworker/u9:1-hci0
+    544  0.0 107544 llama-server
+    545  0.1  2720 verifica_rede_l
+1135102  0.0  5828 systemd
+1135103  0.0  4992 (sd-pam)
+1135134  0.0  9228 ggml-rpc-server
+1430175  2.8 347696 llama-server
+1430185  8.4 1227600 llama-server
+1433683  0.0     0 kworker/0:2-events
+1434021  0.0 16552 python3
+1543183  0.1     0 kworker/0:0H-mmc_complete
+1543689  0.3     0 kworker/1:3-cgroup_destroy
+1544216  0.0     0 kworker/3:2H-mmc_complete
+1544217  0.1     0 kworker/2:1H-mmc_complete
+1544792  0.0     0 kworker/3:0-mm_percpu_wq
+1544933  0.0     0 kworker/2:0-cgroup_destroy
+1545014  0.5     0 kworker/1:4-mm_percpu_wq
+1545558  0.0     0 kworker/u8:3-flush-179:0
+1545792  0.0     0 kworker/3:3-mm_percpu_wq
+1545916  0.0     0 kworker/2:2-cgroup_destroy
+1545926  0.0     0 kworker/1:0-mm_percpu_wq
+1546090  0.0     0 kworker/1:1H-kblockd
+1546113  0.0     0 kworker/0:0-cgroup_destroy
+1546248  0.0     0 kworker/0:1H-mmc_complete
+1546249  0.0     0 kworker/u8:1-events_unbound
+1546260  0.0     0 kworker/u8:2-events_unbound
+1546387  0.0     0 kworker/3:2-events_freezable
+1546545  0.2     0 kworker/1:1+events_freezable
+1546659  0.0     0 kworker/2:2H-mmc_complete
+1546680  0.0     0 kworker/3:0H-mmc_complete
+1546710  0.0     0 kworker/1:2H-mmc_complete
+1546829  0.2     0 kworker/0:2H-mmc_complete
+1546900  0.0     0 kworker/u8:0-flush-179:0
+1547034  0.0     0 kworker/3:1-mm_percpu_wq
+1547107  0.0     0 kworker/0:1-cgroup_destroy
+1547255  0.0     0 kworker/3:1H-mmc_complete
+1547266  0.0     0 kworker/2:0H-mmc_complete
+1547307  0.0     0 kworker/1:0H-mmc_complete
+1547454  0.0     0 kworker/2:1-cgroup_destroy
+1547568  0.0   780 sleep
+1547579 26.8  9576 sshd
+1547585  0.0  6288 sshd
+1547586  125  4008 ps

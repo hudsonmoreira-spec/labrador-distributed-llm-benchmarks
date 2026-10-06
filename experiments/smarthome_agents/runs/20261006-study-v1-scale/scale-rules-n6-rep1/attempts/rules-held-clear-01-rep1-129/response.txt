@@ -1,0 +1,1 @@
+{"choices": [{"finish_reason": "stop", "message": {"content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}"}}], "usage": {}, "timings": {"rule_compute_s": 0.0005148680647835135}, "model": "rules-v1"}

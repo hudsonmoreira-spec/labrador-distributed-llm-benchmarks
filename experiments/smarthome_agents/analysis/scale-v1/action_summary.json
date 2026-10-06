@@ -1,0 +1,23 @@
+[
+  {
+    "model": "rules",
+    "structured_light_commands": 30,
+    "undue_commands": 0,
+    "undue_commands_blocked": 0,
+    "undue_commands_applied": 0
+  },
+  {
+    "model": "05",
+    "structured_light_commands": 36,
+    "undue_commands": 12,
+    "undue_commands_blocked": 6,
+    "undue_commands_applied": 6
+  },
+  {
+    "model": "15",
+    "structured_light_commands": 60,
+    "undue_commands": 36,
+    "undue_commands_blocked": 12,
+    "undue_commands_applied": 24
+  }
+]
