@@ -63,5 +63,27 @@ LINES
 \end{axis}\end{tikzpicture}\end{document}
 '''.replace('LINES','\n'.join(lines))
     (args.out/'scale_figure.tex').write_text(scaleplot)
+    quality_rows=(args.out/'quality_rows.tex').read_text()
+    (args.out/'quality_rows_pt.tex').write_text(quality_rows.replace('Rules','Regras'))
+    (args.out/'scale_rows_pt.tex').write_text((args.out/'scale_rows.tex').read_text().replace('Rules','Regras'))
+    translations={'ambiguity':'Ambiguidade','clear':'Claros','invalid':'Inválidos','paraphrase':'Paráfrases','routine':'Rotinas'}
+    (args.out/'category_rows_pt.tex').write_text(''.join(line([translations[cat],*[next(r['successes'] for r in categories if r['model']==m and r['category']==cat)+'/16' for m in ['rules','05','15']]]) for cat in cats)+'\\bottomrule\n')
+    en=[];pt=[]
+    for r in metrics:
+        label=LABEL[r['model']];ptlabel=label.replace('Rules','Regras')
+        en.append(f"{label} completed {r['successes']}/{r['n']} attempts across {r['scenarios']} scenarios; {r['automatic_successes']} passed automatically. The request-latency sample has $n={r['latency_n']}$. Valid structured replies: {r['valid']}; transport/readiness failures: {r['operational_failures']}; non-stop completions: {r['non_stop']}. Undue structured proposals: {r['undue_proposed']}, including {r['undue_blocked']} blocked and {r['undue_applied']} applied only in the simulator. Correct clarifications: {r['clarification_correct']}; incorrect: {r['clarification_incorrect']}; unresolved: {r['review_pending']}.\n\n")
+        pt.append(f"{ptlabel} concluiu {r['successes']}/{r['n']} tentativas em {r['scenarios']} cenários; {r['automatic_successes']} passaram automaticamente. A amostra de latência tem $n={r['latency_n']}$. Respostas estruturadas válidas: {r['valid']}; falhas de transporte/prontidão: {r['operational_failures']}; terminações diferentes de stop: {r['non_stop']}. Propostas estruturadas indevidas: {r['undue_proposed']}, das quais {r['undue_blocked']} foram bloqueadas e {r['undue_applied']} aplicadas somente no simulador. Esclarecimentos corretos: {r['clarification_correct']}; incorretos: {r['clarification_incorrect']}; não resolvidos: {r['review_pending']}.\n\n")
+        if r['model']!='rules':
+            en.append(f"Input tokens ranged from {r['prompt_tokens_min']} to {r['prompt_tokens_max']}; output tokens from {r['completion_tokens_min']} to {r['completion_tokens_max']}. Median post-request RSS was {r['median_rss_kib']/1024:.1f} MiB. Nonzero cache counts occurred in {r['cache_nonzero']} attempts.\n\n")
+            pt.append(f"As entradas usaram {r['prompt_tokens_min']}--{r['prompt_tokens_max']} tokens; as saídas, {r['completion_tokens_min']}--{r['completion_tokens_max']}. A mediana de RSS após a requisição foi {r['median_rss_kib']/1024:.1f} MiB. Houve cache não zero em {r['cache_nonzero']} tentativas.\n\n")
+        if r['manual_reviewed']:
+            en.append(f"{r['manual_reviewed']} questions underwent recorded case-by-case review; {r['human_validation_pending']} assisted reviews await human validation. Automatic and assisted counts are distinguished in the artifact.\n\n")
+            pt.append(f"{r['manual_reviewed']} perguntas tiveram revisão caso a caso registrada; {r['human_validation_pending']} revisões assistidas aguardam validação humana. Contagens automáticas e assistidas estão separadas no artefato.\n\n")
+    (args.out/'results_en.tex').write_text(''.join(en))
+    (args.out/'results_pt.tex').write_text(''.join(pt))
+    (args.out/'scale_en.tex').write_text('The batch CSV preserves each window, successful-task rate, and response rate separately. Table~\\ref{tab:scale} pools twelve individual requests per condition/size for latency and averages two batch rates; ranges remain in the machine-readable summary.\n')
+    (args.out/'scale_pt.tex').write_text('O CSV de lotes preserva cada janela, taxa de tarefas corretas e taxa de respostas separadamente. A Tabela~\\ref{tab:scale} agrupa doze requisições por condição/tamanho para latência e calcula a média de duas taxas de lote; os intervalos permanecem no resumo legível por máquina.\n')
+    (args.out/'discussion_en.tex').write_text('Task completion and schema validity are separate outcomes. A blocked incorrect proposal remains an incorrect model decision, and higher response volume cannot repair that decision. Replication changes service concurrency, while the model and simulator contract remain fixed.\n\n')
+    (args.out/'discussion_pt.tex').write_text('Conclusão de tarefa e validade estrutural são resultados distintos. Uma proposta incorreta bloqueada continua sendo erro de decisão do modelo; aumentar o volume de respostas não corrige essa decisão. A replicação muda a concorrência de atendimento, mantendo modelo e contrato do simulador.\n\n')
     print('Assets generated from raw-data analysis; plot values are means, batch ranges are tabulated.')
 if __name__=='__main__':main()

@@ -1,0 +1,15 @@
+{
+  "attempt_id": "15-dev2-07-rep2-89",
+  "category": "ambiguity",
+  "host": "192.168.50.89",
+  "model": "15",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "repetition": 2,
+  "scenario_id": "dev2-07",
+  "started_at": "2026-10-06T11:52:30.452694+00:00",
+  "url": "http://192.168.50.89:19015"
+}

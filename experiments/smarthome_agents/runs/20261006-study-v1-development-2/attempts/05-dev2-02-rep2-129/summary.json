@@ -1,0 +1,128 @@
+{
+  "action_applied": false,
+  "attempt_id": "05-dev2-02-rep2-129",
+  "cache_tokens": 0,
+  "category": "clear",
+  "dispatch_monotonic_s": 430350.744885083,
+  "dispatched": true,
+  "elapsed_s": 29.08344599499833,
+  "error": null,
+  "evaluation": {
+    "checks": [
+      {
+        "detail": "allowed",
+        "name": "action_allowed",
+        "passed": true
+      },
+      {
+        "actual": "on",
+        "expected": "off",
+        "name": "final:rooms.quarto.light",
+        "passed": false
+      },
+      {
+        "actual": "off",
+        "expected": "off",
+        "name": "unchanged:rooms.sala.light",
+        "passed": true
+      },
+      {
+        "name": "clarification_allowed",
+        "passed": false
+      },
+      {
+        "name": "clarification_missing_field",
+        "passed": false,
+        "review": {
+          "reason": "missing_field_not_expected",
+          "status": "fail"
+        }
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": {
+      "clarification_question": {
+        "reason": "missing_field_not_expected",
+        "status": "fail"
+      }
+    },
+    "review_pending": false,
+    "task_completed": false,
+    "undue_proposal": false
+  },
+  "execution_completed": true,
+  "final_state": {
+    "known_location": null,
+    "rooms": {
+      "quarto": {
+        "light": "on"
+      },
+      "sala": {
+        "light": "off"
+      }
+    }
+  },
+  "finish_reason": "stop",
+  "finished_at": "2026-10-06T11:47:29.867227+00:00",
+  "host": "192.168.50.129",
+  "memory_errors": [],
+  "model": "05",
+  "model_content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quem está no quarto?\"}",
+  "params": {
+    "max_tokens": 128,
+    "seed": 802,
+    "temperature": 0
+  },
+  "parse": {
+    "action": {
+      "action": "ask_clarification",
+      "missing_field": "room",
+      "question": "Quem está no quarto?"
+    },
+    "reason": "ok",
+    "structured_valid": true
+  },
+  "readiness": {
+    "elapsed_s": 0.007945889024995267,
+    "error": null,
+    "ready": true
+  },
+  "repetition": 2,
+  "response_monotonic_s": 430379.828331078,
+  "returned_model": "qwen2.5-0.5b-instruct-q5_k_m.gguf",
+  "scenario_id": "dev2-02",
+  "started_at": "2026-10-06T11:46:59.667982+00:00",
+  "step_permissions": [],
+  "system_fingerprint": "b9584-e25a32e98",
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 7285.001,
+    "predicted_n": 26,
+    "predicted_per_second": 3.5689768608130596,
+    "predicted_per_token_ms": 280.1923461538462,
+    "prompt_ms": 21556.048,
+    "prompt_n": 126,
+    "prompt_per_second": 5.845227288415762,
+    "prompt_per_token_ms": 171.07974603174603
+  },
+  "url": "http://192.168.50.129:19005",
+  "usage": {
+    "completion_tokens": 26,
+    "prompt_tokens": 126,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 152
+  },
+  "validation": {
+    "allowed": true,
+    "reason": "allowed"
+  }
+}

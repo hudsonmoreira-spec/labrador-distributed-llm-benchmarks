@@ -29,3 +29,19 @@ A instrução revisada foi implementada em inglês, com pedidos preservados em p
 O lançamento com `nohup` não sobreviveu ao encerramento do comando supervisionado: log vazio, diretório de campanha inexistente e nenhum processo ativo. Nenhum cenário foi executado nessa tentativa de lançamento. A nova campanha será iniciada em primeiro plano supervisionado, em diretório de 2026-10-06.
 
 Antes da coleta reservada, acrescentou-se verificação de ociosidade dos dois modelos de cada placa para drenar requisições que continuem após timeout. Isso evita inferências simultâneas na comparação básica mesmo em falhas de transporte. 23 testes passaram. A mudança de controle antecede congelamento e execução reservada.
+
+## Segunda campanha concluída e decisão de congelamento
+
+`runs/20261006-study-v1-development-2/`: 48/48 execuções e respostas estruturadas válidas, todas finish_reason=stop, nenhuma falha de transporte/prontidão e nenhum cache reportado. Reconstrução conferiu respostas brutas, permissões, estado e avaliação.
+
+| Condição | Sucessos / 16 | Mediana (s) | p95 (s), n=16 | Propostas indevidas | Bloqueadas |
+|---|---:|---:|---:|---:|---:|
+| Regras | 14 | 0,092 | 1,102 | 0 | 0 |
+| Qwen 0.5B | 6 | 34,173 | 47,139 | 8 | 4 |
+| Qwen 1.5B | 2 | 95,829 | 138,633 | 10 | 2 |
+
+Escolha: mesma configuração e prompt geral revisado para ambos os modelos, preservando uma comparação de configurações com entrada comum. No desenvolvimento, os sucessos agregados dos modelos passaram de 6/32 para 8/32 e as propostas indevidas de 26 para 18; o 1.5B individualmente caiu de 4 para 2 sucessos. Não existe alegação de melhor configuração universal ou superioridade por tamanho. Os dois arquivos oficiais foram identificados por hashes coincidentes com os publicados por Qwen.
+
+A infraestrutura é viável (transporte, saída, memória observada e limites de geração), mas o desempenho decisório de desenvolvimento é limitado. Não ampliar a busca de prompts para perseguir uma precisão desejada. Congelar esta configuração e reportar resultados reservados como ocorrerem, incluindo negativos. O custo da configuração revisada e a variação por host devem aparecer na análise; não combinar as campanhas de desenvolvimento como amostra de precisão.
+
+Todos os 40 casos reservados continuam sem respostas observadas antes do congelamento. 23 testes locais passaram. Nenhuma alteração motivada pelo reservado será aplicada dentro desta campanha.

@@ -111,6 +111,15 @@ def main():
             'prompt_tokens_max':max([r['prompt_tokens'] for r in rs if r['prompt_tokens'] is not None],default=None),
             'completion_tokens_min':min([r['completion_tokens'] for r in rs if r['completion_tokens'] is not None],default=None),
             'completion_tokens_max':max([r['completion_tokens'] for r in rs if r['completion_tokens'] is not None],default=None)})
+    host_rows=[]
+    for model in sorted({r['model'] for r in rows}):
+        for host in sorted({r['host'] for r in rows}):
+            rs=[r for r in rows if r['model']==model and r['host']==host]
+            xs=[r['latency_s'] for r in rs if r['latency_s'] is not None]
+            if rs:host_rows.append({'model':model,'host':host,'attempts':len(rs),'latency_n':len(xs),
+                'successes':sum(r['success'] for r in rs),'median_s':stats.median(xs) if xs else None,
+                'p95_s':percentile(xs),'note':'case mix varies by host; descriptive, not isolated host effect'})
+    write_csv(args.out/'hosts.csv',host_rows)
     write_csv(args.out/'metrics.csv',metrics)
     for name,data in [('metrics.json',metrics),('pending_reviews.json',pending),('failure_inventory.json',failures),('incomplete_attempts.json',missing)]:
         (args.out/name).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
