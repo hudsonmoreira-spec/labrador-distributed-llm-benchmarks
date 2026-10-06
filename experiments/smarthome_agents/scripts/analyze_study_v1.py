@@ -74,7 +74,7 @@ def main():
              'clarification_proposed':bool(action and action['action']=='ask_clarification'),
              'clarification_correct':bool(action and action['action']=='ask_clarification' and ev['task_completed']),
              'clarification_incorrect':bool(action and action['action']=='ask_clarification' and not ev['task_completed'] and not ev.get('review_pending')),
-             'latency_s':r['elapsed_s'],'prompt_tokens':r['usage'].get('prompt_tokens'),'completion_tokens':r['usage'].get('completion_tokens'),
+             'latency_s':r['elapsed_s'],'dispatched':r.get('dispatched',True),'prompt_tokens':r['usage'].get('prompt_tokens'),'completion_tokens':r['usage'].get('completion_tokens'),
              'cache_tokens':r['cache_tokens'],'rss_before_kib':before.get('VmRSS'),'rss_after_kib':after.get('VmRSS'),'process_hwm_kib':after.get('VmHWM'),
              'finish_reason':r['finish_reason'],'error':r['error'],'block_reason':permission['reason'],'memory_errors':len(r['memory_errors'])}
         rows.append(row)
@@ -84,9 +84,9 @@ def main():
     for r in rows:groups[(r['model'],r['scenario'])].append(r)
     scenarios=[]
     for (model,sid),rs in sorted(groups.items()):
-        xs=[r['latency_s'] for r in rs]
+        xs=[r['latency_s'] for r in rs if r['latency_s'] is not None]
         scenarios.append({'model':model,'scenario':sid,'category':rs[0]['category'],'n':len(rs),'successes':sum(r['success'] for r in rs),
-                          'success_fraction':stats.mean(r['success'] for r in rs),'median_s':stats.median(xs),'p95_s':percentile(xs),
+                          'success_fraction':stats.mean(r['success'] for r in rs),'latency_n':len(xs),'median_s':stats.median(xs) if xs else None,'p95_s':percentile(xs),
                           'valid':sum(r['valid'] for r in rs),'undue_proposals':sum(r['undue_proposal'] for r in rs),'pending':sum(r['review_pending'] for r in rs)})
     write_csv(args.out/'scenarios.csv',scenarios)
     categories=[]
@@ -99,11 +99,11 @@ def main():
     write_csv(args.out/'categories.csv',categories)
     metrics=[]
     for model in sorted({r['model'] for r in rows}):
-        rs=[r for r in rows if r['model']==model];xs=[r['latency_s'] for r in rs];gs=[g for g in scenarios if g['model']==model]
+        rs=[r for r in rows if r['model']==model];xs=[r['latency_s'] for r in rs if r['latency_s'] is not None];gs=[g for g in scenarios if g['model']==model]
         rss=[r['rss_after_kib'] for r in rs if r['rss_after_kib'] is not None]
         metrics.append({'model':model,'n':len(rs),'scenarios':len(gs),'successes':sum(r['success'] for r in rs),
             'mean_scenario_success':stats.mean(g['success_fraction'] for g in gs),'automatic_successes':sum(r['automatic_success'] for r in rs),'manual_reviewed':sum(r['manual_review'] for r in rs),'human_validation_pending':sum(r['human_validation_pending'] for r in rs),'valid':sum(r['valid'] for r in rs),'operational_failures':sum(not r['completed'] for r in rs),
-            'non_stop':sum(r['finish_reason']!='stop' for r in rs),'median_s':stats.median(xs),'p95_s':percentile(xs),'min_s':min(xs),'max_s':max(xs),
+            'non_stop':sum(r['finish_reason']!='stop' for r in rs),'latency_n':len(xs),'median_s':stats.median(xs) if xs else None,'p95_s':percentile(xs),'min_s':min(xs) if xs else None,'max_s':max(xs) if xs else None,
             'undue_proposed':sum(r['undue_proposal'] for r in rs),'undue_blocked':sum(r['undue_blocked'] for r in rs),'undue_applied':sum(r['undue_applied'] for r in rs),
             'clarification_correct':sum(r['clarification_correct'] for r in rs),'clarification_incorrect':sum(r['clarification_incorrect'] for r in rs),'review_pending':sum(r['review_pending'] for r in rs),
             'cache_nonzero':sum(bool(r['cache_tokens']) for r in rs),'median_rss_kib':stats.median(rss) if rss else None,

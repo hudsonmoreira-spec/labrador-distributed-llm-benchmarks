@@ -23,3 +23,9 @@ Hosts finais .129/.89/.169/.54/.240/.195. Auditoria de binário, todas as biblio
 A preparação .85 sofreu conexões fechadas; a cópia notebook→.200 foi muito lenta e não integra o conjunto final. A transferência direta .89→.54 do 0.5B durou 44,743 s. Servidor temporário de arquivos encerrado. Preparações e recuperação do reinício do Codex são evidência operacional, distintas das tentativas de inferência.
 
 A instrução revisada foi implementada em inglês, com pedidos preservados em português, sem exemplos de resposta. A semântica on/off é descrita por verbos gerais. A cortesia é removida somente nas extremidades do pedido da referência por regras. 21 testes passaram, incluindo impedir que a cortesia transforme um pedido inválido em ação de iluminação. Essa revisão é candidata, não resultado reservado.
+
+## Retomada em 2026-10-06
+
+O lançamento com `nohup` não sobreviveu ao encerramento do comando supervisionado: log vazio, diretório de campanha inexistente e nenhum processo ativo. Nenhum cenário foi executado nessa tentativa de lançamento. A nova campanha será iniciada em primeiro plano supervisionado, em diretório de 2026-10-06.
+
+Antes da coleta reservada, acrescentou-se verificação de ociosidade dos dois modelos de cada placa para drenar requisições que continuem após timeout. Isso evita inferências simultâneas na comparação básica mesmo em falhas de transporte. 23 testes passaram. A mudança de controle antecede congelamento e execução reservada.

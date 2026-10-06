@@ -1,0 +1,15 @@
+/home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 19005 --threads 4 --threads-batch 4 --ctx-size 512 --parallel 1 --n-predict 128 --device none --metrics --no-warmup 
+/home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 19015 --threads 4 --threads-batch 4 --ctx-size 512 --parallel 1 --n-predict 128 --device none --metrics --no-warmup 
+python3 rules_server_v1.py 
+lab2
+Linux lab2 6.1.76 #1 SMP Fri Feb 28 17:06:14 UTC 2025 aarch64 GNU/Linux
+               total       usada       livre    compart.  buff/cache  disponível
+Mem.:        1986400      879948       72548        3300     1115640     1106452
+Swap:              0           0           0
+    633  0.0 105728 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none
+1389750 53.3 203684 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 18089 --threads 4 --ctx-size 1024 --n-predict 96 --parallel 1 --metrics
+1436608  9.3 173636 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 19005 --threads 4 --threads-batch 4 --ctx-size 512 --parallel 1 --n-predict 128 --device none --metrics --no-warmup
+1436626 41.3 589216 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 19015 --threads 4 --threads-batch 4 --ctx-size 512 --parallel 1 --n-predict 128 --device none --metrics --no-warmup
+1441067  0.4 18720 python3 rules_server_v1.py
+1441331 15.3  3012 bash -c for d in /home/caninos/smarthome_agents/study_v1/05 /home/caninos/smarthome_agents/study_v1/15 /home/caninos/smarthome_agents/study_v1/rules; do p=$(cat "$d/server.pid"); tr "\0" " " < /proc/$p/cmdline; printf "\n"; done; hostname; uname -a; free -k; ps -eo pid,pcpu,rss,args | grep -E "llama|rules_server"
+1441342  0.0  1912 grep -E llama|rules_server

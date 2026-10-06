@@ -19,7 +19,7 @@ assert len(json.loads((BASE/'reserved.json').read_text()))==40
 files=list(BASE.glob('*.json'))+list(BASE.glob('*.md'))
 files+=[ROOT/'experiments/smarthome_agents/scripts'/name for name in ['study_v1.py','smarthome_pilot.py','rules_server_v1.py','run_study_v1.py','analyze_study_v1.py','prepare_hosts_v1.py']]
 files+=list((ROOT/'experiments/smarthome_agents/tests').glob('*.py'))
-files+=[ROOT/'docs/smarthome_agents/policy_v1.md',ROOT/'experiments/smarthome_agents/runs/20261005-study-v1-audit/verified.json']
+files+=[ROOT/'docs/smarthome_agents/policy_v1.md',ROOT/'experiments/smarthome_agents/runs/20261005-study-v1-audit-2/verified.json']
 manifest={'frozen_at':datetime.now(timezone.utc).isoformat(),'reference_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
           'development_run':str(args.development),'held_out_observed_before_freeze':False,
           'files':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)}}

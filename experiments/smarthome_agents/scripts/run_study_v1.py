@@ -28,6 +28,21 @@ def memory(host,model):
     directory=BASE+'/'+('rules' if model=='rules' else model)
     return ssh(host,'p=$(cat '+directory+'/server.pid); cat /proc/$p/status; cat /proc/loadavg; cat /proc/meminfo; ps -eo pid,pcpu,rss,comm',timeout=20)
 
+def wait_board_idle(host, timeout_s=180):
+    """Drain both model services after a timed-out client before another request."""
+    started=time.monotonic()
+    while True:
+        try:
+            slots=[get(f'http://{host}:{PORTS[m]}/slots') for m in ['05','15']]
+            if all(not slot['is_processing'] for service in slots for slot in service):
+                return {'ready':True,'elapsed_s':time.monotonic()-started,'error':None}
+        except Exception as e:
+            return {'ready':False,'elapsed_s':time.monotonic()-started,'error':f'board_readiness: {type(e).__name__}: {e}'}
+        if time.monotonic()-started >= timeout_s:
+            return {'ready':False,'elapsed_s':time.monotonic()-started,'error':'board_busy_after_timeout'}
+        time.sleep(2)
+
+
 def attempt(host,model,sc,rep,out,barrier=None):
     aid=f"{model}-{sc['scenario_id']}-rep{rep+1}-{host.split('.')[-1]}"
     d=out/'attempts'/aid;d.mkdir(parents=True,exist_ok=False)
@@ -37,19 +52,22 @@ def attempt(host,model,sc,rep,out,barrier=None):
     save(d/'request.json',payload)
     start_record={'attempt_id':aid,'host':host,'model':model,'scenario_id':sc['scenario_id'],'category':sc['category'],'repetition':rep+1,'params':params,'url':url,'started_at':now()}
     save(d/'start.json',start_record)
+    readiness=wait_board_idle(host)
+    save(d/'readiness.json',readiness)
     mem_error=[]
     try:(d/'memory_before.txt').write_text(memory(host,model))
     except Exception as e:mem_error.append(str(e))
-    if barrier:barrier.wait(timeout=60)
+    if barrier:barrier.wait(timeout=540)
     encoded=json.dumps(payload,ensure_ascii=False).encode()
     started=time.monotonic();# Dispatch clock is immediately before the HTTP call; exclude log I/O.
-    completed=False;raw='';response={};error=None
+    completed=False;raw='';response={};error=readiness['error']
     try:
+        if not readiness['ready']:raise RuntimeError(readiness['error'])
         req=request.Request(url+'/v1/chat/completions',data=encoded,headers={'Content-Type':'application/json'})
         with request.urlopen(req,timeout=CONFIG['timeout_s']) as r:
             raw=r.read().decode();response=json.loads(raw);completed=r.status==200
     except Exception as e:error=f'{type(e).__name__}: {e}'
-    ended=time.monotonic();elapsed=ended-started
+    ended=time.monotonic();elapsed=ended-started if readiness['ready'] else None
     (d/'response.txt').write_text(raw)
     try:(d/'memory_after.txt').write_text(memory(host,model))
     except Exception as e:mem_error.append(str(e))
@@ -61,13 +79,13 @@ def attempt(host,model,sc,rep,out,barrier=None):
     usage=response.get('usage',{});timings=response.get('timings',{})
     cache_n=timings.get('cache_n',usage.get('prompt_tokens_details',{}).get('cached_tokens',0))
     result={**start_record,'finished_at':now(),'dispatch_monotonic_s':started,'response_monotonic_s':ended,
-            'elapsed_s':elapsed,'execution_completed':completed,'finish_reason':finish,'error':error,
+            'elapsed_s':elapsed,'dispatched':readiness['ready'],'readiness':readiness,'execution_completed':completed,'finish_reason':finish,'error':error,
             'memory_errors':mem_error,'model_content':content,'parse':parsed,'validation':p,'step_permissions':decisions,
             'final_state':final,'evaluation':ev,'usage':usage,'timings':timings,'cache_tokens':cache_n,
             'returned_model':response.get('model'),'system_fingerprint':response.get('system_fingerprint'),
             'action_applied':bool(study.light_steps(parsed['action'])) and p['allowed']}
     save(d/'summary.json',result)
-    print(aid+' '+('success' if ev['task_completed'] else 'fail')+f' {elapsed:.2f}s',flush=True)
+    print(aid+' '+('success' if ev['task_completed'] else 'fail')+(f' {elapsed:.2f}s' if elapsed is not None else ' no_dispatch'),flush=True)
     return result
 
 def verify(out):
