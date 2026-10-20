@@ -1,61 +1,79 @@
 \documentclass[letterpaper,conference]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{cite}
 \usepackage{booktabs}
 \usepackage{url}
+\def\UrlBreaks{\do\/\do\-\do\_}
 \usepackage{graphicx}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \input{generated/results.tex}
+\title{An Experimental Study of RPC Inference on Resource-Constrained ARM Single-Board Computers}
+\author{\IEEEauthorblockN{Hudson Moreira Guimarães do Santos\IEEEauthorrefmark{1}, Bruno Cavalcante de Souza Sanches\IEEEauthorrefmark{1},\\
+Laisa Caroline Costa De Biase\IEEEauthorrefmark{1}, Roseli de Deus Lopes\IEEEauthorrefmark{1}, Marcelo Knörich Zuffo\IEEEauthorrefmark{1},\\
+Pablo Cesar Calcina Ccori}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}University of São Paulo (USP), São Paulo, Brazil}}
+\begin{document}\maketitle
+\begin{abstract}Partitioning a language model across inexpensive edge devices can extend available memory, but its latency cost must be measured on the target platform. This paper evaluates the RPC backend of \texttt{llama.cpp} on Caninos Labrador ARM single-board computers with approximately 2 GiB of memory each. We compare five selected valid executions per condition: notebook-only, an isolated Labrador, and a notebook coordinating two Labrador RPC workers. Qwen2.5-1.5B-Instruct \texttt{Q5\_K\_M} is evaluated with a fixed prompt, 32 generated tokens, deterministic sampling, and a fixed runtime revision. Paired worker logs establish layer assignment and graph execution on both workers. Mean process time increases from 43.86 s on the isolated board to 168.67 s with two RPC workers, a 3.85-fold increase. Prompt processing and generation increase by 1.95 and 1.91 times, respectively; the larger process-time penalty therefore also involves time outside those measured phases. That remainder is not independently attributable to loading or communication. The contribution is an auditable case study of successful distributed execution without latency improvement under a constrained configuration. The findings inform deployment evaluation for local consumer AI while remaining limited to one model, one short workload, and the selected executions.\end{abstract}
 
-\title{Reproducible RPC Inference Across Resource-Constrained ARM Single-Board Computers}
-
-\author{
-\IEEEauthorblockN{Hudson Moreira\IEEEauthorrefmark{1}, Marcelo Knörich Zuffo\IEEEauthorrefmark{2}}
-\IEEEauthorblockA{\IEEEauthorrefmark{1}Master's program, Escola Politécnica, University of São Paulo, São Paulo, Brazil\\
-\IEEEauthorrefmark{2}Department of Electronic Systems Engineering, Escola Politécnica, University of São Paulo, São Paulo, Brazil}
-}
-
-\begin{document}
-\maketitle
-
-\begin{abstract}
-Splitting a quantized language model across small local computers is attractive when one device has insufficient memory, but networked execution can exchange computation for communication overhead. This paper reports a reproducible, deliberately narrow evaluation of the RPC backend of \texttt{llama.cpp} on homogeneous ARM single-board computers. We compare five valid executions of a notebook-only baseline, five of a single Labrador board, and five of a notebook coordinating two Labrador RPC workers. The selected workload uses Qwen2.5-1.5B-Instruct Q5\_K\_M, a fixed short prompt, deterministic sampling, and a frozen runtime. The logs verify that both RPC workers received assigned layers and executed graph operations for each selected request. Under this configuration, two-worker RPC is slower than the isolated Labrador baseline: 168.67 s versus 43.86 s of process time. The result is a bounded observation, not a claim about all models, networks, or distributed systems. We release the raw evidence, reconstruction scripts, build recipe, and failure inventory for review.
-\end{abstract}
-
-\begin{IEEEkeywords}
-edge AI, consumer electronics, ARM SBC, local inference, RPC, reproducibility
-\end{IEEEkeywords}
+\begin{IEEEkeywords}edge AI, consumer electronics, ARM SBC, local inference, RPC, reproducibility\end{IEEEkeywords}
 
 \section{Introduction}
-Large language model inference is increasingly relevant to local and consumer devices, where privacy, connectivity, and resource ownership can motivate execution near the user. Quantization reduces model storage and memory requirements, while model partitioning can combine several constrained devices. However, a partitioned request must move intermediate state and coordinate remote computation; therefore, adding devices need not reduce latency.
 
-This work studies that trade-off in a controlled laboratory setup. It does not propose a new partitioning algorithm or claim a general scalability limit. Instead, it asks a narrower question: for one quantized instruction model, one short deterministic prompt, and a homogeneous ARM testbed, does coordinating two RPC workers complete the request faster than running the same model on one Labrador board?
+Local language model inference is relevant to consumer devices when connectivity, data locality, and ownership of computing resources motivate execution near the user. Edge-first evaluations show that model selection and hardware affect generation speed, responsiveness, and energy cost \cite{edgefirst}. Quantization reduces model storage, while partitioning can combine the memory of several devices \cite{qwen25}, \cite{mdillm}. However, intermediate-state transfers and remote coordination can offset the benefit of additional resources. For low-cost ARM boards, proving that distributed inference runs and measuring whether it improves latency are separate requirements.
 
-The contributions are: (1) an auditable dataset with explicit inclusion and exclusion rules; (2) direct evidence that both selected RPC workers participated in the same inference, rather than merely accepting a connection; and (3) a reproducible comparison separating prompt processing, generation, actual token count, and process time. The answer is negative for the tested configuration: two-worker RPC is slower than the isolated board.
+This work asks: for a fixed quantized instruction model and short deterministic request on approximately 2-GiB ARM boards, does a notebook coordinating two RPC workers complete the request faster than one isolated board? The model also runs on the isolated board, deliberately providing a feasible local baseline. The experiment consequently tests the latency trade-off, not whether partitioning enables a model
+
+that exceeds single-board memory. Its scope is a platform case study rather than a new partitioning algorithm or a full cluster-scaling evaluation.
+
+The contributions are: (1) a controlled comparison with five selected valid executions per condition and preserved failure provenance; (2) paired layer and graph-operation evidence establishing participation of both workers in each included RPC request; and (3) a phase-aware analysis distinguishing prompt processing, generation, and an uninstrumented process-time remainder. Together, these show a concrete case in which effective distributed execution does not yield a latency advantage. For a developer evaluating local consumer AI on inexpensive boards, this distinction prevents treating successful offloading alone as evidence of a faster service.
 
 \section{Related Work}
-The RPC backend used here is an experimental feature of \texttt{llama.cpp} that exposes remote devices and allows a client to offload computation to one or more servers \cite{ggmlrpc2026}. Qwen2.5 provides the model family context for the selected instruction-tuned checkpoint \cite{qwen25}. Prior edge-inference work addresses broader system designs: EdgeShard formulates device selection and model partitioning for heterogeneous edge resources \cite{edgeshard}, while MDI-LLM studies model-distributed inference and recurrent pipeline parallelism across low-power devices \cite{mdillm}. Those studies motivate collaborative edge inference but do not replace a measurement of this specific RPC implementation, hardware, and workload. Our contribution is consequently an evaluation artifact and bounded baseline rather than a new distributed-inference method.
+
+EdgeShard jointly selects devices and partitions models to optimize latency and throughput in heterogeneous collaborative edge environments \cite{edgeshard}. Its algorithmic optimization addresses a broader design problem than the fixed RPC deployment studied here. MDI-LLM partitions transformer models across low-power devices and introduces recurrent pipeline parallelism for generating multiple sequences \cite{mdillm}. Its evaluation examines throughput and memory use, including models that cannot fit on a single device. Our single-request experiment does not test that concurrency mechanism or the memory-capacity benefit.
+
+Jang and Morabito compare language model deployments using quality, generation speed, time to first token, energy, and cost \cite{edgefirst}. Their evaluation motivates distinguishing user-visible metrics and deployment conditions, rather than relying on a single aggregate throughput value. We address a narrower hardware and runtime combination and separate process time from the available phase timings; energy, response quality, and first-token latency remain outside our measurements.
+
+The \texttt{llama.cpp} RPC backend exposes remote devices for computation offloading \cite{ggmlrpc2026}; Qwen2.5 supplies the model family used in our workload \cite{qwen25}. These implementation sources identify the evaluated system, while the three research studies above establish its context. Our contribution is a measured baseline with per-worker execution evidence on constrained CPU boards. We do not compare numerical performance directly with those studies because their models, hardware, scheduling, and workloads differ.
+
+\begin{figure}[t]\centering
+\begin{tikzpicture}[every node/.style={font=\footnotesize,align=center},box/.style={draw,rounded corners,inner sep=5pt}]
+\node[box] (client) at (0,0) {Notebook client\\Coordination and local CPU computation};
+\node[box] (a) at (-1.75,-1.5) {Labrador-A\\RPC CPU worker\\Logical layers 0--14};
+\node[box] (b) at (1.75,-1.5) {Labrador-B\\RPC CPU worker\\Logical layers 15--28};
+\draw[->] (client.south west) -- node[left]{\scriptsize RPC/TCP} (a.north);
+\draw[->] (client.south east) -- node[right]{\scriptsize RPC/TCP} (b.north);
+\end{tikzpicture}
+\caption{Evaluated RPC condition. The notebook remains computationally active. Layer 28 denotes the output stage; arrows show client--worker communication, not measured link throughput. Baselines run only on the notebook or an isolated Labrador.}\label{fig:architecture}\end{figure}
 
 \section{Testbed and Protocol}
+
 \subsection{Hardware and software}
-The testbed contains homogeneous Caninos Labrador 7 boards: ARM64 Cortex-A53, four cores, approximately 1.99 GiB RAM, Debian GNU/Linux 12, and Linux 6.1.76. The inventory records no swap on the boards. They were connected through the \texttt{end0} Ethernet interface; the 100 Mb/s/full-duplex figure comes from dated kernel link-up records in the inventory, not from a throughput benchmark. The article uses pseudonymous roles: the notebook is the client; Labrador-A and Labrador-B are the two RPC workers. The internal raw artifacts retain the original operational identifiers, while this paper avoids publishing IP addresses and hostnames. The notebook executes the client, scheduler, local CPU backend, and any model portion not assigned remotely; it is not a passive controller.
 
-The client log identifies a 12th Gen Intel Core i7-1255U notebook with 31,829 MiB visible memory, Linux x86\_64, one local CPU backend, and a four-thread llama.cpp compute pool. The log does not preserve the notebook distribution release or a separate worker-thread setting. The ARM server invocation and inventory do not provide a worker thread count; therefore, the client value must not be treated as a worker value. The present notebook state is Ubuntu 26.04 with 12 logical CPUs, but this post-hoc state is not asserted as the experimental OS.
+The testbed contains homogeneous Caninos Labrador 7 boards: ARM64 Cortex-A53, four cores, approximately 1.99 GiB RAM, Debian GNU/Linux 12, and Linux 6.1.76. The inventory records no swap on the boards. They were connected through the \texttt{end0} Ethernet interface; the 100 Mb/s/full-duplex figure comes from dated kernel link-up records in the inventory, not from a throughput benchmark. For readability, the notebook is called the client and the two RPC workers are called Labrador-A and Labrador-B. Public raw artifacts retain the original operational identifiers. The notebook executes the client, scheduler, local CPU backend, and any model portion not assigned remotely; it is not a passive controller.
 
-The model is Qwen2.5-1.5B-Instruct in Q5\_K\_M GGUF format (SHA-256 \texttt{b4666107...896f8c}). The fixed x86 client binary has SHA-256 \texttt{13b3c2e9...348d69}; its log reports GNU 15.2. The ARM package was cross-compiled from \texttt{llama.cpp} commit \texttt{68e79bd8}, with RPC enabled, native CPU detection disabled, and OpenMP, CUDA, Vulkan, Metal, and RDMA disabled. The local compilation variant applies the preserved \texttt{-O0} patch to the common and RPC HTTP compilation targets. The package uses GCC 12 and a Debian 12 arm64 sysroot; the ABI audit reports maximum GLIBC 2.34 and GLIBCXX 3.4.30. These are materially different x86 and ARM builds, so the comparison is an end-to-end configuration comparison rather than an isolated architecture effect.
+The client log identifies a 12th Gen Intel Core i7-1255U notebook with 31,829 MiB visible memory, Linux \texttt{x86\_64}, one local CPU backend, and a four-thread \texttt{llama.cpp} compute pool. The experiment-time notebook distribution release and RPC worker-thread configuration were not preserved. The client thread count must therefore not be treated as a worker value. Fig. 1 distinguishes the active notebook client from the two remote CPU workers.
+
+The model is Qwen2.5-1.5B-Instruct in \texttt{Q5\_K\_M} GGUF format (SHA-256 \texttt{b4666107...896f8c}). The fixed x86 client binary has SHA-256 \texttt{13b3c2e9...348d69}; its log reports GNU 15.2. The ARM package was cross-compiled from \texttt{llama.cpp} commit \texttt{68e79bd8}, with RPC enabled, native CPU detection disabled, and OpenMP, CUDA, Vulkan, Metal, and RDMA disabled. The local compilation variant applies the preserved \texttt{-O0} patch to the common and RPC HTTP compilation targets. The package uses GCC 12 and a Debian 12 arm64 sysroot; the ABI audit reports maximum GLIBC 2.34 and GLIBCXX 3.4.30. These are materially different x86 and ARM builds, so the comparison is an end-to-end configuration comparison rather than an isolated architecture effect.
 
 \subsection{Frozen workload}
-Every selected case used context 512, four threads, \texttt{-ngl 99}, a maximum of 32 output tokens, temperature zero, seed 42, \texttt{--ignore-eos}, and no warmup. The prompt was ``Write exactly one short sentence about distributed computing.'' The runtime reports 38 prompt tokens and, for every included case, 32 actually generated tokens. Each process was newly started; disk caches were not cleared, so the experiment is not a cold-disk benchmark. The process-time metric includes startup, model loading, RPC setup, prompt processing, generation, and residual work not separately instrumented.
+
+Every selected inference invocation used context 512, four threads, \texttt{-ngl 99}, a maximum of 32 output tokens, temperature zero, seed 42, \texttt{--ignore-eos}, and no warmup. These invocation settings do not specify the remote worker-thread configuration. The prompt was “Write exactly one short sentence about distributed computing.” The runtime reports 38 prompt tokens and, for every included case, 32 actually generated tokens. Ignoring end-of-sequence fixes output length; the prompt is a workload specification, not a sentence-quality test. Each process was newly started; disk caches were not cleared, so the experiment is not a cold-disk benchmark. The process-time metric includes startup, model loading, RPC setup, prompt processing, generation, and residual work not separately instrumented.
 
 \subsection{Validity and selection}
+
 The five notebook cases come from \texttt{matrix-validation-1}; the five isolated ARM cases come from \texttt{matrix-validation-5}; and the five RPC cases combine two valid cases from \texttt{matrix-validation-7} with three valid cases from \texttt{rpc2-complete-1}. These groups share model hash, client hash, runtime source commit, prompt, sampling parameters, and context. They do not form one consecutive campaign: the launcher and health-check procedure changed before the final three RPC cases, so campaign provenance is retained and the groups are not presented as uninterrupted repetitions.
 
 \section{Worker Participation Evidence}
+
 The RPC selection requires more than an open TCP port or a successful client exit. Qwen2.5 has 28 repeating transformer blocks, represented by tensors \texttt{blk.0} through \texttt{blk.27}. The runtime also exposes logical layer 28 for the output stage; in the selected requests, layers 0--14 were assigned to Labrador-A and layers 15--28 to Labrador-B. Thus layer 28 is not a 29th transformer block: it covers the output-stage tensors such as \texttt{output\_norm} and \texttt{output}. The paired server-log slices contain distinct graph-compute, graph-recompute, and tensor-transfer events for both hosts. For a representative selected request, each host recorded 3 graph-compute events, 30 graph-recompute events, and 33 get-tensor events; set-tensor counts were 345 and 356. Event counts establish activity but do not imply identical computational work. Each request records 38 evaluated prompt tokens, 32 predicted tokens, and normal completion with exit code zero. The earlier instrumented pilot independently established the same participation pattern; it is cited as validation evidence and was not repeated for this paper.
 
-The selected cases have 426 relevant operation records in the Labrador-A server slice and 435 in Labrador-B under the reconstruction script's broad graph/tensor event rule. These counts are evidence of execution activity, not a claim that the two servers performed identical work. The notebook remains part of the computation, so the comparison is notebook-only versus one ARM board versus notebook-plus-two-workers, not one board versus an entirely remote cluster.
+The notebook remains part of the computation, so the comparison is notebook-only versus one ARM board versus notebook-plus-two-workers. Worker events establish participation, not a compute-only utilization percentage or a balanced partition in execution time.
 
 \section{Results}
+
+\subsection{Latency and phase accounting}
 \begin{table}[t]
 \caption{Selected valid executions and process-time statistics. Values are reconstructed from raw logs; SD is sample standard deviation.}
 \label{tab:process}
@@ -71,38 +89,32 @@ RPC--2 & \RPCN & \RPCProcMean & \RPCProcSD & \RPCProcMin & \RPCProcMax\\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{figure}[t]
-\centering
-\begin{tikzpicture}
-\begin{axis}[ybar,bar width=12pt,width=\columnwidth,height=4.4cm,ylabel={Process time (s)},symbolic x coords={Notebook,Labrador,RPC--2},xtick=data,xticklabel style={font=\scriptsize},ymin=0,grid=major,major grid style={dotted},nodes near coords, nodes near coords style={font=\scriptsize}]
-\addplot coordinates \ProcCoordinates;
-\end{axis}
-\end{tikzpicture}
-\caption{Mean process time for the five selected valid cases per condition. Standard deviations are tabulated in Table~\ref{tab:process}; the plot has no error bars and emphasizes scale, not statistical significance.}
-\label{fig:process}
-\end{figure}
-
-Table~\ref{tab:phases} separates the runtime's prompt and generation measurements. The reported generation-rate column is the arithmetic mean of the individual \texttt{predicted\_per\_second} values extracted from the final JSON response of each valid request. It is not recomputed from the 32-token limit or from an average time. We do not call the remaining process time ``loading time'': loading and first-token timestamps were not independently instrumented.
-
+\begin{figure}[t]\centering
+\begin{tikzpicture}\begin{axis}[ybar stacked,bar width=18pt,width=\columnwidth,height=4.6cm,ylabel={Process time (s)},symbolic x coords={Notebook,Labrador,RPC--2},xtick=data,xticklabel style={font=\scriptsize},ymin=0,enlarge x limits=0.25,grid=major,major grid style={dotted},legend style={font=\scriptsize,at={(0.5,1.05)},anchor=south,legend columns=3}]
+\addplot[fill=gray!10] coordinates {(Notebook,\NotebookPromptSec) (Labrador,\LabradorPromptSec) (RPC--2,\RPCPromptSec)};
+\addplot[fill=gray!50] coordinates {(Notebook,\NotebookGenSec) (Labrador,\LabradorGenSec) (RPC--2,\RPCGenSec)};
+\addplot[fill=white] coordinates {(Notebook,\NotebookRemainderSec) (Labrador,\LabradorRemainderSec) (RPC--2,\RPCRemainderSec)};
+\legend{Prompt,Generation,Remainder}\end{axis}\end{tikzpicture}
+\caption{Mean process time decomposed into runtime prompt and generation timings and their arithmetic remainder. The remainder is not a separately measured loading or communication phase. Total-time variability is reported in Table I.}\label{fig:process}\end{figure}
 \begin{table}[t]
-\caption{Mean phase metrics in seconds for valid selected cases. Runtime generation rate is the mean of the per-request \texttt{predicted\_per\_second} field.}
-\label{tab:phases}
-\centering
-\footnotesize
-\begin{tabular}{lrrrr}
-\toprule
-Condition & Prompt & Gen. & Tok. & RT gen.\\
-\midrule
-Notebook & \NotebookPromptSec & \NotebookGenSec & 32 & \NotebookRuntimeGenRate\\
-Labrador & \LabradorPromptSec & \LabradorGenSec & 32 & \LabradorRuntimeGenRate\\
-RPC--2 & \RPCPromptSec & \RPCGenSec & 32 & \RPCRuntimeGenRate\\
-\bottomrule
-\end{tabular}
-\end{table}
+\caption{Mean timings and runtime generation rates for selected valid cases. Every case generates 32 tokens. Remainder is computed per execution using (1).}
+\centering\footnotesize
+\begin{tabular}{lrrrr}\toprule
+Condition & Prompt (s) & Gen. (s) & $R$ (s) & Rate (tok/s)\\\midrule
+Notebook & \NotebookPromptSec & \NotebookGenSec & \NotebookRemainderSec & \NotebookRuntimeGenRate\\
+Labrador & \LabradorPromptSec & \LabradorGenSec & \LabradorRemainderSec & \LabradorRuntimeGenRate\\
+RPC--2 & \RPCPromptSec & \RPCGenSec & \RPCRemainderSec & \RPCRuntimeGenRate\\\bottomrule
+\end{tabular}\label{tab:phases}\end{table}
 
-The table reports the mean of the runtime's per-request \texttt{predicted\_per\_second}; it is not 32 divided by the mean generation time. The reconstruction CSV also retains that derived ratio under a separate name, but it is not used as the runtime-reported rate. The fifteen selected cases are valid performance observations, not a reliability sample. The complete inventory contains 55 logged attempts across campaigns and conditions, with failures preserved as follows:
+Table I shows that RPC-2 takes 3.85 times as long as the isolated Labrador in mean process time. The corresponding ratios for prompt processing and generation are 1.95 and 1.91. Thus, the penalty is not confined to startup: both measured inference phases are slower as well. The notebook-only condition provides a reference for local execution on the stronger machine; it is not a matched ARM architecture control.
 
+For each selected execution $i$, we compute the process-time remainder \begin{equation}R_i=T_{\mathrm{process},i}-T_{\mathrm{prompt},i}-T_{\mathrm{generation},i},\label{eq:remainder}\end{equation}
+
+after converting phase timings from milliseconds to seconds. Table II and Fig. 2 report the means. RPC-2 has 100.682 s outside the two measured phases, or 59.7\% of process time; the isolated board has 8.536 s (19.5\%). This accounting localizes the measurement gap but does not identify its cause: $R_i$ can contain process startup, model transfer/loading, coordination, teardown, and other costs outside the reported phases. It is neither time to first token nor a measured network-transfer duration.
+
+The generation rate is the arithmetic mean of the individual \texttt{predicted\_per\_second} fields in the final runtime JSON responses, not 32 divided by mean generation time. The reconstruction CSV retains the latter ratio separately. Low process-time standard deviations describe repeatability within these selected cases; they do not quantify variability across prompts, sessions, or deployment environments.
+
+\subsection{Failure provenance}
 \begin{table}[t]
 \caption{Failure inventory reconstructed from all scanned attempts; campaigns are not pooled into a single success denominator.}
 \label{tab:failures}
@@ -121,20 +133,37 @@ Partial generation & \FailurePartial\\
 \end{tabular}
 \end{table}
 
+The fifteen selected cases are valid performance observations, not a reliability sample. The complete inventory contains 55 logged attempts across campaigns and conditions. Table III groups the excluded failures; other normally completed cases outside the fixed selection are retained in the reconstruction CSV.
+
 The five valid cases per condition were selected using explicit selection criteria: valid status, complete phase metrics, actual token count, and worker evidence. They were not five consecutive successes. The failure table distinguishes preparation and host availability, connection/startup, loading timeout, incomplete termination, and partial generation; a zero exit code alone was not sufficient for inclusion. Because these attempts span different campaigns and launcher procedures, no single operational success percentage is reported here.
 
 \section{Discussion and Limitations}
-The observed result is specific and reproducible: in this configuration, RPC-2 is slower than the isolated Labrador board. The latency difference is consistent with a combination of remote graph execution, intermediate-state communication, serialization, and coordination. The dataset does not isolate those mechanisms; in particular, the study does not justify attributing the result exclusively to the 100 Mb/s link.
 
-The experiment has one model, one short prompt, one quantization, one network segment, and five valid cases per condition. Data were collected in distinct campaigns, and detailed logging was used for RPC validation. Loading, time to first token, peak memory, and a direct communication-only cost are absent. Memory snapshots are before/after observations, not peak measurements. The study does not evaluate user-facing services, quality, energy, privacy leakage, concurrent requests, or model sizes that require more memory. Local services on consumer devices motivate the work, but no particular consumer application was tested.
+\subsection{Implications for local consumer AI}
+
+For a short request on these boards, distributing computation is feasible but increases process time and reduces the runtime-reported generation rate relative to the isolated board. Since the selected model already fits locally, the measured configuration offers no latency justification for using two remote workers. A device developer should establish the local baseline and distinguish capacity, startup responsiveness, and steady-state generation before selecting distributed execution. This is a deployment lesson from one configuration, not a recommendation against partitioning when a model cannot fit on one device.
+
+The result complements EdgeShard and MDI-LLM rather than contradicting their reported improvements \cite{mdillm}, \cite{edgeshard}: those systems target optimized allocation or pipelined multi-sequence execution under different hardware and memory constraints. Likewise, an unfavorable process time here does not establish an unfavorable energy, quality, or cost trade-off of the kind considered by edge-first studies \cite{edgefirst}. Our measurements address one latency question only.
+
+\subsection{Threats to validity and next measurements}
+
+The latency difference is consistent with remote execution, intermediate-state communication, serialization, and coordination costs, but the dataset does not isolate those mechanisms. In particular, neither the recorded link mode nor the arithmetic remainder establishes that network bandwidth dominates the observed penalty. Different x86/ARM compiler builds and the local \texttt{-O0} workaround are part of the evaluated configuration, not controlled independent variables. Detailed RPC logging may also affect timing; its overhead was not measured separately.
+
+The experiment has one model, one short prompt, one quantization, one network segment, and five selected valid cases per condition. Separate campaigns and launcher changes limit a causal interpretation of differences between conditions. Selecting complete runs permits a bounded performance comparison but does not estimate service availability. Loading, time to first token, peak memory, and direct communication cost are absent; before/after memory snapshots cannot establish peak use. Worker-thread settings and the experiment-time notebook distribution are also missing. Response quality, energy, privacy leakage, concurrent requests, and models exceeding single-board memory are untested. No particular consumer application was evaluated.
+
+The next measurements should separate model loading and first-token latency, quantify transfer volume and logging overhead, and vary input/output lengths under a matched software setup. These would extend the workload coverage and test explanations for the observed process-time gap.
+
+\subsection{Evidence preservation and access}
+
+Raw logs, per-execution metrics, failure classifications, analysis scripts, and the build patch are publicly available in the project repository.\footnote{\url{https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks}} The experimental evidence is pinned to commit \texttt{7d94be2} \cite{evidence}. The selected-case CSV and summary are under \texttt{research/data/derived/}; the raw runs are under \texttt{research/data/runs/}. Running \texttt{analyze\_rpc\_validation.py} in \texttt{research/scripts/} reconstructs the source metrics and failure inventory from the recorded outputs without launching inference or accessing the cluster. The additional phase accounting follows (1). Full model and runtime hashes, compiler options, and a build recipe accompany the records. Original testbed identifiers are retained with the owner’s authorization. Public availability enables inspection of the evidence; independent rerunning of the hardware experiment has not been established.
 
 \section{Conclusion}
-We presented a reproducible audit of a small ARM RPC inference setup. The raw logs establish that both RPC workers participated in each of five selected two-worker requests. Under the frozen Qwen2.5-1.5B Q5\_K\_M workload, RPC-2 required 168.67 s of process time on average, compared with 43.86 s for a single Labrador board. This is an observation about the tested configuration, not a universal statement about distributed inference. The released evidence and failure inventory provide a basis for future work on phase-level loading and communication measurements without overstating scalability.
+
+We evaluated RPC inference on approximately 2-GiB ARM boards using a fixed Qwen2.5-1.5B \texttt{Q5\_K\_M} workload. Paired logs establish effective execution on both workers for each of five selected RPC requests. Mean process time rises from 43.86 s on one board to 168.67 s with notebook coordination and two workers; both prompt processing and generation also slow down. The larger process-time ratio exposes an additional measurement gap outside those phases, without identifying a unique bottleneck. The study provides a documented baseline for evaluating distributed local AI on constrained devices and motivates targeted loading and communication measurements. It does not establish a general cluster-scaling limit or measure the benefit of pooling memory for a larger model.
 
 \section*{Acknowledgment and AI-use disclosure}
-OpenAI Codex, an AI coding agent, was used to organize logs and manifests, draft and revise portions of the Introduction, Related Work, Testbed and Protocol, Results, Discussion, and Conclusion sections, and prepare or revise the Python analysis and LaTeX asset scripts. All reported values in this manuscript were reconstructed from preserved logs by the repository scripts. The authors remain responsible for verification, technical claims, citations, and the final text. This disclosure identifies the AI system and the affected content in accordance with IEEE guidance on AI-generated text \cite{ieeeai}.
 
+OpenAI Codex, an AI coding agent, was used to organize logs and manifests, draft and revise portions of the Introduction, Related Work, Testbed and Protocol, Results, Discussion, and Conclusion sections, and prepare or revise the Python analysis and LaTeX asset scripts. All reported values in this manuscript were reconstructed from preserved logs by the repository scripts. The authors remain responsible for verification, technical claims, citations, and the final text. This disclosure identifies the AI system and the affected content in accordance with IEEE guidance on AI-generated text \cite{ieeeai}.
 \bibliographystyle{IEEEtran}
 \bibliography{references}
-
 \end{document}

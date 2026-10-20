@@ -10,6 +10,8 @@ The new validation attempt is documented in [`research/reports/rpc-validation-20
 
 Results should be interpreted through three principles: execution traceability, separation of observation from interpretation, and reproducibility. Each run therefore preserves its raw data, UTC timestamps, and the scripts used to generate reports.
 
+For the ICCE RPC paper, see the [public evidence and offline verification guide](paper/icce2027/artifact/README.md). It identifies the frozen evidence commit and explains how to reconstruct the published CSVs without accessing the testbed.
+
 ## Organization
 
 - [`research/data/runs/`](research/data/runs/) — raw evidence for each run and node;

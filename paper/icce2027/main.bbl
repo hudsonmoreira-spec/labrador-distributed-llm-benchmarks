@@ -21,12 +21,12 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{ggmlrpc2026}
+\bibitem{edgefirst}
 \BIBentryALTinterwordspacing
-{ggml-org}, ``llama.cpp rpc backend,'' GitHub repository documentation, 2026,
-  source tree at commit 68e79bd8cd6b7995f8fce8da252b249bbf237e63, accessed
-  2026-10-04. [Online]. Available:
-  \url{https://github.com/ggml-org/llama.cpp/tree/68e79bd8cd6b7995f8fce8da252b249bbf237e63/tools/rpc}
+S.~Jang and R.~Morabito, ``Edge-first language model inference: Models,
+  metrics, and tradeoffs,'' in \emph{2025 IEEE 45th International Conference on
+  Distributed Computing Systems Workshops (ICDCSW)}, 2025, pp. 309--314.
+  [Online]. Available: \url{https://doi.org/10.1109/ICDCSW63273.2025.00058}
 \BIBentrySTDinterwordspacing
 
 \bibitem{qwen25}
@@ -36,22 +36,41 @@ Qwen, A.~Yang, B.~Yang, B.~Zhang, B.~Hui, B.~Zheng, B.~Yu, C.~Li, D.~Liu,
   J.~Zhou, J.~Lin, K.~Dang, K.~Lu, K.~Bao, K.~Yang, L.~Yu, M.~Li, M.~Xue,
   P.~Zhang, Q.~Zhu, R.~Men, R.~Lin, T.~Li, T.~Tang, T.~Xia, X.~Ren, X.~Ren,
   Y.~Fan, Y.~Su, Y.~Zhang, Y.~Wan, Y.~Liu, Z.~Cui, Z.~Zhang, and Z.~Qiu,
-  ``Qwen2.5 technical report,'' \emph{arXiv preprint arXiv:2412.15115}, 2024.
-  [Online]. Available: \url{https://arxiv.org/abs/2412.15115}
-\BIBentrySTDinterwordspacing
-
-\bibitem{edgeshard}
-\BIBentryALTinterwordspacing
-M.~Zhang, J.~Cao, X.~Shen, and Z.~Cui, ``Edgeshard: Efficient llm inference via
-  collaborative edge computing,'' \emph{arXiv preprint arXiv:2405.14371}, 2024.
-  [Online]. Available: \url{https://arxiv.org/abs/2405.14371}
+  ``Qwen2.5 technical report,'' \emph{arXiv preprint arXiv:2412.15115v2}, 2025.
+  [Online]. Available: \url{https://arxiv.org/abs/2412.15115v2}
 \BIBentrySTDinterwordspacing
 
 \bibitem{mdillm}
 \BIBentryALTinterwordspacing
 D.~Macario, H.~Seferoglu, and E.~Koyuncu, ``Model-distributed inference for
-  large language models at the edge,'' \emph{arXiv preprint arXiv:2505.18164},
-  2025. [Online]. Available: \url{https://arxiv.org/abs/2505.18164}
+  large language models at the edge,'' in \emph{2025 IEEE 31st International
+  Symposium on Local and Metropolitan Area Networks (LANMAN)}, 2025, pp. 1--6.
+  [Online]. Available: \url{https://doi.org/10.1109/LANMAN66415.2025.11154542}
+\BIBentrySTDinterwordspacing
+
+\bibitem{edgeshard}
+\BIBentryALTinterwordspacing
+M.~Zhang, X.~Shen, J.~Cao, Z.~Cui, and S.~Jiang, ``{EdgeShard}: Efficient {LLM}
+  inference via collaborative edge computing,'' \emph{IEEE Internet of Things
+  Journal}, vol.~12, no.~10, pp. 13\,119--13\,131, 2025. [Online]. Available:
+  \url{https://doi.org/10.1109/JIOT.2024.3524255}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ggmlrpc2026}
+\BIBentryALTinterwordspacing
+{ggml-org}, ``llama.cpp rpc backend,'' GitHub repository documentation, 2026,
+  source tree at commit 68e79bd8cd6b7995f8fce8da252b249bbf237e63, accessed
+  2026-10-04. [Online]. Available:
+  \url{https://github.com/ggml-org/llama.cpp/tree/68e79bd8cd6b7995f8fce8da252b249bbf237e63/tools/rpc}
+\BIBentrySTDinterwordspacing
+
+\bibitem{evidence}
+\BIBentryALTinterwordspacing
+{Labrador Distributed LLM Benchmarks contributors}, ``Labrador distributed
+  {LLM} benchmarks: Experimental evidence and reconstruction scripts,'' GitHub
+  repository, 2026, evidence snapshot at commit 7d94be2, accessed 2026-10-16.
+  [Online]. Available:
+  \url{https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/7d94be29fe4e8069f2c916cb8cd0350acf338f1e}
 \BIBentrySTDinterwordspacing
 
 \bibitem{ieeeai}

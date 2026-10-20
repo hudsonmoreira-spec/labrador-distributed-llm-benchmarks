@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "evidence_commit": "7d94be29fe4e8069f2c916cb8cd0350acf338f1e",
+  "hashed_files": 507,
+  "csv_files_reconstructed_byte_for_byte": 3,
+  "attempts": 55,
+  "selected_valid": {
+    "notebook": 5,
+    "arm": 5,
+    "rpc2": 5
+  },
+  "rpc_requests_with_two_active_workers": 5,
+  "mean_process_seconds": {
+    "notebook": 5.69,
+    "arm": 43.86,
+    "rpc2": 168.67
+  },
+  "excluded_failure_inventory": {
+    "connection_failure": 15,
+    "connection_or_startup_abort": 1,
+    "incomplete_timeout_or_interrupt": 3,
+    "loading_timeout_or_kill": 1,
+    "partial_generation": 2,
+    "preparation_missing_tool": 5,
+    "preparation_or_host_unavailable": 5
+  },
+  "scope": "Offline reconstruction of preserved evidence; no new inference or independent hardware rerun.",
+  "verified_on": "2026-10-20",
+  "download": {
+    "authentication": "none",
+    "url": "https://api.github.com/repos/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tarball/7d94be29fe4e8069f2c916cb8cd0350acf338f1e",
+    "archive_sha256": "993949168373dfdb716ea1e8ad9a17b8bb666378075dddb18d24f291d7609435"
+  }
+}
