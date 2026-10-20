@@ -43,6 +43,14 @@ Z.~Lu, X.~Li, D.~Cai, R.~Yi, F.~Liu, W.~Liu, J.~Luan, X.~Zhang, N.~D. Lane, and
   \url{https://aclanthology.org/2025.acl-long.718/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{llamaserver}
+\BIBentryALTinterwordspacing
+{ggml-org}, ``{llama.cpp} server documentation,'' accessed: 2026-10-20;
+  deployed source revision e25a32e98c15a1118a976685af0f4d2c1f380079. [Online].
+  Available:
+  \url{https://github.com/ggml-org/llama.cpp/blob/e25a32e98c15a1118a976685af0f4d2c1f380079/tools/server/README.md}
+\BIBentrySTDinterwordspacing
+
 \bibitem{qwen05}
 \BIBentryALTinterwordspacing
 {Qwen}, ``{Qwen2.5-0.5B-Instruct}: Official model card,'' accessed: 2026-10-05.
@@ -67,6 +75,22 @@ Z.~Lu, X.~Li, D.~Cai, R.~Yi, F.~Liu, W.~Liu, J.~Luan, X.~Zhang, N.~D. Lane, and
 ------, ``{Qwen2.5-1.5B-Instruct} {Q5\_K\_M}: Official {GGUF} file and
   {SHA-256},'' accessed: 2026-10-06. [Online]. Available:
   \url{https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/blob/main/qwen2.5-1.5b-instruct-q5_k_m.gguf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{artifact}
+\BIBentryALTinterwordspacing
+{Labrador Distributed LLM Benchmarks contributors}, ``Simulated smart-home
+  control: Frozen protocol, raw attempts, and reconstruction scripts,'' GitHub
+  repository, 2026, evidence snapshot a834b82, accessed 2026-10-20. [Online].
+  Available:
+  \url{https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/a834b8255f736fb59425b146be183c17866a2c7d}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ieeeai}
+\BIBentryALTinterwordspacing
+{IEEE}, ``Guidelines for artificial intelligence ({AI})-generated text,'' 2024,
+  accessed: 2026-10-20. [Online]. Available:
+  \url{https://open.ieee.org/author-guidelines-for-artificial-intelligence-ai-generated-text/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

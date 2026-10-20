@@ -1,0 +1,30 @@
+{
+  "verified_on": "2026-10-20",
+  "models": {
+    "05": {
+      "repo_id": "Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+      "repository_revision": "9217f5db79a29953eb74d5343926648285ec7e67",
+      "filename": "qwen2.5-0.5b-instruct-q5_k_m.gguf",
+      "sha256": "041474553fcabfc2a2d67903f9d2c2e50bd92528e670da4f33b5d0ce6e59fd55",
+      "bytes": 522186592,
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen2.5-0.5B-Instruct-GGUF?blobs=true",
+      "matches_recorded_experimental_hash": true
+    },
+    "15": {
+      "repo_id": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+      "repository_revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+      "filename": "qwen2.5-1.5b-instruct-q5_k_m.gguf",
+      "sha256": "b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c",
+      "bytes": 1285494304,
+      "metadata_url": "https://huggingface.co/api/models/Qwen/Qwen2.5-1.5B-Instruct-GGUF?blobs=true",
+      "matches_recorded_experimental_hash": true
+    }
+  },
+  "runtime": {
+    "source_commit": "e25a32e98c15a1118a976685af0f4d2c1f380079",
+    "url": "https://github.com/ggml-org/llama.cpp/blob/e25a32e98c15a1118a976685af0f4d2c1f380079/tools/server/README.md",
+    "readme_sha256": "536b2d9c306c01c3e404c65dae8c4dd902500c729b682cf5aea7ab8bdfc1791e",
+    "deployed_binary_sha256": "a46782e75231c0a4a75a1e38afbbc5d7b72d92c8d834d6bb8b5020a0e1e79a87",
+    "scope": "Documentation at exact source revision; deployed binary/library identity checked through recorded per-host hashes."
+  }
+}

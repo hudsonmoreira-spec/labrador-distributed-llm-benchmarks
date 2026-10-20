@@ -2,7 +2,20 @@
 
 Repository of experimental materials for studying distributed language-model inference on a Labrador testbed.
 
-## Current status
+## ICCE 2027 candidate: simulated smart-home control
+
+The manuscript being prepared for ICCE is the **smart-home study**, not the separate RPC study:
+
+- [English PDF](paper/smarthome_agents/study_v1/main_en.pdf) and [LaTeX source](paper/smarthome_agents/study_v1/main_en.tex).
+- [Portuguese reading version](paper/smarthome_agents/study_v1/main_pt.pdf).
+- [Public evidence and offline verification](paper/smarthome_agents/study_v1/artifact/README.md).
+- [Technical review and EDAS preparation](paper/smarthome_agents/study_v1/submission/technical-review-20261020.md).
+
+The smart-home study compares rules and Qwen 0.5B/1.5B on simulated lighting tasks with real ARM inference. It has 240 quality attempts and 108 independent-replica attempts. No ICCE/EDAS registration or submission has been performed; submission is on hold at the requester's instruction.
+
+The earlier RPC manuscript remains preserved under `paper/icce2027/` and is not the current submission candidate.
+
+## RPC research status
 
 The material in [`research/`](research/) covers testbed characterization and reproducible RPC inference experiments. The completed replicated campaign is documented in [`research/reports/rpc-replicates-20261004.md`](research/reports/rpc-replicates-20261004.md). It validates completed requests for the notebook baseline and 2, 4, and 6 RPC workers, but does not yet prove per-worker tensor/layer participation or provide fully separated timing/token instrumentation.
 
@@ -10,7 +23,7 @@ The new validation attempt is documented in [`research/reports/rpc-validation-20
 
 Results should be interpreted through three principles: execution traceability, separation of observation from interpretation, and reproducibility. Each run therefore preserves its raw data, UTC timestamps, and the scripts used to generate reports.
 
-For the ICCE RPC paper, see the [public evidence and offline verification guide](paper/icce2027/artifact/README.md). It identifies the frozen evidence commit and explains how to reconstruct the published CSVs without accessing the testbed.
+For the separate RPC manuscript, see the [public evidence and offline verification guide](paper/icce2027/artifact/README.md). It identifies the frozen evidence commit and explains how to reconstruct the published CSVs without accessing the testbed.
 
 ## Organization
 
@@ -35,7 +48,7 @@ The RPC replication artifacts are under [`research/data/runs/20261004T-replicate
 
 The current validation artifacts are under `research/data/runs/20261004T-pilot2-instrumented-6/`, `research/data/runs/20261004T-matrix-validation-{1..7}/`, and `research/data/runs/20261004T-rpc2-complete-1/`. The launcher now uses EOF explicitly and performs a two-worker health-check before each RPC case. Incomplete executions are not treated as valid results.
 
-The ICCE 2027 candidate is under [`paper/icce2027/`](paper/icce2027/), including the LaTeX source, bibliography, compiled PDF, reproducible analysis/asset scripts, build recipe, requirements audit, and author-review checklist. The manuscript is intentionally limited to notebook, isolated Labrador, and two-worker RPC conditions.
+The separate RPC manuscript is under [`paper/icce2027/`](paper/icce2027/), including the LaTeX source, bibliography, compiled PDF, reproducible analysis/asset scripts, build recipe, requirements audit, and author-review checklist. The manuscript is intentionally limited to notebook, isolated Labrador, and two-worker RPC conditions.
 
 ## Publication notice
 

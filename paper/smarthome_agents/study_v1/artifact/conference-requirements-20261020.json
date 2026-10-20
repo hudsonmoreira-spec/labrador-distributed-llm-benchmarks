@@ -1,0 +1,31 @@
+{
+  "checked_on": "2026-10-20",
+  "official_sources": {
+    "submission_guidelines": {
+      "url": "https://icce.org/2027/submission-guidelines/",
+      "sha256": "00cb162924ab2b19ea8e8c132310494acc2300b9679cf4ed9ab2acac007c0a35"
+    },
+    "calendar": {
+      "url": "https://icce.org/2027/",
+      "sha256": "1cb474bbe33e11c2a746eb3cf3bd9a6997645b31426bc1ef1bce4dbbe81d06a5"
+    }
+  },
+  "initial_submission": {
+    "format": "IEEE conference template, US Letter, PDF, no author biographies",
+    "pages": "2-page or up to 6-page, all content included",
+    "portal": "https://edas.info/N35272",
+    "pdf_express_required": false
+  },
+  "dates": {
+    "submission": "2026-10-31",
+    "acceptance": "2026-11-20",
+    "camera_ready": "2026-11-30",
+    "exact_cutoff_timezone": "Check EDAS when submission is authorized"
+  },
+  "final_submission": {
+    "pdf_express_required": true,
+    "pdf_express_id": "TBA on the checked guidelines page",
+    "copyright": "Through EDAS at final stage"
+  },
+  "submission_status": "No EDAS operation; hold requested by user"
+}

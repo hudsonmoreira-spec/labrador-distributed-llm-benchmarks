@@ -1,0 +1,40 @@
+{
+  "checked_on": "2026-10-20",
+  "manuscript": "smart-home simulated control; distinct from RPC",
+  "pdfs": {
+    "en": {
+      "pages": 4,
+      "page_size": "US Letter, 612 x 792 pt",
+      "fonts": "all embedded; no Type 3",
+      "overfull_boxes": false,
+      "undefined_references": false,
+      "all_pages_rendered_and_visually_checked": true,
+      "author_count": 6,
+      "corresponding_author": "Hudson Moreira Guimar\u00e3es dos Santos",
+      "corresponding_email": "hudson.moreira@usp.br",
+      "funding": "none, confirmed by requester",
+      "abstract_words": 132,
+      "pdf_sha256": "e2e020bdf3a7a9e359a6c928e5e08c179a71cfc74b8a11cbb656442b9156123f"
+    },
+    "pt": {
+      "pages": 4,
+      "page_size": "US Letter, 612 x 792 pt",
+      "fonts": "all embedded; no Type 3",
+      "overfull_boxes": false,
+      "undefined_references": false,
+      "all_pages_rendered_and_visually_checked": true,
+      "author_count": 6,
+      "corresponding_author": "Hudson Moreira Guimar\u00e3es dos Santos",
+      "corresponding_email": "hudson.moreira@usp.br",
+      "funding": "none, confirmed by requester",
+      "abstract_words": 145,
+      "pdf_sha256": "ac00933552ba1359bec94770fffaf699cdc9e449e3311c4968906c0784d9edf2"
+    }
+  },
+  "english_abstract_matches_edas_draft": true,
+  "headline_counts_unchanged": true,
+  "manual_review_ledger_unchanged": true,
+  "human_semantic_reviews_still_pending": 4,
+  "submission_status": "Not registered or submitted to ICCE/EDAS; user instruction to hold remains active.",
+  "pdf_express": "Not run; not required for initial submission."
+}

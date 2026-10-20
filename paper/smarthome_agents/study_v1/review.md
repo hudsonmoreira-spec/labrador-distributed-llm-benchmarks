@@ -1,31 +1,27 @@
-# Acompanhamento do manuscrito atualizado
+# Revisão atual — artigo de smart home para ICCE
 
-A prévia inicial está preservada em `../preview_20261005/`. O primeiro artigo permanece em `paper/icce2027/`, sem alterações por este estudo. Este diretório contém fontes e PDFs revisados das versões em inglês e português, produzidos com as campanhas completas.
+Atualizado em 2026-10-20. **Este é o artigo destinado à preparação para ICCE**, conforme esclarecido pelo usuário. O manuscrito RPC em `paper/icce2027/` permanece separado e preservado.
 
-Autoria e ordem propostas para apreciação: Hudson Moreira; Marcelo Knörich Zuffo; Laisa Costa de Biase. Não representam aceite dos orientadores. Afiliações, departamentos oficiais, e-mails e identificadores continuam pendentes conforme `../preview_20261005/review.md`; nenhum dado foi inventado.
+A revisão técnica, bibliográfica e visual foi concluída nas versões inglesa e portuguesa. Os PDFs têm quatro páginas cada. Resultados, protocolo congelado, respostas e julgamentos originais não foram alterados. Relatório completo: [submission/technical-review-20261020.md](submission/technical-review-20261020.md).
 
-Escopo final: regras, Qwen2.5-0.5B/1.5B Q5_K_M, réplicas independentes em 1/3/6 Labradores, casa inteiramente simulada. Colaboração e cache comparativo são trabalho futuro. Não houve envio a pessoas, submissão ou merge em main.
+## Dados confirmados
 
-Protocolo congelado no commit `2bab455`; código de referência `72beda0`; manifesto em `experiments/smarthome_agents/study_v1/freeze.json`. Todas as tentativas ficam preservadas e números são reconstruídos dos arquivos individuais, com revisão caso a caso anexada quando necessária.
+- Seis autores na ordem informada pelo usuário: Hudson Moreira Guimarães dos Santos; Bruno Cavalcante de Souza Sanches; Laisa Caroline Costa De Biase; Roseli de Deus Lopes; Marcelo Knörich Zuffo; Pablo Cesar Calcina Ccori.
+- Todos vinculados à USP, São Paulo, Brazil. Hudson é o correspondente: `hudson.moreira@usp.br`.
+- Concordância de todos os coautores considerada conforme informado; não se pede documento adicional.
+- Sem financiamento, conforme informado. Uso de Labrador não foi convertido em patrocínio ou agradecimento obrigatório.
+- Contatos fornecidos e campos técnicos: [submission/edas-draft.md](submission/edas-draft.md). Falta o e-mail de Pablo.
 
-## Pontos para os orientadores
+## Auditoria concluída
 
-- Autoria/ordem, afiliações e contatos finais; venue e requisitos editoriais.
-- Cobertura limitada dos casos e da gramática de regras. Os 40 casos são pedidos/estados elaborados, não casas independentes; a construção não testa pedidos idempotentes e favorece uma estratégia de inverter o estado em rotinas com as duas luzes. Não generalizar precisão.
-- Comparação de configurações completas, com dois servidores residentes por placa e registros de serviços anteriores. Não atribuir diferenças exclusivamente ao número de parâmetros.
-- Julgamentos semânticos assistidos por Codex devem ser apreciados pelos autores; eles não são apresentados como revisão humana. Contagens automáticas e após revisão são separadas.
-- Taxa de lotes instrumentados não é capacidade máxima. Regras podem ter a taxa dominada pela instrumentação, apesar de latência HTTP curta.
-- Financiamento, agradecimentos, conflitos, divulgação do uso de IA e aprovação final do texto antes de eventual submissão.
+Snapshot público `a834b8255f736fb59425b146be183c17866a2c7d` baixado sem autenticação. Conferidos 3.021 arquivos por hash, os 18 arquivos congelados, 27 arquivos de análise e 19 fontes/resumos de tabelas/figuras reconstruídos byte a byte. Foram verificados 240 resultados de qualidade, 108 de replicação e 18 janelas de lotes. Nenhuma nova inferência foi executada.
 
-A identidade dos arquivos de modelo foi conferida em 2026-10-06 por hashes iguais aos publicados nos GGUF oficiais da Qwen. A nota da prévia permanece como registro do que se conhecia em 2026-10-05.
+Os hashes oficiais dos modelos coincidem com os registros dos seis hosts. A referência de documentação do servidor foi fixada na revisão executada. Comandos e limites da reconstrução estão em [artifact/README.md](artifact/README.md).
 
-A taxa de tarefas corretas usa a janela HTTP já definida no protocolo: primeiro despacho até última resposta, com a decisão julgada depois pelo simulador. Não mede tempo até a aplicação final da mudança de estado. Essa distinção deve acompanhar a interpretação de escala e não ser apresentada como capacidade máxima ou taxa operacional de uma casa real.
+## Limite semântico explicitado
 
-## Conferência final do artefato
+Os quatro julgamentos assistidos de esclarecimento continuam marcados como pendentes de validação humana no ledger histórico. Nenhum sucesso depende deles. Aceitar os quatro aumentaria o 0.5B de 30/80 para 34/80, ainda abaixo das regras (42/80). O manuscrito comunica essa sensibilidade sem inventar revisão humana nem modificar o protocolo.
 
-Em 2026-10-06: qualidade240/240, escala108/108 (18 lotes), duas campanhas de desenvolvimento48/48 cada. Todos os 18 arquivos congelados mantiveram SHA-256; auditoria final confirmou modelos e runtime/bibliotecas nas seis placas. Dados de qualidade commit938184b; escala/auditoria commitd2efabd.
+## Situação da submissão
 
-PDFs IEEE de conferência, US Letter, quatro páginas cada. Todas as páginas foram renderizadas e inspecionadas: títulos/autoria, tabelas com unidades e n, figuras, margens, referências e quebras. A última página tem colunas equilibradas; compilação final sem referências indefinidas ou caixas excedendo margens. Tabelas/figuras derivadas pelos scripts do README, sem números simulados de hardware ou inferência.
-
-- `main_en.pdf`: SHA-256 `53b7f7e5ad3bf4c10624aa29dc1c10ca7a5bb6d7c13178a497edb455ecf704ae`.
-- `main_pt.pdf`: SHA-256 `e77dde36dea4ca1f7b1bbdc8f538955b0e8fe46468f07f1b7971e68d199bfc37`.
+O candidato inglês está em `main_en.pdf`; a tradução portuguesa em `main_pt.pdf`. A aprovação técnica ou concordância de autoria não representa submissão ou aceitação pelo ICCE. **Não cadastrar nem enviar ao ICCE/EDAS sem nova instrução do usuário.** Nenhuma operação no EDAS foi realizada.

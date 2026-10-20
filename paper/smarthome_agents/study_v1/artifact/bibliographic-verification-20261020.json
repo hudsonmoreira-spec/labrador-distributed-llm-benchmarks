@@ -1,0 +1,44 @@
+{
+  "checked_on": "2026-10-20",
+  "research_references": [
+    {
+      "key": "homebench",
+      "title": "HomeBench: Evaluating LLMs in Smart Homes with Valid and Invalid Instructions Across Single and Multiple Devices",
+      "authors": [
+        "Silin Li",
+        "Yuhang Guo",
+        "Jiashu Yao",
+        "Zeming Liu",
+        "Haifeng Wang"
+      ],
+      "venue": "ACL 2025, Volume 1: Long Papers",
+      "pages": "12230–12250",
+      "doi": "10.18653/v1/2025.acl-long.597",
+      "source": "https://aclanthology.org/2025.acl-long.597/",
+      "content_source": "https://aclanthology.org/2025.acl-long.597.pdf",
+      "supports": "Virtual-home valid/invalid and single/multiple-device evaluation; no numerical comparison or reused dataset claimed."
+    },
+    {
+      "key": "edge",
+      "title": "Demystifying Small Language Models for Edge Deployment",
+      "authors": [
+        "Zhenyan Lu",
+        "Xiang Li",
+        "Dongqi Cai",
+        "Rongjie Yi",
+        "Fangming Liu",
+        "Wei Liu",
+        "Jian Luan",
+        "Xiwen Zhang",
+        "Nicholas D. Lane",
+        "Mengwei Xu"
+      ],
+      "venue": "ACL 2025, Volume 1: Long Papers",
+      "pages": "14747–14764",
+      "doi": "10.18653/v1/2025.acl-long.718",
+      "source": "https://aclanthology.org/2025.acl-long.718/",
+      "content_source": "https://aclanthology.org/2025.acl-long.718.pdf",
+      "supports": "Joint model capability/deployment evaluation, prefill/decode, quantization/hardware costs; no Labrador result inferred."
+    }
+  ]
+}

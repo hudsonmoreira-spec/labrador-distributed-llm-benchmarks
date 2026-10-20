@@ -13,7 +13,11 @@ def records(path):
     with path.open() as f:return list(csv.DictReader(f))
 def line(parts):return ' & '.join(str(x) for x in parts)+chr(92)*2+'\n'
 def main():
-    a=argparse.ArgumentParser();a.add_argument('--quality',type=Path,required=True);a.add_argument('--scale',type=Path,required=True);a.add_argument('--out',type=Path,required=True);args=a.parse_args()
+    a=argparse.ArgumentParser();a.add_argument('--quality',type=Path,required=True);a.add_argument('--scale',type=Path,required=True);a.add_argument('--out',type=Path,required=True)
+    a.add_argument('--protocol-commit', help='Recorded protocol commit, for an archive without Git metadata')
+    a.add_argument('--data-commit', help='Recorded data commit, for an archive without Git metadata')
+    a.add_argument('--date', help='Explicit provenance date (YYYY-MM-DD), for deterministic reconstruction')
+    args=a.parse_args()
     args.out.mkdir(parents=True,exist_ok=True)
     actions={r['model']:r for r in json.loads((args.quality/'action_summary.json').read_text())}
     metrics=sorted(json.loads((args.quality/'metrics.json').read_text()),key=lambda r:['rules','05','15'].index(r['model']));categories=records(args.quality/'categories.csv');batches=records(args.scale/'scale_batches.csv');scale_attempts=records(args.scale/'attempts.csv')
@@ -22,9 +26,9 @@ def main():
     assert len(batches)==18 and len(scale_attempts)==108, 'scale campaign must be complete'
     root=Path(__file__).resolve().parents[3]
     freeze_name='experiments/smarthome_agents/study_v1/freeze.json'
-    commit=subprocess.check_output(['git','log','-1','--format=%h','--',freeze_name],cwd=root,text=True).strip()
-    data_commit=subprocess.check_output(['git','log','-1','--format=%h','--','experiments/smarthome_agents/runs/20261006-study-v1-scale'],cwd=root,text=True).strip()
-    date=datetime.now(ZoneInfo('America/Sao_Paulo')).strftime('%Y-%m-%d')
+    commit=args.protocol_commit or subprocess.check_output(['git','log','-1','--format=%h','--',freeze_name],cwd=root,text=True).strip()
+    data_commit=args.data_commit or subprocess.check_output(['git','log','-1','--format=%h','--','experiments/smarthome_agents/runs/20261006-study-v1-scale'],cwd=root,text=True).strip()
+    date=args.date or datetime.now(ZoneInfo('America/Sao_Paulo')).strftime('%Y-%m-%d')
     (args.out/'provenance.tex').write_text('\\newcommand{\\StudyCommit}{'+commit+'}\n'+'\\newcommand{\\StudyDataCommit}{'+data_commit+'}\n'+'\\newcommand{\\StudyDate}{'+date+'}\n')
     tex=[]
     macro={'05':'Small','15':'Large','rules':'Rules'}
