@@ -1,15 +1,17 @@
 # ICCE 2027 submission checklist
 
-Checked 2026-10-04 against the official pages:
+Rechecked 2026-10-20 against the official pages. This replaces the obsolete October 15 deadline in the earlier local checklist.
 
-- Initial submission: 2 pages or up to 6 pages, including references and all other content.
-- IEEE Conference Word or LaTeX template, US Letter, two columns, no biographies.
-- Submit PDF through EDAS; PDF eXpress is not required for the initial submission.
-- Conference: January 8–11, 2027, Las Vegas, Nevada, in person.
-- Paper deadline shown by the official site: October 15, 2026 (final extension); acceptance November 20, 2026; camera-ready November 30, 2026.
-- Track candidates: Internet of Things / Edge Computing with Edge AI, Advanced AI for Affordable and Low Power Consumer Electronics, or Software in Consumer Technologies. Final track selection requires author review.
-- PDF eXpress is required only for the final submission; its conference ID is not yet published (the official page says TBA).
-- EDAS submission and copyright form remain author actions; this repository does not submit anything.
+- Initial submission: two pages or up to six pages, including references and all content; IEEE conference template, US Letter, no biographies.
+- PDF upload through [EDAS N35272](https://edas.info/N35272), with track and keywords.
+- Deadline: **October 31, 2026 (final extension)**. Confirm the exact EDAS cutoff/timezone when registering.
+- Acceptance notification: November 20; camera-ready: November 30, 2026.
+- PDF eXpress is not required initially; required for the accepted final version. ID currently TBA. Copyright form is handled through EDAS at the final stage.
+- The final paper can have up to six pages; the guidelines specify a four-page limit if intending an associated-journal/Transactions submission. Journal acceptance is separate.
+- Conference: January 8–11, 2027, Las Vegas, in person. Full registration is required for proceedings/Xplore publication according to the call for papers.
+- Recommended track: IOT / Edge Computing with Edge AI; author selection remains pending.
+
+Copy-ready technical fields and remaining author decisions: [submission/edas-draft.md](submission/edas-draft.md).
 
 Sources:
 
@@ -18,4 +20,4 @@ Sources:
 - https://icce.org/2027/
 - https://www.ieee.org/conferences/publishing/templates.html
 
-The deadline and PDF eXpress identifier should be rechecked immediately before submission. Author order, affiliation, e-mail, conflicts, and final track are not specified in the repository and remain pending author confirmation.
+Recheck dates and the PDF eXpress ID immediately before the relevant submission stage. No EDAS submission has been performed.

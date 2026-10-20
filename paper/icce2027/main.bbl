@@ -36,8 +36,8 @@ Qwen, A.~Yang, B.~Yang, B.~Zhang, B.~Hui, B.~Zheng, B.~Yu, C.~Li, D.~Liu,
   J.~Zhou, J.~Lin, K.~Dang, K.~Lu, K.~Bao, K.~Yang, L.~Yu, M.~Li, M.~Xue,
   P.~Zhang, Q.~Zhu, R.~Men, R.~Lin, T.~Li, T.~Tang, T.~Xia, X.~Ren, X.~Ren,
   Y.~Fan, Y.~Su, Y.~Zhang, Y.~Wan, Y.~Liu, Z.~Cui, Z.~Zhang, and Z.~Qiu,
-  ``Qwen2.5 technical report,'' \emph{arXiv preprint arXiv:2412.15115v2}, 2025.
-  [Online]. Available: \url{https://arxiv.org/abs/2412.15115v2}
+  ``{Qwen2.5} technical report,'' \emph{arXiv preprint arXiv:2412.15115v2},
+  2025. [Online]. Available: \url{https://arxiv.org/abs/2412.15115v2}
 \BIBentrySTDinterwordspacing
 
 \bibitem{mdillm}
@@ -58,7 +58,7 @@ M.~Zhang, X.~Shen, J.~Cao, Z.~Cui, and S.~Jiang, ``{EdgeShard}: Efficient {LLM}
 
 \bibitem{ggmlrpc2026}
 \BIBentryALTinterwordspacing
-{ggml-org}, ``llama.cpp rpc backend,'' GitHub repository documentation, 2026,
+{ggml-org}, ``{llama.cpp RPC} backend,'' GitHub repository documentation, 2026,
   source tree at commit 68e79bd8cd6b7995f8fce8da252b249bbf237e63, accessed
   2026-10-04. [Online]. Available:
   \url{https://github.com/ggml-org/llama.cpp/tree/68e79bd8cd6b7995f8fce8da252b249bbf237e63/tools/rpc}
@@ -75,7 +75,7 @@ M.~Zhang, X.~Shen, J.~Cao, Z.~Cui, and S.~Jiang, ``{EdgeShard}: Efficient {LLM}
 
 \bibitem{ieeeai}
 \BIBentryALTinterwordspacing
-{IEEE}, ``Guidelines for artificial intelligence (ai)-generated text,'' 2024,
+{IEEE}, ``Guidelines for artificial intelligence ({AI})-generated text,'' 2024,
   accessed 2026-10-04. [Online]. Available:
   \url{https://open.ieee.org/author-guidelines-for-artificial-intelligence-ai-generated-text/}
 \BIBentrySTDinterwordspacing

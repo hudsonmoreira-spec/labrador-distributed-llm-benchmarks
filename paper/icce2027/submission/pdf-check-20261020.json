@@ -1,0 +1,22 @@
+{
+  "checked_on": "2026-10-20",
+  "pages": 4,
+  "page_size": "US Letter (612 x 792 pt)",
+  "fonts": "all embedded; no Type 3",
+  "undefined_references": false,
+  "overfull_boxes": false,
+  "abstract_matches_edas_draft": true,
+  "abstract_words": 192,
+  "supplied_author_block_unchanged": false,
+  "claim_audit_raw_inputs_match_frozen_commit": true,
+  "pdf_sha256": "4587239f837df8c9d422600f2226c188a8f4e78923f9740780a9a7589a0926de",
+  "pdf_express": "not run; not required for initial ICCE submission",
+  "scope": "Final technical preparation with requester-confirmed authorship/funding. EDAS registration/upload not performed: no connected browser; Pablo email still pending.",
+  "all_pages_rendered_and_visually_checked": true,
+  "author_order_unchanged": true,
+  "pablo_usp_affiliation_confirmed_by_requester": true,
+  "corresponding_author": "Hudson Moreira Guimar\u00e3es dos Santos",
+  "corresponding_email": "hudson.moreira@usp.br",
+  "funding": "none, confirmed by requester",
+  "author_consent": "all agree, as stated by requester"
+}

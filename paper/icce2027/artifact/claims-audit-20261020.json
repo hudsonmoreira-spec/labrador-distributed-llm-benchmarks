@@ -1,0 +1,214 @@
+{
+  "status": "pass",
+  "evidence_commit": "7d94be29fe4e8069f2c916cb8cd0350acf338f1e",
+  "inventory_attempts": 55,
+  "valid_attempts_all_campaigns": 23,
+  "selected_attempts": 15,
+  "selection_by_campaign": {
+    "20261004T-matrix-validation-1": 5,
+    "20261004T-matrix-validation-5": 5,
+    "20261004T-matrix-validation-7": 2,
+    "20261004T-rpc2-complete-1": 3
+  },
+  "metrics": {
+    "notebook": {
+      "n": 5,
+      "mean_process_s": 5.69,
+      "sample_sd_s": 0.044721359549995635,
+      "min_s": 5.61,
+      "max_s": 5.71,
+      "prompt_s": 1.222118,
+      "generation_s": 2.425672,
+      "remainder_s": 2.0422100000000003,
+      "runtime_generation_tok_s": 12.782050145963371
+    },
+    "arm": {
+      "n": 5,
+      "mean_process_s": 43.86,
+      "sample_sd_s": 0.4284857057125694,
+      "min_s": 43.52,
+      "max_s": 44.58,
+      "prompt_s": 15.947518,
+      "generation_s": 19.376810000000003,
+      "remainder_s": 8.535672,
+      "runtime_generation_tok_s": 1.6001509413554935
+    },
+    "rpc2": {
+      "n": 5,
+      "mean_process_s": 168.672,
+      "sample_sd_s": 0.16407315441595113,
+      "min_s": 168.49,
+      "max_s": 168.83,
+      "prompt_s": 31.076268000000002,
+      "generation_s": 36.913686,
+      "remainder_s": 100.682046,
+      "runtime_generation_tok_s": 0.8398026639648984
+    }
+  },
+  "rpc_to_arm_ratios": {
+    "mean_process_s": 3.845690834473324,
+    "prompt_s": 1.9486585937698895,
+    "generation_s": 1.9050445351943892
+  },
+  "remainder_percent_of_mean_process": {
+    "arm": 19.461176470588235,
+    "rpc2": 59.691025184974386
+  },
+  "hardware": [
+    {
+      "record": "research/data/runs/20261001T150951Z/hosts/192.168.50.42/raw.txt",
+      "memtotal_kib": 1986400,
+      "os_visible_gib": 1.894378662109375,
+      "swap_kib": 0,
+      "link_evidence": "dated 100Mbps/Full kernel records; no throughput measurement"
+    },
+    {
+      "record": "research/data/runs/20261001T150951Z/hosts/192.168.50.118/raw.txt",
+      "memtotal_kib": 1986400,
+      "os_visible_gib": 1.894378662109375,
+      "swap_kib": 0,
+      "link_evidence": "dated 100Mbps/Full kernel records; no throughput measurement"
+    }
+  ],
+  "rpc_case_checks": [
+    {
+      "run": "20261004T-matrix-validation-7",
+      "case": "rep-3-rpc-2",
+      "layers": {
+        "RPC0": "0-14",
+        "RPC1": "15-28"
+      },
+      "worker_events": [
+        {
+          "graph_compute": 3,
+          "graph_recompute": 30,
+          "get_tensor": 33,
+          "set_tensor": 345
+        },
+        {
+          "graph_compute": 3,
+          "graph_recompute": 30,
+          "get_tensor": 33,
+          "set_tensor": 356
+        }
+      ]
+    },
+    {
+      "run": "20261004T-matrix-validation-7",
+      "case": "rep-4-rpc-2",
+      "layers": {
+        "RPC0": "0-14",
+        "RPC1": "15-28"
+      },
+      "worker_events": [
+        {
+          "graph_compute": 3,
+          "graph_recompute": 30,
+          "get_tensor": 33,
+          "set_tensor": 345
+        },
+        {
+          "graph_compute": 3,
+          "graph_recompute": 30,
+          "get_tensor": 33,
+          "set_tensor": 356
+        }
+      ]
+    },
+    {
+      "run": "20261004T-rpc2-complete-1",
+      "case": "rep-1-rpc-2",
+      "layers": {
+        "RPC0": "0-14",
+        "RPC1": "15-28"
+      },
+      "worker_events": [
+        {
+          "graph_compute": 3,
+          "graph_recompute": 30,
+          "get_tensor": 33,
+          "set_tensor": 345
+        },
+        {
+          "graph_compute": 3,
+          "graph_recompute": 30,
+          "get_tensor": 33,
+          "set_tensor": 356
+        }
+      ]
+    },
+    {
+      "run": "20261004T-rpc2-complete-1",
+      "case": "rep-2-rpc-2",
+      "layers": {
+        "RPC0": "0-14",
+        "RPC1": "15-28"
+      },
+      "worker_events": [
+        {
+          "graph_compute": 3,
+          "graph_recompute": 30,
+          "get_tensor": 33,
+          "set_tensor": 345
+        },
+        {
+          "graph_compute": 3,
+          "graph_recompute": 30,
+          "get_tensor": 33,
+          "set_tensor": 356
+        }
+      ]
+    },
+    {
+      "run": "20261004T-rpc2-complete-1",
+      "case": "rep-3-rpc-2",
+      "layers": {
+        "RPC0": "0-14",
+        "RPC1": "15-28"
+      },
+      "worker_events": [
+        {
+          "graph_compute": 3,
+          "graph_recompute": 30,
+          "get_tensor": 33,
+          "set_tensor": 345
+        },
+        {
+          "graph_compute": 3,
+          "graph_recompute": 30,
+          "get_tensor": 33,
+          "set_tensor": 356
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "research/data/runs/20261004T-matrix-validation-1/rpc-validation/rep-1-local.log": "de9f4f6a464d6cad094297cff84ebf0bd3713bb274af5231d9a280591ed12943",
+    "research/data/runs/20261004T-matrix-validation-1/rpc-validation/manifest.txt": "afa5e4a983339427c734830206712a315497b0742991f80d186e77e66e263d77",
+    "research/data/runs/20261004T-matrix-validation-1/rpc-validation/rep-2-local.log": "cdd54f1b0748e0a44b6e8730887f8cc646d3657c2e6b52556bb3eedaca9e47a7",
+    "research/data/runs/20261004T-matrix-validation-1/rpc-validation/rep-3-local.log": "33b89c39ec9ccd5c41f9aa327c91aec231b345177e545c8df5ac7de1b7cbc283",
+    "research/data/runs/20261004T-matrix-validation-1/rpc-validation/rep-4-local.log": "1c15ee60d0917ac2eef0d8a4dff627d95a7c6f95c60b358a247ff80083c4ee58",
+    "research/data/runs/20261004T-matrix-validation-1/rpc-validation/rep-5-local.log": "dbf88672934692af52b82bd4a02fa4d5920f6263542459ee0574a19731710929",
+    "research/data/runs/20261004T-matrix-validation-5/rpc-validation/rep-1-arm.log": "0865ba71f541f709101ae3dc0583e9c99bc6ca3b79e34d11bc27ec8e1bc2d60d",
+    "research/data/runs/20261004T-matrix-validation-5/rpc-validation/manifest.txt": "ca8b8142be53bbfdeb4a038a04c93ffb6ab47a59c0892b04f93cfdda8130d358",
+    "research/data/runs/20261004T-matrix-validation-5/rpc-validation/rep-2-arm.log": "68f27aa6b4241bbf487435d06a5d63486741b0fd6763ec62852359f782f40305",
+    "research/data/runs/20261004T-matrix-validation-5/rpc-validation/rep-3-arm.log": "782982ad011f2e0477f0ef11f03031b446842b84bb45f3d7d053b58d3c07cc5d",
+    "research/data/runs/20261004T-matrix-validation-5/rpc-validation/rep-4-arm.log": "10a8b5ab0ea4f020b44ed63886346c0974f34a342cbcda2dbbbd66ad345e53cc",
+    "research/data/runs/20261004T-matrix-validation-5/rpc-validation/rep-5-arm.log": "498652920e51093dcad50b47b17aeb93d36d27383a21d717a6e469cca6641ffc",
+    "research/data/runs/20261004T-matrix-validation-7/rpc-validation/rep-3-rpc-2.log": "e58f46273ef499f0ecac3ce7757307ce3322d74930c5b7104e1a4eac9987f607",
+    "research/data/runs/20261004T-matrix-validation-7/rpc-validation/manifest.txt": "e0c27cac3b954382479b570edc91bd75562380e24fddc124574c37d7ac98aaa5",
+    "research/data/runs/20261004T-matrix-validation-7/rpc-validation/rep-3-rpc-2.server.log": "deb23410767582b4c78cbef48821cef8ce509ac4dfe94c6308775f97d467ae95",
+    "research/data/runs/20261004T-matrix-validation-7/rpc-validation/rep-4-rpc-2.log": "3a6184f2d5a27dbceb9aad735b853e3c409a2d6828d54f9b214e70f08193526c",
+    "research/data/runs/20261004T-matrix-validation-7/rpc-validation/rep-4-rpc-2.server.log": "56093b7f8f0e805ef01da25a376d544fd58056d2377ca870c85c7c92629065db",
+    "research/data/runs/20261004T-rpc2-complete-1/rpc-validation/rep-1-rpc-2.log": "d1f2e157fc42d201820ae4dd48caced389261b0aa5323f5992379c182f3fb166",
+    "research/data/runs/20261004T-rpc2-complete-1/rpc-validation/manifest.txt": "d47fe154389bf061c837aae77bde73e007ccc487dae198f454d1bc2d4de602b2",
+    "research/data/runs/20261004T-rpc2-complete-1/rpc-validation/rep-1-rpc-2.server.log": "86b998aac63662d83c509506b9d0d4ecb0041a618ebfcd8c3abb5cff61ebdefa",
+    "research/data/runs/20261004T-rpc2-complete-1/rpc-validation/rep-2-rpc-2.log": "f91a730241740b9b54fa5e121781503a8a58fbc5775b23af4ac5ec99c683670f",
+    "research/data/runs/20261004T-rpc2-complete-1/rpc-validation/rep-2-rpc-2.server.log": "aa9dc538b95b2b8b8057dc5b3eb839befdd88ad81dbfb3298cffbbf2320f357c",
+    "research/data/runs/20261004T-rpc2-complete-1/rpc-validation/rep-3-rpc-2.log": "6ae6944c08da49fb68192ddc9f4fd50a80d59ec79b8b36bc98900373bc15a4ba",
+    "research/data/runs/20261004T-rpc2-complete-1/rpc-validation/rep-3-rpc-2.server.log": "ba6ecb0a8cf683ad5f2932b5efe73a028d9a9c5436e4bff02f3adeeaa4d86996",
+    "research/data/runs/20261001T150951Z/hosts/192.168.50.42/raw.txt": "29f2285bc097b6639077172cbeb195b1ae828a46108301fa7076eec4fb89dff0",
+    "research/data/runs/20261001T150951Z/hosts/192.168.50.118/raw.txt": "9b3adde8bc2715ef4979c62a4988140a1af324468c25119886885cd15ed4207f"
+  },
+  "scope": "Preserved-log reconstruction; not an independent hardware rerun or causal identification of network overhead."
+}

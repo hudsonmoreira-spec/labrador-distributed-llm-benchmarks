@@ -1,0 +1,79 @@
+{
+  "edgefirst": {
+    "metadata_url": "https://api.crossref.org/works/10.1109/icdcsw63273.2025.00058",
+    "title": [
+      "Edge-First Language Model Inference: Models, Metrics, and Tradeoffs"
+    ],
+    "container-title": [
+      "2025 IEEE 45th International Conference on Distributed Computing Systems Workshops (ICDCSW)"
+    ],
+    "page": "309-314",
+    "DOI": "10.1109/icdcsw63273.2025.00058",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          7,
+          21
+        ]
+      ]
+    },
+    "authors": [
+      "SiYoung Jang",
+      "Roberto Morabito"
+    ]
+  },
+  "mdillm": {
+    "metadata_url": "https://api.crossref.org/works/10.1109/lanman66415.2025.11154542",
+    "title": [
+      "Model-Distributed Inference for Large Language Models at the Edge"
+    ],
+    "container-title": [
+      "2025 IEEE 31st International Symposium on Local and Metropolitan Area Networks (LANMAN)"
+    ],
+    "page": "1-6",
+    "DOI": "10.1109/lanman66415.2025.11154542",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          7,
+          7
+        ]
+      ]
+    },
+    "authors": [
+      "Davide Macario",
+      "Hulya Seferoglu",
+      "Erdem Koyuncu"
+    ]
+  },
+  "edgeshard": {
+    "metadata_url": "https://api.crossref.org/works/10.1109/jiot.2024.3524255",
+    "title": [
+      "EdgeShard: Efficient LLM Inference via Collaborative Edge Computing"
+    ],
+    "container-title": [
+      "IEEE Internet of Things Journal"
+    ],
+    "page": "13119-13131",
+    "DOI": "10.1109/jiot.2024.3524255",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          15
+        ]
+      ]
+    },
+    "authors": [
+      "Mingjin Zhang",
+      "Xiaoming Shen",
+      "Jiannong Cao",
+      "Zeyang Cui",
+      "Shan Jiang"
+    ]
+  },
+  "verified_on": "2026-10-20"
+}
