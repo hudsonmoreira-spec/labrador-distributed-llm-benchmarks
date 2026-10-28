@@ -51,7 +51,7 @@ O snapshot contém 240 tentativas de qualidade, 108 de replicação, o protocolo
 ## Processo oficial e pendências
 
 - Portal: https://edas.info/N35272, indicado nas diretrizes do ICCE.
-- Referência consultada nesta conversa em 2026-10-20: submissão inicial em PDF, template IEEE conference, US Letter, até seis páginas incluindo referências, sem biografias. O candidato inglês tem quatro páginas.
+- Referência consultada nesta conversa em 2026-10-20: submissão inicial em PDF, template IEEE conference, US Letter, até seis páginas incluindo referências, sem biografias. O candidato inglês revisado em 28/10 tem cinco páginas; a versão histórica de 20/10 tinha quatro. A rota opcional de Transactions/periódicos associados exigiria condensação para quatro páginas.
 - Prazo divulgado: 31/10/2026; aceite: 20/11/2026; camera-ready: 30/11/2026. Confirmar horário/fuso de encerramento no portal quando houver autorização para submeter.
 - PDF eXpress não é exigido inicialmente; é exigido para a versão final aceita. Não foi executado.
 - E-mail de Pablo ainda não informado. Eventuais identificadores e declarações adicionais dependem dos campos reais do EDAS; não criar obrigações hipotéticas.

@@ -1,0 +1,411 @@
+{
+  "totals": [
+    {
+      "model": "rules",
+      "attempts": 80,
+      "scenarios": 40,
+      "successes": 42,
+      "unsuccessful": 38,
+      "clarifications_proposed": 2,
+      "clarifications_correct": 2,
+      "human_validation_pending": 0,
+      "no_action_proposed": 54
+    },
+    {
+      "model": "05",
+      "attempts": 80,
+      "scenarios": 40,
+      "successes": 30,
+      "unsuccessful": 50,
+      "clarifications_proposed": 12,
+      "clarifications_correct": 0,
+      "human_validation_pending": 4,
+      "no_action_proposed": 4
+    },
+    {
+      "model": "15",
+      "attempts": 80,
+      "scenarios": 40,
+      "successes": 12,
+      "unsuccessful": 68,
+      "clarifications_proposed": 0,
+      "clarifications_correct": 0,
+      "human_validation_pending": 0,
+      "no_action_proposed": 22
+    }
+  ],
+  "criteria": [
+    {
+      "model": "rules",
+      "criterion": "operational",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 80,
+      "failed": 0,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "rules",
+      "criterion": "format",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 80,
+      "failed": 0,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "rules",
+      "criterion": "expected_action",
+      "attempts": 80,
+      "observed": 32,
+      "passed": 18,
+      "failed": 14,
+      "absent_or_not_applicable": 48,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "rules",
+      "criterion": "expected_steps",
+      "attempts": 80,
+      "observed": 48,
+      "passed": 24,
+      "failed": 24,
+      "absent_or_not_applicable": 32,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "rules",
+      "criterion": "final_state",
+      "attempts": 80,
+      "observed": 48,
+      "passed": 24,
+      "failed": 24,
+      "absent_or_not_applicable": 32,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "rules",
+      "criterion": "preservation",
+      "attempts": 80,
+      "observed": 64,
+      "passed": 64,
+      "failed": 0,
+      "absent_or_not_applicable": 16,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "rules",
+      "criterion": "clarification",
+      "attempts": 80,
+      "observed": 2,
+      "passed": 2,
+      "failed": 0,
+      "absent_or_not_applicable": 78,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "rules",
+      "criterion": "no_action",
+      "attempts": 80,
+      "observed": 54,
+      "passed": 16,
+      "failed": 38,
+      "absent_or_not_applicable": 26,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "rules",
+      "criterion": "executor_permission",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 80,
+      "failed": 0,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "rules",
+      "criterion": "prohibited_steps",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 80,
+      "failed": 0,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "05",
+      "criterion": "operational",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 80,
+      "failed": 0,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "05",
+      "criterion": "format",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 80,
+      "failed": 0,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "05",
+      "criterion": "expected_action",
+      "attempts": 80,
+      "observed": 32,
+      "passed": 4,
+      "failed": 28,
+      "absent_or_not_applicable": 48,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "05",
+      "criterion": "expected_steps",
+      "attempts": 80,
+      "observed": 48,
+      "passed": 30,
+      "failed": 18,
+      "absent_or_not_applicable": 32,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "05",
+      "criterion": "final_state",
+      "attempts": 80,
+      "observed": 48,
+      "passed": 30,
+      "failed": 18,
+      "absent_or_not_applicable": 32,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "05",
+      "criterion": "preservation",
+      "attempts": 80,
+      "observed": 64,
+      "passed": 56,
+      "failed": 8,
+      "absent_or_not_applicable": 16,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "05",
+      "criterion": "clarification",
+      "attempts": 80,
+      "observed": 12,
+      "passed": 0,
+      "failed": 12,
+      "absent_or_not_applicable": 68,
+      "provisional_failed": 4,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "05",
+      "criterion": "no_action",
+      "attempts": 80,
+      "observed": 4,
+      "passed": 0,
+      "failed": 4,
+      "absent_or_not_applicable": 76,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "05",
+      "criterion": "executor_permission",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 66,
+      "failed": 14,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "05",
+      "criterion": "prohibited_steps",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 54,
+      "failed": 26,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "15",
+      "criterion": "operational",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 80,
+      "failed": 0,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "15",
+      "criterion": "format",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 80,
+      "failed": 0,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "15",
+      "criterion": "expected_action",
+      "attempts": 80,
+      "observed": 32,
+      "passed": 2,
+      "failed": 30,
+      "absent_or_not_applicable": 48,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "15",
+      "criterion": "expected_steps",
+      "attempts": 80,
+      "observed": 48,
+      "passed": 10,
+      "failed": 38,
+      "absent_or_not_applicable": 32,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "15",
+      "criterion": "final_state",
+      "attempts": 80,
+      "observed": 48,
+      "passed": 26,
+      "failed": 22,
+      "absent_or_not_applicable": 32,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "15",
+      "criterion": "preservation",
+      "attempts": 80,
+      "observed": 64,
+      "passed": 50,
+      "failed": 14,
+      "absent_or_not_applicable": 16,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "15",
+      "criterion": "clarification",
+      "attempts": 80,
+      "observed": 0,
+      "passed": 0,
+      "failed": 0,
+      "absent_or_not_applicable": 80,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "15",
+      "criterion": "no_action",
+      "attempts": 80,
+      "observed": 22,
+      "passed": 2,
+      "failed": 20,
+      "absent_or_not_applicable": 58,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "15",
+      "criterion": "executor_permission",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 68,
+      "failed": 12,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    },
+    {
+      "model": "15",
+      "criterion": "prohibited_steps",
+      "attempts": 80,
+      "observed": 80,
+      "passed": 56,
+      "failed": 24,
+      "absent_or_not_applicable": 0,
+      "provisional_failed": 0,
+      "unit": "attempt; overlapping indicators"
+    }
+  ],
+  "mapping": {
+    "expected_action": [
+      "expected_action"
+    ],
+    "expected_steps": [
+      "exact_proposed_steps"
+    ],
+    "final_state": [
+      "final:"
+    ],
+    "preservation": [
+      "unchanged:"
+    ],
+    "clarification": [
+      "clarification_allowed",
+      "clarification_missing_field"
+    ],
+    "no_action": [
+      "no_action_policy"
+    ],
+    "executor_permission": [
+      "action_allowed"
+    ],
+    "prohibited_steps": [
+      "prohibited:",
+      "no_prohibited_plan_steps"
+    ]
+  },
+  "definitions": {
+    "expected_action": "Only ambiguity/invalid cases: study.evaluate deliberately exempts set_light/set_lights wrappers; step equivalence is assessed separately.",
+    "expected_steps": "Clear/paraphrase/routine: sorted (room,value) steps must equal expected_steps, with no omissions/extras; single-action/one-step-plan wrappers equivalent.",
+    "final_state": "Any final_state_equals path differs; only clear/paraphrase/routine. Does not count unchanged paths.",
+    "preservation": "Any unchanged path differs. Clear/paraphrase preserve unrelated light; ambiguity/invalid preserve both; routine has no unchanged light.",
+    "clarification": "Only when ask_clarification was proposed: allowed in scenario AND question requests expected missing field. Pending semantic checks are not automatic passes; four assisted failure judgments remain provisional.",
+    "no_action": "Only when no_action was proposed: no_action_is_success must be true (invalid requests). Failure means an undue no_action, including ambiguity needing clarification.",
+    "executor_permission": "Returned permission allowed=false. Intervention is not an independent causal explanation or a correction of a wrong proposal.",
+    "prohibited_steps": "Union of legacy top-level prohibited: checks and plan-aware no_prohibited_plan_steps; top-level check alone can miss a set_lights wrapper. No-prohibited check exists even with an empty prohibited set; observed pass is not evidence of a prohibition challenge."
+  },
+  "unit": "attempt; each group at most once per attempt; groups overlap; no causal attribution",
+  "operational": "execution_completed AND finish_reason=stop; explicit fields, not absent checks",
+  "format": "parse.structured_valid if execution completed; otherwise absent",
+  "pending": "Raw clarification_missing_field=false with pending review retained; four ledger decisions=fail remain provisional, not human judgments"
+}

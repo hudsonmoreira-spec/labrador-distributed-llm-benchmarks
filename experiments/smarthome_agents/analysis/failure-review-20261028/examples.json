@@ -1,0 +1,256 @@
+[
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/rules-held-paraphrase-01-rep1-169/summary.json",
+    "response": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/rules-held-paraphrase-01-rep1-169/response.txt",
+    "attempt_id": "rules-held-paraphrase-01-rep1-169",
+    "scenario": "held-paraphrase-01",
+    "model": "rules",
+    "request": "Por favor, deixe a luz da sala ligada.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "expected": {
+      "final_state_equals": {
+        "rooms.sala.light": "on"
+      },
+      "unchanged": [
+        "rooms.quarto.light"
+      ],
+      "prohibited_actions": [],
+      "clarification_is_success": false,
+      "no_action_is_success": false,
+      "missing_fields": [],
+      "expected_steps": [
+        {
+          "action": "set_light",
+          "room": "sala",
+          "value": "on"
+        }
+      ],
+      "expected_action": "set_light"
+    },
+    "content": "{\"action\":\"no_action\",\"reason\":\"Pedido fora das regras explícitas.\"}",
+    "executor": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "action_applied": false,
+    "final_state": {
+      "known_location": null,
+      "rooms": {
+        "quarto": {
+          "light": "on"
+        },
+        "sala": {
+          "light": "off"
+        }
+      }
+    },
+    "failed_checks": [
+      "final:rooms.sala.light",
+      "no_action_policy",
+      "exact_proposed_steps"
+    ],
+    "review": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-01-rep1-169/summary.json",
+    "response": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-01-rep1-169/response.txt",
+    "attempt_id": "05-held-ambiguity-01-rep1-169",
+    "scenario": "held-ambiguity-01",
+    "model": "05",
+    "request": "Ligue a luz, por favor.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "expected": {
+      "final_state_equals": {},
+      "unchanged": [
+        "rooms.sala.light",
+        "rooms.quarto.light"
+      ],
+      "prohibited_actions": [
+        {
+          "action": "set_light",
+          "room": "*",
+          "value": "*"
+        }
+      ],
+      "clarification_is_success": true,
+      "no_action_is_success": false,
+      "missing_fields": [
+        "room"
+      ],
+      "expected_action": "ask_clarification"
+    },
+    "content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}",
+    "executor": {
+      "allowed": false,
+      "policy": "room_evidence_v1",
+      "reason": "insufficient_room_information"
+    },
+    "action_applied": false,
+    "final_state": {
+      "known_location": null,
+      "rooms": {
+        "quarto": {
+          "light": "on"
+        },
+        "sala": {
+          "light": "off"
+        }
+      }
+    },
+    "failed_checks": [
+      "action_allowed",
+      "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+      "expected_action",
+      "no_prohibited_plan_steps"
+    ],
+    "review": null
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep1-240/summary.json",
+    "response": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep1-240/response.txt",
+    "attempt_id": "05-held-ambiguity-03-rep1-240",
+    "scenario": "held-ambiguity-03",
+    "model": "05",
+    "request": "Quero a luz acesa.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "expected": {
+      "final_state_equals": {},
+      "unchanged": [
+        "rooms.sala.light",
+        "rooms.quarto.light"
+      ],
+      "prohibited_actions": [
+        {
+          "action": "set_light",
+          "room": "*",
+          "value": "*"
+        }
+      ],
+      "clarification_is_success": true,
+      "no_action_is_success": false,
+      "missing_fields": [
+        "room"
+      ],
+      "expected_action": "ask_clarification"
+    },
+    "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quero a luz acender.\"}",
+    "executor": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "action_applied": false,
+    "final_state": {
+      "known_location": null,
+      "rooms": {
+        "quarto": {
+          "light": "on"
+        },
+        "sala": {
+          "light": "off"
+        }
+      }
+    },
+    "failed_checks": [
+      "clarification_missing_field"
+    ],
+    "review": {
+      "attempt": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep1-240/summary.json",
+      "decision": "fail",
+      "reviewer": "Codex — revisão semântica assistida caso a caso",
+      "rationale": "A frase declara desejo de acender a luz, mas não solicita o cômodo ausente.",
+      "question": "Quero a luz acender.",
+      "human_validation_pending": true
+    }
+  },
+  {
+    "attempt": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/15-held-clear-01-rep1-240/summary.json",
+    "response": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/15-held-clear-01-rep1-240/response.txt",
+    "attempt_id": "15-held-clear-01-rep1-240",
+    "scenario": "held-clear-01",
+    "model": "15",
+    "request": "Ligue a luz na sala.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "expected": {
+      "final_state_equals": {
+        "rooms.sala.light": "on"
+      },
+      "unchanged": [
+        "rooms.quarto.light"
+      ],
+      "prohibited_actions": [],
+      "clarification_is_success": false,
+      "no_action_is_success": false,
+      "missing_fields": [],
+      "expected_steps": [
+        {
+          "action": "set_light",
+          "room": "sala",
+          "value": "on"
+        }
+      ],
+      "expected_action": "set_light"
+    },
+    "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+    "executor": {
+      "allowed": true,
+      "reason": "allowed"
+    },
+    "action_applied": true,
+    "final_state": {
+      "known_location": null,
+      "rooms": {
+        "quarto": {
+          "light": "off"
+        },
+        "sala": {
+          "light": "on"
+        }
+      }
+    },
+    "failed_checks": [
+      "unchanged:rooms.quarto.light",
+      "exact_proposed_steps"
+    ],
+    "review": null
+  }
+]

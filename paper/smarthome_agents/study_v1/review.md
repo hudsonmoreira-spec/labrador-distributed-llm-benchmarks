@@ -25,3 +25,8 @@ Os quatro julgamentos assistidos de esclarecimento continuam marcados como pende
 ## Situação da submissão
 
 O candidato inglês está em `main_en.pdf`; a tradução portuguesa em `main_pt.pdf`. A aprovação técnica ou concordância de autoria não representa submissão ou aceitação pelo ICCE. **Não cadastrar nem enviar ao ICCE/EDAS sem nova instrução do usuário.** Nenhuma operação no EDAS foi realizada.
+
+
+## Revisão editorial de 2026-10-28 — falhas por requisito
+
+A revisão atual é descrita em [submission/failure-review-20261028.md](submission/failure-review-20261028.md). PT/EN passam a cinco páginas; os registros de quatro páginas acima descrevem a versão de 20/10. Foram incluídos tabela de falhas e quatro exemplos reais, com análise complementar independente das fontes congeladas. Autoria, resultados, dados brutos, critérios, quatro julgamentos assistidos e snapshot científico permanecem preservados. Não houve inferência ou campanha nova. Submissão ICCE/EDAS continua suspensa; a publicação desta revisão no GitHub foi explicitamente solicitada.

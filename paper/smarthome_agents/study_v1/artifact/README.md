@@ -54,3 +54,15 @@ Quatro classificações assistidas de esclarecimento aguardam validação humana
 A casa e as ações são simuladas. A replicação é de servidores independentes, não divisão de um modelo ou colaboração de agentes. A taxa em lotes instrumentados não estabelece capacidade máxima, saturação ou tempo até atuação física. Os modelos e o runtime não são distribuídos neste pacote: há identificação por hash e registros de configuração. As fontes oficiais dos modelos são verificadas em [model-reference-verification-20261020.json](model-reference-verification-20261020.json).
 
 O artefato mantém identificadores originais já públicos. Esta verificação não realiza auditoria completa de segredos/licenças de todo o histórico e não escolhe uma licença de redistribuição para os autores. Não altera protocolo, prompts, avaliador, respostas, ledger ou resultados publicados.
+
+
+## Complemento editorial de 2026-10-28
+
+O snapshot científico acima permanece imutável. A [análise de falhas](../../../../experiments/smarthome_agents/analysis/failure-review-20261028/README.md) é posterior e vive na branch `smarthome-multiagent`, juntamente com `scripts/analyze_failure_criteria.py` e `scripts/verify_failure_review.py` em `experiments/smarthome_agents/`. Não alegamos que esses novos arquivos já estivessem no snapshot.
+
+```bash
+python3 experiments/smarthome_agents/scripts/analyze_failure_criteria.py
+python3 experiments/smarthome_agents/scripts/verify_failure_review.py --output /tmp/smarthome-failure-audit.json
+```
+
+O primeiro comando agrega verificações originais e gera novos CSV/JSON/TeX, com rastreabilidade por tentativa e manifesto de insumos. O segundo reconstrói o complemento em diretório temporário e compara as saídas byte a byte, além de conferir denominadores, ausência de contagens duplicadas por grupo, sobreposição, exemplos, unidades por comando versus tentativa e equivalência de números/IDs/fontes entre PT/EN. O verificador histórico continua separado e confere os 3.021 hashes do snapshot e as análises originais. Nenhum dos dois realiza revisão semântica humana. Os quatro julgamentos assistidos não recebem novos sucessos.

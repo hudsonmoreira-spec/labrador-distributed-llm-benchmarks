@@ -1,0 +1,70 @@
+{
+  "status": "pass",
+  "scientific_input_hashes": 498,
+  "deterministic_files": 18,
+  "quality_attempts": 240,
+  "criterion_attempt_rows": 2400,
+  "original_totals": [
+    {
+      "model": "rules",
+      "attempts": 80,
+      "scenarios": 40,
+      "successes": 42,
+      "unsuccessful": 38,
+      "clarifications_proposed": 2,
+      "clarifications_correct": 2,
+      "human_validation_pending": 0,
+      "no_action_proposed": 54
+    },
+    {
+      "model": "05",
+      "attempts": 80,
+      "scenarios": 40,
+      "successes": 30,
+      "unsuccessful": 50,
+      "clarifications_proposed": 12,
+      "clarifications_correct": 0,
+      "human_validation_pending": 4,
+      "no_action_proposed": 4
+    },
+    {
+      "model": "15",
+      "attempts": 80,
+      "scenarios": 40,
+      "successes": 12,
+      "unsuccessful": 68,
+      "clarifications_proposed": 0,
+      "clarifications_correct": 0,
+      "human_validation_pending": 0,
+      "no_action_proposed": 22
+    }
+  ],
+  "attempts_with_multiple_failed_groups": 146,
+  "absent_group_observations": 770,
+  "assisted_reviews_pending": 4,
+  "newly_awarded_successes": 0,
+  "example_count": 4,
+  "bilingual_numbers_quotes_citations_inputs": "pass; prose equivalence additionally reviewed editorially",
+  "command_units": "generator independently reconstructs every command and compares action_steps.csv and action_summary.json exactly",
+  "checked_outputs": [
+    "experiments/smarthome_agents/analysis/failure-review-20261028/categories.csv",
+    "experiments/smarthome_agents/analysis/failure-review-20261028/README.md",
+    "experiments/smarthome_agents/analysis/failure-review-20261028/examples.json",
+    "experiments/smarthome_agents/analysis/failure-review-20261028/attempts.json",
+    "experiments/smarthome_agents/analysis/failure-review-20261028/criteria_by_condition.csv",
+    "experiments/smarthome_agents/analysis/failure-review-20261028/summary.json",
+    "experiments/smarthome_agents/analysis/failure-review-20261028/criteria_by_attempt.csv",
+    "experiments/smarthome_agents/analysis/failure-review-20261028/input_manifest.json",
+    "paper/smarthome_agents/study_v1/failure_analysis/clarification_en.tex",
+    "paper/smarthome_agents/study_v1/failure_analysis/patterns_en.tex",
+    "paper/smarthome_agents/study_v1/failure_analysis/examples_pt.tex",
+    "paper/smarthome_agents/study_v1/failure_analysis/examples_en.tex",
+    "paper/smarthome_agents/study_v1/failure_analysis/category_rows_pt.tex",
+    "paper/smarthome_agents/study_v1/failure_analysis/category_rows_en.tex",
+    "paper/smarthome_agents/study_v1/failure_analysis/failure_rows_en.tex",
+    "paper/smarthome_agents/study_v1/failure_analysis/clarification_pt.tex",
+    "paper/smarthome_agents/study_v1/failure_analysis/failure_rows_pt.tex",
+    "paper/smarthome_agents/study_v1/failure_analysis/patterns_pt.tex"
+  ],
+  "scope": "Offline reconstruction and consistency checks; no inference, regrading or human semantic validation"
+}
