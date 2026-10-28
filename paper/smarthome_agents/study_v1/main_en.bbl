@@ -78,13 +78,11 @@ Z.~Lu, X.~Li, D.~Cai, R.~Yi, F.~Liu, W.~Liu, J.~Luan, X.~Zhang, N.~D. Lane, and
 \BIBentrySTDinterwordspacing
 
 \bibitem{artifact}
-\BIBentryALTinterwordspacing
 {Labrador Distributed LLM Benchmarks contributors}, ``Simulated smart-home
-  control: Frozen protocol, raw attempts, and reconstruction scripts,'' GitHub
-  repository, 2026, evidence snapshot a834b82, accessed 2026-10-20. [Online].
-  Available:
-  \url{https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/a834b8255f736fb59425b146be183c17866a2c7d}
-\BIBentrySTDinterwordspacing
+  control: Frozen protocol, raw attempts, and reconstruction scripts,''
+  \href{https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/a834b8255f736fb59425b146be183c17866a2c7d}{GitHub
+  repository (snapshot a834b82)}, 2026, evidence snapshot a834b82, accessed
+  2026-10-20.
 
 \bibitem{ieeeai}
 \BIBentryALTinterwordspacing

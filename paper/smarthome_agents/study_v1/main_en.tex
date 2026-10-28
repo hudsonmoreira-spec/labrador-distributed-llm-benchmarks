@@ -6,6 +6,7 @@
 \usepackage{balance}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage[hidelinks]{hyperref}
 \def\UrlBreaks{\do\/\do\-\do\_}
 \providecommand{\StudyPrefix}{}
 \input{\StudyPrefix generated/metrics.tex}
@@ -83,7 +84,9 @@ In the reserved workload, rules completed 42/80 attempts, the 0.5B configuration
 The frozen protocol, all 240 quality and 108 replication attempts, raw responses, unsuccessful outcomes, review ledger, and offline reconstruction scripts are public at an immutable repository snapshot~\cite{artifact}. Reproduction checks recorded state, permissions, and evaluator outputs against every response; the supplied scripts regenerate the tables and plot sources. Re-running hardware additionally requires the recorded runtime and model files; offline reconstruction does not constitute an independent hardware replication.
 
 This research received no external funding. OpenAI Codex assisted code, analysis and figure scripts, evidence reconstruction, literature checking, and drafting and revision of the manuscript. The four assisted clarification judgments are identified separately from human review. Authors remain responsible for verification, claims, citations, and the final text, consistent with IEEE AI-use guidance~\cite{ieeeai}.
+% Allow balance to split the shorter linked bibliography without box overflow.
 \balance
+\vspace{-2pt}
 \bibliographystyle{IEEEtran}
 \bibliography{\StudyPrefix references}
 \end{document}
