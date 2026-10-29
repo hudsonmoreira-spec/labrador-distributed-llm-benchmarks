@@ -1,0 +1,28 @@
+{
+  "confirmed_on": "2026-10-29",
+  "source": "User requested Hudson first, Pablo second, Laisa third, Bruno advisor, Marcelo coordinator, then clarified Roseli precedes Marcelo.",
+  "ordered_authors": [
+    "Hudson Moreira Guimarães dos Santos",
+    "Pablo Cesar Calcina Ccori",
+    "Laisa Caroline Costa De Biase",
+    "Bruno Cavalcante de Souza Sanches",
+    "Roseli de Deus Lopes",
+    "Marcelo Knörich Zuffo"
+  ],
+  "previous_authors": [
+    "Hudson Moreira Guimarães dos Santos",
+    "Bruno Cavalcante de Souza Sanches",
+    "Laisa Caroline Costa De Biase",
+    "Roseli de Deus Lopes",
+    "Marcelo Knörich Zuffo",
+    "Pablo Cesar Calcina Ccori"
+  ],
+  "roles_context_only": {
+    "Hudson Moreira Guimarães dos Santos": "principal e correspondente",
+    "Bruno Cavalcante de Souza Sanches": "orientador",
+    "Marcelo Knörich Zuffo": "coordenador"
+  },
+  "affiliation": "University of São Paulo (USP), São Paulo, Brazil",
+  "corresponding_email": "hudson.moreira@usp.br",
+  "roles_printed_in_pdf": false
+}

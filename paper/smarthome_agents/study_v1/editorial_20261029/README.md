@@ -39,3 +39,7 @@ Relatórios de execução e conferência dos PDFs estão neste diretório. Todas
 Permanecem: apreciação editorial e linguística pelos autores, validação humana dos quatro julgamentos, conferência humana das traduções, escolha de eventual rota de quatro páginas e contato de Pablo para cadastro. Submissão ICCE/EDAS continua dependendo de instrução específica; nenhuma submissão foi realizada. Não houve novas campanhas, acesso às placas, merge em main ou force push. Alterações locais de inventário e arquivos alheios foram excluídos do commit.
 
 O mapeamento e as traduções desta revisão foram preservados no commit `c0650b876b5e1a9169782d9cc0819c078b13fbe9`. Os PDFs finais apontam para esse commit anterior, evitando referência circular ao próprio PDF.
+
+## Atualização posterior de autoria — 29/10/2026
+
+O usuário alterou a ordem para Hudson, Pablo, Laisa, Bruno, Roseli e Marcelo. A lista de autores, afiliação e correspondente são os mesmos; a verificação passou a conferir explicitamente a ordem autorizada em `../submission/author-order-20261029.json`. As referências acima à autoria preservada descrevem a revisão editorial anterior. Os PDFs e a minuta EDAS foram atualizados.

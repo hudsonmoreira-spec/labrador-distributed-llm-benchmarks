@@ -35,3 +35,8 @@ A revisão atual é descrita em [submission/failure-review-20261028.md](submissi
 ## Revisão editorial de 2026-10-29 — comentários do professor Bruno
 
 Versões PT/EN reestruturadas em introdução, trabalhos relacionados, método, resultados, discussão e conclusão. Cinco páginas por PDF; exemplos em tabela numerada, traduções sinalizadas no inglês e rótulos ligados aos originais; legendas curtas e denominadores explícitos. [Nota de revisão e conferências](editorial_20261029/README.md). Evidência, critérios, sucessos, autoria e quatro julgamentos assistidos preservados. Versão para apreciação dos autores, sem aprovação presumida ou envio ao ICCE/EDAS.
+
+
+## Ordem de autoria atualizada — 2026-10-29
+
+Por instrução do usuário: Hudson Moreira Guimarães dos Santos; Pablo Cesar Calcina Ccori; Laisa Caroline Costa De Biase; Bruno Cavalcante de Souza Sanches; Roseli de Deus Lopes; Marcelo Knörich Zuffo. Hudson permanece primeiro e correspondente. Bruno é o orientador e Marcelo o coordenador, registrados como contexto, sem rótulos adicionais nos PDFs. Nenhum autor foi removido. Fontes PT/EN e minuta EDAS atualizadas. Demais conteúdos e evidências preservados. Registro em `submission/author-order-20261029.json`.

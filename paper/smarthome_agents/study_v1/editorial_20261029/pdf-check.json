@@ -4,7 +4,7 @@
   "pdfs": {
     "en": {
       "pages": 5,
-      "sha256": "90b0822c2af6a46a69e53f0eb8dbcaea1be585fb84c83005fde73ce7f113e1f8",
+      "sha256": "718b86b61ca2fa9a0979bb3d09af9b0d58818b255f878c0fb68403b3c2ca1e24",
       "page_size_pt": [
         612,
         792
@@ -41,7 +41,7 @@
     },
     "pt": {
       "pages": 5,
-      "sha256": "6e4abf238456afddb726a56eefeb2478c40808a95a8ce83054b42b0f25436abf",
+      "sha256": "7ca41a9ac3bf01c8b813d3926e0e021ee2f310ffa5e7703f8ae348909d307f44",
       "page_size_pt": [
         612,
         792

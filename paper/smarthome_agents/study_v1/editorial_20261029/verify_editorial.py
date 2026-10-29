@@ -46,7 +46,13 @@ for lang in ['en','pt']:
  text=(P/f'main_{lang}.tex').read_text()
  historic=subprocess.check_output(['git','show',BASE+':'+str((P/f'main_{lang}.tex').relative_to(R))],cwd=R,text=True)
  author=lambda s:s[s.index(r'\author{'):s.index(r'\begin{document}')].replace('\\newcounter{examplecase}\n','')
- require(author(text)==author(historic),'Author block changed')
+ approved=load(P/'submission/author-order-20261029.json')['ordered_authors']
+ block=author(text); oldblock=author(historic)
+ require(all(block.split(r'\IEEEauthorblockA')[0].count(n)==1 for n in approved),'Author membership changed')
+ require([block.index(n) for n in approved]==sorted(block.index(n) for n in approved),'Author order differs from user confirmation')
+ require(all(oldblock.split(r'\IEEEauthorblockA')[0].count(n)==1 for n in approved),'Original author membership changed')
+ without_names=lambda b:re.sub(r'\\IEEEauthorblockN\{.*?\}\s*\\IEEEauthorblockA',lambda m:'<names>IEEEauthorblockA',b,flags=re.S)
+ require(without_names(block)==without_names(oldblock),'Affiliation or corresponding contact changed')
  require(text.startswith(r'\documentclass[letterpaper,conference]{IEEEtran}'),'Document format changed')
  for path in re.findall(r'\\input\{\\StudyPrefix ([^}]+)\}',text):
   require((P/path).is_file(),'Missing input '+path)
@@ -70,5 +76,5 @@ for lang in ['en','pt']:
  else:require(numbers==re.findall(r'\d+(?:\.\d+)?',f),'Bilingual failure counts differ')
 ledger=load(R/'experiments/smarthome_agents/runs/20261006-study-v1-quality/manual_reviews.json')
 require(len(ledger)==4 and all(x['decision']=='fail' and x['human_validation_pending'] for x in ledger),'Judgment status changed')
-result={'status':'pass','based_on_commit':BASE,'cases_mapped_to_original_and_raw_http':4,'failure_table_cells_checked':42,'author_block_and_IEEE_format':'preserved','historical_generated_assets':'byte-identical to preceding commit','assisted_judgments_pending':4,'credited_successes_changed':0,'citations_and_inputs_bilingual':'matched','translation_review':'editorial comparison with Portuguese originals; human linguistic review remains pending','scope':'Presentation consistency; run both original scientific verifiers separately.'}
+result={'status':'pass','based_on_commit':BASE,'cases_mapped_to_original_and_raw_http':4,'failure_table_cells_checked':42,'author_block_and_IEEE_format':'order updated per user confirmation; membership, affiliation, contact and IEEE format preserved','historical_generated_assets':'byte-identical to preceding commit','assisted_judgments_pending':4,'credited_successes_changed':0,'citations_and_inputs_bilingual':'matched','translation_review':'editorial comparison with Portuguese originals; human linguistic review remains pending','scope':'Presentation consistency; run both original scientific verifiers separately.'}
 print(json.dumps(result,indent=2,ensure_ascii=False))

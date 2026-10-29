@@ -27,11 +27,11 @@ Ordem e concordância consideradas conforme informado pelo usuário; todos vincu
 | Ordem | Autor | E-mail |
 |---|---|---|
 | 1 | Hudson Moreira Guimarães dos Santos — correspondente | hudson.moreira@usp.br |
-| 2 | Bruno Cavalcante de Souza Sanches | bruno.csanches@usp.br |
+| 2 | Pablo Cesar Calcina Ccori | Pendente |
 | 3 | Laisa Caroline Costa De Biase | laisa.costa@usp.br |
-| 4 | Roseli de Deus Lopes | roseli.lopes@usp.br |
-| 5 | Marcelo Knörich Zuffo | mkzuffo@usp.br |
-| 6 | Pablo Cesar Calcina Ccori | Pendente |
+| 4 | Bruno Cavalcante de Souza Sanches | bruno.csanches@usp.br |
+| 5 | Roseli de Deus Lopes | roseli.lopes@usp.br |
+| 6 | Marcelo Knörich Zuffo | mkzuffo@usp.br |
 
 Não inventar e-mail para Pablo nem omiti-lo da autoria. Não é necessário pedir nova prova de concordância dos coautores.
 
