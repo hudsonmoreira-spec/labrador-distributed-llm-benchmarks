@@ -27,6 +27,12 @@ for i,(old,new) in enumerate(zip(original,mapped),1):
  require(r'\ref{'+new['latex_label']+'}' in en and r'\ref{'+new['latex_label']+'}' in pt,'Case not referenced')
  require(new['request'] not in en+en_table,'Untranslated Portuguese request in English article')
 require(len(mapped)==len(original)==4,'Example coverage mismatch')
+for text in [en,pt]:
+ pins=re.findall(r'/tree/([0-9a-f]{40})/paper/smarthome_agents/study_v1/editorial_20261029',text)
+ require(len(pins)==1,'Missing immutable editorial supplement link')
+ pinned=subprocess.check_output(['git','show',pins[0]+':'+str((E/'example_mapping.json').relative_to(R))],cwd=R)
+ require(pinned==(E/'example_mapping.json').read_bytes(),'Pinned translation mapping differs')
+
 rows=list(csv.DictReader((R/'experiments/smarthome_agents/analysis/failure-review-20261028/criteria_by_condition.csv').open()))
 keys=['expected_steps','final_state','preservation','no_action','executor_permission','prohibited_steps','clarification']
 for lang in ['en','pt']:
