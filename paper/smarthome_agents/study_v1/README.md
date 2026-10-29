@@ -35,6 +35,10 @@ python3 experiments/smarthome_agents/scripts/verify_submission_artifact.py --out
 O verificador compara os insumos com o snapshot científico imutável e reconstrói as análises em diretório temporário. Os parâmetros opcionais de proveniência do gerador permitem reconstrução sem metadados Git e não modificam medições, avaliação ou critérios.
 
 
+## Revisão editorial atual — 2026-10-29
+
+A versão atual PT/EN responde aos comentários do professor Bruno com nova organização, comparação metodológica com trabalhos relacionados, legendas curtas e tabela de quatro casos nomeados. Ambos os PDFs têm cinco páginas. [Nota de revisão, fontes, traduções e verificações](editorial_20261029/README.md). Resultados e fontes históricas permanecem preservados. A revisão de falhas abaixo documenta a etapa anterior.
+
 ## Revisão de falhas — 2026-10-28
 
 Versões atuais PT/EN: cinco páginas cada, formato IEEE conference US Letter, sem reduzir fontes ou margens. A [diretriz oficial](https://icce.org/2027/submission-guidelines/) permite até seis páginas na submissão inicial; quatro páginas são o limite condicional para a rota de Transactions/periódicos associados. A escolha dessa rota ainda exigiria condensar o texto. A revisão anterior permanece no histórico Git (commit anterior `365847f`); a prévia e o artigo RPC não foram alterados.

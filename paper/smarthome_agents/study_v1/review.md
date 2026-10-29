@@ -30,3 +30,8 @@ O candidato inglês está em `main_en.pdf`; a tradução portuguesa em `main_pt.
 ## Revisão editorial de 2026-10-28 — falhas por requisito
 
 A revisão atual é descrita em [submission/failure-review-20261028.md](submission/failure-review-20261028.md). PT/EN passam a cinco páginas; os registros de quatro páginas acima descrevem a versão de 20/10. Foram incluídos tabela de falhas e quatro exemplos reais, com análise complementar independente das fontes congeladas. Autoria, resultados, dados brutos, critérios, quatro julgamentos assistidos e snapshot científico permanecem preservados. Não houve inferência ou campanha nova. Submissão ICCE/EDAS continua suspensa; a publicação desta revisão no GitHub foi explicitamente solicitada.
+
+
+## Revisão editorial de 2026-10-29 — comentários do professor Bruno
+
+Versões PT/EN reestruturadas em introdução, trabalhos relacionados, método, resultados, discussão e conclusão. Cinco páginas por PDF; exemplos em tabela numerada, traduções sinalizadas no inglês e rótulos ligados aos originais; legendas curtas e denominadores explícitos. [Nota de revisão e conferências](editorial_20261029/README.md). Evidência, critérios, sucessos, autoria e quatro julgamentos assistidos preservados. Versão para apreciação dos autores, sem aprovação presumida ou envio ao ICCE/EDAS.

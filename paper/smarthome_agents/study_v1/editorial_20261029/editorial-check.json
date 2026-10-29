@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "based_on_commit": "f2f566b179fcf3893099d7d1b12b888455e531ae",
+  "cases_mapped_to_original_and_raw_http": 4,
+  "failure_table_cells_checked": 42,
+  "author_block_and_IEEE_format": "preserved",
+  "historical_generated_assets": "byte-identical to preceding commit",
+  "assisted_judgments_pending": 4,
+  "credited_successes_changed": 0,
+  "citations_and_inputs_bilingual": "matched",
+  "translation_review": "editorial comparison with Portuguese originals; human linguistic review remains pending",
+  "scope": "Presentation consistency; run both original scientific verifiers separately."
+}

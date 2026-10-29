@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\caption{Falhas de decisão representativas.}
+\label{tab:cases}
+\centering\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.15\textwidth}>{\raggedright\arraybackslash}p{.26\textwidth}>{\raggedright\arraybackslash}p{.26\textwidth}>{\raggedright\arraybackslash}p{.23\textwidth}@{}}\toprule
+Caso & Pedido e comportamento esperado & Resposta observada & Requisito não atendido\\\midrule
+\refstepcounter{examplecase}\label{case:paraphrase}\theexamplecase. \textbf{Paráfrase não reconhecida}
+& ``Por favor, deixe a luz da sala ligada.'' Ligar \texttt{sala}; preservar \texttt{quarto=on}.
+& Regras: \texttt{no\_action}; motivo ``Pedido fora das regras explícitas.'' A luz solicitada permanece apagada.
+& Passos e estado-alvo corretos; rejeição é indevida para esse pedido válido.\\\addlinespace
+\refstepcounter{examplecase}\label{case:room}\theexamplecase. \textbf{Suposição de cômodo}
+& ``Ligue a luz, por favor.'' Sem localização conhecida; perguntar o cômodo e preservar as luzes.
+& 0.5B: \texttt{set\_light}, \texttt{room=sala}, \texttt{value=on}. Executor bloqueia a proposta; estado inalterado.
+& Ação correta, permissão e ausência de passos proibidos. Bloqueio impede aplicação, mas não corrige a proposta.\\\addlinespace
+\refstepcounter{examplecase}\label{case:clarification}\theexamplecase. \textbf{Esclarecimento não informativo}
+& ``Quero a luz acesa.'' Sem localização conhecida; perguntar o cômodo e preservar as luzes.
+& 0.5B: \texttt{ask\_clarification}, \texttt{missing\_field=room}; \texttt{question}: ``Quero a luz acender.'' Sem mudança de estado.
+& Pergunta informativa, provisoriamente: o julgamento assistido de falha aguarda validação humana.\\\addlinespace
+\refstepcounter{examplecase}\label{case:preservation}\theexamplecase. \textbf{Mudança não solicitada}
+& ``Ligue a luz na sala.'' Ligar \texttt{sala}; preservar \texttt{quarto=on}.
+& 1.5B: \texttt{set\_lights} com \texttt{(sala,on)} e \texttt{(quarto,off)}. Ambos os comandos permitidos e simulados.
+& Passos exatos e preservação. A luz-alvo está correta, mas o quarto também é alterado.\\\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,87 @@
+{
+  "checked_on": "2026-10-29",
+  "format": "IEEEtran conference, US Letter; unchanged fonts and margins",
+  "pdfs": {
+    "en": {
+      "pages": 5,
+      "sha256": "31a3147b54aa54f4f0d4a4ad84754ecaccd75886260f59265bce08a9f37259c8",
+      "page_size_pt": [
+        612,
+        792
+      ],
+      "all_fonts_embedded": true,
+      "type3_fonts": false,
+      "overfull_boxes": false,
+      "undefined_references": false,
+      "external_targets": [
+        "https://aclanthology.org/2025.acl-long.597/",
+        "https://aclanthology.org/2025.acl-long.718/",
+        "https://doi.org/10.1145/3736721",
+        "https://github.com/ggml-org/llama.cpp/blob/e25a32e98c15a1118a976685af0f4d2c1f380079/tools/server/README.md",
+        "https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/a834b8255f736fb59425b146be183c17866a2c7d",
+        "https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/f2f566b179fcf3893099d7d1b12b888455e531ae/experiments/smarthome_agents/analysis/failure-review-20261028",
+        "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/blob/main/qwen2.5-0.5b-instruct-q5_k_m.gguf",
+        "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/blob/main/qwen2.5-1.5b-instruct-q5_k_m.gguf",
+        "https://open.ieee.org/author-guidelines-for-artificial-intelligence-ai-generated-text/"
+      ],
+      "resolved_internal_links": 23,
+      "text_bounds_pt": [
+        48.964,
+        49.042883,
+        563.038042,
+        719.244491
+      ],
+      "named_cases": 4,
+      "table_count": 5,
+      "figure_count": 1,
+      "source_and_mapping_checks": "editorial-check.json"
+    },
+    "pt": {
+      "pages": 5,
+      "sha256": "3b5bd1ae4f90cfa9473cd69a3366a60e834e2e7973addf9027c6387aa8c60df6",
+      "page_size_pt": [
+        612,
+        792
+      ],
+      "all_fonts_embedded": true,
+      "type3_fonts": false,
+      "overfull_boxes": false,
+      "undefined_references": false,
+      "external_targets": [
+        "https://aclanthology.org/2025.acl-long.597/",
+        "https://aclanthology.org/2025.acl-long.718/",
+        "https://doi.org/10.1145/3736721",
+        "https://github.com/ggml-org/llama.cpp/blob/e25a32e98c15a1118a976685af0f4d2c1f380079/tools/server/README.md",
+        "https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/a834b8255f736fb59425b146be183c17866a2c7d",
+        "https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/f2f566b179fcf3893099d7d1b12b888455e531ae/experiments/smarthome_agents/analysis/failure-review-20261028",
+        "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/blob/main/qwen2.5-0.5b-instruct-q5_k_m.gguf",
+        "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+        "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/blob/main/qwen2.5-1.5b-instruct-q5_k_m.gguf",
+        "https://open.ieee.org/author-guidelines-for-artificial-intelligence-ai-generated-text/"
+      ],
+      "resolved_internal_links": 23,
+      "text_bounds_pt": [
+        48.964,
+        49.042883,
+        563.038042,
+        719.244491
+      ],
+      "named_cases": 4,
+      "table_count": 5,
+      "figure_count": 1,
+      "source_and_mapping_checks": "editorial-check.json"
+    }
+  },
+  "visual_review": "All five pages per language rendered and inspected; final changed pages rechecked",
+  "ICCE": {
+    "official_source": "https://icce.org/2027/submission-guidelines/",
+    "initial_max_pages": 6,
+    "journal_route_conditional_max_pages": 4,
+    "eligibility_or_open_deadline_asserted": false
+  },
+  "new_inferences": 0,
+  "submission_to_EDAS": false
+}
