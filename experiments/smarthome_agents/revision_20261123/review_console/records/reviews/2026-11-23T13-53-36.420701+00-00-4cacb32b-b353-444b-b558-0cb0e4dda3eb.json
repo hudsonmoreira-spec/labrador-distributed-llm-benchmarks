@@ -1,0 +1,63 @@
+{
+  "record_id": "4cacb32b-b353-444b-b558-0cb0e4dda3eb",
+  "recorded_at": "2026-11-23T13:53:36.420701+00:00",
+  "kind": "interactive",
+  "id": "cbb434fd-8b83-43ee-aeb6-393d3f43bcd9",
+  "decision": "fail",
+  "reviewer": "Hudson Moreira Guimarães dos Santos",
+  "rationale": "A IA respondeu apenas “quarto”, embora o cômodo já estivesse informado, e não apagou a luz.",
+  "criterion": "A resposta atende ao comando e preserva o que não foi solicitado?",
+  "human_validation_pending": false,
+  "source": {
+    "id": "cbb434fd-8b83-43ee-aeb6-393d3f43bcd9",
+    "source_sha256": "08cbfa949051a76b47a052df9ab37af43c9ddb4047b2e6979ce6f24b6b74078e",
+    "result": {
+      "id": "cbb434fd-8b83-43ee-aeb6-393d3f43bcd9",
+      "type": "new_interactive_test",
+      "created_at": "2026-11-23T13:52:26.047720+00:00",
+      "command": "Apague a luz do quarto.",
+      "model": "05",
+      "host": "192.168.50.85",
+      "elapsed_s": 23.55258446300013,
+      "initial": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": "sala"
+      },
+      "final": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": "sala"
+      },
+      "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"quarto\"}",
+      "answer": "quarto",
+      "valid": true,
+      "completed": true,
+      "action": {
+        "action": "ask_clarification",
+        "missing_field": "room",
+        "question": "quarto"
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "preparation_errors": [],
+      "request_sha256": "fe65a6bf948e24fc877bc70064004cf7073ef1a8c2671639716af290e04e0dcb",
+      "response_sha256": "7312cc02256a402cae7232a5e4d6cf3a702c2dfa4eab38d456f754933066ee07"
+    }
+  },
+  "review_method": "Explicit form submission by the local user; name self-declared"
+}

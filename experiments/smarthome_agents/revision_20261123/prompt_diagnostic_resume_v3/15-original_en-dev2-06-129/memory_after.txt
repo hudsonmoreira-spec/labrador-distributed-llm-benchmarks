@@ -1,0 +1,1 @@
+INSTRUMENTATION ERROR (not inference): TimeoutExpired(['ssh', '-F', '/dev/null', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=6', '-o', 'UserKnownHostsFile=/home/hudymoreira/labrador-distributed-llm-benchmarks/experiments/smarthome_agents/revision_20261123/inventory/known_hosts', 'caninos@192.168.50.129', 'cat /proc/meminfo; cat /proc/loadavg; ps -eo pid,pcpu,rss,comm'], 90)

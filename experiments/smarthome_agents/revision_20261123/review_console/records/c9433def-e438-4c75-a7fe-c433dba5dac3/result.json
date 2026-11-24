@@ -1,0 +1,47 @@
+{
+  "id": "c9433def-e438-4c75-a7fe-c433dba5dac3",
+  "type": "new_interactive_test",
+  "created_at": "2026-11-23T13:50:12.278529+00:00",
+  "command": "Apague a luz do quarto.",
+  "model": "05",
+  "host": "192.168.50.85",
+  "elapsed_s": 23.79323290100001,
+  "initial": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quem está no quarto?\"}",
+  "answer": "Quem está no quarto?",
+  "valid": true,
+  "completed": true,
+  "action": {
+    "action": "ask_clarification",
+    "missing_field": "room",
+    "question": "Quem está no quarto?"
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "preparation_errors": [],
+  "request_sha256": "69c1e624cd19b9cb7f28a85c2db367ace0689d19362c30d5dcc4da50677257a7",
+  "response_sha256": "dc2be461e360cee8bb6673d49f475c3efbf0c0779ae81708b21cfafe91305e78"
+}

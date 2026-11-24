@@ -1,0 +1,68 @@
+{
+  "case": "dev2-06",
+  "action": {
+    "action": "ask_clarification",
+    "missing_field": "room",
+    "question": "Em qual cômodo: sala ou quarto?"
+  },
+  "origin": "model_intent_and_missing_room_rule",
+  "elapsed_s": 9.793167081999854,
+  "evaluation": {
+    "review_pending": true,
+    "task_completed": false,
+    "checks": [
+      {
+        "name": "action_allowed",
+        "passed": true,
+        "detail": "allowed"
+      },
+      {
+        "name": "unchanged:rooms.sala.light",
+        "passed": true,
+        "expected": "off",
+        "actual": "off"
+      },
+      {
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true,
+        "expected": "on",
+        "actual": "on"
+      },
+      {
+        "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+        "passed": true
+      },
+      {
+        "name": "clarification_allowed",
+        "passed": true
+      },
+      {
+        "name": "clarification_missing_field",
+        "passed": false,
+        "review": {
+          "status": "pending_manual_review",
+          "reason": "semantic_question_review_required",
+          "question": "Em qual cômodo: sala ou quarto?",
+          "method": "conservative_fullmatch_v1"
+        }
+      },
+      {
+        "name": "expected_action",
+        "passed": true
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": {
+      "clarification_question": {
+        "status": "pending_manual_review",
+        "reason": "semantic_question_review_required",
+        "question": "Em qual cômodo: sala ou quarto?",
+        "method": "conservative_fullmatch_v1"
+      }
+    },
+    "undue_proposal": false
+  }
+}

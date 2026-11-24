@@ -1,0 +1,190 @@
+MemTotal:        1986400 kB
+MemFree:           61048 kB
+MemAvailable:    1509744 kB
+Buffers:           19796 kB
+Cached:          1480760 kB
+SwapCached:            0 kB
+Active:           957068 kB
+Inactive:         851972 kB
+Active(anon):       2768 kB
+Inactive(anon):   308656 kB
+Active(file):     954300 kB
+Inactive(file):   543316 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               136 kB
+Writeback:             0 kB
+AnonPages:        306572 kB
+Mapped:          1246304 kB
+Shmem:              2940 kB
+KReclaimable:      26060 kB
+Slab:              52440 kB
+SReclaimable:      26060 kB
+SUnreclaim:        26380 kB
+KernelStack:        2656 kB
+PageTables:         7056 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      993200 kB
+Committed_AS:     822672 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:        8428 kB
+VmallocChunk:          0 kB
+Percpu:             1216 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    264192 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:         524288 kB
+CmaFree:           11184 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+4.20 3.63 2.08 1/163 5944
+/sys/class/thermal/thermal_zone0/temp
+113072
+/sys/class/thermal/thermal_zone1/temp
+120519
+/sys/class/thermal/thermal_zone2/temp
+102670
+    PID %CPU   RSS COMMAND
+      1  0.2 12100 systemd
+      2  0.0     0 kthreadd
+      3  0.0     0 rcu_gp
+      4  0.0     0 rcu_par_gp
+      5  0.0     0 slub_flushwq
+      6  0.0     0 netns
+     10  0.0     0 mm_percpu_wq
+     11  0.0     0 rcu_tasks_rude_kthread
+     12  0.0     0 rcu_tasks_trace_kthread
+     13  0.0     0 ksoftirqd/0
+     14  0.0     0 rcu_sched
+     15  0.0     0 migration/0
+     16  0.4     0 kworker/0:1-events
+     17  0.0     0 cpuhp/0
+     18  0.0     0 cpuhp/1
+     19  0.0     0 migration/1
+     20  0.0     0 ksoftirqd/1
+     23  0.0     0 cpuhp/2
+     24  0.0     0 migration/2
+     25  0.0     0 ksoftirqd/2
+     28  0.0     0 cpuhp/3
+     29  0.0     0 migration/3
+     30  0.0     0 ksoftirqd/3
+     33  0.0     0 kdevtmpfs
+     34  0.0     0 inet_frag_wq
+     35  0.0     0 kauditd
+     36  0.0     0 khungtaskd
+     37  0.0     0 oom_reaper
+     39  0.0     0 writeback
+     40  0.0     0 kcompactd0
+     41  0.0     0 khugepaged
+     42  0.0     0 pencrypt_serial
+     44  0.0     0 pdecrypt_serial
+     45  0.0     0 cryptd
+     46  0.0     0 kintegrityd
+     47  0.0     0 kblockd
+     48  0.0     0 blkcg_punt_bio
+     49  0.0     0 devfreq_wq
+     54  0.0     0 kswapd0
+     55  0.0     0 kthrotld
+     60  0.0     0 card0-crtc0
+     62  0.0     0 kworker/u9:0-hci0
+     63  0.0     0 nbd0-recv
+     64  0.0     0 nbd1-recv
+     65  0.0     0 nbd2-recv
+     66  0.0     0 nbd3-recv
+     67  0.0     0 nbd4-recv
+     68  0.0     0 nbd5-recv
+     69  0.0     0 nbd6-recv
+     70  0.0     0 nbd7-recv
+     71  0.0     0 nbd8-recv
+     72  0.0     0 nbd9-recv
+     73  0.0     0 nbd10-recv
+     74  0.0     0 nbd11-recv
+     75  0.0     0 nbd12-recv
+     76  0.0     0 nbd13-recv
+     77  0.0     0 nbd14-recv
+     78  0.0     0 nbd15-recv
+     79  0.0     0 drbd-reissue
+     80  0.0     0 kmemstick
+     82  0.0     0 mmc_complete
+     83  0.0     0 kworker/0:1H-kblockd
+     85  0.0     0 tls-strp
+     86  0.0     0 mld
+     87  0.0     0 ipv6_addrconf
+     98  0.0     0 kstrp
+    100  0.0     0 zswap-shrink
+    200  0.0     0 jbd2/mmcblk2p1-8
+    201  0.0     0 ext4-rsv-conver
+    203  0.0     0 kworker/2:2H-mmc_complete
+    219  0.0     0 kworker/3:2H-mmc_complete
+    233  0.0 15268 systemd-journal
+    260  0.0  5160 systemd-udevd
+    276  0.0  6692 systemd-timesyn
+    338  0.0  2512 cron
+    339  0.1  4136 dbus-daemon
+    341  0.0  6964 polkitd
+    342  0.0  3184 rsyslogd
+    343  0.0  7356 systemd-logind
+    346  0.0     0 cfg80211
+    351  0.0     0 ksdioirqd/mmc1
+    354  0.0     0 stmmac_wq
+    380  0.0 14496 ModemManager
+    385  0.3 23856 NetworkManager
+    389  0.0  3876 sudo
+    393  0.0   784 rtk_hciattach
+    403  0.0  9128 python3
+    407  0.0   728 agetty
+    408  0.0   736 agetty
+    418  0.0  8556 sshd
+    439  0.0     0 RTW_XMIT_THREAD
+    440  0.1     0 RTW_CMD_THREAD
+    441  0.0     0 RTWHALXT
+    445  0.0 10608 wpa_supplicant
+    471  0.0     0 kworker/u9:1-hci0
+    492  0.5 1295036 llama-server
+    493  0.1  2896 verifica_rede_l
+    976  0.2     0 kworker/0:0-events_power_efficient
+   2211  0.0     0 kworker/2:1-cgroup_destroy
+   2296  0.0     0 kworker/1:2-events
+   2461  0.0     0 kworker/1:2H-mmc_complete
+   3260  0.0     0 kworker/u8:3-ext4-rsv-conversion
+   3997  0.0     0 kworker/0:0H-mmc_complete
+   4061  0.0     0 kworker/2:2-mm_percpu_wq
+   4094  0.0     0 kworker/u8:4-events_unbound
+   4324  0.0     0 kworker/0:5-mm_percpu_wq
+   4560  0.2 11240 systemd
+   4561  0.0  5384 (sd-pam)
+   4596  385 1358712 llama-server
+   4803  0.0     0 kworker/3:1-mm_percpu_wq
+   4856  0.0     0 kworker/3:0H-mmc_complete
+   4883  0.0     0 kworker/1:0H-mmc_complete
+   4916  0.0     0 kworker/3:3-events_power_efficient
+   4967  0.0     0 kworker/1:0-cgroup_destroy
+   5078  0.4     0 kworker/0:2-cgroup_destroy
+   5144  0.0     0 kworker/2:1H-mmc_complete
+   5579  0.0     0 kworker/2:0-events
+   5601  0.0     0 kworker/3:1H-mmc_complete
+   5612  0.0     0 kworker/3:0-events_power_efficient
+   5613  0.0     0 kworker/1:1H-mmc_complete
+   5768  0.0     0 kworker/u8:0
+   5769  0.0     0 kworker/0:3-mm_percpu_wq
+   5782  0.0     0 kworker/1:1
+   5783  0.0     0 kworker/0:2H-mmc_complete
+   5933  0.0   780 sleep
+   5934 23.2  9724 sshd
+   5936  0.0     0 kworker/2:0H-mmc_complete
+   5941 10.0  6420 sshd
+   5942  100  4036 ps

@@ -1,0 +1,209 @@
+MemTotal:        1986272 kB
+MemFree:           52424 kB
+MemAvailable:    1568884 kB
+Buffers:           13120 kB
+Cached:          1553732 kB
+SwapCached:            0 kB
+Active:          1280984 kB
+Inactive:         528424 kB
+Active(anon):       2884 kB
+Inactive(anon):   242780 kB
+Active(file):    1278100 kB
+Inactive(file):   285644 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               260 kB
+Writeback:             0 kB
+AnonPages:        240756 kB
+Mapped:          1314604 kB
+Shmem:              3068 kB
+KReclaimable:      29336 kB
+Slab:              57848 kB
+SReclaimable:      29336 kB
+SUnreclaim:        28512 kB
+KernelStack:        3152 kB
+PageTables:         7796 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      993136 kB
+Committed_AS:     937268 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:        9696 kB
+VmallocChunk:          0 kB
+Percpu:             1408 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    143360 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:         524288 kB
+CmaFree:           24100 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+2.40 2.39 2.13 3/194 4946
+/sys/class/thermal/thermal_zone0/temp
+81645
+/sys/class/thermal/thermal_zone1/temp
+73447
+/sys/class/thermal/thermal_zone2/temp
+73832
+    PID %CPU   RSS COMMAND
+      1  0.3 12228 systemd
+      2  0.0     0 kthreadd
+      3  0.0     0 rcu_gp
+      4  0.0     0 rcu_par_gp
+      5  0.0     0 slub_flushwq
+      6  0.0     0 netns
+      7  0.0     0 kworker/0:0-mm_percpu_wq
+      9  0.0     0 kworker/u8:0-ext4-rsv-conversion
+     10  0.0     0 mm_percpu_wq
+     11  0.0     0 rcu_tasks_rude_kthread
+     12  0.0     0 rcu_tasks_trace_kthread
+     13  0.1     0 ksoftirqd/0
+     14  0.0     0 rcu_sched
+     15  0.0     0 migration/0
+     17  0.0     0 cpuhp/0
+     18  0.0     0 cpuhp/1
+     19  0.0     0 migration/1
+     20  0.0     0 ksoftirqd/1
+     23  0.0     0 cpuhp/2
+     24  0.0     0 migration/2
+     25  0.0     0 ksoftirqd/2
+     28  0.0     0 cpuhp/3
+     29  0.0     0 migration/3
+     30  0.0     0 ksoftirqd/3
+     33  0.0     0 kdevtmpfs
+     34  0.0     0 inet_frag_wq
+     35  0.0     0 kauditd
+     36  0.0     0 khungtaskd
+     37  0.0     0 oom_reaper
+     39  0.0     0 writeback
+     40  0.0     0 kcompactd0
+     41  0.0     0 khugepaged
+     42  0.0     0 pencrypt_serial
+     43  0.0     0 kworker/1:1+events
+     44  0.0     0 pdecrypt_serial
+     45  0.0     0 cryptd
+     46  0.0     0 kintegrityd
+     47  0.0     0 kblockd
+     48  0.0     0 blkcg_punt_bio
+     49  0.0     0 devfreq_wq
+     51  0.0     0 kworker/1:1H-mmc_complete
+     53  0.0     0 kswapd0
+     54  0.0     0 kthrotld
+     58  0.0     0 card0-crtc0
+     59  0.0     0 kworker/2:1+events
+     61  0.0     0 kworker/u9:0+hci0
+     62  0.0     0 nbd0-recv
+     63  0.0     0 nbd1-recv
+     64  0.0     0 nbd2-recv
+     65  0.0     0 nbd3-recv
+     66  0.0     0 nbd4-recv
+     67  0.0     0 nbd5-recv
+     68  0.0     0 nbd6-recv
+     69  0.0     0 nbd7-recv
+     70  0.0     0 nbd8-recv
+     71  0.0     0 nbd9-recv
+     72  0.0     0 nbd10-recv
+     73  0.0     0 nbd11-recv
+     74  0.0     0 nbd12-recv
+     75  0.0     0 nbd13-recv
+     76  0.0     0 nbd14-recv
+     77  0.0     0 nbd15-recv
+     78  0.0     0 drbd-reissue
+     80  0.0     0 kmemstick
+     82  0.3     0 kworker/1:4-events
+     83  0.0     0 mmc_complete
+     86  0.0     0 tls-strp
+     87  0.0     0 mld
+     88  0.0     0 ipv6_addrconf
+     99  0.0     0 kstrp
+    101  0.0     0 zswap-shrink
+    200  0.0     0 jbd2/mmcblk2p1-8
+    201  0.0     0 ext4-rsv-conver
+    236  0.0 14916 systemd-journal
+    260  0.0  5856 systemd-udevd
+    267  0.0  6868 systemd-timesyn
+    346  0.2  3340 avahi-daemon
+    348  0.0  2520 cron
+    349  0.1  4484 dbus-daemon
+    351  0.0 10628 polkitd
+    352  0.0  3192 rsyslogd
+    353  0.0  7080 systemd-logind
+    365  0.0   308 avahi-daemon
+    367  0.0     0 cfg80211
+    376  0.0     0 stmmac_wq
+    377  0.3     0 ksdioirqd/mmc1
+    404  0.0  3940 sudo
+    408  0.0   788 rtk_hciattach
+    411  0.0 12572 ModemManager
+    412  0.4 21772 NetworkManager
+    438  0.0   764 agetty
+    440  0.0   764 agetty
+    443  0.0 14508 colord
+    444  0.0  8652 sshd
+    476  0.0     0 RTW_XMIT_THREAD
+    477  0.0     0 RTW_CMD_THREAD
+    478  0.0     0 RTWHALXT
+    483  0.0 10352 wpa_supplicant
+    510  0.0     0 kworker/u9:1-hci0
+    512  0.0  5624 bluetoothd
+    644  0.0  7620 cupsd
+    662  0.0 15960 cups-browsed
+    663  0.7 1353116 llama-server
+    664  0.1  2836 verifica_rede_l
+    688  0.0  4684 dbus
+   1096  0.0     0 kworker/2:2-cgroup_destroy
+   1198  0.0     0 kworker/3:0-cgroup_destroy
+   1618  0.0     0 kworker/3:2H-mmc_complete
+   2146  0.0     0 kworker/0:1H-mmc_complete
+   2289  0.4     0 kworker/1:3-events_power_efficient
+   2290  0.0     0 kworker/2:1H-mmc_complete
+   2357  0.0     0 kworker/3:2-events
+   2701  0.0     0 kworker/u8:3-writeback
+   3362  0.0     0 kworker/3:1H-mmc_complete
+   3383  0.0     0 kworker/1:2H-mmc_complete
+   3423  0.0     0 kworker/0:2H-mmc_complete
+   3715  0.0     0 kworker/2:0-events_power_efficient
+   3789  0.0     0 kworker/u8:2-events_unbound
+   3790  0.0     0 kworker/2:0H-mmc_complete
+   3881  0.0     0 kworker/1:0-mm_percpu_wq
+   3882  0.0     0 kworker/1:5-mm_percpu_wq
+   3973  0.0     0 kworker/0:1-mm_percpu_wq
+   4235  0.0     0 kworker/3:0H-mmc_complete
+   4237  0.0     0 kworker/0:0H-mmc_complete
+   4251  0.0     0 kworker/1:0H-mmc_complete
+   4257  0.0  1552 rtkit-daemon
+   4274  0.0     0 kworker/3:1-events
+   4311  0.0     0 kworker/3:3
+   4383  0.0     0 kworker/2:3-mm_percpu_wq
+   4532  0.0     0 kworker/2:2H-mmc_complete
+   4563  0.0     0 krfcommd
+   4564  0.0     0 kworker/u9:2
+   4566  0.0     0 kworker/u8:1-flush-179:0
+   4704  0.0     0 kworker/0:2-events
+   4838 14.4 11372 systemd
+   4839  0.0  5536 (sd-pam)
+   4854  1.1  5580 pipewire
+   4855  4.5 13788 wireplumber
+   4856  1.0  6180 pipewire-pulse
+   4861  0.4  1972 dbus-daemon
+   4892  0.0     0 kworker/u8:4-writeback
+   4893  0.0     0 kworker/u8:5-flush-179:0
+   4904  118 1335880 llama-server
+   4913  0.0     0 kworker/u8:6
+   4936  0.0   780 sleep
+   4937 22.9  9772 sshd
+   4943  9.0  6644 sshd
+   4944 83.3  4036 ps

@@ -1,0 +1,50 @@
+{
+  "id": "03a44a8a-e528-4cdf-8d13-6a86e954a01f",
+  "type": "new_interactive_test",
+  "created_at": "2026-11-23T17:11:28.170249+00:00",
+  "command": "Apague a luz do quarto.",
+  "model": "15_pc_original",
+  "host": "pc_original",
+  "elapsed_s": 6.831216507001955,
+  "initial": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "response": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}",
+  "answer": "A IA decidiu não agir. Motivo informado: Unsupported request",
+  "valid": true,
+  "completed": true,
+  "action": {
+    "action": "no_action",
+    "reason": "Unsupported request"
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "preparation_errors": [],
+  "configuration": "original_pc_v1",
+  "machine": "Notebook local (x86-64)",
+  "origin": "model_action",
+  "raw_model_content": [],
+  "request_sha256": "69c1e624cd19b9cb7f28a85c2db367ace0689d19362c30d5dcc4da50677257a7",
+  "response_sha256": "d7a860cd7fe42d83c337f163dd2c0411500b6758eb0cff07594e8ed5580eb7e8"
+}

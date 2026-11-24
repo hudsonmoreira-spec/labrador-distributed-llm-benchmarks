@@ -1,0 +1,68 @@
+{
+  "record_id": "2a2d214a-2b6d-4eea-8aa3-b9eff74b71be",
+  "recorded_at": "2026-11-24T21:04:23.756312+00:00",
+  "kind": "interactive",
+  "id": "74da7c2d-d5ca-44d2-a8bb-ff342b53cea1",
+  "decision": "fail",
+  "reviewer": "Hudson Moreira Guimarães dos Santos",
+  "rationale": "A IA escolheu a sala sem informação suficiente. Deveria perguntar qual cômodo. A ação foi bloqueada pelo simulador.",
+  "criterion": "A resposta atende ao comando e preserva o que não foi solicitado?",
+  "human_validation_pending": false,
+  "source": {
+    "id": "74da7c2d-d5ca-44d2-a8bb-ff342b53cea1",
+    "source_sha256": "5f7470b1856411dd76dbecebbb168305e82e9478377a10991d1c4b70ecff74ef",
+    "result": {
+      "id": "74da7c2d-d5ca-44d2-a8bb-ff342b53cea1",
+      "type": "new_interactive_test",
+      "created_at": "2026-11-24T21:01:44.154058+00:00",
+      "command": "Acenda a luz.",
+      "model": "05",
+      "host": "192.168.50.85",
+      "elapsed_s": 20.44112269100151,
+      "initial": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "final": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "response": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}",
+      "answer": "Acender a luz da sala.",
+      "valid": true,
+      "completed": true,
+      "action": {
+        "action": "set_light",
+        "room": "sala",
+        "value": "on"
+      },
+      "permission": {
+        "allowed": false,
+        "reason": "insufficient_room_information",
+        "policy": "room_evidence_v1"
+      },
+      "preparation_errors": [],
+      "configuration": "original_action_v1",
+      "machine": "Labrador 192.168.50.85",
+      "origin": "model_action",
+      "raw_model_content": [],
+      "request_sha256": "f3ccbc2534fc1089fbf2b87d2dbfd48e9b4358ca8945c2c8e847303369f6a246",
+      "response_sha256": "0b8236a76f7093bbb9b344f6e95eb95bd883fdc220f4ca4c37df350ee5f983eb"
+    }
+  },
+  "review_method": "Explicit form submission by the local user; name self-declared"
+}

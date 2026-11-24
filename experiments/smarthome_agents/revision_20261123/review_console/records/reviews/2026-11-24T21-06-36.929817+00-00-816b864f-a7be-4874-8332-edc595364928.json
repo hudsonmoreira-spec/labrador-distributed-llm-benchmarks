@@ -1,0 +1,67 @@
+{
+  "record_id": "816b864f-a7be-4874-8332-edc595364928",
+  "recorded_at": "2026-11-24T21:06:36.929817+00:00",
+  "kind": "interactive",
+  "id": "e5c6f047-0a77-4263-b111-d2980c002de6",
+  "decision": "pass",
+  "reviewer": "Hudson Moreira Guimarães dos Santos",
+  "rationale": "A IA utilizou corretamente a localização do morador e acendeu apenas a luz do quarto.",
+  "criterion": "A resposta atende ao comando e preserva o que não foi solicitado?",
+  "human_validation_pending": false,
+  "source": {
+    "id": "e5c6f047-0a77-4263-b111-d2980c002de6",
+    "source_sha256": "afa46db8430a0d94108382e4e51ac745d4123904e8d5b781c63fe596c815986c",
+    "result": {
+      "id": "e5c6f047-0a77-4263-b111-d2980c002de6",
+      "type": "new_interactive_test",
+      "created_at": "2026-11-24T21:05:40.671767+00:00",
+      "command": "Acenda a luz.",
+      "model": "05",
+      "host": "192.168.50.85",
+      "elapsed_s": 20.36806153100042,
+      "initial": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": "quarto"
+      },
+      "final": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": "quarto"
+      },
+      "response": "{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}",
+      "answer": "Acender a luz do quarto.",
+      "valid": true,
+      "completed": true,
+      "action": {
+        "action": "set_light",
+        "room": "quarto",
+        "value": "on"
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "preparation_errors": [],
+      "configuration": "original_action_v1",
+      "machine": "Labrador 192.168.50.85",
+      "origin": "model_action",
+      "raw_model_content": [],
+      "request_sha256": "555ec1e73c2113d427edd7c5e7ce74b2292b24af1de970994366042c250ee343",
+      "response_sha256": "d3887a3e80882d065a6fc667e41ad38e367611f4235f3aca4fabdd28c847f9ba"
+    }
+  },
+  "review_method": "Explicit form submission by the local user; name self-declared"
+}

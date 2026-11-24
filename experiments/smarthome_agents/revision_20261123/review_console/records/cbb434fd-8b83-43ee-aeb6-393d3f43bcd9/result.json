@@ -1,0 +1,47 @@
+{
+  "id": "cbb434fd-8b83-43ee-aeb6-393d3f43bcd9",
+  "type": "new_interactive_test",
+  "created_at": "2026-11-23T13:52:26.047720+00:00",
+  "command": "Apague a luz do quarto.",
+  "model": "05",
+  "host": "192.168.50.85",
+  "elapsed_s": 23.55258446300013,
+  "initial": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": "sala"
+  },
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": "sala"
+  },
+  "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"quarto\"}",
+  "answer": "quarto",
+  "valid": true,
+  "completed": true,
+  "action": {
+    "action": "ask_clarification",
+    "missing_field": "room",
+    "question": "quarto"
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "preparation_errors": [],
+  "request_sha256": "fe65a6bf948e24fc877bc70064004cf7073ef1a8c2671639716af290e04e0dcb",
+  "response_sha256": "7312cc02256a402cae7232a5e4d6cf3a702c2dfa4eab38d456f754933066ee07"
+}

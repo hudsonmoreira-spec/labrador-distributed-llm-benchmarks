@@ -1,0 +1,5 @@
+/home/caninos/llama-offline/llama.cpp/tools/server/server-task.cpp:384:    // process "json_schema" and "grammar"
+/home/caninos/llama-offline/llama.cpp/tools/server/server-task.cpp:385:    if (data.contains("json_schema") && !data.contains("grammar")) {
+/home/caninos/llama-offline/llama.cpp/tools/server/server-task.cpp:389:            std::string grammar_str      = json_schema_to_grammar(schema);
+/home/caninos/llama-offline/llama.cpp/tools/server/server-common.cpp:941:    if (!json_schema.is_null() && !grammar.empty()) {
+/home/caninos/llama-offline/llama.cpp/tools/server/server-common.cpp:942:        throw std::runtime_error("Cannot use both json_schema and grammar");

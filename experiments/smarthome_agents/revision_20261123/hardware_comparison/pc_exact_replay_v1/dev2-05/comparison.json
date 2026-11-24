@@ -1,0 +1,57 @@
+{
+  "scenario_id": "dev2-05",
+  "command": "Acenda a luz da sala e apague a luz do quarto.",
+  "sbc_host": "192.168.50.89",
+  "sbc_response": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+  "pc_response": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+  "identical_text": true,
+  "identical_json": true,
+  "sbc_success": true,
+  "pc_success": true,
+  "sbc_s": 80.84374224300063,
+  "pc_s": 9.622616126001958,
+  "request_sha256": "dc2168b57f0042f0c59132958f6da4add2375896e075ac4ce1b795b11af52f89",
+  "pc_completed": true,
+  "pc_valid": true,
+  "pc_evaluation": {
+    "review_pending": false,
+    "task_completed": true,
+    "checks": [
+      {
+        "name": "action_allowed",
+        "passed": true,
+        "detail": "allowed"
+      },
+      {
+        "name": "final:rooms.sala.light",
+        "passed": true,
+        "expected": "on",
+        "actual": "on"
+      },
+      {
+        "name": "final:rooms.quarto.light",
+        "passed": true,
+        "expected": "off",
+        "actual": "off"
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": true
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "undue_proposal": false
+  },
+  "usage": {
+    "completion_tokens": 41,
+    "prompt_tokens": 133,
+    "total_tokens": 174,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

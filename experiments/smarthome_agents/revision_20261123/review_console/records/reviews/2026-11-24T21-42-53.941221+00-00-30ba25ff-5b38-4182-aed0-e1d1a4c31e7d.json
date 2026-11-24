@@ -1,0 +1,31 @@
+{
+  "record_id": "30ba25ff-5b38-4182-aed0-e1d1a4c31e7d",
+  "recorded_at": "2026-11-24T21:42:53.941221+00:00",
+  "kind": "original",
+  "id": "0",
+  "decision": "fail",
+  "reviewer": "Hudson Moreira Guimarães dos Santos",
+  "rationale": "A resposta apenas reformula o pedido e não pergunta qual cômodo deve ter a luz acesa.",
+  "criterion": "A resposta solicita explicitamente o cômodo ausente?",
+  "human_validation_pending": false,
+  "source": {
+    "id": "0",
+    "command": "Quero a luz acesa.",
+    "initial": {
+      "lights": {
+        "sala": "off",
+        "quarto": "on"
+      },
+      "location": null
+    },
+    "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quero a luz acender.\"}",
+    "question": "Quero a luz acender.",
+    "host": "192.168.50.240",
+    "elapsed_s": 35.59349480603123,
+    "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep1-240/summary.json",
+    "source_sha256": "170766421f35dfae77682337a2f48969791ce617d9c5f571f82ffa094176dec8",
+    "request_sha256": "cb01c1fd6260504a70157b64176a2ae2df6fef170b796872f65020b159b52c79",
+    "ledger_sha256": "1c1247114f1714727758a18cd6bcc8471b20c09d109512e49af79ac6178ee194"
+  },
+  "review_method": "Explicit form submission by the local user; name self-declared"
+}

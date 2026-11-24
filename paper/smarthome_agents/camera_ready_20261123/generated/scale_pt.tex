@@ -1,0 +1,3 @@
+O CSV de lotes preserva cada janela, taxa de tarefas corretas e taxa de respostas separadamente. A Tabela~\ref{tab:scale} agrupa doze requisições por condição/tamanho para latência e calcula a média de duas taxas de lote; os intervalos permanecem no resumo legível por máquina.
+
+No 0.5B, as médias de respostas corretas às tarefas foram 0.871, 2.883 e 6.393/min com uma, três e seis réplicas; no 1.5B, 0.085, 0.289 e 0.661/min. Cada lote de seis pedidos manteve três tarefas corretas no 0.5B, uma no 1.5B e cinco nas regras. A taxa das regras em seis réplicas reflete janela de respostas de cerca de 9--11 ms e ausência dos intervalos de instrumentação entre ondas; não deve ser interpretada como capacidade sustentada medida.

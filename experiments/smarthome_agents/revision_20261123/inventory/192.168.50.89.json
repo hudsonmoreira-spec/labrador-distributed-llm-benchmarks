@@ -1,0 +1,52 @@
+{
+  "hostname": "lab2",
+  "machine_id": "11b02da9cc614528b947d24bad602e6d",
+  "arch": "aarch64",
+  "kernel": "6.1.76",
+  "model": "Caninos Labrador 7 (Base 2.1)",
+  "macs": {
+    "end0": "ea:0e:48:7f:0c:1b",
+    "ip6tnl0": "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00",
+    "lo": "00:00:00:00:00:00",
+    "tunl0": "00:00:00:00",
+    "wlan0": "14:6b:9c:7c:06:0e"
+  },
+  "models": [
+    {
+      "path": "/home/caninos/models/Qwen3-0.6B-Q8_0.gguf",
+      "size": 639446688
+    },
+    {
+      "path": "/home/caninos/models/qwen2.5-1.5b-instruct-q5_k_m.gguf",
+      "size": 1285494304
+    },
+    {
+      "path": "/home/caninos/models/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+      "size": 491400032
+    },
+    {
+      "path": "/home/caninos/models/qwen2.5-0.5b-instruct-q5_k_m.gguf",
+      "size": 522186592
+    },
+    {
+      "path": "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf",
+      "size": 1285494304
+    },
+    {
+      "path": "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf",
+      "size": 522186592
+    }
+  ],
+  "original_study_present": true,
+  "runtime": "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server",
+  "runtime_exists": true,
+  "memory": [
+    "MemTotal:        1986400 kB",
+    "MemFree:          294232 kB",
+    "MemAvailable:    1641132 kB"
+  ],
+  "uptime": "1984.52 7750.68",
+  "model_processes": "650 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none\n",
+  "ports": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      128          0.0.0.0:22        0.0.0.0:*          \nLISTEN 0      512          0.0.0.0:8080      0.0.0.0:*          \nLISTEN 0      128             [::]:22           [::]:*          \nLISTEN 0      511                *:80              *:*          \n",
+  "ip": "192.168.50.89"
+}

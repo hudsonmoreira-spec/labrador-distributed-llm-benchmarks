@@ -1,0 +1,13 @@
+{
+  "id": "plain_question",
+  "content": "A capital do Brasil é Brasília.",
+  "elapsed_s": 3.1884701479993964,
+  "usage": {
+    "completion_tokens": 9,
+    "prompt_tokens": 43,
+    "total_tokens": 52,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

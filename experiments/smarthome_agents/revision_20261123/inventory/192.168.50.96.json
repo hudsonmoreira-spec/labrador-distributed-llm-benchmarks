@@ -1,0 +1,4 @@
+{
+  "error": "Warning: Permanently added '192.168.50.96' (ED25519) to the list of known hosts.\ncaninos@192.168.50.96: Permission denied (publickey,password).\n",
+  "ip": "192.168.50.96"
+}

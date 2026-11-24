@@ -1,0 +1,145 @@
+{
+  "at": "2026-11-23T14:01:53.026736+00:00",
+  "purpose": "Exploratory tuning; not original scientific evaluation",
+  "hosts": [
+    "192.168.50.89",
+    "192.168.50.169"
+  ],
+  "cases": [
+    {
+      "scenario_id": "dev2-02",
+      "category": "clear",
+      "resident_request": "Apague a luz do quarto.",
+      "initial_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permissions": {
+        "set_light": {
+          "rooms": [
+            "sala",
+            "quarto"
+          ],
+          "values": [
+            "on",
+            "off"
+          ]
+        }
+      },
+      "evaluator": {
+        "final_state_equals": {
+          "rooms.quarto.light": "off"
+        },
+        "unchanged": [
+          "rooms.sala.light"
+        ],
+        "prohibited_actions": [],
+        "clarification_is_success": false,
+        "no_action_is_success": false,
+        "missing_fields": [],
+        "expected_steps": [
+          {
+            "action": "set_light",
+            "room": "quarto",
+            "value": "off"
+          }
+        ],
+        "expected_action": "set_light"
+      }
+    },
+    {
+      "scenario_id": "dev2-06",
+      "category": "ambiguity",
+      "resident_request": "Acenda a luz.",
+      "initial_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permissions": {
+        "set_light": {
+          "rooms": [
+            "sala",
+            "quarto"
+          ],
+          "values": [
+            "on",
+            "off"
+          ]
+        }
+      },
+      "evaluator": {
+        "final_state_equals": {},
+        "unchanged": [
+          "rooms.sala.light",
+          "rooms.quarto.light"
+        ],
+        "prohibited_actions": [
+          {
+            "action": "set_light",
+            "room": "*",
+            "value": "*"
+          }
+        ],
+        "clarification_is_success": true,
+        "no_action_is_success": false,
+        "missing_fields": [
+          "room"
+        ],
+        "expected_action": "ask_clarification"
+      }
+    }
+  ],
+  "system": "Você interpreta comandos de luz para sala e quarto. Responda somente JSON. Use o cômodo citado no pedido, mesmo se a pessoa estiver em outro cômodo. Se o pedido não citar cômodo, use a localização conhecida; se for desconhecida, pergunte em qual cômodo. Não pergunte quem está no cômodo. Nunca altere luz que não foi solicitada. Acender/ligar usa value on; apagar/desligar usa value off. Uma luz: {\"action\":\"set_light\",\"room\":\"sala ou quarto\",\"value\":\"on ou off\"}. Duas luzes: {\"action\":\"set_lights\",\"steps\":[ações set_light]}. Sem cômodo: {\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Em qual cômodo?\"}. Pedido fora de luzes: {\"action\":\"no_action\",\"reason\":\"Dispositivo não suportado\"}.",
+  "examples": [
+    {
+      "role": "user",
+      "content": "Ligue a iluminação da sala.\nLocalização conhecida: quarto."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}"
+    },
+    {
+      "role": "user",
+      "content": "Desligue a iluminação do quarto.\nLocalização: desconhecida."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}"
+    },
+    {
+      "role": "user",
+      "content": "Apague a luz.\nLocalização: desconhecida."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Em qual cômodo?\"}"
+    }
+  ],
+  "context": 1024,
+  "runtime": "b9584-e25a32e98",
+  "model_sha256": "b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c",
+  "changes": [
+    "Portuguese instructions",
+    "three demonstrations",
+    "omit light states in language interpretation; executor still uses full state",
+    "context1024"
+  ],
+  "seed": 801,
+  "temperature": 0,
+  "max_tokens": 128
+}

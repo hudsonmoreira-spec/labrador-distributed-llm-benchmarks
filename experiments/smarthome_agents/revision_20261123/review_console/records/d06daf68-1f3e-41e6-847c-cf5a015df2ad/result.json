@@ -1,0 +1,53 @@
+{
+  "id": "d06daf68-1f3e-41e6-847c-cf5a015df2ad",
+  "type": "new_interactive_test",
+  "created_at": "2026-11-23T14:12:39.889032+00:00",
+  "command": "Apague a luz do quarto.",
+  "model": "15_hybrid",
+  "host": "127.0.0.1",
+  "elapsed_s": 7.960735083000145,
+  "initial": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "off"
+      }
+    },
+    "known_location": null
+  },
+  "response": "{\"action\": \"set_light\", \"room\": \"quarto\", \"value\": \"off\"}",
+  "answer": "Apagar a luz do quarto.",
+  "valid": true,
+  "completed": true,
+  "action": {
+    "action": "set_light",
+    "room": "quarto",
+    "value": "off"
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "preparation_errors": [],
+  "configuration": "hybrid_intent_v2",
+  "machine": "Notebook local (x86-64)",
+  "origin": "model_intent_and_rules",
+  "raw_model_content": [
+    "{\"intent\":\"off\"}"
+  ],
+  "request_sha256": "998873f136c3977913ded5405e74ac92e1540612c852837002ce5d8c17cd0779",
+  "response_sha256": "46432edb3b310f202410009310fe8555799a6c3bfb089d547db4cbb6385ccc5c"
+}

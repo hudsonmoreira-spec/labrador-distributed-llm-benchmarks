@@ -1,0 +1,48 @@
+{
+  "id": "6820ee02-ae5c-496c-befd-ed5d6bc5d6c4",
+  "type": "new_interactive_test",
+  "created_at": "2026-11-23T13:37:31.363434+00:00",
+  "command": "Acenda a luz.",
+  "model": "05",
+  "host": "192.168.50.85",
+  "elapsed_s": 20.196846187999654,
+  "initial": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "response": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}",
+  "answer": "Acender a luz da sala.",
+  "valid": true,
+  "completed": true,
+  "action": {
+    "action": "set_light",
+    "room": "sala",
+    "value": "on"
+  },
+  "permission": {
+    "allowed": false,
+    "reason": "insufficient_room_information",
+    "policy": "room_evidence_v1"
+  },
+  "preparation_errors": [],
+  "request_sha256": "c563ba398190e3a5d82e15573e38226c6c03dfc02d40c9728e5b310254534477",
+  "response_sha256": "1b0a4cc429be524b4fd3a14ec54481c623f79d82f5f663058834dcfc47e37361"
+}

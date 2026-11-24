@@ -1,0 +1,2354 @@
+{
+  "created_at": "2026-11-23T13:22:25.389568+00:00",
+  "scope": "Exploratory development-only, eight pre-existing cases, one repetition; not reserved-set scores",
+  "conditions": {
+    "original_en": {
+      "attempts": 8,
+      "task_successes": 1,
+      "review_pending": 0,
+      "structured_valid": 8,
+      "median_s": 78.48427723300006,
+      "clear_successes": 0,
+      "clear_attempts": 3,
+      "prompt_tokens_range": [
+        123,
+        133
+      ]
+    },
+    "pt_zero_shot": {
+      "attempts": 8,
+      "task_successes": 3,
+      "review_pending": 0,
+      "structured_valid": 8,
+      "median_s": 93.248168631,
+      "clear_successes": 2,
+      "clear_attempts": 3,
+      "prompt_tokens_range": [
+        160,
+        170
+      ]
+    },
+    "pt_two_examples": {
+      "attempts": 8,
+      "task_successes": 4,
+      "review_pending": 0,
+      "structured_valid": 8,
+      "median_s": 124.03725474549992,
+      "clear_successes": 3,
+      "clear_attempts": 3,
+      "prompt_tokens_range": [
+        272,
+        282
+      ]
+    }
+  },
+  "completed": 24,
+  "instrumentation": "18 original records retained; six remaining requests resumed after memory snapshot timeouts. Lab8 became unreachable; its three remaining requests reassigned to lab2 with identical audited runtime/model hashes. No completed inference replaced. SSH memory errors not graded as inference failures.",
+  "attempts": [
+    {
+      "host": "192.168.50.129",
+      "variant": "original_en",
+      "scenario_id": "dev2-01",
+      "category": "clear",
+      "elapsed_s": 79.61581156600005,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.sala.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": false,
+            "expected": "on",
+            "actual": "off"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 125,
+        "prompt_ms": 52834.228,
+        "prompt_per_token_ms": 422.673824,
+        "prompt_per_second": 2.365890535960893,
+        "predicted_n": 41,
+        "predicted_ms": 26706.484,
+        "predicted_per_token_ms": 651.3776585365854,
+        "predicted_per_second": 1.535207704615853
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 125,
+        "total_tokens": 166,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:04:28.589277+00:00",
+      "record_path": "prompt_diagnostic_v1/00-original_en-dev2-01-129/summary.json",
+      "record_sha256": "6ccc052e64ec7992d3ca19d31fb017cea491ae93bd84809725284244b2c0810f"
+    },
+    {
+      "host": "192.168.50.89",
+      "variant": "pt_zero_shot",
+      "scenario_id": "dev2-01",
+      "category": "clear",
+      "elapsed_s": 93.69432843300001,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.sala.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": false,
+            "expected": "on",
+            "actual": "off"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 162,
+        "prompt_ms": 67539.656,
+        "prompt_per_token_ms": 416.91145679012345,
+        "prompt_per_second": 2.398590836767069,
+        "predicted_n": 41,
+        "predicted_ms": 26072.97,
+        "predicted_per_token_ms": 635.9260975609757,
+        "predicted_per_second": 1.5725097677786612
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 162,
+        "total_tokens": 203,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:04:42.690811+00:00",
+      "record_path": "prompt_diagnostic_v1/01-pt_zero_shot-dev2-01-89/summary.json",
+      "record_sha256": "dd6c5b28c72d407c9409feb6e180d16d80e359d2a35ecb4f619e67c064369b91"
+    },
+    {
+      "host": "192.168.50.169",
+      "variant": "pt_two_examples",
+      "scenario_id": "dev2-01",
+      "category": "clear",
+      "elapsed_s": 123.88398118899977,
+      "error": null,
+      "model_content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_light",
+          "room": "sala",
+          "value": "on"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": true,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.sala.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": true
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 274,
+        "prompt_ms": 113904.051,
+        "prompt_per_token_ms": 415.7082153284672,
+        "prompt_per_second": 2.4055334081138167,
+        "predicted_n": 16,
+        "predicted_ms": 9897.428,
+        "predicted_per_token_ms": 618.58925,
+        "predicted_per_second": 1.6165816007956815
+      },
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 274,
+        "total_tokens": 290,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:05:12.792647+00:00",
+      "record_path": "prompt_diagnostic_v1/02-pt_two_examples-dev2-01-169/summary.json",
+      "record_sha256": "a1c7459c4df7c95117165b751f4f768a0c15d9e2341fd7a6a65007e2508e5ca7"
+    },
+    {
+      "host": "192.168.50.89",
+      "variant": "original_en",
+      "scenario_id": "dev2-02",
+      "category": "clear",
+      "elapsed_s": 60.12460682600022,
+      "error": null,
+      "model_content": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "no_action",
+          "reason": "Unsupported request"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.quarto.light",
+            "passed": false,
+            "expected": "off",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "no_action_policy",
+            "passed": false
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 126,
+        "prompt_ms": 52638.984,
+        "prompt_per_token_ms": 417.76971428571426,
+        "prompt_per_second": 2.393663221159436,
+        "predicted_n": 12,
+        "predicted_ms": 7411.234,
+        "predicted_per_token_ms": 617.6028333333334,
+        "predicted_per_second": 1.6191635562984517
+      },
+      "usage": {
+        "completion_tokens": 12,
+        "prompt_tokens": 126,
+        "total_tokens": 138,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:05:43.845535+00:00",
+      "record_path": "prompt_diagnostic_v1/03-original_en-dev2-02-89/summary.json",
+      "record_sha256": "3b3ec2243595bac271746ac885d855bbe729432b045f01b2b2446286136cf3c7"
+    },
+    {
+      "host": "192.168.50.169",
+      "variant": "pt_zero_shot",
+      "scenario_id": "dev2-02",
+      "category": "clear",
+      "elapsed_s": 86.02858887999992,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": true,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.quarto.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": true
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 163,
+        "prompt_ms": 68512.721,
+        "prompt_per_token_ms": 420.32344171779147,
+        "prompt_per_second": 2.379120222067957,
+        "predicted_n": 27,
+        "predicted_ms": 17426.909,
+        "predicted_per_token_ms": 645.4410740740741,
+        "predicted_per_second": 1.549328110911694
+      },
+      "usage": {
+        "completion_tokens": 27,
+        "prompt_tokens": 163,
+        "total_tokens": 190,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:06:40.066189+00:00",
+      "record_path": "prompt_diagnostic_v1/04-pt_zero_shot-dev2-02-169/summary.json",
+      "record_sha256": "efb33a96b50c939b511d5189cc94987b6640d1719d857d3627b3659498cc4d48"
+    },
+    {
+      "host": "192.168.50.240",
+      "variant": "pt_two_examples",
+      "scenario_id": "dev2-02",
+      "category": "clear",
+      "elapsed_s": 124.12571248099994,
+      "error": null,
+      "model_content": "{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_light",
+          "room": "quarto",
+          "value": "off"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": true,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.quarto.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": true
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 275,
+        "prompt_ms": 114348.319,
+        "prompt_per_token_ms": 415.8120690909091,
+        "prompt_per_second": 2.404932598965447,
+        "predicted_n": 16,
+        "predicted_ms": 9695.343,
+        "predicted_per_token_ms": 605.9589375,
+        "predicted_per_second": 1.6502768390968734
+      },
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 275,
+        "total_tokens": 291,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:05:13.071288+00:00",
+      "record_path": "prompt_diagnostic_v1/05-pt_two_examples-dev2-02-240/summary.json",
+      "record_sha256": "5a14d76028f054618472717612f413bfbc70c1f43945c8e012da110ef8b0c0ce"
+    },
+    {
+      "host": "192.168.50.169",
+      "variant": "original_en",
+      "scenario_id": "dev2-03",
+      "category": "paraphrase",
+      "elapsed_s": 79.43483487899994,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.sala.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": false,
+            "expected": "on",
+            "actual": "off"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 128,
+        "prompt_ms": 53506.468,
+        "prompt_per_token_ms": 418.01928125,
+        "prompt_per_second": 2.3922341500844344,
+        "predicted_n": 41,
+        "predicted_ms": 25853.832,
+        "predicted_per_token_ms": 630.5812682926829,
+        "predicted_per_second": 1.5858384165256434
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 128,
+        "total_tokens": 169,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:08:00.513491+00:00",
+      "record_path": "prompt_diagnostic_v1/06-original_en-dev2-03-169/summary.json",
+      "record_sha256": "cfdd4da06062e05724ae786d8b4a022c0f836682bc15ae143b4d49395872e360"
+    },
+    {
+      "host": "192.168.50.240",
+      "variant": "pt_zero_shot",
+      "scenario_id": "dev2-03",
+      "category": "paraphrase",
+      "elapsed_s": 94.9653685180001,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "on"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.sala.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 165,
+        "prompt_ms": 68495.88,
+        "prompt_per_token_ms": 415.12654545454546,
+        "prompt_per_second": 2.4089040099930097,
+        "predicted_n": 41,
+        "predicted_ms": 26383.702,
+        "predicted_per_token_ms": 643.5049268292684,
+        "predicted_per_second": 1.5539896561900222
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 165,
+        "total_tokens": 206,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:06:49.025187+00:00",
+      "record_path": "prompt_diagnostic_v1/07-pt_zero_shot-dev2-03-240/summary.json",
+      "record_sha256": "0db4c9adf8093481aff5f48f9f172a74abf3901ebc202c7629b1222358c06561"
+    },
+    {
+      "host": "192.168.50.195",
+      "variant": "pt_two_examples",
+      "scenario_id": "dev2-03",
+      "category": "paraphrase",
+      "elapsed_s": 126.02803823199974,
+      "error": null,
+      "model_content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_light",
+          "room": "sala",
+          "value": "on"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": true,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.sala.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": true
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 277,
+        "prompt_ms": 116186.284,
+        "prompt_per_token_ms": 419.44506859205774,
+        "prompt_per_second": 2.3841024126393435,
+        "predicted_n": 16,
+        "predicted_ms": 9753.591,
+        "predicted_per_token_ms": 609.5994375,
+        "predicted_per_second": 1.6404214611828607
+      },
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 277,
+        "total_tokens": 293,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:05:14.991693+00:00",
+      "record_path": "prompt_diagnostic_v1/08-pt_two_examples-dev2-03-195/summary.json",
+      "record_sha256": "4c58489b5a25c5ab1014773f4576529d9795360f766ae90f628a4ad08b63640f"
+    },
+    {
+      "host": "192.168.50.240",
+      "variant": "original_en",
+      "scenario_id": "dev2-04",
+      "category": "clear",
+      "elapsed_s": 77.8750969130001,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "on"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": "quarto"
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": false,
+            "expected": "off",
+            "actual": "on"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 124,
+        "prompt_ms": 51889.824,
+        "prompt_per_token_ms": 418.46632258064517,
+        "prompt_per_second": 2.38967856202403,
+        "predicted_n": 41,
+        "predicted_ms": 25903.665,
+        "predicted_per_token_ms": 631.7967073170732,
+        "predicted_per_second": 1.5827876093981297
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 124,
+        "total_tokens": 165,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:08:07.927203+00:00",
+      "record_path": "prompt_diagnostic_v1/09-original_en-dev2-04-240/summary.json",
+      "record_sha256": "67b63856070d893944809e1de49478e1ae5696db9d3afb93b3acfae32d28d507"
+    },
+    {
+      "host": "192.168.50.89",
+      "variant": "pt_zero_shot",
+      "scenario_id": "dev2-04",
+      "category": "clear",
+      "elapsed_s": 84.42904289600028,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "on"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": "quarto"
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": true,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": true
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 161,
+        "prompt_ms": 66916.756,
+        "prompt_per_token_ms": 415.63202484472043,
+        "prompt_per_second": 2.4059743720989704,
+        "predicted_n": 27,
+        "predicted_ms": 17435.485,
+        "predicted_per_token_ms": 645.7587037037038,
+        "predicted_per_second": 1.5485660421835123
+      },
+      "usage": {
+        "completion_tokens": 27,
+        "prompt_tokens": 161,
+        "total_tokens": 188,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:16:13.244717+00:00",
+      "record_path": "prompt_diagnostic_resume_v3/10-pt_zero_shot-dev2-04-89/summary.json",
+      "record_sha256": "e326cae4681c7279ce6c6932d708c9f88de57640144f1c51787712136bcad18e"
+    },
+    {
+      "host": "192.168.50.129",
+      "variant": "pt_two_examples",
+      "scenario_id": "dev2-04",
+      "category": "clear",
+      "elapsed_s": 123.0953300430001,
+      "error": null,
+      "model_content": "{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_light",
+          "room": "quarto",
+          "value": "on"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": "quarto"
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": true,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": true
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 273,
+        "prompt_ms": 113362.424,
+        "prompt_per_token_ms": 415.24697435897434,
+        "prompt_per_second": 2.4082053855870265,
+        "predicted_n": 16,
+        "predicted_ms": 9646.774,
+        "predicted_per_token_ms": 602.923375,
+        "predicted_per_second": 1.6585855540930057
+      },
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 273,
+        "total_tokens": 289,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:16:51.928200+00:00",
+      "record_path": "prompt_diagnostic_resume_v3/11-pt_two_examples-dev2-04-129/summary.json",
+      "record_sha256": "debfeb3f7e1123f3bc3751e439ef6c161373535fe43f61dbc8e314b7ae0748bf"
+    },
+    {
+      "host": "192.168.50.89",
+      "variant": "original_en",
+      "scenario_id": "dev2-05",
+      "category": "routine",
+      "elapsed_s": 80.84374224300063,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": true,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.sala.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "final:rooms.quarto.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": true
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 133,
+        "prompt_ms": 55280.036,
+        "prompt_per_token_ms": 415.6393684210526,
+        "prompt_per_second": 2.405931862996616,
+        "predicted_n": 41,
+        "predicted_ms": 25488.694,
+        "predicted_per_token_ms": 621.6754634146341,
+        "predicted_per_second": 1.6085563269738339
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 133,
+        "total_tokens": 174,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:17:35.076177+00:00",
+      "record_path": "prompt_diagnostic_resume_v3/12-original_en-dev2-05-89/summary.json",
+      "record_sha256": "3d21c0434a043d8a332d2c63ee686c514ca77270dfaca466cb721fb9c437a877"
+    },
+    {
+      "host": "192.168.50.129",
+      "variant": "pt_zero_shot",
+      "scenario_id": "dev2-05",
+      "category": "routine",
+      "elapsed_s": 96.7286200389999,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": true,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.sala.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "final:rooms.quarto.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": true
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 170,
+        "prompt_ms": 70575.316,
+        "prompt_per_token_ms": 415.14891764705885,
+        "prompt_per_second": 2.4087741952157886,
+        "predicted_n": 41,
+        "predicted_ms": 26062.892,
+        "predicted_per_token_ms": 635.6802926829268,
+        "predicted_per_second": 1.5731178259112613
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 170,
+        "total_tokens": 211,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:19:22.188689+00:00",
+      "record_path": "prompt_diagnostic_resume_v3/13-pt_zero_shot-dev2-05-129/summary.json",
+      "record_sha256": "304539c8bc27c8436665cc42d4ec5be0e879dfc248be14199681b338cb0ddd00"
+    },
+    {
+      "host": "192.168.50.89",
+      "variant": "pt_two_examples",
+      "scenario_id": "dev2-05",
+      "category": "routine",
+      "elapsed_s": 127.46219356199981,
+      "error": null,
+      "model_content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_light",
+          "room": "sala",
+          "value": "off"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "final:rooms.sala.light",
+            "passed": false,
+            "expected": "on",
+            "actual": "off"
+          },
+          {
+            "name": "final:rooms.quarto.light",
+            "passed": false,
+            "expected": "off",
+            "actual": "on"
+          },
+          {
+            "name": "exact_proposed_steps",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 282,
+        "prompt_ms": 117654.868,
+        "prompt_per_token_ms": 417.2158439716312,
+        "prompt_per_second": 2.396840902494574,
+        "predicted_n": 16,
+        "predicted_ms": 9719.737,
+        "predicted_per_token_ms": 607.4835625,
+        "predicted_per_second": 1.6461350754655195
+      },
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 282,
+        "total_tokens": 298,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:07:52.320613+00:00",
+      "record_path": "prompt_diagnostic_v1/14-pt_two_examples-dev2-05-89/summary.json",
+      "record_sha256": "a2dc75511bfccf64fcf04b04c334aca803ca07d5ce52cae125eb573a6954ca7c"
+    },
+    {
+      "host": "192.168.50.129",
+      "variant": "original_en",
+      "scenario_id": "dev2-06",
+      "category": "ambiguity",
+      "elapsed_s": 76.85412821299997,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": false,
+        "reason": "insufficient_room_information",
+        "policy": "room_evidence_v1"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": false,
+            "detail": "insufficient_room_information"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+            "passed": true
+          },
+          {
+            "name": "expected_action",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": false
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 123,
+        "prompt_ms": 51232.411,
+        "prompt_per_token_ms": 416.52366666666666,
+        "prompt_per_second": 2.4008239627840275,
+        "predicted_n": 41,
+        "predicted_ms": 25546.21,
+        "predicted_per_token_ms": 623.0782926829268,
+        "predicted_per_second": 1.604934743744767
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 123,
+        "total_tokens": 164,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:22:09.596322+00:00",
+      "record_path": "prompt_diagnostic_resume_v3/15-original_en-dev2-06-129/summary.json",
+      "record_sha256": "e20480332857026e5495a74c4fcab502add451b3e2b0b73600360ad7103306a0"
+    },
+    {
+      "host": "192.168.50.89",
+      "variant": "pt_zero_shot",
+      "scenario_id": "dev2-06",
+      "category": "ambiguity",
+      "elapsed_s": 92.80200882899999,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "on"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": false,
+        "reason": "insufficient_room_information",
+        "policy": "room_evidence_v1"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": false,
+            "detail": "insufficient_room_information"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+            "passed": true
+          },
+          {
+            "name": "expected_action",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": false
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 160,
+        "prompt_ms": 66486.236,
+        "prompt_per_token_ms": 415.53897500000005,
+        "prompt_per_second": 2.4065131315299606,
+        "predicted_n": 41,
+        "predicted_ms": 26237.747,
+        "predicted_per_token_ms": 639.9450487804878,
+        "predicted_per_second": 1.5626341697707506
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 160,
+        "total_tokens": 201,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:09:26.084123+00:00",
+      "record_path": "prompt_diagnostic_v1/16-pt_zero_shot-dev2-06-89/summary.json",
+      "record_sha256": "13d2212b425a59f31d12f03f3018771fb1988167f19fd01858279b8f5ed24840"
+    },
+    {
+      "host": "192.168.50.169",
+      "variant": "pt_two_examples",
+      "scenario_id": "dev2-06",
+      "category": "ambiguity",
+      "elapsed_s": 122.60157943200011,
+      "error": null,
+      "model_content": "{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_light",
+          "room": "quarto",
+          "value": "on"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": false,
+        "reason": "insufficient_room_information",
+        "policy": "room_evidence_v1"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": false,
+            "detail": "insufficient_room_information"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+            "passed": false
+          },
+          {
+            "name": "expected_action",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": false
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 272,
+        "prompt_ms": 112797.567,
+        "prompt_per_token_ms": 414.6969375,
+        "prompt_per_second": 2.4113995295660944,
+        "predicted_n": 16,
+        "predicted_ms": 9711.718,
+        "predicted_per_token_ms": 606.982375,
+        "predicted_per_second": 1.6474942950361613
+      },
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 272,
+        "total_tokens": 288,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:10:04.096958+00:00",
+      "record_path": "prompt_diagnostic_v1/17-pt_two_examples-dev2-06-169/summary.json",
+      "record_sha256": "9b223a285fc448b943cb8dc668cedf901747ba7a2697006a56226e77dfe5a9c4"
+    },
+    {
+      "host": "192.168.50.89",
+      "variant": "original_en",
+      "scenario_id": "dev2-07",
+      "category": "ambiguity",
+      "elapsed_s": 61.63459269699979,
+      "error": null,
+      "model_content": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "no_action",
+          "reason": "Unsupported request"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+            "passed": true
+          },
+          {
+            "name": "no_action_policy",
+            "passed": false
+          },
+          {
+            "name": "expected_action",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 126,
+        "prompt_ms": 52417.068,
+        "prompt_per_token_ms": 416.0084761904762,
+        "prompt_per_second": 2.403797175378066,
+        "predicted_n": 12,
+        "predicted_ms": 9128.323,
+        "predicted_per_token_ms": 760.6935833333333,
+        "predicted_per_second": 1.3145897663787751
+      },
+      "usage": {
+        "completion_tokens": 12,
+        "prompt_tokens": 126,
+        "total_tokens": 138,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:10:29.090479+00:00",
+      "record_path": "prompt_diagnostic_v1/18-original_en-dev2-07-89/summary.json",
+      "record_sha256": "294932e691619fcf47aa8a177ba9ef1268e933bf95ddb0daf54e8f3ee6b410bd"
+    },
+    {
+      "host": "192.168.50.169",
+      "variant": "pt_zero_shot",
+      "scenario_id": "dev2-07",
+      "category": "ambiguity",
+      "elapsed_s": 80.17219711300004,
+      "error": null,
+      "model_content": "{\"action\":\"no_action\",\"reason\":\"Dispositivo ou operação não suportados\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "no_action",
+          "reason": "Dispositivo ou operação não suportados"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+            "passed": true
+          },
+          {
+            "name": "no_action_policy",
+            "passed": false
+          },
+          {
+            "name": "expected_action",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": true
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": false
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 163,
+        "prompt_ms": 67715.926,
+        "prompt_per_token_ms": 415.43512883435585,
+        "prompt_per_second": 2.4071146867282,
+        "predicted_n": 20,
+        "predicted_ms": 12370.335,
+        "predicted_per_token_ms": 618.51675,
+        "predicted_per_second": 1.6167710898694336
+      },
+      "usage": {
+        "completion_tokens": 20,
+        "prompt_tokens": 163,
+        "total_tokens": 183,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:11:25.208751+00:00",
+      "record_path": "prompt_diagnostic_v1/19-pt_zero_shot-dev2-07-169/summary.json",
+      "record_sha256": "2f32c743124b65f2127e748f686d967aa150a82f4f003daf68d1efab564e22e8"
+    },
+    {
+      "host": "192.168.50.240",
+      "variant": "pt_two_examples",
+      "scenario_id": "dev2-07",
+      "category": "ambiguity",
+      "elapsed_s": 123.94879700999991,
+      "error": null,
+      "model_content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_light",
+          "room": "sala",
+          "value": "off"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "off"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": false,
+        "reason": "insufficient_room_information",
+        "policy": "room_evidence_v1"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": false,
+            "detail": "insufficient_room_information"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": true,
+            "expected": "off",
+            "actual": "off"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+            "passed": false
+          },
+          {
+            "name": "expected_action",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": false
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 275,
+        "prompt_ms": 114191.835,
+        "prompt_per_token_ms": 415.2430363636364,
+        "prompt_per_second": 2.408228224023197,
+        "predicted_n": 16,
+        "predicted_ms": 9664.738,
+        "predicted_per_token_ms": 604.046125,
+        "predicted_per_second": 1.6555027151279218
+      },
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 275,
+        "total_tokens": 291,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:10:12.858409+00:00",
+      "record_path": "prompt_diagnostic_v1/20-pt_two_examples-dev2-07-240/summary.json",
+      "record_sha256": "c83b6c2574d6dd3f16b354735f25b90fcc9b2e2f6e3c69d6b12adcfbceec848e"
+    },
+    {
+      "host": "192.168.50.169",
+      "variant": "original_en",
+      "scenario_id": "dev2-08",
+      "category": "invalid",
+      "elapsed_s": 79.09345755300001,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": false,
+            "expected": "off",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": false,
+            "expected": "on",
+            "actual": "off"
+          },
+          {
+            "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+            "passed": true
+          },
+          {
+            "name": "expected_action",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": false
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 128,
+        "prompt_ms": 53220.508,
+        "prompt_per_token_ms": 415.78521875,
+        "prompt_per_second": 2.405087903332302,
+        "predicted_n": 41,
+        "predicted_ms": 25794.753,
+        "predicted_per_token_ms": 629.1403170731708,
+        "predicted_per_second": 1.5894705407723813
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 128,
+        "total_tokens": 169,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:12:45.479989+00:00",
+      "record_path": "prompt_diagnostic_v1/21-original_en-dev2-08-169/summary.json",
+      "record_sha256": "eb465ea17d2ff2bb8b84f375d6cc98581eab10ed8dac05bc2e466efed210a418"
+    },
+    {
+      "host": "192.168.50.240",
+      "variant": "pt_zero_shot",
+      "scenario_id": "dev2-08",
+      "category": "invalid",
+      "elapsed_s": 94.85518229300033,
+      "error": null,
+      "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_lights",
+          "steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ]
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "off"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": false,
+            "expected": "off",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": false,
+            "expected": "on",
+            "actual": "off"
+          },
+          {
+            "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+            "passed": true
+          },
+          {
+            "name": "expected_action",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": false
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 165,
+        "prompt_ms": 68488.035,
+        "prompt_per_token_ms": 415.079,
+        "prompt_per_second": 2.409179939240482,
+        "predicted_n": 41,
+        "predicted_ms": 26284.557,
+        "predicted_per_token_ms": 641.086756097561,
+        "predicted_per_second": 1.559851284539435
+      },
+      "usage": {
+        "completion_tokens": 41,
+        "prompt_tokens": 165,
+        "total_tokens": 206,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:11:48.683381+00:00",
+      "record_path": "prompt_diagnostic_v1/22-pt_zero_shot-dev2-08-240/summary.json",
+      "record_sha256": "61659095c750dd782f888d2fc9ba6b59eda23a796a12e428ba5cc8f2d4e26dda"
+    },
+    {
+      "host": "192.168.50.89",
+      "variant": "pt_two_examples",
+      "scenario_id": "dev2-08",
+      "category": "invalid",
+      "elapsed_s": 124.84652977299993,
+      "error": null,
+      "model_content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}",
+      "parse": {
+        "structured_valid": true,
+        "action": {
+          "action": "set_light",
+          "room": "sala",
+          "value": "on"
+        },
+        "reason": "ok"
+      },
+      "final_state": {
+        "rooms": {
+          "sala": {
+            "light": "on"
+          },
+          "quarto": {
+            "light": "on"
+          }
+        },
+        "known_location": null
+      },
+      "permission": {
+        "allowed": true,
+        "reason": "allowed"
+      },
+      "evaluation": {
+        "review_pending": false,
+        "task_completed": false,
+        "checks": [
+          {
+            "name": "action_allowed",
+            "passed": true,
+            "detail": "allowed"
+          },
+          {
+            "name": "unchanged:rooms.sala.light",
+            "passed": false,
+            "expected": "off",
+            "actual": "on"
+          },
+          {
+            "name": "unchanged:rooms.quarto.light",
+            "passed": true,
+            "expected": "on",
+            "actual": "on"
+          },
+          {
+            "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+            "passed": false
+          },
+          {
+            "name": "expected_action",
+            "passed": false
+          },
+          {
+            "name": "no_prohibited_plan_steps",
+            "passed": false
+          }
+        ],
+        "manual_review": null,
+        "undue_proposal": true
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 277,
+        "prompt_ms": 115093.648,
+        "prompt_per_token_ms": 415.5005342960289,
+        "prompt_per_second": 2.406735773984677,
+        "predicted_n": 16,
+        "predicted_ms": 9663.91,
+        "predicted_per_token_ms": 603.994375,
+        "predicted_per_second": 1.655644557948077
+      },
+      "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 277,
+        "total_tokens": 293,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "completed": true,
+      "finished_at": "2026-11-23T13:19:40.838799+00:00",
+      "record_path": "prompt_diagnostic_resume_v3/23-pt_two_examples-dev2-08-89/summary.json",
+      "record_sha256": "5962b434f4d7f98555837ea0b6db696cccbfa8f7dd56c9bceb075e6acc808871"
+    }
+  ]
+}

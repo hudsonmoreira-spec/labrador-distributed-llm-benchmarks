@@ -1,0 +1,24 @@
+{
+  "configuration": "hybrid_intent_v2",
+  "machine": "notebook x86-64",
+  "source_sha256": "adec68be92fa04d98a571b93b2be2bdb24dc255fa9a55e6531f90c35fe3439d1",
+  "live_browser_checks": [
+    {
+      "source": "experiments/smarthome_agents/revision_20261123/review_console/records/d06daf68-1f3e-41e6-847c-cf5a015df2ad/result.json",
+      "sha256": "c86c4c7db08f44959e611535e2411c2bff3ead4ff69ae0bee5aa50239e99c832",
+      "command": "Apague a luz do quarto.",
+      "answer": "Apagar a luz do quarto.",
+      "seconds": 7.960735083000145,
+      "origin": "model_intent_and_rules"
+    },
+    {
+      "source": "experiments/smarthome_agents/revision_20261123/review_console/records/e583a753-c1a4-4dc6-bb5b-8a0f2bce3e97/result.json",
+      "sha256": "a99af2a1b701383568ccafa34240c4514add42777a214f0f577a85fe524d159d",
+      "command": "Acenda a luz.",
+      "answer": "Em qual cômodo: sala ou quarto?",
+      "seconds": 7.8911223289997,
+      "origin": "model_intent_and_missing_room_rule"
+    }
+  ],
+  "human_evaluations_submitted_by_agent": 0
+}

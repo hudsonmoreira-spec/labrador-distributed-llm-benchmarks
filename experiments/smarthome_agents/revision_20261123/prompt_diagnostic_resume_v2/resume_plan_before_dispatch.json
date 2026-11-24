@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-11-23T13:13:06.639761+00:00",
+  "original_plan_sha256": "3ab13e064f04815c47dd4bbf0878480a2a03d2b2da4bcc60bd80e59dc5e4ec72",
+  "runner_sha256": "4d9a7d3b70c2e916335b98c7ee0062cd21b53b4ba4aae652d7b9e4ae45192006",
+  "reason": "SSH memory snapshot timeout interrupted host queues; retain every existing summary, resume missing records only. Prompts and inference settings unchanged.",
+  "retained_records": 18,
+  "queues": {
+    "192.168.50.129": [
+      {
+        "variant": "pt_two_examples",
+        "scenario_id": "dev2-04",
+        "index": 11
+      },
+      {
+        "variant": "pt_zero_shot",
+        "scenario_id": "dev2-05",
+        "index": 13
+      },
+      {
+        "variant": "original_en",
+        "scenario_id": "dev2-06",
+        "index": 15
+      }
+    ],
+    "192.168.50.89": [],
+    "192.168.50.169": [],
+    "192.168.50.240": [],
+    "192.168.50.195": [
+      {
+        "variant": "pt_zero_shot",
+        "scenario_id": "dev2-04",
+        "index": 10
+      },
+      {
+        "variant": "original_en",
+        "scenario_id": "dev2-05",
+        "index": 12
+      },
+      {
+        "variant": "pt_two_examples",
+        "scenario_id": "dev2-08",
+        "index": 23
+      }
+    ]
+  }
+}

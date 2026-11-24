@@ -1,0 +1,7 @@
+{
+  "type": "hybrid_controller_input",
+  "command": "Acenda a luz.",
+  "known_location": null,
+  "profile": "hybrid_intent_v2",
+  "profile_sha256": "adec68be92fa04d98a571b93b2be2bdb24dc255fa9a55e6531f90c35fe3439d1"
+}

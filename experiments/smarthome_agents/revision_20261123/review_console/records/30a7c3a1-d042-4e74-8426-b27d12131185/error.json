@@ -1,0 +1,18 @@
+{
+  "id": "30a7c3a1-d042-4e74-8426-b27d12131185",
+  "created_at": "2026-11-23T13:54:33.848082+00:00",
+  "error": "Nenhuma reserva ficou disponível para iniciar o teste.",
+  "preparation_errors": [
+    {
+      "host": "192.168.50.200",
+      "phase": "preparation",
+      "error": "A placa não respondeu ao acesso de preparação: ssh: connect to host 192.168.50.200 port 22: No route to host"
+    },
+    {
+      "host": "192.168.50.85",
+      "phase": "preparation",
+      "error": "Command '['ssh', '-F', '/dev/null', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=5', '-o', 'ServerAliveInterval=5', '-o', 'ServerAliveCountMax=2', '-o', 'UserKnownHostsFile=/home/hudymoreira/labrador-distributed-llm-benchmarks/experiments/smarthome_agents/revision_20261123/inventory/known_hosts', 'caninos@192.168.50.85', 'mkdir -p /home/caninos/smarthome_agents/review_console_20261123\\nif test -f /home/caninos/smarthome_agents/review_console_20261123/server.pid; then\\n p=$(cat /home/caninos/smarthome_agents/review_console_20261123/server.pid)\\n if test -r /proc/$p/cmdline && tr \\'\\\\0\\' \\' \\' </proc/$p/cmdline | grep -q -- \\'--port 19116\\'; then kill \"$p\"; sleep 1; fi\\nfi\\nsha256sum /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf\\n']' timed out after 30 seconds"
+    }
+  ],
+  "message": "Falha de comunicação ou de execução. Isso não é um julgamento sobre a resposta da IA."
+}

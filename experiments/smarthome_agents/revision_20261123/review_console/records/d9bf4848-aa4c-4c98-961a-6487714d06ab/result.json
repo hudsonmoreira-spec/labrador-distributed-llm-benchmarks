@@ -1,0 +1,58 @@
+{
+  "id": "d9bf4848-aa4c-4c98-961a-6487714d06ab",
+  "type": "new_interactive_test",
+  "created_at": "2026-11-23T13:40:30.627712+00:00",
+  "command": "Acenda a luz.",
+  "model": "15",
+  "host": "192.168.50.200",
+  "elapsed_s": 77.46901629399963,
+  "initial": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "response": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+  "answer": "Acender a luz da sala. Apagar a luz do quarto.",
+  "valid": true,
+  "completed": true,
+  "action": {
+    "action": "set_lights",
+    "steps": [
+      {
+        "action": "set_light",
+        "room": "sala",
+        "value": "on"
+      },
+      {
+        "action": "set_light",
+        "room": "quarto",
+        "value": "off"
+      }
+    ]
+  },
+  "permission": {
+    "allowed": false,
+    "reason": "insufficient_room_information",
+    "policy": "room_evidence_v1"
+  },
+  "preparation_errors": [],
+  "request_sha256": "c563ba398190e3a5d82e15573e38226c6c03dfc02d40c9728e5b310254534477",
+  "response_sha256": "028c4375ca74d56d50f1b73e962e4823b81b3364c4e3312d9b3148ad774fd27e"
+}

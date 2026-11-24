@@ -1,0 +1,282 @@
+{
+  "started_at": "2026-11-23T17:08:28.422942+00:00",
+  "purpose": "Hardware/runtime comparison, original model/prompt only, no hybrid or post-processing repair",
+  "command": [
+    "/home/hudymoreira/.cache/labrador-revision-20261123/llama-b9584-x86/build/bin/llama-server",
+    "--model",
+    "/home/hudymoreira/labrador-distributed-llm-benchmarks/models/qwen2.5-1.5b-instruct-q5_k_m/qwen2.5-1.5b-instruct-q5_k_m.gguf",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "19118",
+    "--threads",
+    "4",
+    "--threads-batch",
+    "4",
+    "--ctx-size",
+    "512",
+    "--parallel",
+    "1",
+    "--n-predict",
+    "128",
+    "--device",
+    "none",
+    "--metrics",
+    "--no-warmup"
+  ],
+  "model_sha256": "b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c",
+  "runtime_commit": "e25a32e98c15a1118a976685af0f4d2c1f380079",
+  "runtime_sha256_x86": "6ab263412e2d30b06f470a45b29ff3c1f293d2cc6c799d767b0cd60dbbb8ff07",
+  "cpu": {
+    "lscpu": [
+      {
+        "field": "Architecture:",
+        "data": "x86_64"
+      },
+      {
+        "field": "CPU op-mode(s):",
+        "data": "32-bit, 64-bit"
+      },
+      {
+        "field": "Address sizes:",
+        "data": "39 bits physical, 48 bits virtual"
+      },
+      {
+        "field": "Byte Order:",
+        "data": "Little Endian"
+      },
+      {
+        "field": "CPU(s):",
+        "data": "12"
+      },
+      {
+        "field": "On-line CPU(s) list:",
+        "data": "0-11"
+      },
+      {
+        "field": "Vendor ID:",
+        "data": "GenuineIntel"
+      },
+      {
+        "field": "Model name:",
+        "data": "12th Gen Intel(R) Core(TM) i7-1255U"
+      },
+      {
+        "field": "CPU family:",
+        "data": "6"
+      },
+      {
+        "field": "Model:",
+        "data": "154"
+      },
+      {
+        "field": "Thread(s) per core:",
+        "data": "2"
+      },
+      {
+        "field": "Core(s) per socket:",
+        "data": "10"
+      },
+      {
+        "field": "Socket(s):",
+        "data": "1"
+      },
+      {
+        "field": "Stepping:",
+        "data": "4"
+      },
+      {
+        "field": "CPU(s) scaling MHz:",
+        "data": "57%"
+      },
+      {
+        "field": "CPU max MHz:",
+        "data": "1700.0000"
+      },
+      {
+        "field": "CPU min MHz:",
+        "data": "400.0000"
+      },
+      {
+        "field": "BogoMIPS:",
+        "data": "5222.40"
+      },
+      {
+        "field": "Flags:",
+        "data": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l2 cdp_l2 ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities"
+      },
+      {
+        "field": "Virtualization:",
+        "data": "VT-x"
+      },
+      {
+        "field": "L1d cache:",
+        "data": "352 KiB (10 instances)"
+      },
+      {
+        "field": "L1i cache:",
+        "data": "576 KiB (10 instances)"
+      },
+      {
+        "field": "L2 cache:",
+        "data": "6.5 MiB (4 instances)"
+      },
+      {
+        "field": "L3 cache:",
+        "data": "12 MiB (1 instance)"
+      },
+      {
+        "field": "NUMA node(s):",
+        "data": "1"
+      },
+      {
+        "field": "NUMA node0 CPU(s):",
+        "data": "0-11"
+      },
+      {
+        "field": "Vulnerability Gather data sampling:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Ghostwrite:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Indirect target selection:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Itlb multihit:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability L1tf:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Mds:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Meltdown:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Mmio stale data:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Old microcode:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Reg file data sampling:",
+        "data": "Mitigation; Clear Register File"
+      },
+      {
+        "field": "Vulnerability Retbleed:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Spec rstack overflow:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Spec store bypass:",
+        "data": "Mitigation; Speculative Store Bypass disabled via prctl"
+      },
+      {
+        "field": "Vulnerability Spectre v1:",
+        "data": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization"
+      },
+      {
+        "field": "Vulnerability Spectre v2:",
+        "data": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S"
+      },
+      {
+        "field": "Vulnerability Srbds:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Tsa:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Tsx async abort:",
+        "data": "Not affected"
+      },
+      {
+        "field": "Vulnerability Vmscape:",
+        "data": "Mitigation; IBPB before exit to userspace"
+      }
+    ]
+  },
+  "seed": 801,
+  "temperature": 0,
+  "repetitions": 1,
+  "cases": [
+    {
+      "scenario_id": "dev2-01",
+      "sbc_host": "192.168.50.129",
+      "sbc_record": "prompt_diagnostic_v1/00-original_en-dev2-01-129/summary.json",
+      "request_sha256": "6cbe2ead7db3ebbfa0a8864ef5a8e6d1df53acee9be0e5a460651a09e30388f2",
+      "sbc_summary_sha256": "6ccc052e64ec7992d3ca19d31fb017cea491ae93bd84809725284244b2c0810f"
+    },
+    {
+      "scenario_id": "dev2-02",
+      "sbc_host": "192.168.50.89",
+      "sbc_record": "prompt_diagnostic_v1/03-original_en-dev2-02-89/summary.json",
+      "request_sha256": "69c1e624cd19b9cb7f28a85c2db367ace0689d19362c30d5dcc4da50677257a7",
+      "sbc_summary_sha256": "3b3ec2243595bac271746ac885d855bbe729432b045f01b2b2446286136cf3c7"
+    },
+    {
+      "scenario_id": "dev2-03",
+      "sbc_host": "192.168.50.169",
+      "sbc_record": "prompt_diagnostic_v1/06-original_en-dev2-03-169/summary.json",
+      "request_sha256": "e9ada12561a86f9419d08f7d07e0e9cacbe0566d6804322dd85865cf2e937f6b",
+      "sbc_summary_sha256": "cfdd4da06062e05724ae786d8b4a022c0f836682bc15ae143b4d49395872e360"
+    },
+    {
+      "scenario_id": "dev2-04",
+      "sbc_host": "192.168.50.240",
+      "sbc_record": "prompt_diagnostic_v1/09-original_en-dev2-04-240/summary.json",
+      "request_sha256": "555ec1e73c2113d427edd7c5e7ce74b2292b24af1de970994366042c250ee343",
+      "sbc_summary_sha256": "67b63856070d893944809e1de49478e1ae5696db9d3afb93b3acfae32d28d507"
+    },
+    {
+      "scenario_id": "dev2-05",
+      "sbc_host": "192.168.50.89",
+      "sbc_record": "prompt_diagnostic_resume_v3/12-original_en-dev2-05-89/summary.json",
+      "request_sha256": "dc2168b57f0042f0c59132958f6da4add2375896e075ac4ce1b795b11af52f89",
+      "sbc_summary_sha256": "3d21c0434a043d8a332d2c63ee686c514ca77270dfaca466cb721fb9c437a877"
+    },
+    {
+      "scenario_id": "dev2-06",
+      "sbc_host": "192.168.50.129",
+      "sbc_record": "prompt_diagnostic_resume_v3/15-original_en-dev2-06-129/summary.json",
+      "request_sha256": "c563ba398190e3a5d82e15573e38226c6c03dfc02d40c9728e5b310254534477",
+      "sbc_summary_sha256": "e20480332857026e5495a74c4fcab502add451b3e2b0b73600360ad7103306a0"
+    },
+    {
+      "scenario_id": "dev2-07",
+      "sbc_host": "192.168.50.89",
+      "sbc_record": "prompt_diagnostic_v1/18-original_en-dev2-07-89/summary.json",
+      "request_sha256": "8cbd8862b7698ae0e076b56358f398cb75b2c47e84d1e23e1457c2fe12e29fca",
+      "sbc_summary_sha256": "294932e691619fcf47aa8a177ba9ef1268e933bf95ddb0daf54e8f3ee6b410bd"
+    },
+    {
+      "scenario_id": "dev2-08",
+      "sbc_host": "192.168.50.169",
+      "sbc_record": "prompt_diagnostic_v1/21-original_en-dev2-08-169/summary.json",
+      "request_sha256": "bd1d8864ac13606b739523372200a461ad0e004db1bba06bd575095a0317ba4c",
+      "sbc_summary_sha256": "eb465ea17d2ff2bb8b84f375d6cc98581eab10ed8dac05bc2e466efed210a418"
+    }
+  ],
+  "limits": [
+    "eight reused development cases, not reserved data",
+    "SBC baseline recorded earlier across five recovered hosts; lab8 missing cases moved as recorded",
+    "architecture/compiler/backend differ; comparison does not certify physical hardware health",
+    "HTTP timings include Ethernet on SBC and loopback on PC",
+    "not a pure CPU microbenchmark; other desktop services not stopped"
+  ]
+}

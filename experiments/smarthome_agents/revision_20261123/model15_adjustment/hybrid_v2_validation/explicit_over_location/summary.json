@@ -1,0 +1,17 @@
+{
+  "id": "explicit_over_location",
+  "action": {
+    "action": "set_light",
+    "room": "quarto",
+    "value": "on"
+  },
+  "expected": {
+    "action": "set_light",
+    "room": "quarto",
+    "value": "on"
+  },
+  "passed": true,
+  "elapsed_s": 7.903096471999561,
+  "origin": "model_intent_and_rules",
+  "inference_calls": 1
+}

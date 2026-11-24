@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-24",
+  "author_assessment_verifier": "pass; 4 explicit author judgments, 4 failures, 0 new successes",
+  "historical_verifier": "pass; 498 scientific hashes, 240 attempts, 18 deterministic outputs unchanged; pending labels in this historical report refer to the preserved historical ledger, not the new author assessment",
+  "persistence_tests": "3 passed; isolated temporary fixtures",
+  "hybrid_rule_tests": "5 passed",
+  "working_pdf": "paper/smarthome_agents/camera_ready_20261123/main_en.pdf",
+  "pdf_sha256": "a42443a64be7dbd8fa743f6b5ed63654f003155079d663d05587d2317375271f",
+  "pages": 5,
+  "layout": "All 5 rendered pages inspected; no overlaps or clipping; no overfull boxes or undefined references in build log",
+  "scope": "No EDAS upload; original submitted PDF and reserved records unchanged."
+}

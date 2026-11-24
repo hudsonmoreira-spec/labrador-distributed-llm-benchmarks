@@ -1,0 +1,53 @@
+{
+  "id": "e583a753-c1a4-4dc6-bb5b-8a0f2bce3e97",
+  "type": "new_interactive_test",
+  "created_at": "2026-11-23T14:13:59.895876+00:00",
+  "command": "Acenda a luz.",
+  "model": "15_hybrid",
+  "host": "127.0.0.1",
+  "elapsed_s": 7.8911223289997,
+  "initial": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "response": "{\"action\": \"ask_clarification\", \"missing_field\": \"room\", \"question\": \"Em qual cômodo: sala ou quarto?\"}",
+  "answer": "Em qual cômodo: sala ou quarto?",
+  "valid": true,
+  "completed": true,
+  "action": {
+    "action": "ask_clarification",
+    "missing_field": "room",
+    "question": "Em qual cômodo: sala ou quarto?"
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "preparation_errors": [],
+  "configuration": "hybrid_intent_v2",
+  "machine": "Notebook local (x86-64)",
+  "origin": "model_intent_and_missing_room_rule",
+  "raw_model_content": [
+    "{\"intent\":\"on\"}"
+  ],
+  "request_sha256": "ca980f40eea8befc634cc5daebab4ba07e36a3eb6e81077a257a29e7b93b222f",
+  "response_sha256": "4d393e876dc27d722ff7bd231074f4fb931ed5fa4de2299885cb4295d40b6bed"
+}

@@ -1,0 +1,57 @@
+{
+  "scenario_id": "dev2-03",
+  "command": "Pode deixar a sala iluminada?",
+  "sbc_host": "192.168.50.169",
+  "sbc_response": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+  "pc_response": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+  "identical_text": true,
+  "identical_json": true,
+  "sbc_success": false,
+  "pc_success": false,
+  "sbc_s": 79.43483487899994,
+  "pc_s": 10.130375120999815,
+  "request_sha256": "e9ada12561a86f9419d08f7d07e0e9cacbe0566d6804322dd85865cf2e937f6b",
+  "pc_completed": true,
+  "pc_valid": true,
+  "pc_evaluation": {
+    "review_pending": false,
+    "task_completed": false,
+    "checks": [
+      {
+        "name": "action_allowed",
+        "passed": true,
+        "detail": "allowed"
+      },
+      {
+        "name": "final:rooms.sala.light",
+        "passed": true,
+        "expected": "on",
+        "actual": "on"
+      },
+      {
+        "name": "unchanged:rooms.quarto.light",
+        "passed": false,
+        "expected": "on",
+        "actual": "off"
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "undue_proposal": true
+  },
+  "usage": {
+    "completion_tokens": 41,
+    "prompt_tokens": 128,
+    "total_tokens": 169,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

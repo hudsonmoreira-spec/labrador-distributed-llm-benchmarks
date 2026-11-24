@@ -1,0 +1,18 @@
+{
+  "hostname": "lab3",
+  "mac": "aa:fa:5a:c3:1d:cb",
+  "arch": "aarch64",
+  "files": {
+    "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": true,
+    "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": true,
+    "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": false,
+    "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": true
+  },
+  "uptime": "115498.35 454724.41",
+  "memory": [
+    "MemTotal:        1986400 kB",
+    "MemFree:           55852 kB",
+    "MemAvailable:    1651108 kB"
+  ],
+  "ip": "192.168.50.169"
+}

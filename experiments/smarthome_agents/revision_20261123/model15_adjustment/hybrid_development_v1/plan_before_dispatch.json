@@ -1,0 +1,64 @@
+{
+  "at": "2026-11-23T14:08:00.499847+00:00",
+  "purpose": "Development-only hybrid intent classification; separate configuration, not pure model action evaluation",
+  "cases": [
+    "dev2-01",
+    "dev2-02",
+    "dev2-03",
+    "dev2-04",
+    "dev2-05",
+    "dev2-06",
+    "dev2-07",
+    "dev2-08"
+  ],
+  "intent_system": "Classifique a intenção do pedido SOMENTE para iluminação. Ligar/acender/iluminar significa on. Apagar/desligar/escurecer significa off. Pedido sobre aparelho, porta ou assunto diferente de iluminação significa unsupported. Não execute nada. Retorne somente JSON com intent igual a on, off ou unsupported.",
+  "examples": [
+    {
+      "role": "user",
+      "content": "Desligue a lâmpada do dormitório."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"intent\":\"off\"}"
+    },
+    {
+      "role": "user",
+      "content": "Ilumine este ambiente."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"intent\":\"on\"}"
+    },
+    {
+      "role": "user",
+      "content": "Ative o ar-condicionado."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"intent\":\"unsupported\"}"
+    }
+  ],
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "intent"
+    ],
+    "properties": {
+      "intent": {
+        "enum": [
+          "on",
+          "off",
+          "unsupported"
+        ]
+      }
+    }
+  },
+  "rules": [
+    "explicit room matching",
+    "known-location fallback",
+    "ask missing room",
+    "split conjunction into at most two clauses",
+    "no evaluator access in controller"
+  ]
+}

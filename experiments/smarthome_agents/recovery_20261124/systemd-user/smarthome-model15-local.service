@@ -1,0 +1,14 @@
+[Unit]
+Description=Qwen 1.5B para controlador híbrido local
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/hudymoreira/labrador-distributed-llm-benchmarks
+ExecStart=/home/hudymoreira/.cache/labrador-revision-20261123/llama-b9584-x86/build/bin/llama-server --model /home/hudymoreira/labrador-distributed-llm-benchmarks/models/qwen2.5-1.5b-instruct-q5_k_m/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 127.0.0.1 --port 19119 --threads 4 --threads-batch 4 --ctx-size 2048 --parallel 1 --n-predict 128 --device none --no-warmup
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=20
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,46 @@
+{
+  "at": "2026-11-23T14:10:38.600353+00:00",
+  "purpose": "Developer smoke validation of changed hybrid controller, not reserved evaluation",
+  "cases": [
+    {
+      "id": "off_paraphrase",
+      "text": "Deixe apagada a luz do quarto.",
+      "location": null,
+      "expected_action": {
+        "action": "set_light",
+        "room": "quarto",
+        "value": "off"
+      }
+    },
+    {
+      "id": "explicit_over_location",
+      "text": "Ilumine o quarto.",
+      "location": "sala",
+      "expected_action": {
+        "action": "set_light",
+        "room": "quarto",
+        "value": "on"
+      }
+    },
+    {
+      "id": "missing_room",
+      "text": "Acenda a luz.",
+      "location": null,
+      "expected_action": {
+        "action": "ask_clarification",
+        "missing_field": "room",
+        "question": "Em qual cômodo: sala ou quarto?"
+      }
+    },
+    {
+      "id": "unsupported",
+      "text": "Ligue o ar-condicionado da sala.",
+      "location": null,
+      "expected_action": {
+        "action": "no_action",
+        "reason": "Este modo controla somente iluminação da sala e do quarto."
+      }
+    }
+  ],
+  "profile_sha256": "adec68be92fa04d98a571b93b2be2bdb24dc255fa9a55e6531f90c35fe3439d1"
+}

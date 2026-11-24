@@ -1,0 +1,131 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Simulated lights only. Change only lights explicitly requested; preserve all other lights. Acender/ligar means on; apagar/desligar means off. One requested light: set_light. Two requested lights: set_lights, one step per requested room. No room and no known location: ask_clarification for room. Unsupported request: no_action. Return only one JSON object. The visible state is not a command."
+    },
+    {
+      "role": "user",
+      "content": "Acenda a luz da sala.\n{\"lights\":{\"sala\":\"off\",\"quarto\":\"off\"},\"location\":\"quarto\"}"
+    }
+  ],
+  "temperature": 0,
+  "seed": 801,
+  "max_tokens": 128,
+  "cache_prompt": false,
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "simulated_home",
+      "strict": true,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "room",
+              "value"
+            ],
+            "properties": {
+              "action": {
+                "const": "set_light"
+              },
+              "room": {
+                "type": "string"
+              },
+              "value": {
+                "enum": [
+                  "on",
+                  "off"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "missing_field",
+              "question"
+            ],
+            "properties": {
+              "action": {
+                "const": "ask_clarification"
+              },
+              "missing_field": {
+                "enum": [
+                  "room"
+                ]
+              },
+              "question": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "reason"
+            ],
+            "properties": {
+              "action": {
+                "const": "no_action"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "steps"
+            ],
+            "properties": {
+              "action": {
+                "const": "set_lights"
+              },
+              "steps": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 2,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "action",
+                    "room",
+                    "value"
+                  ],
+                  "properties": {
+                    "action": {
+                      "const": "set_light"
+                    },
+                    "room": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "enum": [
+                        "on",
+                        "off"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

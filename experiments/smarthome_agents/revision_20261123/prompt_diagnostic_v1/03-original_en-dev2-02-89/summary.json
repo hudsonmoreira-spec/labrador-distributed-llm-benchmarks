@@ -1,0 +1,90 @@
+{
+  "host": "192.168.50.89",
+  "variant": "original_en",
+  "scenario_id": "dev2-02",
+  "category": "clear",
+  "elapsed_s": 60.12460682600022,
+  "error": null,
+  "model_content": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}",
+  "parse": {
+    "structured_valid": true,
+    "action": {
+      "action": "no_action",
+      "reason": "Unsupported request"
+    },
+    "reason": "ok"
+  },
+  "final_state": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "evaluation": {
+    "review_pending": false,
+    "task_completed": false,
+    "checks": [
+      {
+        "name": "action_allowed",
+        "passed": true,
+        "detail": "allowed"
+      },
+      {
+        "name": "final:rooms.quarto.light",
+        "passed": false,
+        "expected": "off",
+        "actual": "on"
+      },
+      {
+        "name": "unchanged:rooms.sala.light",
+        "passed": true,
+        "expected": "off",
+        "actual": "off"
+      },
+      {
+        "name": "no_action_policy",
+        "passed": false
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "undue_proposal": false
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 126,
+    "prompt_ms": 52638.984,
+    "prompt_per_token_ms": 417.76971428571426,
+    "prompt_per_second": 2.393663221159436,
+    "predicted_n": 12,
+    "predicted_ms": 7411.234,
+    "predicted_per_token_ms": 617.6028333333334,
+    "predicted_per_second": 1.6191635562984517
+  },
+  "usage": {
+    "completion_tokens": 12,
+    "prompt_tokens": 126,
+    "total_tokens": 138,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "completed": true,
+  "finished_at": "2026-11-23T13:05:43.845535+00:00"
+}

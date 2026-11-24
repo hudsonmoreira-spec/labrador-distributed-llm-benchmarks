@@ -1,0 +1,33 @@
+{
+  "validated_at": "2026-11-23T13:18:07.590022+00:00",
+  "network": "Ethernet",
+  "configuration": {
+    "runtime": "b9584-e25a32e98",
+    "model_sha256": "b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c",
+    "runtime_sha256": "a46782e75231c0a4a75a1e38afbbc5d7b72d92c8d834d6bb8b5020a0e1e79a87",
+    "ctx": 512,
+    "threads": 4,
+    "port": 19115
+  },
+  "backups": [
+    {
+      "host": "192.168.50.85",
+      "ready": true,
+      "evidence": "backup_validation/192.168.50.85-validation.json",
+      "launcher": "/home/caninos/smarthome_agents/revision_20261123_backup/start-1.5b.sh",
+      "model_05_ready": true,
+      "model_05_launcher": "/home/caninos/smarthome_agents/revision_20261123_backup/start-0.5b.sh",
+      "model_05_evidence": "backup_validation_05/192.168.50.85-validation.json"
+    },
+    {
+      "host": "192.168.50.200",
+      "ready": true,
+      "evidence": "backup_validation/192.168.50.200-validation.json",
+      "launcher": "/home/caninos/smarthome_agents/revision_20261123_backup/start-1.5b.sh",
+      "model_05_ready": true,
+      "model_05_launcher": "/home/caninos/smarthome_agents/revision_20261123_backup/start-0.5b.sh",
+      "model_05_evidence": "backup_validation_05/192.168.50.200-validation.json"
+    }
+  ],
+  "model_05_sha256": "041474553fcabfc2a2d67903f9d2c2e50bd92528e670da4f33b5d0ce6e59fd55"
+}

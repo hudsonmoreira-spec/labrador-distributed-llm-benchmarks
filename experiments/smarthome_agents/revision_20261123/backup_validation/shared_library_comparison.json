@@ -1,0 +1,34 @@
+{
+  "192.168.50.85": {
+    "libggml-base.so": true,
+    "libggml-cpu.so": true,
+    "libggml.so": true,
+    "libllama-batched-bench-impl.so": true,
+    "libllama-bench-impl.so": true,
+    "libllama-cli-impl.so": true,
+    "libllama-common.so": true,
+    "libllama-completion-impl.so": true,
+    "libllama-fit-params-impl.so": true,
+    "libllama-perplexity-impl.so": true,
+    "libllama-quantize-impl.so": true,
+    "libllama-server-impl.so": true,
+    "libllama.so": true,
+    "libmtmd.so": true
+  },
+  "192.168.50.200": {
+    "libggml-base.so": true,
+    "libggml-cpu.so": true,
+    "libggml.so": true,
+    "libllama-batched-bench-impl.so": true,
+    "libllama-bench-impl.so": true,
+    "libllama-cli-impl.so": true,
+    "libllama-common.so": true,
+    "libllama-completion-impl.so": true,
+    "libllama-fit-params-impl.so": true,
+    "libllama-perplexity-impl.so": true,
+    "libllama-quantize-impl.so": true,
+    "libllama-server-impl.so": true,
+    "libllama.so": true,
+    "libmtmd.so": true
+  }
+}

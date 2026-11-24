@@ -1,0 +1,18 @@
+{
+  "hostname": "labrador",
+  "mac": "82:7b:8b:d6:85:dc",
+  "arch": "aarch64",
+  "files": {
+    "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": false,
+    "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": false,
+    "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": false,
+    "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": false
+  },
+  "uptime": "114697.91 454701.96",
+  "memory": [
+    "MemTotal:        1986400 kB",
+    "MemFree:         1541256 kB",
+    "MemAvailable:    1764024 kB"
+  ],
+  "ip": "192.168.50.44"
+}

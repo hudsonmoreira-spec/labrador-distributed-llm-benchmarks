@@ -1,0 +1,186 @@
+MemTotal:        1986400 kB
+MemFree:          262540 kB
+MemAvailable:    1660496 kB
+Buffers:           11740 kB
+Cached:          1438320 kB
+SwapCached:            0 kB
+Active:          1326632 kB
+Inactive:         268004 kB
+Active(anon):       2748 kB
+Inactive(anon):   144748 kB
+Active(file):    1323884 kB
+Inactive(file):   123256 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               724 kB
+Writeback:             0 kB
+AnonPages:        144724 kB
+Mapped:          1309424 kB
+Shmem:              2920 kB
+KReclaimable:      25536 kB
+Slab:              51968 kB
+SReclaimable:      25536 kB
+SUnreclaim:        26432 kB
+KernelStack:        2528 kB
+PageTables:         4156 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      993200 kB
+Committed_AS:     507032 kB
+VmallocTotal:   259653632 kB
+VmallocUsed:        8300 kB
+VmallocChunk:          0 kB
+Percpu:             1264 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    106496 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:         524288 kB
+CmaFree:          131396 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+0.68 0.36 0.24 1/155 6410
+    PID %CPU   RSS COMMAND
+      1  0.2 12068 systemd
+      2  0.0     0 kthreadd
+      3  0.0     0 rcu_gp
+      4  0.0     0 rcu_par_gp
+      5  0.0     0 slub_flushwq
+      6  0.0     0 netns
+     10  0.0     0 mm_percpu_wq
+     11  0.0     0 rcu_tasks_rude_kthread
+     12  0.0     0 rcu_tasks_trace_kthread
+     13  0.0     0 ksoftirqd/0
+     14  0.0     0 rcu_sched
+     15  0.0     0 migration/0
+     16  0.3     0 kworker/0:1-mm_percpu_wq
+     17  0.0     0 cpuhp/0
+     18  0.0     0 cpuhp/1
+     19  0.0     0 migration/1
+     20  0.0     0 ksoftirqd/1
+     23  0.0     0 cpuhp/2
+     24  0.0     0 migration/2
+     25  0.0     0 ksoftirqd/2
+     28  0.0     0 cpuhp/3
+     29  0.0     0 migration/3
+     30  0.0     0 ksoftirqd/3
+     32  0.0     0 kworker/3:0H-mmc_complete
+     33  0.0     0 kdevtmpfs
+     34  0.0     0 inet_frag_wq
+     35  0.0     0 kauditd
+     36  0.0     0 khungtaskd
+     37  0.0     0 oom_reaper
+     39  0.0     0 writeback
+     40  0.0     0 kcompactd0
+     41  0.0     0 khugepaged
+     42  0.0     0 pencrypt_serial
+     44  0.0     0 pdecrypt_serial
+     45  0.0     0 cryptd
+     46  0.0     0 kintegrityd
+     47  0.0     0 kblockd
+     48  0.0     0 blkcg_punt_bio
+     49  0.0     0 devfreq_wq
+     54  0.0     0 kswapd0
+     55  0.0     0 kthrotld
+     60  0.0     0 card0-crtc0
+     61  0.4     0 kworker/0:2-events_power_efficient
+     62  0.0     0 kworker/u9:0-hci0
+     63  0.0     0 nbd0-recv
+     64  0.0     0 nbd1-recv
+     65  0.0     0 nbd2-recv
+     66  0.0     0 nbd3-recv
+     67  0.0     0 nbd4-recv
+     68  0.0     0 nbd5-recv
+     69  0.0     0 nbd6-recv
+     70  0.0     0 nbd7-recv
+     71  0.0     0 nbd8-recv
+     72  0.0     0 nbd9-recv
+     73  0.0     0 nbd10-recv
+     74  0.0     0 nbd11-recv
+     75  0.0     0 nbd12-recv
+     76  0.0     0 nbd13-recv
+     77  0.0     0 nbd14-recv
+     78  0.0     0 nbd15-recv
+     79  0.0     0 drbd-reissue
+     80  0.0     0 kmemstick
+     82  0.0     0 mmc_complete
+     84  0.0     0 tls-strp
+     85  0.0     0 mld
+     86  0.0     0 ipv6_addrconf
+     97  0.0     0 kstrp
+     99  0.0     0 zswap-shrink
+    196  0.0     0 kworker/2:2H-mmc_complete
+    199  0.0     0 jbd2/mmcblk2p1-8
+    200  0.0     0 ext4-rsv-conver
+    202  0.0     0 kworker/0:1H-mmc_complete
+    209  0.0     0 kworker/1:2H-mmc_complete
+    220  0.2     0 kworker/0:3-rcu_gp
+    244  0.0 17632 systemd-journal
+    265  0.0  7152 systemd-udevd
+    280  0.0  6748 systemd-timesyn
+    356  0.0     0 cfg80211
+    359  0.0     0 stmmac_wq
+    360  0.0     0 ksdioirqd/mmc1
+    415  0.0  2576 cron
+    416  0.0  4184 dbus-daemon
+    418  0.0  7024 polkitd
+    419  0.0  5336 rsyslogd
+    420  0.0  7116 systemd-logind
+    432  0.2 19732 NetworkManager
+    445  0.0  4016 sudo
+    449  0.0   792 rtk_hciattach
+    454  0.0 12508 ModemManager
+    462  0.0  8676 python3
+    466  0.0   716 agetty
+    470  0.0   736 agetty
+    477  0.0  8696 sshd
+    498  0.0     0 RTW_XMIT_THREAD
+    499  0.1     0 RTW_CMD_THREAD
+    500  0.0     0 RTWHALXT
+    504  0.0 10688 wpa_supplicant
+    527  0.0     0 kworker/u9:2-hci0
+    552  0.5 1368088 llama-server
+    553  0.1  3220 verifica_rede_l
+   1859  0.0     0 kworker/1:0-mm_percpu_wq
+   1942  0.0     0 kworker/u8:2-flush-179:0
+   3314  0.0     0 kworker/u8:3-flush-179:0
+   4084  0.0     0 kworker/2:1-cgroup_destroy
+   4268  0.0     0 kworker/2:1H-mmc_complete
+   4576  0.0     0 kworker/1:0H-mmc_complete
+   4808  0.0     0 kworker/3:0-mm_percpu_wq
+   4923  0.0     0 kworker/3:1H-mmc_complete
+   5074  0.0     0 kworker/0:2H-mmc_complete
+   5216  0.0     0 kworker/2:2-cgroup_destroy
+   5307  0.0     0 kworker/0:4-mm_percpu_wq
+   5448  0.0     0 kworker/3:2-events_power_efficient
+   5449  0.0     0 kworker/1:1-events
+   5660  0.0     0 kworker/u8:0-events_unbound
+   5832  0.0     0 kworker/u8:1-flush-179:0
+   5863  0.0     0 kworker/0:0H-mmc_complete
+   5874  0.0     0 kworker/1:1H-mmc_complete
+   6008  0.0     0 kworker/0:0-events
+   6019  0.0     0 kworker/u8:4-flush-179:0
+   6020  0.0     0 kworker/2:0H-mmc_complete
+   6021  0.0     0 kworker/3:2H-mmc_complete
+   6042  0.0     0 kworker/3:1-cgroup_destroy
+   6043  0.0     0 kworker/1:2-events_power_efficient
+   6238  0.0     0 kworker/2:0-events_power_efficient
+   6240  0.0     0 kworker/3:3-mm_percpu_wq
+   6327  7.0 11192 systemd
+   6328  0.0  5208 (sd-pam)
+   6389  0.0   780 sleep
+   6401 25.5  9732 sshd
+   6407  0.0  6408 sshd
+   6408  125  4032 ps

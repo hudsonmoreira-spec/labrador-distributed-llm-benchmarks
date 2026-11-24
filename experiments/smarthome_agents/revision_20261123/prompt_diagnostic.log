@@ -1,0 +1,62 @@
+{"host": "192.168.50.89", "variant": "pt_zero_shot", "scenario_id": "dev2-01", "elapsed_s": 93.69432843300001, "error": null, "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}"}
+{"host": "192.168.50.169", "variant": "pt_two_examples", "scenario_id": "dev2-01", "elapsed_s": 123.88398118899977, "error": null, "model_content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}"}
+{"host": "192.168.50.240", "variant": "pt_two_examples", "scenario_id": "dev2-02", "elapsed_s": 124.12571248099994, "error": null, "model_content": "{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}"}
+{"host": "192.168.50.89", "variant": "original_en", "scenario_id": "dev2-02", "elapsed_s": 60.12460682600022, "error": null, "model_content": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}"}
+{"host": "192.168.50.169", "variant": "pt_zero_shot", "scenario_id": "dev2-02", "elapsed_s": 86.02858887999992, "error": null, "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}"}
+{"host": "192.168.50.240", "variant": "pt_zero_shot", "scenario_id": "dev2-03", "elapsed_s": 94.9653685180001, "error": null, "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}"}
+{"host": "192.168.50.89", "variant": "pt_two_examples", "scenario_id": "dev2-05", "elapsed_s": 127.46219356199981, "error": null, "model_content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"}"}
+{"host": "192.168.50.169", "variant": "original_en", "scenario_id": "dev2-03", "elapsed_s": 79.43483487899994, "error": null, "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}"}
+{"host": "192.168.50.240", "variant": "original_en", "scenario_id": "dev2-04", "elapsed_s": 77.8750969130001, "error": null, "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}"}
+{"host": "192.168.50.89", "variant": "pt_zero_shot", "scenario_id": "dev2-06", "elapsed_s": 92.80200882899999, "error": null, "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}]}"}
+{"host": "192.168.50.169", "variant": "pt_two_examples", "scenario_id": "dev2-06", "elapsed_s": 122.60157943200011, "error": null, "model_content": "{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"on\"}"}
+{"host": "192.168.50.240", "variant": "pt_two_examples", "scenario_id": "dev2-07", "elapsed_s": 123.94879700999991, "error": null, "model_content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"off\"}"}
+{"host": "192.168.50.89", "variant": "original_en", "scenario_id": "dev2-07", "elapsed_s": 61.63459269699979, "error": null, "model_content": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}"}
+{"host": "192.168.50.169", "variant": "pt_zero_shot", "scenario_id": "dev2-07", "elapsed_s": 80.17219711300004, "error": null, "model_content": "{\"action\":\"no_action\",\"reason\":\"Dispositivo ou opera\u00e7\u00e3o n\u00e3o suportados\"}"}
+{"host": "192.168.50.240", "variant": "pt_zero_shot", "scenario_id": "dev2-08", "elapsed_s": 94.85518229300033, "error": null, "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}"}
+{"host": "192.168.50.169", "variant": "original_en", "scenario_id": "dev2-08", "elapsed_s": 79.09345755300001, "error": null, "model_content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}"}
+Traceback (most recent call last):
+  File "/home/hudymoreira/labrador-distributed-llm-benchmarks/experiments/smarthome_agents/revision_20261123/run_prompt_diagnostic.py", line 119, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/hudymoreira/labrador-distributed-llm-benchmarks/experiments/smarthome_agents/revision_20261123/run_prompt_diagnostic.py", line 108, in main
+    for group in pool.map(worker,HOSTS):results.extend(group)
+                 ~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 639, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 311, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 450, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/usr/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/home/hudymoreira/labrador-distributed-llm-benchmarks/experiments/smarthome_agents/revision_20261123/run_prompt_diagnostic.py", line 106, in worker
+    def worker(h):return [attempt(h,v,c,i,out) for v,c,i in queues[h]]
+                          ~~~~~~~^^^^^^^^^^^^^
+  File "/home/hudymoreira/labrador-distributed-llm-benchmarks/experiments/smarthome_agents/revision_20261123/run_prompt_diagnostic.py", line 83, in attempt
+    (path/'memory_after.txt').write_text(snapshot(h))
+                                         ~~~~~~~~^^^
+  File "/home/hudymoreira/labrador-distributed-llm-benchmarks/experiments/smarthome_agents/revision_20261123/run_prompt_diagnostic.py", line 45, in snapshot
+    return ssh(h,'cat /proc/meminfo; cat /proc/loadavg; for p in /sys/class/thermal/thermal_zone*/temp; do echo "$p"; cat "$p"; done; ps -eo pid,pcpu,rss,comm',timeout=20)
+  File "/home/hudymoreira/labrador-distributed-llm-benchmarks/experiments/smarthome_agents/revision_20261123/run_prompt_diagnostic.py", line 36, in ssh
+    p=subprocess.run(['ssh','-F','/dev/null','-o','BatchMode=yes','-o','ConnectTimeout=6','-o','UserKnownHostsFile='+str(HERE/'inventory/known_hosts'),'caninos@'+h,command],text=True,capture_output=True,timeout=timeout)
+  File "/usr/lib/python3.14/subprocess.py", line 557, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1221, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 2154, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 1268, in _check_timeout
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+subprocess.TimeoutExpired: Command '['ssh', '-F', '/dev/null', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=6', '-o', 'UserKnownHostsFile=/home/hudymoreira/labrador-distributed-llm-benchmarks/experiments/smarthome_agents/revision_20261123/inventory/known_hosts', 'caninos@192.168.50.129', 'cat /proc/meminfo; cat /proc/loadavg; for p in /sys/class/thermal/thermal_zone*/temp; do echo "$p"; cat "$p"; done; ps -eo pid,pcpu,rss,comm']' timed out after 20 seconds

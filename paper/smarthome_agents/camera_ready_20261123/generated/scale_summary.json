@@ -1,0 +1,110 @@
+[
+  {
+    "model": "rules",
+    "replicas": 1,
+    "batches": 2,
+    "tasks_per_min_mean": 42.75256608075449,
+    "min": 29.091203326056483,
+    "max": 56.413928835452495,
+    "successes": 10,
+    "requests": 12,
+    "individual_median_s": 0.005703386006643996,
+    "individual_p95_s": 0.2108741319971159
+  },
+  {
+    "model": "rules",
+    "replicas": 3,
+    "batches": 2,
+    "tasks_per_min_mean": 235.1956666276912,
+    "min": 191.54258832793496,
+    "max": 278.84874492744746,
+    "successes": 10,
+    "requests": 12,
+    "individual_median_s": 0.005713524500606582,
+    "individual_p95_s": 0.008341626962646842
+  },
+  {
+    "model": "rules",
+    "replicas": 6,
+    "batches": 2,
+    "tasks_per_min_mean": 30555.53590759361,
+    "min": 28194.812997846493,
+    "max": 32916.25881734073,
+    "successes": 10,
+    "requests": 12,
+    "individual_median_s": 0.005983701004879549,
+    "individual_p95_s": 0.010640255000907928
+  },
+  {
+    "model": "05",
+    "replicas": 1,
+    "batches": 2,
+    "tasks_per_min_mean": 0.8712849488547245,
+    "min": 0.699989890713388,
+    "max": 1.0425800069960611,
+    "successes": 6,
+    "requests": 12,
+    "individual_median_s": 24.585663042991655,
+    "individual_p95_s": 37.90347159001976
+  },
+  {
+    "model": "05",
+    "replicas": 3,
+    "batches": 2,
+    "tasks_per_min_mean": 2.883074495419038,
+    "min": 2.690500136676303,
+    "max": 3.075648854161773,
+    "successes": 6,
+    "requests": 12,
+    "individual_median_s": 23.99277466451167,
+    "individual_p95_s": 40.91672324802494
+  },
+  {
+    "model": "05",
+    "replicas": 6,
+    "batches": 2,
+    "tasks_per_min_mean": 6.392992493412178,
+    "min": 6.256064023706302,
+    "max": 6.5299209631180535,
+    "successes": 6,
+    "requests": 12,
+    "individual_median_s": 23.98951736401068,
+    "individual_p95_s": 28.772084064024966
+  },
+  {
+    "model": "15",
+    "replicas": 1,
+    "batches": 2,
+    "tasks_per_min_mean": 0.08467383389670718,
+    "min": 0.07791561989796258,
+    "max": 0.0914320478954518,
+    "successes": 2,
+    "requests": 12,
+    "individual_median_s": 84.18652343496797,
+    "individual_p95_s": 131.20283506496344
+  },
+  {
+    "model": "15",
+    "replicas": 3,
+    "batches": 2,
+    "tasks_per_min_mean": 0.2886450663862217,
+    "min": 0.2582437709154478,
+    "max": 0.31904636185699564,
+    "successes": 2,
+    "requests": 12,
+    "individual_median_s": 78.6064652139903,
+    "individual_p95_s": 139.2779517250019
+  },
+  {
+    "model": "15",
+    "replicas": 6,
+    "batches": 2,
+    "tasks_per_min_mean": 0.6606873930202192,
+    "min": 0.6415828761595538,
+    "max": 0.6797919098808846,
+    "successes": 2,
+    "requests": 12,
+    "individual_median_s": 80.01884271699237,
+    "individual_p95_s": 93.51770100399153
+  }
+]

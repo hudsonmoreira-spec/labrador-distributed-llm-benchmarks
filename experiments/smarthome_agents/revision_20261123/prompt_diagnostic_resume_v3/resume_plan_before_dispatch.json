@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-11-23T13:14:33.521475+00:00",
+  "original_plan_sha256": "3ab13e064f04815c47dd4bbf0878480a2a03d2b2da4bcc60bd80e59dc5e4ec72",
+  "runner_sha256": "d4fdb0316561d2cfcf9f43b8c983e025964b8f993f7267a4243fb078162c64d2",
+  "reason": "SSH snapshot timeout interrupted host queues. Resume v2 completed no inference because lab8 (.195) became unreachable. Reassign its three missing requests to lab2 (.89), with identical audited runtime/model hashes. Retain all existing summaries; do not replace responses. Prompts and inference settings unchanged; host reassignment limits timing comparison.",
+  "retained_records": 18,
+  "queues": {
+    "192.168.50.129": [
+      {
+        "variant": "pt_two_examples",
+        "scenario_id": "dev2-04",
+        "index": 11
+      },
+      {
+        "variant": "pt_zero_shot",
+        "scenario_id": "dev2-05",
+        "index": 13
+      },
+      {
+        "variant": "original_en",
+        "scenario_id": "dev2-06",
+        "index": 15
+      }
+    ],
+    "192.168.50.89": [
+      {
+        "variant": "pt_zero_shot",
+        "scenario_id": "dev2-04",
+        "index": 10
+      },
+      {
+        "variant": "original_en",
+        "scenario_id": "dev2-05",
+        "index": 12
+      },
+      {
+        "variant": "pt_two_examples",
+        "scenario_id": "dev2-08",
+        "index": 23
+      }
+    ],
+    "192.168.50.169": [],
+    "192.168.50.240": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "case": "dev2-02",
+  "content": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}",
+  "elapsed_s": 6.955131646999689,
+  "evaluation": {
+    "review_pending": false,
+    "task_completed": false,
+    "checks": [
+      {
+        "name": "action_allowed",
+        "passed": true,
+        "detail": "allowed"
+      },
+      {
+        "name": "final:rooms.quarto.light",
+        "passed": false,
+        "expected": "off",
+        "actual": "on"
+      },
+      {
+        "name": "unchanged:rooms.sala.light",
+        "passed": true,
+        "expected": "off",
+        "actual": "off"
+      },
+      {
+        "name": "no_action_policy",
+        "passed": false
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "undue_proposal": false
+  },
+  "usage": {
+    "completion_tokens": 12,
+    "prompt_tokens": 126,
+    "total_tokens": 138,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

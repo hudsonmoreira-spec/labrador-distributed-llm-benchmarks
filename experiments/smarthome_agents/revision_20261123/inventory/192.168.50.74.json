@@ -1,0 +1,27 @@
+{
+  "hostname": "labrador",
+  "machine_id": "11b02da9cc614528b947d24bad602e6d",
+  "arch": "aarch64",
+  "kernel": "6.1.76",
+  "model": "Caninos Labrador 7 (Base 2.1)",
+  "macs": {
+    "end0": "5e:74:05:b1:f3:99",
+    "ip6tnl0": "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00",
+    "lo": "00:00:00:00:00:00",
+    "tunl0": "00:00:00:00",
+    "wlan0": "14:6b:9c:7d:30:ca"
+  },
+  "models": [],
+  "original_study_present": false,
+  "runtime": "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server",
+  "runtime_exists": false,
+  "memory": [
+    "MemTotal:        1986400 kB",
+    "MemFree:         1700908 kB",
+    "MemAvailable:    1780052 kB"
+  ],
+  "uptime": "1184.52 4654.09",
+  "model_processes": "",
+  "ports": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      128          0.0.0.0:22        0.0.0.0:*          \nLISTEN 0      128             [::]:22           [::]:*          \n",
+  "ip": "192.168.50.74"
+}

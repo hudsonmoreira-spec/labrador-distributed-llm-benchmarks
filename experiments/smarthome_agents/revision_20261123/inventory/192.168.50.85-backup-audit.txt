@@ -1,0 +1,12 @@
+lab4
+aarch64
+4
+               total       usada       livre    compart.  buff/cache  disponível
+Mem.:        1986400      326284      277408        2932     1460440     1660116
+Swap:              0           0           0
+Sist. Arq.     Blocos de 1024   Usado Disponível Capacid. Montado em
+/dev/root            14920584 5197504    8943356      37% /
+a46782e75231c0a4a75a1e38afbbc5d7b72d92c8d834d6bb8b5020a0e1e79a87  /home/caninos/llama-offline/llama.cpp/build/bin/llama-server
+2fd64d2f82daa895c5e2a4a2dd81570a3045256acb5b05ae01ecf1e6bda59e51  /home/caninos/llama-offline/llama.cpp/build/bin/libllama-server-impl.so
+b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c  /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf
+5: end0    inet 192.168.50.85/24 brd 192.168.50.255 scope global dynamic noprefixroute end0\       valid_lft 5431sec preferred_lft 5431sec

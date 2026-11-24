@@ -1,0 +1,52 @@
+{
+  "id": "e7b035ba-42e9-44b8-b1bf-33bd55d208f3",
+  "type": "new_interactive_test",
+  "created_at": "2026-11-23T13:48:51.808934+00:00",
+  "command": "Apague a luz do quarto.",
+  "model": "15",
+  "host": "192.168.50.85",
+  "elapsed_s": 60.14992425199944,
+  "initial": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "response": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}",
+  "answer": "A IA decidiu não agir. Motivo informado: Unsupported request",
+  "valid": true,
+  "completed": true,
+  "action": {
+    "action": "no_action",
+    "reason": "Unsupported request"
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "preparation_errors": [
+    {
+      "host": "192.168.50.200",
+      "phase": "preparation",
+      "error": "A placa não respondeu ao acesso de preparação: ssh: connect to host 192.168.50.200 port 22: No route to host"
+    }
+  ],
+  "request_sha256": "69c1e624cd19b9cb7f28a85c2db367ace0689d19362c30d5dcc4da50677257a7",
+  "response_sha256": "eb816048b3ded773d56ab0f8fda8a10c31026edec3ff179062f309a2f3bac40e"
+}

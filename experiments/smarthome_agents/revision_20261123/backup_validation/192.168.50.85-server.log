@@ -1,0 +1,51 @@
+0.00.021.933 I log_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.021.963 I device_info:
+0.00.022.038 I   - CPU     : CPU (1939 MiB, 1939 MiB free)
+0.00.022.502 I system_info: n_threads = 4 (n_threads_batch = 4) / 4 | CPU : NEON = 1 | ARM_FMA = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.023.086 I srv          init: using 5 threads for HTTP server
+0.00.024.184 I srv         start: binding port with default address family
+0.00.026.711 I srv  llama_server: loading model
+0.00.026.767 I srv    load_model: loading model '/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf'
+0.00.027.152 I common_init_result: fitting params to device memory ...
+0.00.027.167 I common_init_result: (for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on)
+0.03.095.883 I common_params_fit_impl: projected to use 1299 MiB of host memory vs. 1939 MiB of total host memory
+0.03.096.288 W common_fit_params: failed to fit params to free device memory: was unable to fit model into system memory by reducing context, abort
+0.04.808.142 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.05.964.330 W llama_context: n_ctx_seq (512) < n_ctx_train (32768) -- the full capacity of the model will not be utilized
+0.06.019.114 I srv    load_model: initializing slots, n_slots = 1
+0.07.113.118 W common_speculative_init: no implementations specified for speculative decoding
+0.07.113.169 I slot   load_model: id  0 | task -1 | new slot, n_ctx = 512
+0.07.113.401 I srv    load_model: prompt cache is enabled, size limit: 8192 MiB
+0.07.113.404 I srv    load_model: use `--cache-ram 0` to disable the prompt cache
+0.07.113.408 I srv    load_model: for more info see https://github.com/ggml-org/llama.cpp/pull/16391
+0.07.113.411 I srv    load_model: context checkpoints enabled, max = 32, min spacing = 256
+0.07.113.627 I srv          init: idle slots will be saved to prompt cache upon starting a new task
+0.07.165.676 I init: chat template, example_format: '<|im_start|>system
+You are a helpful assistant<|im_end|>
+<|im_start|>user
+Hello<|im_end|>
+<|im_start|>assistant
+Hi there<|im_end|>
+<|im_start|>user
+How are you?<|im_end|>
+<|im_start|>assistant
+'
+0.07.199.268 I srv          init: init: chat template, thinking = 0
+0.07.199.554 I srv  llama_server: model loaded
+0.07.199.588 I srv  llama_server: server is listening on http://0.0.0.0:19115
+0.07.199.617 I srv  update_slots: all slots are idle
+0.08.035.376 I srv  params_from_: Chat format: peg-native
+0.08.036.265 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.08.036.277 I srv  get_availabl: updating prompt cache
+0.08.036.305 I srv          load:  - looking for better prompt, base f_keep = -1.000, sim = 0.000
+0.08.036.338 I srv        update:  - cache state: 0 prompts, 0.000 MiB (limits: 8192.000 MiB, 512 tokens, 8589934592 est)
+0.08.036.347 I srv  get_availabl: prompt cache update took 0.06 ms
+0.08.036.587 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.16.667.717 I slot print_timing: id  0 | task 0 | prompt processing, n_tokens =     21, progress = 0.70, t =   8.63 s / 2.43 tokens per second
+0.20.544.342 I slot print_timing: id  0 | task 0 | prompt eval time =   12507.58 ms /    30 tokens (  416.92 ms per token,     2.40 tokens per second)
+0.20.544.618 I slot print_timing: id  0 | task 0 |        eval time =       0.00 ms /     1 tokens (    0.00 ms per token, 1000000.00 tokens per second)
+0.20.544.716 I slot print_timing: id  0 | task 0 |       total time =   12507.58 ms /    31 tokens
+0.20.544.821 I slot print_timing: id  0 | task 0 |    graphs reused =          0
+0.20.546.122 I slot      release: id  0 | task 0 | stop processing: n_tokens = 30, truncated = 0
+0.20.546.284 I srv  update_slots: all slots are idle
+0.21.162.347 I srv    operator(): operator(): cleaning up before exit...

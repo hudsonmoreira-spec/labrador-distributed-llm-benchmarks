@@ -1,0 +1,48 @@
+{
+  "at": "2026-11-23T13:24:33.723183+00:00",
+  "hosts": [
+    {
+      "host": "192.168.50.129",
+      "returncode": 0,
+      "listeners": "LISTEN 0      512          0.0.0.0:8080      0.0.0.0:*          \n",
+      "stderr": "",
+      "temporary_port_absent": true
+    },
+    {
+      "host": "192.168.50.89",
+      "returncode": 0,
+      "listeners": "LISTEN 0      512          0.0.0.0:8080      0.0.0.0:*          \n",
+      "stderr": "",
+      "temporary_port_absent": true
+    },
+    {
+      "host": "192.168.50.169",
+      "returncode": 0,
+      "listeners": "LISTEN 0      512          0.0.0.0:8080      0.0.0.0:*          \n",
+      "stderr": "",
+      "temporary_port_absent": true
+    },
+    {
+      "host": "192.168.50.240",
+      "returncode": 0,
+      "listeners": "LISTEN 0      512          0.0.0.0:8080      0.0.0.0:*          \n",
+      "stderr": "",
+      "temporary_port_absent": true
+    },
+    {
+      "host": "192.168.50.85",
+      "returncode": 0,
+      "listeners": "LISTEN 0      512          0.0.0.0:8080      0.0.0.0:*          \n",
+      "stderr": "",
+      "temporary_port_absent": true
+    },
+    {
+      "host": "192.168.50.200",
+      "returncode": 0,
+      "listeners": "",
+      "stderr": "",
+      "temporary_port_absent": true
+    }
+  ],
+  "unreachable_host": "lab8 192.168.50.195: cleanup unverified until connectivity returns"
+}

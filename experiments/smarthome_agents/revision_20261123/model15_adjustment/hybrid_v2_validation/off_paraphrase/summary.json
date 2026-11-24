@@ -1,0 +1,17 @@
+{
+  "id": "off_paraphrase",
+  "action": {
+    "action": "set_light",
+    "room": "quarto",
+    "value": "off"
+  },
+  "expected": {
+    "action": "set_light",
+    "room": "quarto",
+    "value": "off"
+  },
+  "passed": true,
+  "elapsed_s": 8.12065935999999,
+  "origin": "model_intent_and_rules",
+  "inference_calls": 1
+}

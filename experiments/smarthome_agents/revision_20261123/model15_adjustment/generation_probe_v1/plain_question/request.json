@@ -1,0 +1,12 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Qual é a capital do Brasil? Responda em uma frase."
+    }
+  ],
+  "temperature": 0,
+  "seed": 801,
+  "max_tokens": 64,
+  "cache_prompt": false
+}

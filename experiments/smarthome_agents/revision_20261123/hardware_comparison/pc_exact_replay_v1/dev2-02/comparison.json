@@ -1,0 +1,61 @@
+{
+  "scenario_id": "dev2-02",
+  "command": "Apague a luz do quarto.",
+  "sbc_host": "192.168.50.89",
+  "sbc_response": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}",
+  "pc_response": "{\"action\":\"no_action\",\"reason\":\"Unsupported request\"}",
+  "identical_text": true,
+  "identical_json": true,
+  "sbc_success": false,
+  "pc_success": false,
+  "sbc_s": 60.12460682600022,
+  "pc_s": 7.0753153869991365,
+  "request_sha256": "69c1e624cd19b9cb7f28a85c2db367ace0689d19362c30d5dcc4da50677257a7",
+  "pc_completed": true,
+  "pc_valid": true,
+  "pc_evaluation": {
+    "review_pending": false,
+    "task_completed": false,
+    "checks": [
+      {
+        "name": "action_allowed",
+        "passed": true,
+        "detail": "allowed"
+      },
+      {
+        "name": "final:rooms.quarto.light",
+        "passed": false,
+        "expected": "off",
+        "actual": "on"
+      },
+      {
+        "name": "unchanged:rooms.sala.light",
+        "passed": true,
+        "expected": "off",
+        "actual": "off"
+      },
+      {
+        "name": "no_action_policy",
+        "passed": false
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "undue_proposal": false
+  },
+  "usage": {
+    "completion_tokens": 12,
+    "prompt_tokens": 126,
+    "total_tokens": 138,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  }
+}

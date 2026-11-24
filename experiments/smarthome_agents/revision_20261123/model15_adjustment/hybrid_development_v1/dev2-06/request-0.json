@@ -1,0 +1,63 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Classifique a intenção do pedido SOMENTE para iluminação. Ligar/acender/iluminar significa on. Apagar/desligar/escurecer significa off. Pedido sobre aparelho, porta ou assunto diferente de iluminação significa unsupported. Não execute nada. Retorne somente JSON com intent igual a on, off ou unsupported."
+    },
+    {
+      "role": "user",
+      "content": "Desligue a lâmpada do dormitório."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"intent\":\"off\"}"
+    },
+    {
+      "role": "user",
+      "content": "Ilumine este ambiente."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"intent\":\"on\"}"
+    },
+    {
+      "role": "user",
+      "content": "Ative o ar-condicionado."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"intent\":\"unsupported\"}"
+    },
+    {
+      "role": "user",
+      "content": "Acenda a luz."
+    }
+  ],
+  "temperature": 0,
+  "seed": 801,
+  "max_tokens": 24,
+  "cache_prompt": false,
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "light_intent",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "intent"
+        ],
+        "properties": {
+          "intent": {
+            "enum": [
+              "on",
+              "off",
+              "unsupported"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

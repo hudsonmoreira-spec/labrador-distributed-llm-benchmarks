@@ -1,0 +1,36 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}"
+      }
+    }
+  ],
+  "created": 1795442702,
+  "model": "qwen2.5-1.5b-instruct-q5_k_m.gguf",
+  "system_fingerprint": "b9584-e25a32e98",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 41,
+    "prompt_tokens": 125,
+    "total_tokens": 166,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "id": "chatcmpl-LorjLP2YcML39dhChVbYUo3DGsgiTc2R",
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 125,
+    "prompt_ms": 5774.781,
+    "prompt_per_token_ms": 46.198248,
+    "prompt_per_second": 21.645842500347634,
+    "predicted_n": 41,
+    "predicted_ms": 3449.021,
+    "predicted_per_token_ms": 84.12246341463415,
+    "predicted_per_second": 11.88743124498227
+  }
+}

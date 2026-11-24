@@ -1,0 +1,31 @@
+{
+  "record_id": "a621f28d-cf67-4520-9c25-80fb989b3015",
+  "recorded_at": "2026-11-24T21:43:30.599748+00:00",
+  "kind": "original",
+  "id": "1",
+  "decision": "fail",
+  "reviewer": "Hudson Moreira Guimarães dos Santos",
+  "rationale": "A IA reformulou o pedido, mas não solicitou o cômodo ausente.",
+  "criterion": "A resposta solicita explicitamente o cômodo ausente?",
+  "human_validation_pending": false,
+  "source": {
+    "id": "1",
+    "command": "Quero a luz acesa.",
+    "initial": {
+      "lights": {
+        "sala": "off",
+        "quarto": "on"
+      },
+      "location": null
+    },
+    "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quero a luz acender.\"}",
+    "question": "Quero a luz acender.",
+    "host": "192.168.50.89",
+    "elapsed_s": 39.877181068994105,
+    "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep2-89/summary.json",
+    "source_sha256": "3c89fd2f544fcef78ec75ac7afb63c036c567374875c9ec15eee4eb5a152c005",
+    "request_sha256": "fabe6692fc85d9dc351058defc6a64de07d36269e19220defaf9943e8bf3c306",
+    "ledger_sha256": "1c1247114f1714727758a18cd6bcc8471b20c09d109512e49af79ac6178ee194"
+  },
+  "review_method": "Explicit form submission by the local user; name self-declared"
+}

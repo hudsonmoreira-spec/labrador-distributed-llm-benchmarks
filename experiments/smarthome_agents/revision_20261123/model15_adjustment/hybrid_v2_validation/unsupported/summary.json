@@ -1,0 +1,15 @@
+{
+  "id": "unsupported",
+  "action": {
+    "action": "no_action",
+    "reason": "Este modo controla somente iluminação da sala e do quarto."
+  },
+  "expected": {
+    "action": "no_action",
+    "reason": "Este modo controla somente iluminação da sala e do quarto."
+  },
+  "passed": true,
+  "elapsed_s": 4.569100019580219e-05,
+  "origin": "scope_rule_without_model",
+  "inference_calls": 0
+}

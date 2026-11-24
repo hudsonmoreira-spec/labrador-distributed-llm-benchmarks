@@ -1,0 +1,155 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Você interpreta comandos de luz para sala e quarto. Responda somente JSON. Use o cômodo citado no pedido, mesmo se a pessoa estiver em outro cômodo. Se o pedido não citar cômodo, use a localização conhecida; se for desconhecida, pergunte em qual cômodo. Não pergunte quem está no cômodo. Nunca altere luz que não foi solicitada. Acender/ligar usa value on; apagar/desligar usa value off. Uma luz: {\"action\":\"set_light\",\"room\":\"sala ou quarto\",\"value\":\"on ou off\"}. Duas luzes: {\"action\":\"set_lights\",\"steps\":[ações set_light]}. Sem cômodo: {\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Em qual cômodo?\"}. Pedido fora de luzes: {\"action\":\"no_action\",\"reason\":\"Dispositivo não suportado\"}."
+    },
+    {
+      "role": "user",
+      "content": "Ligue a iluminação da sala.\nLocalização conhecida: quarto."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}"
+    },
+    {
+      "role": "user",
+      "content": "Desligue a iluminação do quarto.\nLocalização: desconhecida."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}"
+    },
+    {
+      "role": "user",
+      "content": "Apague a luz.\nLocalização: desconhecida."
+    },
+    {
+      "role": "assistant",
+      "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Em qual cômodo?\"}"
+    },
+    {
+      "role": "user",
+      "content": "Pode deixar a sala iluminada?\nLocalização conhecida: desconhecida."
+    }
+  ],
+  "temperature": 0,
+  "seed": 801,
+  "max_tokens": 128,
+  "cache_prompt": false,
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "simulated_home",
+      "strict": true,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "room",
+              "value"
+            ],
+            "properties": {
+              "action": {
+                "const": "set_light"
+              },
+              "room": {
+                "type": "string"
+              },
+              "value": {
+                "enum": [
+                  "on",
+                  "off"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "missing_field",
+              "question"
+            ],
+            "properties": {
+              "action": {
+                "const": "ask_clarification"
+              },
+              "missing_field": {
+                "enum": [
+                  "room"
+                ]
+              },
+              "question": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "reason"
+            ],
+            "properties": {
+              "action": {
+                "const": "no_action"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "steps"
+            ],
+            "properties": {
+              "action": {
+                "const": "set_lights"
+              },
+              "steps": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 2,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "action",
+                    "room",
+                    "value"
+                  ],
+                  "properties": {
+                    "action": {
+                      "const": "set_light"
+                    },
+                    "room": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "enum": [
+                        "on",
+                        "off"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

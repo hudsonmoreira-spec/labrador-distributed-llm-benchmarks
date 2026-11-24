@@ -1,0 +1,31 @@
+{
+  "record_id": "913b0596-8219-43d6-acf4-d164ae14b09f",
+  "recorded_at": "2026-11-24T21:44:23.754219+00:00",
+  "kind": "original",
+  "id": "2",
+  "decision": "fail",
+  "reviewer": "Hudson Moreira Guimarães dos Santos",
+  "rationale": "A IA apenas repetiu o pedido e não perguntou de qual cômodo deveria apagar a iluminação",
+  "criterion": "A resposta solicita explicitamente o cômodo ausente?",
+  "human_validation_pending": false,
+  "source": {
+    "id": "2",
+    "command": "Pode apagar a iluminação?",
+    "initial": {
+      "lights": {
+        "sala": "off",
+        "quarto": "on"
+      },
+      "location": null
+    },
+    "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Pode apagar a iluminação?\"}",
+    "question": "Pode apagar a iluminação?",
+    "host": "192.168.50.195",
+    "elapsed_s": 31.6518352709827,
+    "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-04-rep1-195/summary.json",
+    "source_sha256": "99d7dc75c0b9f66b9c11b9a9a074ec901cfc7d044498e0e3e2e04b97d8c15b16",
+    "request_sha256": "3cc7aaeec0c9b445d407d17cc502741be3d793adc935a2ef50b1616584634d8f",
+    "ledger_sha256": "1c1247114f1714727758a18cd6bcc8471b20c09d109512e49af79ac6178ee194"
+  },
+  "review_method": "Explicit form submission by the local user; name self-declared"
+}

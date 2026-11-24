@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-24",
+  "review_type": "single_author_semantic_assessment",
+  "reviewer": "Hudson Moreira Guimarães dos Santos",
+  "criterion": "Does the question explicitly request the missing room when no room or location is known?",
+  "method": "The author read the recorded Portuguese requests and question texts and submitted each judgment explicitly through the local interface. The author reports having formed his own interpretations and comparing them with assistant explanations; assistant-suggested wording was used in the rationales. This is not a blinded review or an independent multi-rater evaluation.",
+  "historical_assisted_ledger_preserved": true,
+  "new_inference_for_this_assessment": false,
+  "confirmed_failures": 4,
+  "new_success_credit": 0,
+  "reviews": [
+    {
+      "record_id": "30ba25ff-5b38-4182-aed0-e1d1a4c31e7d",
+      "recorded_at": "2026-11-24T21:42:53.941221+00:00",
+      "kind": "original",
+      "id": "0",
+      "decision": "fail",
+      "reviewer": "Hudson Moreira Guimarães dos Santos",
+      "rationale": "A resposta apenas reformula o pedido e não pergunta qual cômodo deve ter a luz acesa.",
+      "criterion": "A resposta solicita explicitamente o cômodo ausente?",
+      "human_validation_pending": false,
+      "source": {
+        "id": "0",
+        "command": "Quero a luz acesa.",
+        "initial": {
+          "lights": {
+            "sala": "off",
+            "quarto": "on"
+          },
+          "location": null
+        },
+        "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quero a luz acender.\"}",
+        "question": "Quero a luz acender.",
+        "host": "192.168.50.240",
+        "elapsed_s": 35.59349480603123,
+        "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep1-240/summary.json",
+        "source_sha256": "170766421f35dfae77682337a2f48969791ce617d9c5f571f82ffa094176dec8",
+        "request_sha256": "cb01c1fd6260504a70157b64176a2ae2df6fef170b796872f65020b159b52c79",
+        "ledger_sha256": "1c1247114f1714727758a18cd6bcc8471b20c09d109512e49af79ac6178ee194"
+      },
+      "review_method": "Explicit form submission by the local user; name self-declared",
+      "review_file": "experiments/smarthome_agents/revision_20261123/review_console/records/reviews/2026-11-24T21-42-53.941221+00-00-30ba25ff-5b38-4182-aed0-e1d1a4c31e7d.json"
+    },
+    {
+      "record_id": "a621f28d-cf67-4520-9c25-80fb989b3015",
+      "recorded_at": "2026-11-24T21:43:30.599748+00:00",
+      "kind": "original",
+      "id": "1",
+      "decision": "fail",
+      "reviewer": "Hudson Moreira Guimarães dos Santos",
+      "rationale": "A IA reformulou o pedido, mas não solicitou o cômodo ausente.",
+      "criterion": "A resposta solicita explicitamente o cômodo ausente?",
+      "human_validation_pending": false,
+      "source": {
+        "id": "1",
+        "command": "Quero a luz acesa.",
+        "initial": {
+          "lights": {
+            "sala": "off",
+            "quarto": "on"
+          },
+          "location": null
+        },
+        "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quero a luz acender.\"}",
+        "question": "Quero a luz acender.",
+        "host": "192.168.50.89",
+        "elapsed_s": 39.877181068994105,
+        "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep2-89/summary.json",
+        "source_sha256": "3c89fd2f544fcef78ec75ac7afb63c036c567374875c9ec15eee4eb5a152c005",
+        "request_sha256": "fabe6692fc85d9dc351058defc6a64de07d36269e19220defaf9943e8bf3c306",
+        "ledger_sha256": "1c1247114f1714727758a18cd6bcc8471b20c09d109512e49af79ac6178ee194"
+      },
+      "review_method": "Explicit form submission by the local user; name self-declared",
+      "review_file": "experiments/smarthome_agents/revision_20261123/review_console/records/reviews/2026-11-24T21-43-30.599748+00-00-a621f28d-cf67-4520-9c25-80fb989b3015.json"
+    },
+    {
+      "record_id": "913b0596-8219-43d6-acf4-d164ae14b09f",
+      "recorded_at": "2026-11-24T21:44:23.754219+00:00",
+      "kind": "original",
+      "id": "2",
+      "decision": "fail",
+      "reviewer": "Hudson Moreira Guimarães dos Santos",
+      "rationale": "A IA apenas repetiu o pedido e não perguntou de qual cômodo deveria apagar a iluminação",
+      "criterion": "A resposta solicita explicitamente o cômodo ausente?",
+      "human_validation_pending": false,
+      "source": {
+        "id": "2",
+        "command": "Pode apagar a iluminação?",
+        "initial": {
+          "lights": {
+            "sala": "off",
+            "quarto": "on"
+          },
+          "location": null
+        },
+        "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Pode apagar a iluminação?\"}",
+        "question": "Pode apagar a iluminação?",
+        "host": "192.168.50.195",
+        "elapsed_s": 31.6518352709827,
+        "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-04-rep1-195/summary.json",
+        "source_sha256": "99d7dc75c0b9f66b9c11b9a9a074ec901cfc7d044498e0e3e2e04b97d8c15b16",
+        "request_sha256": "3cc7aaeec0c9b445d407d17cc502741be3d793adc935a2ef50b1616584634d8f",
+        "ledger_sha256": "1c1247114f1714727758a18cd6bcc8471b20c09d109512e49af79ac6178ee194"
+      },
+      "review_method": "Explicit form submission by the local user; name self-declared",
+      "review_file": "experiments/smarthome_agents/revision_20261123/review_console/records/reviews/2026-11-24T21-44-23.754219+00-00-913b0596-8219-43d6-acf4-d164ae14b09f.json"
+    },
+    {
+      "record_id": "e3c94859-d677-4f63-b416-31f1f412c6fe",
+      "recorded_at": "2026-11-24T21:44:22.512556+00:00",
+      "kind": "original",
+      "id": "3",
+      "decision": "fail",
+      "reviewer": "Hudson Moreira Guimarães dos Santos",
+      "rationale": "A IA apenas repetiu o pedido e não perguntou de qual cômodo deveria apagar a iluminação",
+      "criterion": "A resposta solicita explicitamente o cômodo ausente?",
+      "human_validation_pending": false,
+      "source": {
+        "id": "3",
+        "command": "Pode apagar a iluminação?",
+        "initial": {
+          "lights": {
+            "sala": "off",
+            "quarto": "on"
+          },
+          "location": null
+        },
+        "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Pode apagar a iluminação?\"}",
+        "question": "Pode apagar a iluminação?",
+        "host": "192.168.50.169",
+        "elapsed_s": 38.48779335897416,
+        "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-04-rep2-169/summary.json",
+        "source_sha256": "c3c9151e6c675954e6a5b737c841b364f53d9e2e5cab585058307cf687885336",
+        "request_sha256": "d7af8bf80b1db00e175c5911ad4c803fe367868419e9b07b099d59c71aa6b0a3",
+        "ledger_sha256": "1c1247114f1714727758a18cd6bcc8471b20c09d109512e49af79ac6178ee194"
+      },
+      "review_method": "Explicit form submission by the local user; name self-declared",
+      "review_file": "experiments/smarthome_agents/revision_20261123/review_console/records/reviews/2026-11-24T21-44-22.512556+00-00-e3c94859-d677-4f63-b416-31f1f412c6fe.json"
+    }
+  ]
+}

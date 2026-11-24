@@ -1,0 +1,51 @@
+{
+  "id": "c2f3027a-3145-44ae-b026-afe2b2120ae6",
+  "type": "new_interactive_test",
+  "created_at": "2026-11-24T20:56:35.415748+00:00",
+  "command": "Apague a luz da sala.",
+  "model": "05",
+  "host": "192.168.50.85",
+  "elapsed_s": 23.29502949000016,
+  "initial": {
+    "rooms": {
+      "sala": {
+        "light": "on"
+      },
+      "quarto": {
+        "light": "off"
+      }
+    },
+    "known_location": null
+  },
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "on"
+      },
+      "quarto": {
+        "light": "off"
+      }
+    },
+    "known_location": null
+  },
+  "response": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Apague a luz da sala?\"}",
+  "answer": "Apague a luz da sala?",
+  "valid": true,
+  "completed": true,
+  "action": {
+    "action": "ask_clarification",
+    "missing_field": "room",
+    "question": "Apague a luz da sala?"
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "preparation_errors": [],
+  "configuration": "original_action_v1",
+  "machine": "Labrador 192.168.50.85",
+  "origin": "model_action",
+  "raw_model_content": [],
+  "request_sha256": "862cdc0c770a7a0412e0d3f1d2c62bb64f73bd81739429e5b5e4d70c40017f2d",
+  "response_sha256": "a231546183231a001deb2de8f8643d5788b0392ea16e3ba510a4fe4c2bf5fc42"
+}

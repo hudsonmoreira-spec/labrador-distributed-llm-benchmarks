@@ -1,0 +1,36 @@
+{
+  "hostname": "lab8",
+  "machine_id": "11b02da9cc614528b947d24bad602e6d",
+  "arch": "aarch64",
+  "kernel": "6.1.76",
+  "model": "Caninos Labrador 7 (Base 2.1)",
+  "macs": {
+    "ip6tnl0": "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00",
+    "lo": "00:00:00:00:00:00",
+    "tunl0": "00:00:00:00",
+    "wlan0": "14:6b:9c:7b:0d:e8",
+    "end0": "3e:b1:de:25:6a:41"
+  },
+  "models": [
+    {
+      "path": "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf",
+      "size": 1285494304
+    },
+    {
+      "path": "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf",
+      "size": 522186592
+    }
+  ],
+  "original_study_present": true,
+  "runtime": "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server",
+  "runtime_exists": true,
+  "memory": [
+    "MemTotal:        1986272 kB",
+    "MemFree:          183252 kB",
+    "MemAvailable:    1635852 kB"
+  ],
+  "uptime": "1978.83 7748.56",
+  "model_processes": "663 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none\n",
+  "ports": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      512          0.0.0.0:8080      0.0.0.0:*          \nLISTEN 0      128        127.0.0.1:631       0.0.0.0:*          \nLISTEN 0      128          0.0.0.0:22        0.0.0.0:*          \nLISTEN 0      128            [::1]:631          [::]:*          \nLISTEN 0      128             [::]:22           [::]:*          \n",
+  "ip": "192.168.50.195"
+}
