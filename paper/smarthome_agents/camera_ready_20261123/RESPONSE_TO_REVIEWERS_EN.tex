@@ -1,0 +1,144 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=22mm]{geometry}
+\usepackage{lmodern,booktabs,array,xcolor,fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\definecolor{ink}{HTML}{17324D}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlist[itemize]{nosep,leftmargin=18pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\textcolor{ink}{ICCE 2027 | Paper 1571376010}}
+\fancyhead[R]{\small Response to reviewers}
+\fancyfoot[L]{\footnotesize Prepared for author review | 25 November 2026}
+\fancyfoot[R]{\footnotesize\thepage}
+\setlength{\headheight}{14pt}
+\newcommand{\point}[2]{\vspace{4pt}\textbf{#1. #2}\par}
+\newcommand{\where}[1]{\par{\small\textcolor{ink}{\textbf{Location:} #1}}\par}
+\begin{document}
+{\LARGE\bfseries\color{ink}Response to Reviewers}\par
+{\large ICCE 2027 | Paper \#1571376010}\par
+\textbf{Revised title:} Simulated Smart-Home Control with Small Language Models on SBCs: Task Success, Latency, and Parallel Replicas
+
+Dear Reviewers and Technical Program Committee,
+
+Thank you for the detailed comments. We revised the setup description, reported the original prompt in full, completed the four author assessments, added prompt and hardware diagnostics, and evaluated a rules-first controller with model fallback. We also condensed the parallel-replica discussion and made the findings and limitations more explicit.
+
+The original 240 quality attempts and 108 replication attempts are preserved. Supplementary experiments are reported separately; they do not replace the original results. Below, comments are paraphrased for brevity. Section and table references refer to the revised five-page manuscript. This response is prepared for author review and has not been submitted to EDAS.
+
+\section*{Reviewer 1}
+\point{R1.1}{Complete the four pending judgments}
+One author assessed the four unresolved Portuguese clarification records on 24 November. All four repeated or reformulated the request without asking which room was intended. They were therefore assessed as failures; the original 0.5B score remains 30/80 (37.5\%). Identity, rationale, timestamps and source hashes are retained. This is a non-blinded, single-author assessment, not independent multi-rater validation. The author reports forming his own interpretations and comparing them with assistant explanations; assistant-suggested wording was used for rationales. This assistance is disclosed.
+\where{III-C; IV-A; V-B; Evidence Availability and AI-use Disclosure.}
+
+\point{R1.2}{Test prompt changes before interpreting the 1.5B result}
+We ran the eight existing development cases with three prompts: original English, Portuguese, and Portuguese with two examples. Success was 1/8, 3/8 and 4/8; median HTTP latency was 78.5, 93.2 and 124.0 s. All 24 outputs were structurally valid. This tests the prompt-variant alternative; no new tool-calling-template evaluation is claimed. One repetition, development-case reuse, and three host reassignments limit causal and population inference. Reserved-set scores remain unchanged.
+\where{V-A.}
+
+\point{R1.3}{Limited workload and expected scaling}
+We restrict conclusions to the tested configurations and authored two-light workload. Repetitions assess operational stability rather than independent scenario diversity. Replica results are condensed and identified as a closed-batch deployment baseline, without claiming a new parallelization algorithm or sustained capacity.
+\where{III-C--D; IV-C; V-B; VI.}
+
+\newpage
+\section*{Reviewer 2}
+\point{R2.1}{Explain poor model performance and possible improvements}
+The revised discussion separates valid JSON, correct proposed steps, target state, unrelated-state preservation and executor intervention. A response can set the requested light correctly and still fail by changing another light. The 1.5B result therefore concerns this complete configuration, rather than proving that a larger model is generally inferior.
+
+The prompt diagnostic described in R1.2 indicates configuration sensitivity. We also replayed the eight original development requests on a notebook, retaining their exact payloads, model hash, runtime commit, context, thread counts and decoding settings. All eight response texts and JSON outputs matched the SBC outputs exactly; success was 1/8 on each platform. Median latency fell from 78.48 s on SBCs to 9.48 s on the notebook, without correcting those decisions. Architecture, compiler, transport and collection-time differences remain. This replay does not establish that hardware is universally irrelevant or isolate a unique failure cause.
+
+Smaller/distilled models, shorter prompts, caching and acceleration are discussed as possible interventions requiring evaluation. Their benefits are not presented as measured results.
+\where{III-C; IV-A--B; V-A; VI.}
+
+\point{R2.2}{Justify local execution without Internet access}
+Local execution is motivated by retaining household requests on user-controlled hardware and maintaining availability without an Internet connection. We clarify that the experiment measures local inference cost; it does not measure privacy guarantees or compare against cloud services. It therefore supports a bounded deployment comparison rather than a claim that local processing is always preferable.
+\where{I; V-A--B.}
+
+\point{R2.3}{Describe connectivity, processing and input modalities}
+The notebook is the Python HTTP/IPv4 client and evaluator. It and all six original boards connect through an Ethernet LAN (192.168.50.0/24). Each board executes a complete model; there is no model sharding or cooperation within an individual decision. The manuscript specifies CPU/runtime settings, context, slots, quantization and memory interpretation.
+
+Inputs in the measured study are exclusively text. The home and device actions are simulated; there are no microphones, cameras or physical actuators in that measurement path. Audio/visual processing is outside the reported experiment, so no multimodal capability is claimed.
+\where{III-A--B; III-D. Supplementary topology: III-E.}
+
+\newpage
+\section*{Reviewer 3}
+\point{R3.1}{Broaden the workload, devices and initial states}
+We agree that 40 authored cases with two lights cannot establish general smart-home performance. The revised validity section explicitly addresses related utterances, near-deterministic repeats, opposite initial states, untested idempotent commands and absent user-population evidence. We did not collect a new user-authored workload or add device types and initial-state distributions. These remain future work; we have narrowed the conclusions rather than presenting the supplementary known-case comparison as broader validation.
+\where{III-C; V-B; VI.}
+
+\point{R3.2}{Show the prompt; try Portuguese, examples and constrained decoding}
+The complete original system prompt is now printed, together with the user-message format and decoding settings. The Portuguese and two-example variants were evaluated separately on development cases, as described in R1.2.
+
+We also clarify that the original requests already supplied a JSON schema to \texttt{llama-server}. Requests used \texttt{response\_format} with type \texttt{json\_schema}. Structural validity was checked independently. Accordingly, constrained generation is documented as part of the original configuration; no new standalone GBNF intervention or speedup is claimed. All original quality responses were structurally valid, while decision errors remained.
+\where{III-C; IV-A; V-A.}
+
+\point{R3.3}{Evaluate rules first, with model fallback}
+We added a separate controller retaining the original finite grammar. Its single \texttt{no\_action} branch triggers fallback to the original 0.5B configuration. Recognized actions and clarifications are retained; executor blocking does not trigger a second attempt. No invalid-request detector was added.
+
+After 24 development routing/deployment checks, the frozen comparison ran 40 known scenarios twice under each of three conditions (240 new attempts). Five serial board queues and two reserves were used; two readiness failures caused pre-dispatch substitutions, with no retry of dispatched inference. All 240 responses completed with valid JSON and no dispatched infrastructure failures.
+
+\begin{center}\small
+\begin{tabular}{lrrrr}\toprule
+Controller & Success & Model calls & Mean (s) & Median (s)\\\midrule
+Rules & 42/80 & 0 & 0.007 & 0.006\\
+Qwen 0.5B & 30/80 & 80 & 23.464 & 23.740\\
+Rules + 0.5B & 44/80 & 54 & 15.880 & 21.466\\\bottomrule
+\end{tabular}
+\end{center}
+Hybrid avoided 26/80 model calls (32.5\%), but rejected 0/16 invalid requests versus 16/16 for rules. It recovered phrasing coverage without preserving rejection reliability. Eight automatic clarification flags exactly matched previously author-rejected request/response pairs; no success credit was added. Known-case reuse and host substitutions limit generalization and strict within-board pairing. The common supplementary HTTP wrapper differs from the original measurement path, so cross-campaign latency differences are not claimed as optimization gains.
+\where{III-E; IV-D and Table V; V-A--B; VI; evidence reference [9].}
+
+\newpage
+\section*{Reviewer 3 (continued)}
+\point{R3.4}{Discuss the obstacle posed by interactive latency}
+We explicitly state that the original model medians (36.848 and 94.663 s) obstruct interactive control. Potential improvements include smaller/distilled models, shorter prompts, caching and acceleration; none is claimed as an established speedup. The supplementary hybrid reduces mean latency relative to model-only within its own campaign, but its median remains 21.47 s. We do not present it as an interactive-ready solution.
+\where{IV-D; V-A.}
+
+\point{R3.5}{Condense replica scaling or evaluate sustained load; avoid misleading rules/min}
+We followed the condensation alternative. The discussion now emphasizes independent complete replicas, fixed closed batches and unchanged decision quality. The very large rules/min figure is omitted from the main comparison because six-replica batches lasted only about 9--11 ms, making extrapolation sensitive to instrumentation and absent between-wave gaps. Raw windows and rates remain archived.
+
+No sustained-load experiment with a realistic arrival process was performed. Queue measurements, longer runs and realistic arrivals are explicitly identified as necessary for capacity evaluation.
+\where{III-D; IV-C; V-A--B.}
+
+\point{R3.6}{Resolve the four pending human judgments}
+All four were assessed as failures by one author, with provenance and the single-author, non-blinded limitation disclosed. No original score was increased or retrospectively rewritten. Please see R1.1 for the assessment and assistance disclosure.
+\where{III-C; IV-A; V-B; Evidence Availability and AI-use Disclosure.}
+
+\point{R3.7}{Make the findings clearer and use ``Parallel Replicas'' in the title}
+The abstract and conclusion now state the observed differences directly. In the original comparison, rules had the best aggregate success and cost; 0.5B covered more paraphrases and outperformed the tested 1.5B configuration. Parallel copies improved batch service without correcting individual decisions. The supplementary hybrid achieved 55.0\% success but lost correct invalid-request rejection. Scope restrictions are consolidated in the validity discussion, while essential distinctions between original and supplementary evidence remain explicit.
+
+We adopted ``Parallel Replicas'' in the manuscript title to identify complete model copies serving separate requests and avoid ambiguity with study reproducibility. The conference metadata still needs to be aligned with this approved title; no EDAS change is claimed here.
+\where{Title; Abstract; V-B; VI.}
+
+\newpage
+\section*{Reviewer 4}
+\point{R4.1}{Small workload restricts generalizability}
+We explicitly limit the findings to authored Portuguese request/state combinations and two simulated lights. We make no real-home safety, usability or population claim. More devices, independently authored user requests and varied initial states were not added and remain future work, as explained in R3.1.
+\where{V-B; VI.}
+
+\point{R4.2}{Only two model configurations and a simple rule baseline}
+The original matched comparison remains unchanged and is described as configuration-specific. We acknowledge that the finite grammar is a limited engineering reference. The supplementary rules-first controller adds a matched deployment comparison, and the separate development diagnostic examines prompt variants. Neither amounts to a broad model survey or an optimal rule-system benchmark.
+\where{III-B--C; III-E; IV-D/Table V; V-A--B.}
+
+\point{R4.3}{Low success and long latency limit deployment}
+The revised discussion treats both decision errors and response cost as deployment obstacles. It reports that valid JSON alone is insufficient, and that naive fallback loses correct rejection despite improving aggregate success slightly. We do not claim readiness for real-home or interactive use.
+\where{IV-A--B; IV-D; V-A--B; VI.}
+
+\point{R4.4}{Replica throughput is expected rather than technically novel}
+We condensed the experiment and describe it as a deployment baseline with independent full model copies, not a new parallelization algorithm. The contribution is the traceable joint measurement of task success, inference cost and executor intervention on this platform; broader novelty is not claimed for expected scaling.
+\where{I; III-D; IV-C; VI.}
+
+\section*{Reviewer 5}
+\point{R5.1}{Positive assessment of the empirical evaluation}
+Thank you for recognizing the evaluation's relevance. The author-facing comment contains no additional specific requested change. We retained task-success, latency and independent-deployment results, clarified their scope, and added the supplementary comparison in response to the other reviewers. The limited novelty remains characterized as an empirical configuration comparison.
+\where{I; IV; V-B; VI.}
+
+\section*{Evidence and manuscript version}
+This response refers to the five-page manuscript at research-branch commit
+\href{https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/commit/a203f0ffd32aff1ee3b5abd4cc26181837948ae4}{\texttt{a203f0f}} (25 November 2026).
+The \href{https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/4cfbb483ddb5b53201c73c7f48f73cee03a85615/experiments/smarthome_agents/hybrid_comparison_20261125}{immutable supplementary archive, snapshot \texttt{4cfbb48}}, contains 24 development and 240 comparison attempts, frozen plans, raw exchanges, host changes and offline reconstruction scripts. Original evidence remains separately referenced in the manuscript. Audit scripts reconstructed all new scores, and controller routing tests passed.
+
+
+
+\end{document}

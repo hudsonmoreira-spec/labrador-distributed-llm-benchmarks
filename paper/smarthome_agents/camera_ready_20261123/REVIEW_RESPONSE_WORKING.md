@@ -57,3 +57,7 @@ All 240 comparison and 24 development attempts were reconstructed offline again;
 ## Title suggestion implemented — 25 November 2026
 
 Hudson approved Reviewer 3's suggested wording. The working manuscript now reads “Simulated Smart-Home Control with Small Language Models on SBCs: Task Success, Latency, and Parallel Replicas”. The wording identifies complete model copies serving independent requests in parallel. The original submitted manuscript remains preserved. Conference/EDAS metadata was not changed in this step.
+
+## Separate response completed — 25 November 2026
+
+RESPONSE_TO_REVIEWERS_EN.tex/pdf is the prepared point-by-point response for author/professor review, based on a fresh reading of all five reviews in the 22 November acceptance message. It contains 18 response items with manuscript locations, completed experiments, and explicit explanations for unperformed workload expansion/sustained-load tests. This checklist remains an internal history; the separate document has not been uploaded or sent.
