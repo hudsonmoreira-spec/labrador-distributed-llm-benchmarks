@@ -21,7 +21,7 @@ This is an internal response checklist, not an uploaded camera-ready version. Or
 
 ## Submission status
 
-No EDAS upload has been performed. This revision and its separate evidence are being released to the research branch with the author-assessment update. A possible title change from “Replication” to “Parallel Replicas” needs alignment with submission metadata and any current conference restrictions. The clarification assessment is complete. Final author/professor approval, conference requirements and the remaining reviewer checklist must still be checked before any submission; this commit is not an EDAS upload.
+No EDAS upload has been performed. This revision and its separate evidence are being released to the research branch with the author-assessment update. Hudson approved replacing “Replication” with “Parallel Replicas” on 25 November; the manuscript is updated. Alignment with conference metadata remains pending. The clarification assessment is complete. Final author/professor approval, conference requirements and the remaining reviewer checklist must still be checked before any submission; this commit is not an EDAS upload.
 
 ## Author-assessment procedure
 
@@ -36,7 +36,7 @@ Confirmed in the draft/evidence: four explicit author judgments; 24 exploratory 
 At that audit date, two content decisions remained (item 1 is now completed by the supplementary experiment and manuscript integration below):
 
 1. Reviewer 3 explicitly asks to evaluate rules-first control with model fallback. The current intent-plus-rules notebook prototype and its targeted development tests do not constitute that matched evaluation. Either perform a separate, clearly defined rules-first comparison or explicitly explain its deferral and retain it as an unresolved reviewer request; discussing it alone does not complete the requested experiment.
-2. Reviewer 3 recommends “Parallel Replicas” instead of “Replication” in the title. The title is unchanged. Decide with the authors whether to amend it and align EDAS metadata, or explain retention. Do not claim the title suggestion was implemented.
+2. Reviewer 3 recommends “Parallel Replicas” instead of “Replication” in the title. At the audit date the title was unchanged. On 25 November Hudson approved the suggestion, now implemented in the manuscript. EDAS metadata alignment remains pending.
 
 The larger user-written workload, more devices and varied initial states were not implemented. Their limits and future-work status are disclosed; this addresses scope in writing, not the requested expansion experimentally. Similarly, sustained load was not measured; the reviewer offered condensation as an alternative, which the draft implements. The original request already used JSON-schema-constrained decoding, so no new GBNF experiment is claimed.
 
@@ -48,8 +48,12 @@ The discussion now combines the existing prompt diagnostic (1/8 original, 3/8 Po
 
 ## 25 November: rules-first comparison completed
 
-See `experiments/smarthome_agents/hybrid_comparison_20261125/REPORT.md`. All240 comparative executions and24 development executions completed without dispatched infrastructure failures. Hybrid44/80 versus rules42/80 and model30/80; model calls54/80. Invalid-request rejection is0/16 for hybrid versus16/16 for rules. This is a descriptive comparison on known authored cases, with two pre-dispatch host substitutions. Eight automatic semantic flags exactly match original request/response evidence already rejected by the author; the cross-reference adds no success credit and does not claim new independent review. The experiment and manuscript integration are complete. Method III-E, Results IV-D/Table V, discussion, abstract and conclusion report the comparison and its limitations. Citation [9] points to immutable evidence snapshot 4cfbb483ddb5b53201c73c7f48f73cee03a85615. The title decision and final author/conference checks remain.
+See `experiments/smarthome_agents/hybrid_comparison_20261125/REPORT.md`. All240 comparative executions and24 development executions completed without dispatched infrastructure failures. Hybrid44/80 versus rules42/80 and model30/80; model calls54/80. Invalid-request rejection is0/16 for hybrid versus16/16 for rules. This is a descriptive comparison on known authored cases, with two pre-dispatch host substitutions. Eight automatic semantic flags exactly match original request/response evidence already rejected by the author; the cross-reference adds no success credit and does not claim new independent review. The experiment and manuscript integration are complete. Method III-E, Results IV-D/Table V, discussion, abstract and conclusion report the comparison and its limitations. Citation [9] points to immutable evidence snapshot 4cfbb483ddb5b53201c73c7f48f73cee03a85615. The title decision is now resolved as recorded below; metadata alignment and final author/conference checks remain.
 
 ## Final verification — 25 November 2026
 
 All 240 comparison and 24 development attempts were reconstructed offline again; three controller routing tests passed. The final five-page PDF was rendered and visually inspected, with the complete original system prompt and all five tables preserved. No unresolved references or overfull boxes were reported. The original submitted PDF and frozen study outputs were not modified. This release is a Git update, not an EDAS upload.
+
+## Title suggestion implemented — 25 November 2026
+
+Hudson approved Reviewer 3's suggested wording. The working manuscript now reads “Simulated Smart-Home Control with Small Language Models on SBCs: Task Success, Latency, and Parallel Replicas”. The wording identifies complete model copies serving independent requests in parallel. The original submitted manuscript remains preserved. Conference/EDAS metadata was not changed in this step.
