@@ -21,3 +21,7 @@ A opção **Qwen1,5B original · notebook** executa o prompt/esquema originais, 
 ## Avaliação dos registros originais concluída
 
 Em 24/11, Hudson salvou as quatro avaliações originais como inadequadas, com justificativas. O pacote separado `../author_review_20261124/` documenta procedimento, limites e verificação. Os novos testes interativos continuam separados dos resultados do artigo. `withdrawn_reviews/` preserva uma avaliação retirada explicitamente pelo autor por ter sido registrada no teste errado; ela não conta como avaliação ativa.
+
+## Pool após reinício de25/11
+
+A configuração do serviço local agora usa as cinco principais (.129,.89,.169,.240,.195), seguidas das reservas (.85,.200), para ambos os modelos nas Labradors. O0,5B usa o caminho comum configurado por `SMARTHOME_CONSOLE_MODEL_05`. Ver `../../cluster_ready_20261125/README.md` para serviços, identidade, parâmetros, recuperação e limites. O host.141 está excluído. As13 avaliações existentes foram preservadas; um smoke pela interface na lab1 passou.

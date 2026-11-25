@@ -1,0 +1,7 @@
+{
+  "command": "Acenda a luz da sala.",
+  "model": "05",
+  "sala": "off",
+  "quarto": "off",
+  "location": null
+}

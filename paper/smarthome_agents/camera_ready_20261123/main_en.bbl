@@ -86,9 +86,15 @@ R.~Qin, D.~Liu, C.~Xu, Z.~Yan, Z.~Tan, Z.~Jia, A.~Nassereldine, J.~Li,
   \url{https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/blob/main/qwen2.5-1.5b-instruct-q5_k_m.gguf}
 \BIBentrySTDinterwordspacing
 
+\bibitem{hybridartifact}
+{Labrador Distributed LLM Benchmarks contributors}, ``Supplementary rules-first
+  smart-home comparison: Plans, raw attempts, and reconstruction audits,''
+  \href{https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/4cfbb483ddb5b53201c73c7f48f73cee03a85615/experiments/smarthome_agents/hybrid_comparison_20261125}{GitHub
+  evidence (snapshot 4cfbb48)}, 2026, 264 new attempts; accessed 2026-11-25.
+
 \bibitem{artifact}
-{Labrador Distributed LLM Benchmarks contributors}, ``Simulated smart-home
-  control: Frozen protocol, raw attempts, and reconstruction scripts,''
+------, ``Simulated smart-home control: Frozen protocol, raw attempts, and
+  reconstruction scripts,''
   \href{https://github.com/hudsonmoreira-spec/labrador-distributed-llm-benchmarks/tree/a834b8255f736fb59425b146be183c17866a2c7d}{GitHub
   repository (snapshot a834b82)}, 2026, evidence snapshot a834b82, accessed
   2026-10-20.

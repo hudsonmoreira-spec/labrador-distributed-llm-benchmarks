@@ -1,0 +1,51 @@
+{
+  "id": "fb49a36a-9548-42a8-9dce-5b2f4080f83a",
+  "type": "new_interactive_test",
+  "created_at": "2026-11-25T17:21:16.545660+00:00",
+  "command": "Acenda a luz da sala.",
+  "model": "05",
+  "host": "192.168.50.129",
+  "elapsed_s": 21.01272717000029,
+  "initial": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "off"
+      }
+    },
+    "known_location": null
+  },
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "on"
+      },
+      "quarto": {
+        "light": "off"
+      }
+    },
+    "known_location": null
+  },
+  "response": "{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"}",
+  "answer": "Acender a luz da sala.",
+  "valid": true,
+  "completed": true,
+  "action": {
+    "action": "set_light",
+    "room": "sala",
+    "value": "on"
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "preparation_errors": [],
+  "configuration": "original_action_v1",
+  "machine": "Labrador 192.168.50.129",
+  "origin": "model_action",
+  "raw_model_content": [],
+  "request_sha256": "83270fa638bf9def39bcaef72b3abf01ac5ba16863fb8db89339ae793823964f",
+  "response_sha256": "c8289dadf84df88e1e3dd99c0894b152d97da352778a11a6b395429af964427b"
+}

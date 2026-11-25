@@ -30,7 +30,7 @@ REMOTE='/home/caninos/smarthome_agents/review_console_20261123'
 PORT=19116
 HOSTS=[h.strip() for h in os.environ.get('SMARTHOME_CONSOLE_HOSTS','192.168.50.85,192.168.50.200').split(',') if h.strip()]
 MODELS={
- '05':{'label':'Qwen 0,5B · modelo dos quatro casos','path':'/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf','sha':'041474553fcabfc2a2d67903f9d2c2e50bd92528e670da4f33b5d0ce6e59fd55'},
+ '05':{'label':'Qwen 0,5B · modelo dos quatro casos','path':os.environ.get('SMARTHOME_CONSOLE_MODEL_05','/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf'),'sha':'041474553fcabfc2a2d67903f9d2c2e50bd92528e670da4f33b5d0ce6e59fd55'},
  '15':{'label':'Qwen 1,5B · original na Labrador','path':'/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf','sha':'b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c'}}
 MODELS['15_hybrid']={'label':'Qwen 1,5B + regras · notebook','local':True}
 MODELS['15_pc_original']={'label':'Qwen 1,5B original · notebook','local':True}
@@ -112,7 +112,7 @@ def run(job,body):
  if body['model']=='15_hybrid':payload={'type':'hybrid_controller_input','command':body['command'],'known_location':body['location'],'profile':'hybrid_intent_v2','profile_sha256':sha(Path(hybrid.__file__))}
  save(folder/'request.json',payload);save(folder/'input.json',body)
  errors=[]
- hosts=['pc_original'] if body['model']=='15_pc_original' else ['127.0.0.1'] if body['model']=='15_hybrid' else HOSTS if body['model']=='05' else list(reversed(HOSTS))
+ hosts=['pc_original'] if body['model']=='15_pc_original' else ['127.0.0.1'] if body['model']=='15_hybrid' else HOSTS
  try:
   for h in hosts:
    try:prepare(h,body['model'],job)
