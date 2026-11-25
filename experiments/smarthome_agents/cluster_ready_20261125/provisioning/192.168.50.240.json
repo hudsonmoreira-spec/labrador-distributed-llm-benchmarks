@@ -1,0 +1,71 @@
+{
+  "profile": {
+    "remote": "/home/caninos/smarthome_agents/cluster_ready_20261125",
+    "binary": "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server",
+    "mac": "6a:5a:ed:60:07:55",
+    "hostname": "lab7",
+    "ip_at_setup": "192.168.50.240",
+    "role": "primary",
+    "port": 19115,
+    "runtime_sha256": "a46782e75231c0a4a75a1e38afbbc5d7b72d92c8d834d6bb8b5020a0e1e79a87",
+    "model_hashes": {
+      "05": "041474553fcabfc2a2d67903f9d2c2e50bd92528e670da4f33b5d0ce6e59fd55",
+      "15": "b46661073c18e5b56a41fa320975f866a00def1ff08feef4718e013258896f8c"
+    },
+    "server_settings": {
+      "threads": 4,
+      "threads_batch": 4,
+      "context": 512,
+      "parallel": 1,
+      "cpu_only": true
+    },
+    "request_defaults": {
+      "temperature": 0,
+      "seed": 801,
+      "max_tokens": 128,
+      "cache_prompt": false
+    },
+    "second_repetition_seed": 802,
+    "library_hashes": {
+      "libggml-base.so": "3a2346e2a4f8517dd53083141f024eef823f81a99969c015ffdc4bc3e38b8390",
+      "libggml-base.so.0": "3a2346e2a4f8517dd53083141f024eef823f81a99969c015ffdc4bc3e38b8390",
+      "libggml-base.so.0.14.0": "3a2346e2a4f8517dd53083141f024eef823f81a99969c015ffdc4bc3e38b8390",
+      "libggml-cpu.so": "a3b287b9a5bd3f3a74b215680e274d014e405b363d8e68c48b4e71940c5ecf23",
+      "libggml-cpu.so.0": "a3b287b9a5bd3f3a74b215680e274d014e405b363d8e68c48b4e71940c5ecf23",
+      "libggml-cpu.so.0.14.0": "a3b287b9a5bd3f3a74b215680e274d014e405b363d8e68c48b4e71940c5ecf23",
+      "libggml.so": "f03ab71acfcf7bb71724cef4e1940db9dd9acdd87852e04f21ff197b13218018",
+      "libggml.so.0": "f03ab71acfcf7bb71724cef4e1940db9dd9acdd87852e04f21ff197b13218018",
+      "libggml.so.0.14.0": "f03ab71acfcf7bb71724cef4e1940db9dd9acdd87852e04f21ff197b13218018",
+      "libllama-batched-bench-impl.so": "7b886e49a5cfdecabc9b73a75bdccba39689a0d41b4e90d7bbc72f5f2e2c0f3a",
+      "libllama-bench-impl.so": "5939c1da0808a4f7ff1652f07e550af46d3895f9f01091f7bed21aba8dfee846",
+      "libllama-cli-impl.so": "cee4e9ab2cac055e1769f038e7d2d92449bb539fad0ff8ef7e85cab0aa855fef",
+      "libllama-common.so": "969ffa3b07e02f38809bc0072fe8e99f2a64ab8af73496475331ae8478518c68",
+      "libllama-common.so.0": "969ffa3b07e02f38809bc0072fe8e99f2a64ab8af73496475331ae8478518c68",
+      "libllama-common.so.0.0.9584": "969ffa3b07e02f38809bc0072fe8e99f2a64ab8af73496475331ae8478518c68",
+      "libllama-completion-impl.so": "51cc75f56469efd5208a977ac587ebbd228f1f7a55313fda22495696008285bb",
+      "libllama-fit-params-impl.so": "6f532123a7688ae8506b82c935877a8fdde7f3f10056b94b1ae92a780c524624",
+      "libllama-perplexity-impl.so": "2e1466bb3d1e249923710acc8f63691ff6e3c3d576ec6adb56cd0f3ec3e3c899",
+      "libllama-quantize-impl.so": "693bb506870f24637d7ed0432d1d183104260dd0d2d146a57985ec6c24e06b72",
+      "libllama-server-impl.so": "2fd64d2f82daa895c5e2a4a2dd81570a3045256acb5b05ae01ecf1e6bda59e51",
+      "libllama.so": "e4856996bc39976a68302e84806dc48ef91a8435b66b4cb07bd3110b6d73cc7a",
+      "libllama.so.0": "e4856996bc39976a68302e84806dc48ef91a8435b66b4cb07bd3110b6d73cc7a",
+      "libllama.so.0.0.9584": "e4856996bc39976a68302e84806dc48ef91a8435b66b4cb07bd3110b6d73cc7a",
+      "libmtmd.so": "e5853910b96e58dc6aa4277189c6c9c5422461a259204d20e7a921f7bc21abed",
+      "libmtmd.so.0": "e5853910b96e58dc6aa4277189c6c9c5422461a259204d20e7a921f7bc21abed",
+      "libmtmd.so.0.0.9584": "e5853910b96e58dc6aa4277189c6c9c5422461a259204d20e7a921f7bc21abed"
+    },
+    "resolved_models": {
+      "05": "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf",
+      "15": "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf"
+    }
+  },
+  "enabled_05": "enabled",
+  "disk": "Sist. Arq.     Blocos de 1024   Usado Dispon\u00edvel Capacid. Montado em\n/dev/root            14920584 5730444    8410416      41% /\n",
+  "memory": [
+    "MemTotal:        1986400 kB",
+    "MemFree:           64920 kB",
+    "MemAvailable:    1643036 kB"
+  ],
+  "installed": true,
+  "ip": "192.168.50.240"
+}

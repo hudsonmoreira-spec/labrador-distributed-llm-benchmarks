@@ -1,0 +1,30 @@
+{
+  "condition": "rules",
+  "seed": 802,
+  "case": {
+    "resident_request": "Pode desligar a iluminação do quarto?",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    }
+  }
+}

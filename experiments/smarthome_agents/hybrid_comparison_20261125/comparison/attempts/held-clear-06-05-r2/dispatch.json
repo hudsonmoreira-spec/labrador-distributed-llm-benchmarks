@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-25T17:59:54.604710+00:00",
+  "actual_host": {
+    "ip": "192.168.50.89",
+    "mac": "ea:0e:48:7f:0c:1b",
+    "name": "lab2",
+    "role": "primary"
+  },
+  "assigned_host": {
+    "ip": "192.168.50.89",
+    "mac": "ea:0e:48:7f:0c:1b",
+    "name": "lab2",
+    "role": "primary"
+  },
+  "id": "held-clear-06-05-r2"
+}

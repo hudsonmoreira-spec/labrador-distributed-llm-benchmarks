@@ -1,0 +1,14 @@
+{
+  "content": "{\"action\": \"set_light\", \"room\": \"sala\", \"value\": \"off\"}",
+  "completed": true,
+  "origin": "rules",
+  "fallback": false,
+  "rule_action": {
+    "action": "set_light",
+    "room": "sala",
+    "value": "off"
+  },
+  "model_request": null,
+  "model_response": null,
+  "controller_elapsed_s": 0.00033129600024039974
+}

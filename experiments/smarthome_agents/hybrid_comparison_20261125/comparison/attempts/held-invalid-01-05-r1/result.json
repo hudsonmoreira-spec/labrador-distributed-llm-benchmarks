@@ -1,0 +1,92 @@
+{
+  "id": "held-invalid-01-05-r1",
+  "scenario_id": "held-invalid-01",
+  "category": "invalid",
+  "condition": "05",
+  "rep": 1,
+  "host": "192.168.50.169",
+  "assigned_host": "192.168.50.169",
+  "created_at": "2026-11-25T18:08:36.584765+00:00",
+  "infrastructure_ok": true,
+  "elapsed_s": 23.020977549000236,
+  "origin": "model",
+  "fallback": false,
+  "completed": true,
+  "structured_valid": true,
+  "action": {
+    "action": "ask_clarification",
+    "missing_field": "room",
+    "question": "Qual sala gostaria de abrir?"
+  },
+  "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Qual sala gostaria de abrir?\"}",
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "evaluation": {
+    "review_pending": false,
+    "task_completed": false,
+    "checks": [
+      {
+        "name": "action_allowed",
+        "passed": true,
+        "detail": "allowed"
+      },
+      {
+        "name": "unchanged:rooms.sala.light",
+        "passed": true,
+        "expected": "off",
+        "actual": "off"
+      },
+      {
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true,
+        "expected": "on",
+        "actual": "on"
+      },
+      {
+        "name": "prohibited:{'action': 'set_light', 'room': '*', 'value': '*'}",
+        "passed": true
+      },
+      {
+        "name": "clarification_allowed",
+        "passed": false
+      },
+      {
+        "name": "clarification_missing_field",
+        "passed": false,
+        "review": {
+          "status": "fail",
+          "reason": "missing_field_not_expected"
+        }
+      },
+      {
+        "name": "expected_action",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": {
+      "clarification_question": {
+        "status": "fail",
+        "reason": "missing_field_not_expected"
+      }
+    },
+    "undue_proposal": false
+  },
+  "controller_elapsed_s": 23.013633306999964
+}

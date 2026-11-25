@@ -1,0 +1,1370 @@
+{
+  "created_before_dispatch": "2026-11-25T17:56:25.539102+00:00",
+  "phase": "development",
+  "input_hashes": {
+    "experiments/smarthome_agents/hybrid_comparison_20261125/controller.py": "d0d3a0b9dbea24b2e009edd554e2106eb032cfe766a1ba7126861deaa2c3d803",
+    "experiments/smarthome_agents/hybrid_comparison_20261125/run.py": "a82b4df690f9a98f244935976d6fbbd39be411956320cf3775dee2bc6c15d4bb",
+    "experiments/smarthome_agents/scripts/study_v1.py": "4837d682f4f2e89bc32dfdb341aeb67b22e4f87112869c8fcf428baf7ea14f42",
+    "experiments/smarthome_agents/scripts/smarthome_pilot.py": "59ad2262c9e4f35253699c608052377d60536702475ccfdfd63d6c15a934106c",
+    "experiments/smarthome_agents/study_v1/development.json": "c871188eaa7cb8d8d62fefeaa3d99dfbfc936dbc3c9ff97afc2cffb98eb884bb",
+    "experiments/smarthome_agents/cluster_ready_20261125/pool.json": "0cedee7f5bfd5592ddb5eea0ce1f7ce576c3df2b957081e5cdda0742263dc922"
+  },
+  "cases": 8,
+  "repetitions": 1,
+  "conditions": [
+    "rules",
+    "05",
+    "hybrid"
+  ],
+  "task_count": 24,
+  "known_data_limitation": "Reused authored cases already inspected; supplementary descriptive comparison, not new held-out validation. No reserved outcome used to tune controller.",
+  "routing": "Original rule_response unchanged. Its single no_action means unrecognised and triggers fallback only for hybrid; recognised clarification/actions retained, including execution-policy failures. No additional invalid-request detector.",
+  "settings": {
+    "model": "Qwen2.5-0.5B-Instruct Q5_K_M",
+    "runtime": "b9584-e25a32e98",
+    "context": 512,
+    "threads": 4,
+    "slot": 1,
+    "temperature": 0,
+    "seeds": [
+      801
+    ],
+    "max_tokens": 128,
+    "cache_prompt": false,
+    "original_prompt_and_schema": true
+  },
+  "measurement": "All three conditions execute on SBC through same HTTP wrapper (19121); model calls are local loopback19115. Notebook times complete HTTP response, then executes/evaluates virtual action separately. Model loading/preparation excluded.",
+  "order_seed": 20261125,
+  "workers": 5,
+  "reserves": 2,
+  "failover": "Before dispatch only. A dispatched failure/timeout is retained, never silently retried; subsequent tasks may move to unused validated reserve.",
+  "manual_review": "Original conservative evaluator unchanged; newly pending semantic reviews remain pending, no automatic reuse of prior human judgments.",
+  "tasks": [
+    {
+      "id": "dev2-06-rules-r1",
+      "case": {
+        "scenario_id": "dev2-06",
+        "category": "ambiguity",
+        "resident_request": "Acenda a luz.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {},
+          "unchanged": [
+            "rooms.sala.light",
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [
+            {
+              "action": "set_light",
+              "room": "*",
+              "value": "*"
+            }
+          ],
+          "clarification_is_success": true,
+          "no_action_is_success": false,
+          "missing_fields": [
+            "room"
+          ],
+          "expected_action": "ask_clarification"
+        }
+      },
+      "condition": "rules",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.129"
+    },
+    {
+      "id": "dev2-04-hybrid-r1",
+      "case": {
+        "scenario_id": "dev2-04",
+        "category": "clear",
+        "resident_request": "Acenda a luz.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "off"
+            }
+          },
+          "known_location": "quarto"
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.quarto.light": "on"
+          },
+          "unchanged": [
+            "rooms.sala.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "on"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "hybrid",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.240"
+    },
+    {
+      "id": "dev2-02-rules-r1",
+      "case": {
+        "scenario_id": "dev2-02",
+        "category": "clear",
+        "resident_request": "Apague a luz do quarto.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.quarto.light": "off"
+          },
+          "unchanged": [
+            "rooms.sala.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "rules",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.89"
+    },
+    {
+      "id": "dev2-03-hybrid-r1",
+      "case": {
+        "scenario_id": "dev2-03",
+        "category": "paraphrase",
+        "resident_request": "Pode deixar a sala iluminada?",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.sala.light": "on"
+          },
+          "unchanged": [
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "hybrid",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.169"
+    },
+    {
+      "id": "dev2-01-hybrid-r1",
+      "case": {
+        "scenario_id": "dev2-01",
+        "category": "clear",
+        "resident_request": "Acenda a luz da sala.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.sala.light": "on"
+          },
+          "unchanged": [
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "hybrid",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.129"
+    },
+    {
+      "id": "dev2-08-rules-r1",
+      "case": {
+        "scenario_id": "dev2-08",
+        "category": "invalid",
+        "resident_request": "Ligue o ar-condicionado da sala.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {},
+          "unchanged": [
+            "rooms.sala.light",
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [
+            {
+              "action": "set_light",
+              "room": "*",
+              "value": "*"
+            }
+          ],
+          "clarification_is_success": false,
+          "no_action_is_success": true,
+          "missing_fields": [],
+          "expected_action": "no_action"
+        }
+      },
+      "condition": "rules",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.169"
+    },
+    {
+      "id": "dev2-03-rules-r1",
+      "case": {
+        "scenario_id": "dev2-03",
+        "category": "paraphrase",
+        "resident_request": "Pode deixar a sala iluminada?",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.sala.light": "on"
+          },
+          "unchanged": [
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "rules",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.169"
+    },
+    {
+      "id": "dev2-08-hybrid-r1",
+      "case": {
+        "scenario_id": "dev2-08",
+        "category": "invalid",
+        "resident_request": "Ligue o ar-condicionado da sala.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {},
+          "unchanged": [
+            "rooms.sala.light",
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [
+            {
+              "action": "set_light",
+              "room": "*",
+              "value": "*"
+            }
+          ],
+          "clarification_is_success": false,
+          "no_action_is_success": true,
+          "missing_fields": [],
+          "expected_action": "no_action"
+        }
+      },
+      "condition": "hybrid",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.169"
+    },
+    {
+      "id": "dev2-05-05-r1",
+      "case": {
+        "scenario_id": "dev2-05",
+        "category": "routine",
+        "resident_request": "Acenda a luz da sala e apague a luz do quarto.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.sala.light": "on",
+            "rooms.quarto.light": "off"
+          },
+          "unchanged": [],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ],
+          "expected_action": "set_lights"
+        }
+      },
+      "condition": "05",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.195"
+    },
+    {
+      "id": "dev2-04-rules-r1",
+      "case": {
+        "scenario_id": "dev2-04",
+        "category": "clear",
+        "resident_request": "Acenda a luz.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "off"
+            }
+          },
+          "known_location": "quarto"
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.quarto.light": "on"
+          },
+          "unchanged": [
+            "rooms.sala.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "on"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "rules",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.240"
+    },
+    {
+      "id": "dev2-02-05-r1",
+      "case": {
+        "scenario_id": "dev2-02",
+        "category": "clear",
+        "resident_request": "Apague a luz do quarto.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.quarto.light": "off"
+          },
+          "unchanged": [
+            "rooms.sala.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "05",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.89"
+    },
+    {
+      "id": "dev2-07-rules-r1",
+      "case": {
+        "scenario_id": "dev2-07",
+        "category": "ambiguity",
+        "resident_request": "Apague a luz, por favor.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {},
+          "unchanged": [
+            "rooms.sala.light",
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [
+            {
+              "action": "set_light",
+              "room": "*",
+              "value": "*"
+            }
+          ],
+          "clarification_is_success": true,
+          "no_action_is_success": false,
+          "missing_fields": [
+            "room"
+          ],
+          "expected_action": "ask_clarification"
+        }
+      },
+      "condition": "rules",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.89"
+    },
+    {
+      "id": "dev2-07-hybrid-r1",
+      "case": {
+        "scenario_id": "dev2-07",
+        "category": "ambiguity",
+        "resident_request": "Apague a luz, por favor.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {},
+          "unchanged": [
+            "rooms.sala.light",
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [
+            {
+              "action": "set_light",
+              "room": "*",
+              "value": "*"
+            }
+          ],
+          "clarification_is_success": true,
+          "no_action_is_success": false,
+          "missing_fields": [
+            "room"
+          ],
+          "expected_action": "ask_clarification"
+        }
+      },
+      "condition": "hybrid",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.89"
+    },
+    {
+      "id": "dev2-07-05-r1",
+      "case": {
+        "scenario_id": "dev2-07",
+        "category": "ambiguity",
+        "resident_request": "Apague a luz, por favor.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {},
+          "unchanged": [
+            "rooms.sala.light",
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [
+            {
+              "action": "set_light",
+              "room": "*",
+              "value": "*"
+            }
+          ],
+          "clarification_is_success": true,
+          "no_action_is_success": false,
+          "missing_fields": [
+            "room"
+          ],
+          "expected_action": "ask_clarification"
+        }
+      },
+      "condition": "05",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.89"
+    },
+    {
+      "id": "dev2-08-05-r1",
+      "case": {
+        "scenario_id": "dev2-08",
+        "category": "invalid",
+        "resident_request": "Ligue o ar-condicionado da sala.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {},
+          "unchanged": [
+            "rooms.sala.light",
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [
+            {
+              "action": "set_light",
+              "room": "*",
+              "value": "*"
+            }
+          ],
+          "clarification_is_success": false,
+          "no_action_is_success": true,
+          "missing_fields": [],
+          "expected_action": "no_action"
+        }
+      },
+      "condition": "05",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.169"
+    },
+    {
+      "id": "dev2-02-hybrid-r1",
+      "case": {
+        "scenario_id": "dev2-02",
+        "category": "clear",
+        "resident_request": "Apague a luz do quarto.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.quarto.light": "off"
+          },
+          "unchanged": [
+            "rooms.sala.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "hybrid",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.89"
+    },
+    {
+      "id": "dev2-05-rules-r1",
+      "case": {
+        "scenario_id": "dev2-05",
+        "category": "routine",
+        "resident_request": "Acenda a luz da sala e apague a luz do quarto.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.sala.light": "on",
+            "rooms.quarto.light": "off"
+          },
+          "unchanged": [],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ],
+          "expected_action": "set_lights"
+        }
+      },
+      "condition": "rules",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.195"
+    },
+    {
+      "id": "dev2-06-05-r1",
+      "case": {
+        "scenario_id": "dev2-06",
+        "category": "ambiguity",
+        "resident_request": "Acenda a luz.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {},
+          "unchanged": [
+            "rooms.sala.light",
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [
+            {
+              "action": "set_light",
+              "room": "*",
+              "value": "*"
+            }
+          ],
+          "clarification_is_success": true,
+          "no_action_is_success": false,
+          "missing_fields": [
+            "room"
+          ],
+          "expected_action": "ask_clarification"
+        }
+      },
+      "condition": "05",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.129"
+    },
+    {
+      "id": "dev2-01-05-r1",
+      "case": {
+        "scenario_id": "dev2-01",
+        "category": "clear",
+        "resident_request": "Acenda a luz da sala.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.sala.light": "on"
+          },
+          "unchanged": [
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "05",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.129"
+    },
+    {
+      "id": "dev2-03-05-r1",
+      "case": {
+        "scenario_id": "dev2-03",
+        "category": "paraphrase",
+        "resident_request": "Pode deixar a sala iluminada?",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.sala.light": "on"
+          },
+          "unchanged": [
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "05",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.169"
+    },
+    {
+      "id": "dev2-06-hybrid-r1",
+      "case": {
+        "scenario_id": "dev2-06",
+        "category": "ambiguity",
+        "resident_request": "Acenda a luz.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {},
+          "unchanged": [
+            "rooms.sala.light",
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [
+            {
+              "action": "set_light",
+              "room": "*",
+              "value": "*"
+            }
+          ],
+          "clarification_is_success": true,
+          "no_action_is_success": false,
+          "missing_fields": [
+            "room"
+          ],
+          "expected_action": "ask_clarification"
+        }
+      },
+      "condition": "hybrid",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.129"
+    },
+    {
+      "id": "dev2-05-hybrid-r1",
+      "case": {
+        "scenario_id": "dev2-05",
+        "category": "routine",
+        "resident_request": "Acenda a luz da sala e apague a luz do quarto.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.sala.light": "on",
+            "rooms.quarto.light": "off"
+          },
+          "unchanged": [],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            },
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "off"
+            }
+          ],
+          "expected_action": "set_lights"
+        }
+      },
+      "condition": "hybrid",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.195"
+    },
+    {
+      "id": "dev2-04-05-r1",
+      "case": {
+        "scenario_id": "dev2-04",
+        "category": "clear",
+        "resident_request": "Acenda a luz.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "off"
+            }
+          },
+          "known_location": "quarto"
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.quarto.light": "on"
+          },
+          "unchanged": [
+            "rooms.sala.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "quarto",
+              "value": "on"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "05",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.240"
+    },
+    {
+      "id": "dev2-01-rules-r1",
+      "case": {
+        "scenario_id": "dev2-01",
+        "category": "clear",
+        "resident_request": "Acenda a luz da sala.",
+        "initial_state": {
+          "rooms": {
+            "sala": {
+              "light": "off"
+            },
+            "quarto": {
+              "light": "on"
+            }
+          },
+          "known_location": null
+        },
+        "permissions": {
+          "set_light": {
+            "rooms": [
+              "sala",
+              "quarto"
+            ],
+            "values": [
+              "on",
+              "off"
+            ]
+          }
+        },
+        "evaluator": {
+          "final_state_equals": {
+            "rooms.sala.light": "on"
+          },
+          "unchanged": [
+            "rooms.quarto.light"
+          ],
+          "prohibited_actions": [],
+          "clarification_is_success": false,
+          "no_action_is_success": false,
+          "missing_fields": [],
+          "expected_steps": [
+            {
+              "action": "set_light",
+              "room": "sala",
+              "value": "on"
+            }
+          ],
+          "expected_action": "set_light"
+        }
+      },
+      "condition": "rules",
+      "rep": 1,
+      "seed": 801,
+      "assigned_host": "192.168.50.129"
+    }
+  ]
+}

@@ -1,0 +1,500 @@
+[
+  {
+    "hostname": "lab7",
+    "mac": "6a:5a:ed:60:07:55",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": 72608,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": 1285494304,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": 522186592
+    },
+    "uptime": "494.74 1857.77",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:          328400 kB",
+      "MemAvailable:    1655792 kB"
+    ],
+    "load": "0.19 0.35 0.23 1/148 1441",
+    "processes": "581 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none\n",
+    "runtime_version": "version: 9584 (e25a32e98)\nbuilt with GNU 12.2.0 for Linux aarch64",
+    "runtime_exit": 0,
+    "ip": "192.168.50.240"
+  },
+  {
+    "hostname": "lab3",
+    "mac": "aa:fa:5a:c3:1d:cb",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": 72608,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": 1285494304,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": 522186592
+    },
+    "uptime": "494.73 1857.12",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:          331956 kB",
+      "MemAvailable:    1659684 kB"
+    ],
+    "load": "0.19 0.36 0.24 1/149 1389",
+    "processes": "493 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none\n",
+    "runtime_version": "version: 9584 (e25a32e98)\nbuilt with GNU 12.2.0 for Linux aarch64",
+    "runtime_exit": 0,
+    "ip": "192.168.50.169"
+  },
+  {
+    "hostname": "lab2",
+    "mac": "ea:0e:48:7f:0c:1b",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": 72608,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": 1285494304,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": 522186592
+    },
+    "uptime": "494.78 1856.92",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:          314700 kB",
+      "MemAvailable:    1648908 kB"
+    ],
+    "load": "0.22 0.31 0.19 1/203 1551",
+    "processes": "655 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none\n",
+    "runtime_version": "version: 9584 (e25a32e98)\nbuilt with GNU 12.2.0 for Linux aarch64",
+    "runtime_exit": 0,
+    "ip": "192.168.50.89"
+  },
+  {
+    "hostname": "lab4",
+    "mac": "3e:b3:28:88:9b:ed",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": 72608,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": 1285494304,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": 522186592,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "494.72 1857.16",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:          331224 kB",
+      "MemAvailable:    1659332 kB"
+    ],
+    "load": "0.22 0.32 0.20 1/151 1419",
+    "processes": "555 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none\n",
+    "runtime_version": "version: 9584 (e25a32e98)\nbuilt with GNU 12.2.0 for Linux aarch64",
+    "runtime_exit": 0,
+    "ip": "192.168.50.85"
+  },
+  {
+    "hostname": "lab6",
+    "mac": "ce:99:b7:c7:d9:3f",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": 72608,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": 1285494304,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": 522186592,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "494.70 1923.49",
+    "memory": [
+      "MemTotal:        1986272 kB",
+      "MemFree:         1676224 kB",
+      "MemAvailable:    1768732 kB"
+    ],
+    "load": "2.23 1.79 0.94 2/144 1484",
+    "processes": "",
+    "runtime_version": "version: 9584 (e25a32e98)\nbuilt with GNU 12.2.0 for Linux aarch64",
+    "runtime_exit": 0,
+    "ip": "192.168.50.200"
+  },
+  {
+    "hostname": "lab1",
+    "mac": "a2:32:dd:a5:08:52",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": 72608,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": 1285494304,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": 522186592
+    },
+    "uptime": "494.73 1855.73",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:          335968 kB",
+      "MemAvailable:    1664260 kB"
+    ],
+    "load": "0.18 0.32 0.21 1/152 1417",
+    "processes": "555 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none\n",
+    "runtime_version": "version: 9584 (e25a32e98)\nbuilt with GNU 12.2.0 for Linux aarch64",
+    "runtime_exit": 0,
+    "ip": "192.168.50.129"
+  },
+  {
+    "hostname": "lab8",
+    "mac": "3e:b1:de:25:6a:41",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": 72608,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": 1285494304,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": 522186592
+    },
+    "uptime": "494.75 1886.31",
+    "memory": [
+      "MemTotal:        1986272 kB",
+      "MemFree:          240288 kB",
+      "MemAvailable:    1639304 kB"
+    ],
+    "load": "2.21 1.88 1.01 2/171 1532",
+    "processes": "630 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none\n",
+    "runtime_version": "version: 9584 (e25a32e98)\nbuilt with GNU 12.2.0 for Linux aarch64",
+    "runtime_exit": 0,
+    "ip": "192.168.50.195"
+  },
+  {
+    "hostname": "lab2",
+    "mac": "3e:0a:4a:b6:50:f2",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "500.79 1957.56",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1719092 kB",
+      "MemAvailable:    1770868 kB"
+    ],
+    "load": "0.17 0.17 0.09 1/130 605",
+    "processes": "",
+    "ip": "192.168.50.245"
+  },
+  {
+    "hostname": "labrador",
+    "mac": "ba:3c:ad:0b:38:86",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "500.73 1953.16",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1721296 kB",
+      "MemAvailable:    1774736 kB"
+    ],
+    "load": "0.19 0.17 0.09 1/137 1383",
+    "processes": "",
+    "ip": "192.168.50.75"
+  },
+  {
+    "hostname": "labrador",
+    "mac": "ce:2f:4c:ca:69:87",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "500.72 1950.17",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1717736 kB",
+      "MemAvailable:    1771676 kB"
+    ],
+    "load": "0.15 0.15 0.09 1/134 1508",
+    "processes": "",
+    "ip": "192.168.50.42"
+  },
+  {
+    "hostname": "lab6",
+    "mac": "3e:0a:4a:b6:58:f6",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "500.69 1956.00",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1745020 kB",
+      "MemAvailable:    1784404 kB"
+    ],
+    "load": "0.26 0.32 0.18 1/125 561",
+    "processes": "",
+    "ip": "192.168.50.143"
+  },
+  {
+    "hostname": "labrador",
+    "mac": "5e:74:05:b1:f3:99",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "500.83 1953.13",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1720152 kB",
+      "MemAvailable:    1771180 kB"
+    ],
+    "load": "0.16 0.17 0.10 1/134 1348",
+    "processes": "",
+    "ip": "192.168.50.74"
+  },
+  {
+    "hostname": "labrador",
+    "mac": "66:0d:70:7f:06:7a",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "500.89 1954.23",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1719836 kB",
+      "MemAvailable:    1771008 kB"
+    ],
+    "load": "0.19 0.16 0.09 1/139 1379",
+    "processes": "",
+    "ip": "192.168.50.71"
+  },
+  {
+    "hostname": "labrador",
+    "mac": "9e:68:25:5a:32:a9",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "500.97 1955.26",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1716292 kB",
+      "MemAvailable:    1767052 kB"
+    ],
+    "load": "0.14 0.17 0.09 1/136 1381",
+    "processes": "",
+    "ip": "192.168.50.231"
+  },
+  {
+    "hostname": "lab3",
+    "mac": "3e:0a:4a:b6:58:f3",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "503.39 1971.98",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1741688 kB",
+      "MemAvailable:    1785872 kB"
+    ],
+    "load": "0.20 0.14 0.07 1/124 623",
+    "processes": "",
+    "ip": "192.168.50.140"
+  },
+  {
+    "hostname": "labrador",
+    "mac": "06:d2:46:63:4b:0b",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "503.58 1965.52",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1716376 kB",
+      "MemAvailable:    1767124 kB"
+    ],
+    "load": "0.24 0.18 0.10 1/136 1390",
+    "processes": "",
+    "ip": "192.168.50.118"
+  },
+  {
+    "hostname": "lab8",
+    "mac": "3a:0a:4a:b6:58:f8",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "503.61 1969.31",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1719356 kB",
+      "MemAvailable:    1772628 kB"
+    ],
+    "load": "0.21 0.16 0.10 1/134 580",
+    "processes": "",
+    "ip": "192.168.50.175"
+  },
+  {
+    "hostname": "lab1",
+    "mac": "3e:0a:4a:b6:58:f4",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "504.14 1977.81",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1737480 kB",
+      "MemAvailable:    1776884 kB"
+    ],
+    "load": "0.20 0.16 0.09 1/123 550",
+    "processes": "",
+    "ip": "192.168.50.141"
+  },
+  {
+    "hostname": "lab5",
+    "mac": "3e:0a:4a:b6:58:f5",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "503.72 1975.24",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1740864 kB",
+      "MemAvailable:    1784452 kB"
+    ],
+    "load": "0.24 0.16 0.08 1/125 559",
+    "processes": "",
+    "ip": "192.168.50.142"
+  },
+  {
+    "hostname": "labrador",
+    "mac": "82:7b:8b:d6:85:dc",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "503.82 1965.49",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1716212 kB",
+      "MemAvailable:    1767208 kB"
+    ],
+    "load": "0.24 0.18 0.10 1/137 1359",
+    "processes": "",
+    "ip": "192.168.50.44"
+  },
+  {
+    "hostname": "lab4",
+    "mac": "3e:0a:4a:b6:50:f4",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "503.91 1970.44",
+    "memory": [
+      "MemTotal:        1986400 kB",
+      "MemFree:         1738804 kB",
+      "MemAvailable:    1784684 kB"
+    ],
+    "load": "0.24 0.31 0.18 1/125 559",
+    "processes": "",
+    "ip": "192.168.50.247"
+  },
+  {
+    "hostname": "labrador",
+    "mac": "4e:38:6c:00:94:ec",
+    "arch": "aarch64",
+    "ethernet_carrier": "1",
+    "ethernet_speed": "100",
+    "files": {
+      "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": null,
+      "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+      "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null
+    },
+    "uptime": "506.29 1979.37",
+    "memory": [
+      "MemTotal:        1986272 kB",
+      "MemFree:         1736296 kB",
+      "MemAvailable:    1783752 kB"
+    ],
+    "load": "2.43 1.88 0.98 1/133 1429",
+    "processes": "",
+    "ip": "192.168.50.241"
+  }
+]

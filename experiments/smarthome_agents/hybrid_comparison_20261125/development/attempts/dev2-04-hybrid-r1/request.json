@@ -1,0 +1,30 @@
+{
+  "condition": "hybrid",
+  "seed": 801,
+  "case": {
+    "resident_request": "Acenda a luz.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "off"
+        }
+      },
+      "known_location": "quarto"
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    }
+  }
+}

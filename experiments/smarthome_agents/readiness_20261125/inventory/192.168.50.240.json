@@ -1,0 +1,24 @@
+{
+  "hostname": "lab7",
+  "mac": "6a:5a:ed:60:07:55",
+  "arch": "aarch64",
+  "ethernet_carrier": "1",
+  "ethernet_speed": "100",
+  "files": {
+    "/home/caninos/llama-offline/llama.cpp/build/bin/llama-server": 72608,
+    "/home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf": 1285494304,
+    "/home/caninos/smarthome_agents/revision_20261123_backup/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": null,
+    "/home/caninos/smarthome_agents/study_v1/models/qwen2.5-0.5b-instruct-q5_k_m.gguf": 522186592
+  },
+  "uptime": "188807.21 746340.28",
+  "memory": [
+    "MemTotal:        1986400 kB",
+    "MemFree:           64660 kB",
+    "MemAvailable:    1661332 kB"
+  ],
+  "load": "0.26 0.22 0.19 1/146 317972",
+  "processes": "578 /home/caninos/llama-offline/llama.cpp/build/bin/llama-server --model /home/caninos/llama-offline/models/qwen2.5-1.5b-instruct-q5_k_m.gguf --host 0.0.0.0 --port 8080 --threads 4 --ctx-size 1024 --device none\n",
+  "runtime_version": "version: 9584 (e25a32e98)\nbuilt with GNU 12.2.0 for Linux aarch64",
+  "runtime_exit": 0,
+  "ip": "192.168.50.240"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "held-paraphrase-07-rules-r2",
+  "scenario_id": "held-paraphrase-07",
+  "category": "paraphrase",
+  "condition": "rules",
+  "rep": 2,
+  "host": "192.168.50.85",
+  "assigned_host": "192.168.50.129",
+  "created_at": "2026-11-25T17:59:51.080739+00:00",
+  "infrastructure_ok": true,
+  "elapsed_s": 0.015699673000199255,
+  "origin": "rules",
+  "fallback": false,
+  "completed": true,
+  "structured_valid": true,
+  "action": {
+    "action": "no_action",
+    "reason": "Pedido fora das regras explícitas."
+  },
+  "content": "{\"action\": \"no_action\", \"reason\": \"Pedido fora das regras explícitas.\"}",
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "evaluation": {
+    "review_pending": false,
+    "task_completed": false,
+    "checks": [
+      {
+        "name": "action_allowed",
+        "passed": true,
+        "detail": "allowed"
+      },
+      {
+        "name": "final:rooms.sala.light",
+        "passed": false,
+        "expected": "on",
+        "actual": "off"
+      },
+      {
+        "name": "unchanged:rooms.quarto.light",
+        "passed": true,
+        "expected": "on",
+        "actual": "on"
+      },
+      {
+        "name": "no_action_policy",
+        "passed": false
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": null,
+    "undue_proposal": false
+  },
+  "controller_elapsed_s": 0.008936640999763767
+}

@@ -1,0 +1,25 @@
+{"id": "dev2-06-rules-r1", "host": "192.168.50.129", "infra": true, "success": true, "pending": false, "s": 0.02}
+{"id": "dev2-04-hybrid-r1", "host": "192.168.50.240", "infra": true, "success": true, "pending": false, "s": 0.02}
+{"id": "dev2-02-rules-r1", "host": "192.168.50.89", "infra": true, "success": true, "pending": false, "s": 0.02}
+{"id": "dev2-04-rules-r1", "host": "192.168.50.240", "infra": true, "success": true, "pending": false, "s": 0.01}
+{"id": "dev2-01-hybrid-r1", "host": "192.168.50.129", "infra": true, "success": true, "pending": false, "s": 0.01}
+{"id": "dev2-06-05-r1", "host": "192.168.50.129", "infra": true, "success": false, "pending": false, "s": 20.5}
+{"id": "dev2-03-hybrid-r1", "host": "192.168.50.169", "infra": true, "success": true, "pending": false, "s": 21.38}
+{"id": "dev2-04-05-r1", "host": "192.168.50.240", "infra": true, "success": true, "pending": false, "s": 20.62}
+{"id": "dev2-05-05-r1", "host": "192.168.50.195", "infra": true, "success": false, "pending": false, "s": 21.97}
+{"id": "dev2-08-rules-r1", "host": "192.168.50.169", "infra": true, "success": true, "pending": false, "s": 0.01}
+{"id": "dev2-02-05-r1", "host": "192.168.50.89", "infra": true, "success": false, "pending": false, "s": 23.68}
+{"id": "dev2-03-rules-r1", "host": "192.168.50.169", "infra": true, "success": false, "pending": false, "s": 0.01}
+{"id": "dev2-05-rules-r1", "host": "192.168.50.195", "infra": true, "success": true, "pending": false, "s": 0.01}
+{"id": "dev2-05-hybrid-r1", "host": "192.168.50.195", "infra": true, "success": true, "pending": false, "s": 0.01}
+{"id": "dev2-07-rules-r1", "host": "192.168.50.89", "infra": true, "success": true, "pending": false, "s": 0.01}
+{"id": "dev2-07-hybrid-r1", "host": "192.168.50.89", "infra": true, "success": true, "pending": false, "s": 0.01}
+{"id": "dev2-01-05-r1", "host": "192.168.50.129", "infra": true, "success": true, "pending": false, "s": 20.52}
+{"id": "dev2-06-hybrid-r1", "host": "192.168.50.129", "infra": true, "success": true, "pending": false, "s": 0.01}
+{"id": "dev2-01-rules-r1", "host": "192.168.50.129", "infra": true, "success": true, "pending": false, "s": 0.01}
+{"id": "dev2-08-hybrid-r1", "host": "192.168.50.169", "infra": true, "success": false, "pending": false, "s": 26.92}
+{"id": "dev2-07-05-r1", "host": "192.168.50.89", "infra": true, "success": false, "pending": false, "s": 26.92}
+{"id": "dev2-02-hybrid-r1", "host": "192.168.50.89", "infra": true, "success": true, "pending": false, "s": 0.01}
+{"id": "dev2-08-05-r1", "host": "192.168.50.169", "infra": true, "success": false, "pending": false, "s": 26.93}
+{"id": "dev2-03-05-r1", "host": "192.168.50.169", "infra": true, "success": true, "pending": false, "s": 21.17}
+COMPLETE {"phase": "development", "generated_at": "2026-11-25T17:58:13.912945+00:00", "attempts_recorded": 24, "conditions": {"rules": {"attempts": 8, "infra_failures": 0, "successes": 7, "pending_semantic_reviews": 0, "structured_valid": 8, "model_calls": 0, "fallback_calls": 0, "median_s": 0.006816588000219781, "mean_s": 0.009848073000284785, "p95_s": 0.01635417699799291, "categories": {"ambiguity": {"attempts": 2, "successes": 2}, "clear": {"attempts": 3, "successes": 3}, "invalid": {"attempts": 1, "successes": 1}, "paraphrase": {"attempts": 1, "successes": 0}, "routine": {"attempts": 1, "successes": 1}}}, "05": {"attempts": 8, "infra_failures": 0, "successes": 3, "pending_semantic_reviews": 0, "structured_valid": 8, "model_calls": 8, "fallback_calls": 0, "median_s": 21.569036873001096, "mean_s": 22.788575322375436, "p95_s": 26.92929999900298, "categories": {"ambiguity": {"attempts": 2, "successes": 0}, "clear": {"attempts": 3, "successes": 2}, "invalid": {"attempts": 1, "successes": 0}, "paraphrase": {"attempts": 1, "successes": 1}, "routine": {"attempts": 1, "successes": 0}}}, "hybrid": {"attempts": 8, "infra_failures": 0, "successes": 7, "pending_semantic_reviews": 0, "structured_valid": 8, "model_calls": 2, "fallback_calls": 2, "median_s": 0.006786030000512255, "mean_s": 6.043519894625206, "p95_s": 26.924850665000122, "categories": {"ambiguity": {"attempts": 2, "successes": 2}, "clear": {"attempts": 3, "successes": 3}, "invalid": {"attempts": 1, "successes": 0}, "paraphrase": {"attempts": 1, "successes": 1}, "routine": {"attempts": 1, "successes": 1}}}}}

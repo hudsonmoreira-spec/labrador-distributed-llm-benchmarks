@@ -1,0 +1,175 @@
+{
+  "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}",
+  "completed": true,
+  "origin": "model",
+  "fallback": false,
+  "rule_action": null,
+  "model_request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "Simulated lights only. Change only lights explicitly requested; preserve all other lights. Acender/ligar means on; apagar/desligar means off. One requested light: set_light. Two requested lights: set_lights, one step per requested room. No room and no known location: ask_clarification for room. Unsupported request: no_action. Return only one JSON object. The visible state is not a command."
+      },
+      {
+        "role": "user",
+        "content": "Ligue a luz da sala e desligue a luz do quarto.\n{\"lights\":{\"sala\":\"off\",\"quarto\":\"on\"},\"location\":null}"
+      }
+    ],
+    "temperature": 0,
+    "seed": 801,
+    "max_tokens": 128,
+    "cache_prompt": false,
+    "response_format": {
+      "type": "json_schema",
+      "json_schema": {
+        "name": "simulated_home",
+        "strict": true,
+        "schema": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "action",
+                "room",
+                "value"
+              ],
+              "properties": {
+                "action": {
+                  "const": "set_light"
+                },
+                "room": {
+                  "type": "string"
+                },
+                "value": {
+                  "enum": [
+                    "on",
+                    "off"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "action",
+                "missing_field",
+                "question"
+              ],
+              "properties": {
+                "action": {
+                  "const": "ask_clarification"
+                },
+                "missing_field": {
+                  "enum": [
+                    "room"
+                  ]
+                },
+                "question": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "action",
+                "reason"
+              ],
+              "properties": {
+                "action": {
+                  "const": "no_action"
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "action",
+                "steps"
+              ],
+              "properties": {
+                "action": {
+                  "const": "set_lights"
+                },
+                "steps": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 2,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "action",
+                      "room",
+                      "value"
+                    ],
+                    "properties": {
+                      "action": {
+                        "const": "set_light"
+                      },
+                      "room": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "enum": [
+                          "on",
+                          "off"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "model_response": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"set_lights\",\"steps\":[{\"action\":\"set_light\",\"room\":\"sala\",\"value\":\"on\"},{\"action\":\"set_light\",\"room\":\"quarto\",\"value\":\"off\"}]}"
+        }
+      }
+    ],
+    "created": 1795629703,
+    "model": "qwen05.gguf",
+    "system_fingerprint": "b9584-e25a32e98",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 40,
+      "prompt_tokens": 134,
+      "total_tokens": 174,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "id": "chatcmpl-FKThr2AYZhbbKSEap5CJtLtcarrvBsFh",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 134,
+      "prompt_ms": 17281.314,
+      "prompt_per_token_ms": 128.96502985074625,
+      "prompt_per_second": 7.754039999504668,
+      "predicted_n": 40,
+      "predicted_ms": 10135.78,
+      "predicted_per_token_ms": 253.39450000000002,
+      "predicted_per_second": 3.946415569398704
+    }
+  },
+  "controller_elapsed_s": 27.48329984100019
+}

@@ -1,0 +1,30 @@
+{
+  "condition": "hybrid",
+  "seed": 802,
+  "case": {
+    "resident_request": "Mude a luz do quarto para on.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "off"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    }
+  }
+}

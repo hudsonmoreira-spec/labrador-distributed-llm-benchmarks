@@ -1,0 +1,14 @@
+{
+  "content": "{\"action\": \"set_light\", \"room\": \"quarto\", \"value\": \"off\"}",
+  "completed": true,
+  "origin": "rules",
+  "fallback": false,
+  "rule_action": {
+    "action": "set_light",
+    "room": "quarto",
+    "value": "off"
+  },
+  "model_request": null,
+  "model_response": null,
+  "controller_elapsed_s": 0.003981534000104148
+}

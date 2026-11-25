@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "phase": "comparison",
+  "planned_attempts": 240,
+  "all_operational_inputs_without_evaluator": true,
+  "routing_and_model_requests_verified": true,
+  "scores_reconstructed": true,
+  "frozen_inputs_unchanged": true
+}

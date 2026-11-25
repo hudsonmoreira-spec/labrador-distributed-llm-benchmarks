@@ -1,0 +1,147 @@
+{
+  "automatic_service_restart": {
+    "ip": "192.168.50.85",
+    "old_pid": "2371",
+    "new_pid": "2618",
+    "health_recovered": true,
+    "elapsed_s": 22.316027728000336
+  },
+  "primary_unavailable_selects_next_primary": {
+    "selected": {
+      "ip": "192.168.50.89",
+      "name": "lab2",
+      "role": "primary",
+      "ready": true
+    },
+    "checks": [
+      {
+        "ip": "192.168.50.129",
+        "name": "lab1",
+        "role": "primary",
+        "ready": false,
+        "error": "<urlopen error [Errno 111] Connection refused>"
+      },
+      {
+        "ip": "192.168.50.89",
+        "name": "lab2",
+        "role": "primary",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.169",
+        "name": "lab3",
+        "role": "primary",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.240",
+        "name": "lab7",
+        "role": "primary",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.195",
+        "name": "lab8",
+        "role": "primary",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.85",
+        "name": "lab4",
+        "role": "reserve",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.200",
+        "name": "lab6",
+        "role": "reserve",
+        "ready": true
+      }
+    ],
+    "scope": "Endpoint selection before dispatch only; no request sent or silently replayed."
+  },
+  "no_available_primary_selects_reserve": {
+    "selected": {
+      "ip": "192.168.50.85",
+      "name": "lab4",
+      "role": "reserve",
+      "ready": true
+    },
+    "checks": [
+      {
+        "ip": "192.168.50.129",
+        "name": "lab1",
+        "role": "primary",
+        "ready": false,
+        "error": "<urlopen error [Errno 111] Connection refused>"
+      },
+      {
+        "ip": "192.168.50.85",
+        "name": "lab4",
+        "role": "reserve",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.200",
+        "name": "lab6",
+        "role": "reserve",
+        "ready": true
+      }
+    ],
+    "scope": "Endpoint selection before dispatch only; no request sent or silently replayed."
+  },
+  "primary_restored": true,
+  "final_full_pool": {
+    "selected": {
+      "ip": "192.168.50.129",
+      "name": "lab1",
+      "role": "primary",
+      "ready": true
+    },
+    "checks": [
+      {
+        "ip": "192.168.50.129",
+        "name": "lab1",
+        "role": "primary",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.89",
+        "name": "lab2",
+        "role": "primary",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.169",
+        "name": "lab3",
+        "role": "primary",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.240",
+        "name": "lab7",
+        "role": "primary",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.195",
+        "name": "lab8",
+        "role": "primary",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.85",
+        "name": "lab4",
+        "role": "reserve",
+        "ready": true
+      },
+      {
+        "ip": "192.168.50.200",
+        "name": "lab6",
+        "role": "reserve",
+        "ready": true
+      }
+    ],
+    "scope": "Endpoint selection before dispatch only; no request sent or silently replayed."
+  }
+}

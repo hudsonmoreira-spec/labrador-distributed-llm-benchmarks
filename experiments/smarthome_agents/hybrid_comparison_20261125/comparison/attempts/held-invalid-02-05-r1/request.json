@@ -1,0 +1,30 @@
+{
+  "condition": "05",
+  "seed": 801,
+  "case": {
+    "resident_request": "Ajuste a luz do quarto para 50 por cento.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "off"
+        },
+        "quarto": {
+          "light": "on"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    }
+  }
+}

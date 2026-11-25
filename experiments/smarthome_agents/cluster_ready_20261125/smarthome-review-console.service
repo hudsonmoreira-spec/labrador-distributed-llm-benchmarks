@@ -1,0 +1,16 @@
+[Unit]
+Description=Interface local de avaliação SmartHome
+After=network.target
+
+[Service]
+Environment=SMARTHOME_CONSOLE_HOSTS=192.168.50.129,192.168.50.89,192.168.50.169,192.168.50.240,192.168.50.195,192.168.50.85,192.168.50.200
+Environment=SMARTHOME_CONSOLE_MODEL_05=/home/caninos/smarthome_agents/cluster_ready_20261125/models/qwen05.gguf
+Type=simple
+WorkingDirectory=/home/hudymoreira/labrador-distributed-llm-benchmarks
+ExecStart=/usr/bin/python3 /home/hudymoreira/labrador-distributed-llm-benchmarks/experiments/smarthome_agents/revision_20261123/review_console/app.py
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=20
+
+[Install]
+WantedBy=default.target

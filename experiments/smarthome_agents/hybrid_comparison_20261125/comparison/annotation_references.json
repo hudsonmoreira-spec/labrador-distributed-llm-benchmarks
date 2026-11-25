@@ -1,0 +1,114 @@
+{
+  "method": "Post-run exact object match of original model request and exact response text to existing author-reviewed evidence. Cross-reference only; frozen evaluation results are unmodified. Not new or independent human review. No success credit added.",
+  "assessment_source": "experiments/smarthome_agents/revision_20261123/author_review_20261124/assessment.json",
+  "assessment_sha256": "f566de8b788672ee646580062a78e2e40d612bc40c272d72b21cb440f4e34366",
+  "automatic_pending_flags": 8,
+  "matching_existing_author_failures": 8,
+  "without_exact_prior_match": 0,
+  "rows": [
+    {
+      "attempt": "held-ambiguity-03-05-r1",
+      "condition": "05",
+      "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quero a luz acender.\"}",
+      "exact_prior_request_and_response_matches": [
+        {
+          "record_id": "30ba25ff-5b38-4182-aed0-e1d1a4c31e7d",
+          "decision": "fail",
+          "rationale": "A resposta apenas reformula o pedido e não pergunta qual cômodo deve ter a luz acesa.",
+          "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep1-240/summary.json"
+        }
+      ]
+    },
+    {
+      "attempt": "held-ambiguity-03-05-r2",
+      "condition": "05",
+      "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quero a luz acender.\"}",
+      "exact_prior_request_and_response_matches": [
+        {
+          "record_id": "a621f28d-cf67-4520-9c25-80fb989b3015",
+          "decision": "fail",
+          "rationale": "A IA reformulou o pedido, mas não solicitou o cômodo ausente.",
+          "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep2-89/summary.json"
+        }
+      ]
+    },
+    {
+      "attempt": "held-ambiguity-03-hybrid-r1",
+      "condition": "hybrid",
+      "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quero a luz acender.\"}",
+      "exact_prior_request_and_response_matches": [
+        {
+          "record_id": "30ba25ff-5b38-4182-aed0-e1d1a4c31e7d",
+          "decision": "fail",
+          "rationale": "A resposta apenas reformula o pedido e não pergunta qual cômodo deve ter a luz acesa.",
+          "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep1-240/summary.json"
+        }
+      ]
+    },
+    {
+      "attempt": "held-ambiguity-03-hybrid-r2",
+      "condition": "hybrid",
+      "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quero a luz acender.\"}",
+      "exact_prior_request_and_response_matches": [
+        {
+          "record_id": "a621f28d-cf67-4520-9c25-80fb989b3015",
+          "decision": "fail",
+          "rationale": "A IA reformulou o pedido, mas não solicitou o cômodo ausente.",
+          "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-03-rep2-89/summary.json"
+        }
+      ]
+    },
+    {
+      "attempt": "held-ambiguity-04-05-r1",
+      "condition": "05",
+      "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Pode apagar a iluminação?\"}",
+      "exact_prior_request_and_response_matches": [
+        {
+          "record_id": "913b0596-8219-43d6-acf4-d164ae14b09f",
+          "decision": "fail",
+          "rationale": "A IA apenas repetiu o pedido e não perguntou de qual cômodo deveria apagar a iluminação",
+          "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-04-rep1-195/summary.json"
+        }
+      ]
+    },
+    {
+      "attempt": "held-ambiguity-04-05-r2",
+      "condition": "05",
+      "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Pode apagar a iluminação?\"}",
+      "exact_prior_request_and_response_matches": [
+        {
+          "record_id": "e3c94859-d677-4f63-b416-31f1f412c6fe",
+          "decision": "fail",
+          "rationale": "A IA apenas repetiu o pedido e não perguntou de qual cômodo deveria apagar a iluminação",
+          "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-04-rep2-169/summary.json"
+        }
+      ]
+    },
+    {
+      "attempt": "held-ambiguity-04-hybrid-r1",
+      "condition": "hybrid",
+      "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Pode apagar a iluminação?\"}",
+      "exact_prior_request_and_response_matches": [
+        {
+          "record_id": "913b0596-8219-43d6-acf4-d164ae14b09f",
+          "decision": "fail",
+          "rationale": "A IA apenas repetiu o pedido e não perguntou de qual cômodo deveria apagar a iluminação",
+          "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-04-rep1-195/summary.json"
+        }
+      ]
+    },
+    {
+      "attempt": "held-ambiguity-04-hybrid-r2",
+      "condition": "hybrid",
+      "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Pode apagar a iluminação?\"}",
+      "exact_prior_request_and_response_matches": [
+        {
+          "record_id": "e3c94859-d677-4f63-b416-31f1f412c6fe",
+          "decision": "fail",
+          "rationale": "A IA apenas repetiu o pedido e não perguntou de qual cômodo deveria apagar a iluminação",
+          "source": "experiments/smarthome_agents/runs/20261006-study-v1-quality/attempts/05-held-ambiguity-04-rep2-169/summary.json"
+        }
+      ]
+    }
+  ]
+}

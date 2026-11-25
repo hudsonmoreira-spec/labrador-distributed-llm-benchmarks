@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-25T18:04:57.768596+00:00",
+  "actual_host": {
+    "ip": "192.168.50.240",
+    "mac": "6a:5a:ed:60:07:55",
+    "name": "lab7",
+    "role": "primary"
+  },
+  "assigned_host": {
+    "ip": "192.168.50.240",
+    "mac": "6a:5a:ed:60:07:55",
+    "name": "lab7",
+    "role": "primary"
+  },
+  "id": "held-ambiguity-05-05-r1"
+}

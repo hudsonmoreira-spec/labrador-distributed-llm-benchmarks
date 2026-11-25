@@ -1,0 +1,30 @@
+{
+  "condition": "05",
+  "seed": 802,
+  "case": {
+    "resident_request": "Apague a luz da sala e acenda a luz do quarto.",
+    "initial_state": {
+      "rooms": {
+        "sala": {
+          "light": "on"
+        },
+        "quarto": {
+          "light": "off"
+        }
+      },
+      "known_location": null
+    },
+    "permissions": {
+      "set_light": {
+        "rooms": [
+          "sala",
+          "quarto"
+        ],
+        "values": [
+          "on",
+          "off"
+        ]
+      }
+    }
+  }
+}

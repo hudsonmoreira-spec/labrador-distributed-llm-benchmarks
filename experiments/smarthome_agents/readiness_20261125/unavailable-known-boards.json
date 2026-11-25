@@ -1,0 +1,22 @@
+[
+  {
+    "board": "lab1",
+    "last_ip": "192.168.50.129",
+    "tcp22": "timed out"
+  },
+  {
+    "board": "lab4",
+    "last_ip": "192.168.50.85",
+    "tcp22": "TCP22 reachable; SSH login not confirmed"
+  },
+  {
+    "board": "lab6",
+    "last_ip": "192.168.50.200",
+    "tcp22": "timed out"
+  },
+  {
+    "board": "lab8",
+    "last_ip": "192.168.50.195",
+    "tcp22": "timed out"
+  }
+]

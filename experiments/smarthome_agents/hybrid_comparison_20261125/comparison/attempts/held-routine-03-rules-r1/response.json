@@ -1,0 +1,24 @@
+{
+  "content": "{\"action\": \"set_lights\", \"steps\": [{\"action\": \"set_light\", \"room\": \"sala\", \"value\": \"on\"}, {\"action\": \"set_light\", \"room\": \"quarto\", \"value\": \"on\"}]}",
+  "completed": true,
+  "origin": "rules",
+  "fallback": false,
+  "rule_action": {
+    "action": "set_lights",
+    "steps": [
+      {
+        "action": "set_light",
+        "room": "sala",
+        "value": "on"
+      },
+      {
+        "action": "set_light",
+        "room": "quarto",
+        "value": "on"
+      }
+    ]
+  },
+  "model_request": null,
+  "model_response": null,
+  "controller_elapsed_s": 0.0004617110002982372
+}

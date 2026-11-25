@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-25T17:59:21.737982+00:00",
+  "actual_host": {
+    "ip": "192.168.50.169",
+    "mac": "aa:fa:5a:c3:1d:cb",
+    "name": "lab3",
+    "role": "primary"
+  },
+  "assigned_host": {
+    "ip": "192.168.50.169",
+    "mac": "aa:fa:5a:c3:1d:cb",
+    "name": "lab3",
+    "role": "primary"
+  },
+  "id": "held-routine-01-rules-r2"
+}

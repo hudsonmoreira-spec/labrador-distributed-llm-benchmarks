@@ -1,0 +1,109 @@
+{
+  "phase": "comparison",
+  "generated_at": "2026-11-25T18:11:11.687358+00:00",
+  "attempts_recorded": 240,
+  "conditions": {
+    "rules": {
+      "attempts": 80,
+      "infra_failures": 0,
+      "successes": 42,
+      "pending_semantic_reviews": 0,
+      "structured_valid": 80,
+      "model_calls": 0,
+      "fallback_calls": 0,
+      "median_s": 0.006192521999764722,
+      "mean_s": 0.006521068737265523,
+      "p95_s": 0.007251678998727584,
+      "categories": {
+        "ambiguity": {
+          "attempts": 16,
+          "successes": 2
+        },
+        "clear": {
+          "attempts": 16,
+          "successes": 16
+        },
+        "invalid": {
+          "attempts": 16,
+          "successes": 16
+        },
+        "paraphrase": {
+          "attempts": 16,
+          "successes": 0
+        },
+        "routine": {
+          "attempts": 16,
+          "successes": 8
+        }
+      }
+    },
+    "05": {
+      "attempts": 80,
+      "infra_failures": 0,
+      "successes": 30,
+      "pending_semantic_reviews": 4,
+      "structured_valid": 80,
+      "model_calls": 80,
+      "fallback_calls": 0,
+      "median_s": 23.740286404499784,
+      "mean_s": 23.46350946620023,
+      "p95_s": 27.60874330200022,
+      "categories": {
+        "ambiguity": {
+          "attempts": 16,
+          "successes": 0
+        },
+        "clear": {
+          "attempts": 16,
+          "successes": 8
+        },
+        "invalid": {
+          "attempts": 16,
+          "successes": 0
+        },
+        "paraphrase": {
+          "attempts": 16,
+          "successes": 14
+        },
+        "routine": {
+          "attempts": 16,
+          "successes": 8
+        }
+      }
+    },
+    "hybrid": {
+      "attempts": 80,
+      "infra_failures": 0,
+      "successes": 44,
+      "pending_semantic_reviews": 4,
+      "structured_valid": 80,
+      "model_calls": 54,
+      "fallback_calls": 54,
+      "median_s": 21.466280519500287,
+      "mean_s": 15.880301261887372,
+      "p95_s": 27.18396847099939,
+      "categories": {
+        "ambiguity": {
+          "attempts": 16,
+          "successes": 2
+        },
+        "clear": {
+          "attempts": 16,
+          "successes": 16
+        },
+        "invalid": {
+          "attempts": 16,
+          "successes": 0
+        },
+        "paraphrase": {
+          "attempts": 16,
+          "successes": 14
+        },
+        "routine": {
+          "attempts": 16,
+          "successes": 12
+        }
+      }
+    }
+  }
+}

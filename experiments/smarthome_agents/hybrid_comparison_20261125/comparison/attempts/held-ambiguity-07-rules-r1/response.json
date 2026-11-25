@@ -1,0 +1,13 @@
+{
+  "content": "{\"action\": \"no_action\", \"reason\": \"Pedido fora das regras explícitas.\"}",
+  "completed": true,
+  "origin": "rules",
+  "fallback": false,
+  "rule_action": {
+    "action": "no_action",
+    "reason": "Pedido fora das regras explícitas."
+  },
+  "model_request": null,
+  "model_response": null,
+  "controller_elapsed_s": 0.00036779300035050255
+}

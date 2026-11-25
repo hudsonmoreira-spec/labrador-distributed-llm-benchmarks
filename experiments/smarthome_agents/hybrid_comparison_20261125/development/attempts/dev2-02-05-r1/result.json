@@ -1,0 +1,88 @@
+{
+  "id": "dev2-02-05-r1",
+  "scenario_id": "dev2-02",
+  "category": "clear",
+  "condition": "05",
+  "rep": 1,
+  "host": "192.168.50.89",
+  "assigned_host": "192.168.50.89",
+  "created_at": "2026-11-25T17:56:29.593081+00:00",
+  "infrastructure_ok": true,
+  "elapsed_s": 23.684812374998728,
+  "origin": "model",
+  "fallback": false,
+  "completed": true,
+  "structured_valid": true,
+  "action": {
+    "action": "ask_clarification",
+    "missing_field": "room",
+    "question": "Quem está no quarto?"
+  },
+  "content": "{\"action\":\"ask_clarification\",\"missing_field\":\"room\",\"question\":\"Quem está no quarto?\"}",
+  "final": {
+    "rooms": {
+      "sala": {
+        "light": "off"
+      },
+      "quarto": {
+        "light": "on"
+      }
+    },
+    "known_location": null
+  },
+  "permission": {
+    "allowed": true,
+    "reason": "allowed"
+  },
+  "evaluation": {
+    "review_pending": false,
+    "task_completed": false,
+    "checks": [
+      {
+        "name": "action_allowed",
+        "passed": true,
+        "detail": "allowed"
+      },
+      {
+        "name": "final:rooms.quarto.light",
+        "passed": false,
+        "expected": "off",
+        "actual": "on"
+      },
+      {
+        "name": "unchanged:rooms.sala.light",
+        "passed": true,
+        "expected": "off",
+        "actual": "off"
+      },
+      {
+        "name": "clarification_allowed",
+        "passed": false
+      },
+      {
+        "name": "clarification_missing_field",
+        "passed": false,
+        "review": {
+          "status": "fail",
+          "reason": "missing_field_not_expected"
+        }
+      },
+      {
+        "name": "exact_proposed_steps",
+        "passed": false
+      },
+      {
+        "name": "no_prohibited_plan_steps",
+        "passed": true
+      }
+    ],
+    "manual_review": {
+      "clarification_question": {
+        "status": "fail",
+        "reason": "missing_field_not_expected"
+      }
+    },
+    "undue_proposal": false
+  },
+  "controller_elapsed_s": 23.67777792700008
+}

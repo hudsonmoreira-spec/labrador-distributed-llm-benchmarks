@@ -1,0 +1,44 @@
+[
+  {
+    "ip": "192.168.50.129",
+    "returncode": 0,
+    "output": "NRestarts=0\nActiveState=active\nUnitFileState=enabled\n1\n",
+    "stderr": "sudo: n\u00e3o foi poss\u00edvel resolver m\u00e1quina lab1: Nome ou servi\u00e7o desconhecido\n"
+  },
+  {
+    "ip": "192.168.50.89",
+    "returncode": 0,
+    "output": "NRestarts=0\nActiveState=active\nUnitFileState=enabled\n1\n",
+    "stderr": ""
+  },
+  {
+    "ip": "192.168.50.169",
+    "returncode": 0,
+    "output": "NRestarts=0\nActiveState=active\nUnitFileState=enabled\n1\n",
+    "stderr": ""
+  },
+  {
+    "ip": "192.168.50.240",
+    "returncode": 0,
+    "output": "NRestarts=0\nActiveState=active\nUnitFileState=enabled\n1\n",
+    "stderr": ""
+  },
+  {
+    "ip": "192.168.50.195",
+    "returncode": 0,
+    "output": "NRestarts=0\nActiveState=active\nUnitFileState=enabled\n1\n",
+    "stderr": ""
+  },
+  {
+    "ip": "192.168.50.85",
+    "returncode": 0,
+    "output": "NRestarts=1\nActiveState=active\nUnitFileState=enabled\n1\n",
+    "stderr": ""
+  },
+  {
+    "ip": "192.168.50.200",
+    "returncode": 0,
+    "output": "NRestarts=0\nActiveState=active\nUnitFileState=enabled\n1\n",
+    "stderr": ""
+  }
+]

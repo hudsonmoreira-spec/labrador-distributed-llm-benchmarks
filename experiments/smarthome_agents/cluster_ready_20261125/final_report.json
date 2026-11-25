@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-25",
+  "primary_count": 5,
+  "reserve_count": 2,
+  "model_generation_checks": 14,
+  "all_model_profiles_passed": true,
+  "default_model": "05",
+  "auto_start_enabled": 7,
+  "automatic_process_restart_test": "pass on lab4",
+  "alternate_primary_selection_test": "pass: lab2",
+  "reserve_selection_test": "pass: lab4",
+  "final_full_pool_health": "7/7",
+  "console_model_05_host": "192.168.50.129",
+  "console_elapsed_s": 21.01272717000029,
+  "human_reviews_preserved": 13,
+  "excluded_ip": "192.168.50.141",
+  "benchmark_battery_started": false
+}

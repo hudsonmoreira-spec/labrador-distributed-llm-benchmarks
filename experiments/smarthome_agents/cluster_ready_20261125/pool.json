@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-25",
+  "status": "7 boards verified: both model profiles generated tokens; 0.5B boot default ready",
+  "network": "Ethernet",
+  "port": 19115,
+  "default_model": "05",
+  "models": [
+    "05",
+    "15"
+  ],
+  "boards": [
+    {
+      "ip": "192.168.50.129",
+      "mac": "a2:32:dd:a5:08:52",
+      "name": "lab1",
+      "role": "primary"
+    },
+    {
+      "ip": "192.168.50.89",
+      "mac": "ea:0e:48:7f:0c:1b",
+      "name": "lab2",
+      "role": "primary"
+    },
+    {
+      "ip": "192.168.50.169",
+      "mac": "aa:fa:5a:c3:1d:cb",
+      "name": "lab3",
+      "role": "primary"
+    },
+    {
+      "ip": "192.168.50.240",
+      "mac": "6a:5a:ed:60:07:55",
+      "name": "lab7",
+      "role": "primary"
+    },
+    {
+      "ip": "192.168.50.195",
+      "mac": "3e:b1:de:25:6a:41",
+      "name": "lab8",
+      "role": "primary"
+    },
+    {
+      "ip": "192.168.50.85",
+      "mac": "3e:b3:28:88:9b:ed",
+      "name": "lab4",
+      "role": "reserve"
+    },
+    {
+      "ip": "192.168.50.200",
+      "mac": "ce:99:b7:c7:d9:3f",
+      "name": "lab6",
+      "role": "reserve"
+    }
+  ],
+  "excluded": [
+    {
+      "ip": "192.168.50.141",
+      "reason": "Explicitly excluded by user due to recurrent problems"
+    }
+  ],
+  "failover_policy": "Select a validated primary, otherwise a validated reserve, before dispatch. Never silently retry a timed-out inference; preserve failed/incomplete attempts and record any reassignment.",
+  "ip_policy": "DHCP; MAC identity must match before selecting. Rediscover/revalidate if the address changes."
+}

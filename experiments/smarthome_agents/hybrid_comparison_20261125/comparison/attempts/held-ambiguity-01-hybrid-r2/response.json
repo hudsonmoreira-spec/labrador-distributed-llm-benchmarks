@@ -1,0 +1,14 @@
+{
+  "content": "{\"action\": \"ask_clarification\", \"missing_field\": \"room\", \"question\": \"Qual cômodo?\"}",
+  "completed": true,
+  "origin": "rules",
+  "fallback": false,
+  "rule_action": {
+    "action": "ask_clarification",
+    "missing_field": "room",
+    "question": "Qual cômodo?"
+  },
+  "model_request": null,
+  "model_response": null,
+  "controller_elapsed_s": 0.00032383400002800045
+}

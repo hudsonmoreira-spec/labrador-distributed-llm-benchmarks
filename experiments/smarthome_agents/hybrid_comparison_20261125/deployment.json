@@ -1,0 +1,65 @@
+[
+  {
+    "files": {
+      "controller.py": "d0d3a0b9dbea24b2e009edd554e2106eb032cfe766a1ba7126861deaa2c3d803",
+      "study_v1.py": "4837d682f4f2e89bc32dfdb341aeb67b22e4f87112869c8fcf428baf7ea14f42",
+      "smarthome_pilot.py": "59ad2262c9e4f35253699c608052377d60536702475ccfdfd63d6c15a934106c"
+    },
+    "enabled": "enabled",
+    "ip": "192.168.50.129"
+  },
+  {
+    "files": {
+      "controller.py": "d0d3a0b9dbea24b2e009edd554e2106eb032cfe766a1ba7126861deaa2c3d803",
+      "study_v1.py": "4837d682f4f2e89bc32dfdb341aeb67b22e4f87112869c8fcf428baf7ea14f42",
+      "smarthome_pilot.py": "59ad2262c9e4f35253699c608052377d60536702475ccfdfd63d6c15a934106c"
+    },
+    "enabled": "enabled",
+    "ip": "192.168.50.89"
+  },
+  {
+    "files": {
+      "controller.py": "d0d3a0b9dbea24b2e009edd554e2106eb032cfe766a1ba7126861deaa2c3d803",
+      "study_v1.py": "4837d682f4f2e89bc32dfdb341aeb67b22e4f87112869c8fcf428baf7ea14f42",
+      "smarthome_pilot.py": "59ad2262c9e4f35253699c608052377d60536702475ccfdfd63d6c15a934106c"
+    },
+    "enabled": "enabled",
+    "ip": "192.168.50.169"
+  },
+  {
+    "files": {
+      "controller.py": "d0d3a0b9dbea24b2e009edd554e2106eb032cfe766a1ba7126861deaa2c3d803",
+      "study_v1.py": "4837d682f4f2e89bc32dfdb341aeb67b22e4f87112869c8fcf428baf7ea14f42",
+      "smarthome_pilot.py": "59ad2262c9e4f35253699c608052377d60536702475ccfdfd63d6c15a934106c"
+    },
+    "enabled": "enabled",
+    "ip": "192.168.50.240"
+  },
+  {
+    "files": {
+      "controller.py": "d0d3a0b9dbea24b2e009edd554e2106eb032cfe766a1ba7126861deaa2c3d803",
+      "study_v1.py": "4837d682f4f2e89bc32dfdb341aeb67b22e4f87112869c8fcf428baf7ea14f42",
+      "smarthome_pilot.py": "59ad2262c9e4f35253699c608052377d60536702475ccfdfd63d6c15a934106c"
+    },
+    "enabled": "enabled",
+    "ip": "192.168.50.195"
+  },
+  {
+    "files": {
+      "controller.py": "d0d3a0b9dbea24b2e009edd554e2106eb032cfe766a1ba7126861deaa2c3d803",
+      "study_v1.py": "4837d682f4f2e89bc32dfdb341aeb67b22e4f87112869c8fcf428baf7ea14f42",
+      "smarthome_pilot.py": "59ad2262c9e4f35253699c608052377d60536702475ccfdfd63d6c15a934106c"
+    },
+    "enabled": "enabled",
+    "ip": "192.168.50.85"
+  },
+  {
+    "files": {
+      "controller.py": "d0d3a0b9dbea24b2e009edd554e2106eb032cfe766a1ba7126861deaa2c3d803",
+      "study_v1.py": "4837d682f4f2e89bc32dfdb341aeb67b22e4f87112869c8fcf428baf7ea14f42",
+      "smarthome_pilot.py": "59ad2262c9e4f35253699c608052377d60536702475ccfdfd63d6c15a934106c"
+    },
+    "enabled": "enabled",
+    "ip": "192.168.50.200"
+  }
+]
