@@ -1,6 +1,6 @@
 # Camera-ready working copy — 2026-11-23
 
-Original study_v1 files and immutable scientific records are preserved. This copy is not yet ready for submission.
+Original study_v1 files and immutable scientific records are preserved. Hudson reports final scientific/text approval by professors, coauthors and colleagues on 26 November 2026. Conference metadata and submission checks remain separate.
 
 Implemented: original prompt printed in full; text-only HTTP client/replica architecture clarified; original JSON-schema-constrained request documented; local-processing rationale clarified; closed-batch replication results condensed; unstable rules/min rate omitted from main text; prompt-sensitivity and interactive-latency limitations explicit.
 
@@ -13,3 +13,5 @@ Completed 24 November: four explicit author assessments saved with source hashes
 25 November: rules-first supplementary experiment completed and audited (24 development +240 comparison requests). Results: rules42/80, Qwen0.5B30/80, hybrid44/80, with54 model calls in80 hybrid requests. Known-case reuse and invalid-request failures limit interpretation. Raw evidence and report are in hybrid_comparison_20261125; incorporated in methodology, Table V, discussion, abstract and conclusion. The five-page PDF compiles without unresolved references or overfull boxes. The paper cites immutable evidence snapshot 4cfbb483ddb5b53201c73c7f48f73cee03a85615. Original results and submitted PDF remain preserved.
 
 25 November: separate point-by-point response completed in RESPONSE_TO_REVIEWERS_EN.tex/pdf for professor/author review. It covers all five reviews, distinguishes completed experiments from scope/future-work responses, and identifies manuscript sections/tables and immutable evidence. The five-page response was rendered and visually checked. No EDAS upload or message to reviewers was performed.
+
+26 November: Hudson reports that professors, coauthors and colleagues approved publication, requesting only the affiliation update. The manuscript now uses their exact supplied wording: Department of Electronic Systems Engineering, Polytechnic School, University of São Paulo (USP), Sao Paulo, Brazil. No additional laboratory acronym was inserted beyond the supplied text. The PDF was rebuilt and checked; no EDAS upload is performed by this update.
